@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:pagina="clr-namespace:APP_FIRTEL.Vistas"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.Pagainaprincipal"
+                   Title="Sistemas">
+
+    <MasterDetailPage.Master>
+        <pagina:Menu></pagina:Menu>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+
+        <NavigationPage x:Name="Navigation">
+            <x:Arguments>
+
+                <pagina:Detalle></pagina:Detalle>
+
+            </x:Arguments>
+
+        </NavigationPage>
+
+
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

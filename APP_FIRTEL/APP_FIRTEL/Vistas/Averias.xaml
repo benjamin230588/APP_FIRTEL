@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.Averias"
+             Title="Averias">
+    
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <ScrollView>
+                <ListView ItemsSource="{Binding listaCategoria }"
+                  x:Name="lstCategoria" Margin="5"  HasUnevenRows="True" ItemSelected="lstCategoria_ItemSelected" >
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ViewCell>
+                                <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10" BorderColor="#BDBDBD" IsClippedToBounds="True" >
+                                <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding nombre}" TextColor="#2E64FE" FontSize="16"></Label>
+                                    <Grid Margin="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Text="{Binding cliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                    FontAttributes="Bold"/>
+
+                                            <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                    FontAttributes="Bold"/>
+
+                                            <Label Text="{Binding fecha}"  Grid.Column="0" Grid.Row="2" FontAttributes="Bold"/>
+                                            <Label Text="{Binding nombretecnico}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
+                                            <Label Text="{Binding estado}"  Grid.Column="2" Grid.Row="2" TextColor="Red"  HorizontalTextAlignment="Center" />
+
+
+                                        </Grid>
+
+                                </StackLayout>
+
+                                 </Frame> 
+                            </ViewCell>
+
+
+                        </DataTemplate>
+
+
+                    </ListView.ItemTemplate>
+
+
+
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

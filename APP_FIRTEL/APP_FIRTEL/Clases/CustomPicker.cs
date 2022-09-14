@@ -16,14 +16,14 @@ namespace APP_FIRTEL.Clases
 			set { SetValue(ImageProperty, value); }
 		}
 
-		public static readonly BindableProperty ItemFontFamilyProperty =
-				BindableProperty.Create("ItemFontFamily", typeof(string), typeof(CustomPicker), defaultBindingMode: BindingMode.OneWay);
+		//public static readonly BindableProperty ItemFontFamilyProperty =
+		//		BindableProperty.Create("ItemFontFamily", typeof(string), typeof(CustomPicker), defaultBindingMode: BindingMode.OneWay);
 
-		public string ItemFontFamily
-		{
-			get { return (string)GetValue(ItemFontFamilyProperty); }
-			set { SetValue(ItemFontFamilyProperty, value); }
-		}
+		//public string ItemFontFamily
+		//{
+		//	get { return (string)GetValue(ItemFontFamilyProperty); }
+		//	set { SetValue(ItemFontFamilyProperty, value); }
+		//}
 
 		public static readonly BindableProperty ItemColorProperty =
 				BindableProperty.Create("ItemColor", typeof(string), typeof(CustomPicker), defaultBindingMode: BindingMode.OneWay);

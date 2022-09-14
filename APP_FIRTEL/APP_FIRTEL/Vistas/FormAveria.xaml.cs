@@ -21,7 +21,6 @@ namespace APP_FIRTEL.Vistas
 			lista.Add("Pendiente");
 			lista.Add("Realizado");
 			lista.Add("Ingresado");
-			lista.Add("Ingresadodd");
 
 			defecto = "Pendiente";
 			BindingContext = this;

@@ -67,8 +67,7 @@ namespace APP_FIRTEL.Droid
                 : (e.OldElement != null) ? (CustomPicker)e.OldElement
                 : new CustomPicker();
 
-            itemFont = !string.IsNullOrWhiteSpace(customPicker.ItemFontFamily)
-                ? customPicker.ItemFontFamily : "Pacifico";
+         
 
             itemColor = !string.IsNullOrWhiteSpace(customPicker.ItemColor)
                 ? customPicker.ItemColor : "#000000";
@@ -134,7 +133,7 @@ namespace APP_FIRTEL.Droid
                 dialog.Hide();
             };
 
-            if (model.ItemsSource.Count > 3)
+            if (model.ItemsSource.Count > 2)
             {
                 var height = Xamarin.Forms.Application.Current.MainPage.Height;
                 var width = Xamarin.Forms.Application.Current.MainPage.Width;

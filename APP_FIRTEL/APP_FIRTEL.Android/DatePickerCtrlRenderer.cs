@@ -22,7 +22,7 @@ namespace APP_FIRTEL.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<DatePicker> e)
         {
             base.OnElementChanged(e);
-            this.Control.SetTextColor(Android.Graphics.Color.Rgb(83, 63, 149));
+            this.Control.SetTextColor(Android.Graphics.Color.Rgb(0,0,0));
             this.Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
             this.Control.SetPadding(20, 0, 0, 0);
 

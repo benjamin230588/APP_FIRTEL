@@ -39,9 +39,14 @@ namespace APP_FIRTEL.Vistas
 
         }
 
-        private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void listaaveriacol_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Navigation.PushAsync(new FormAveria());
         }
+
+        //private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    Navigation.PushAsync(new FormAveria());
+        //}
     }
 }

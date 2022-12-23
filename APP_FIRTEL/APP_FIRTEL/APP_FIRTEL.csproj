@@ -11,12 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Modelos\**" />
+    <EmbeddedResource Remove="Modelos\**" />
+    <None Remove="Modelos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="RestSharp" Version="106.6.7" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modelos\" />
+    <ProjectReference Include="..\..\..\..\..\Javascript\Web_Firtel\Utilitarios_Firtel\Utilitarios_Firtel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

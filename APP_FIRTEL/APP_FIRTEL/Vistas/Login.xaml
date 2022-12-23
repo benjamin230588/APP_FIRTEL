@@ -5,14 +5,13 @@
              BackgroundColor="#FAFAFA"
              Title="Login"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
-             x:Class="APP_FIRTEL.Vistas.Login">
-    <ContentPage.Content>
+             x:Class="APP_FIRTEL.Vistas.Login"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
         <StackLayout Margin="10,0,10,0">
             
             <Image Source="userlogin.png" Margin="0"></Image>
-           
 
-  
              
             <StackLayout HeightRequest="15"></StackLayout>
 
@@ -23,9 +22,10 @@
                                 HorizontalTextAlignment="Center"
                                 FontSize="17"
                                 HeightRequest="40"
-                                Placeholder="Ingrese usuario "
+                                Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
+                                x:Name="txtusuario"
                     
                     />
             <StackLayout HeightRequest="1"></StackLayout>
@@ -37,6 +37,8 @@
                                 FontSize="17"
                                 HeightRequest="40"
                                 Placeholder="Ingrese Pasword"
+                                IsPassword="True"
+                                x:Name="txtpasword"
                                 PlaceholderColor="Gray"
                                TextColor="Black" 
                 BorderWidth="2"
@@ -45,14 +47,22 @@
             <StackLayout HeightRequest="20"></StackLayout>
 
            
-            <Button HeightRequest="55" Text="Login"  Background="#DF0101"  x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" TextColor="White"/>
-
-               
+            <Button HeightRequest="55" Text="INGRESAR AL SISTEMA"  Background="#DF0101"  x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" TextColor="White"/>
 
 
-          
+           
+
+
 
 
         </StackLayout>
-    </ContentPage.Content>
+
+        <Grid   BindingContext="{Binding ousuarioCLS}" BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicadormetodo}">
+            <ActivityIndicator
+               HorizontalOptions="Center"
+                IsRunning="{Binding flgindicadormetodo}"
+                Color="#904355"
+                />
+        </Grid>
+    </Grid>
 </ContentPage>

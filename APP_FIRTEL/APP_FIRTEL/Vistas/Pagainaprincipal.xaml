@@ -3,7 +3,8 @@
                xmlns:pagina="clr-namespace:APP_FIRTEL.Vistas"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Pagainaprincipal"
-                   Title="Sistemas">
+                   Title="Sistemas"
+                   NavigationPage.HasNavigationBar="False">
 
     <MasterDetailPage.Master>
         <pagina:Menu></pagina:Menu>

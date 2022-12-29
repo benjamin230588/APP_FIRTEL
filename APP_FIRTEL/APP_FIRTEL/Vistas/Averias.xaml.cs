@@ -44,6 +44,11 @@ namespace APP_FIRTEL.Vistas
             Navigation.PushAsync(new FormAveria());
         }
 
+        private void btnfiltro_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FiltrosAveria());
+        }
+
         //private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         //{
         //    Navigation.PushAsync(new FormAveria());

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.Cliente"
+                Title="Clientes">
+    <ContentPage.Content>
+
+        <StackLayout>
+           
+            <SearchBar Placeholder="ingrese cliente" x:Name="searchcliente"
+                       SearchButtonPressed="searchcliente_SearchButtonPressed" />
+           
+            <ScrollView>
+                <ListView  ItemsSource="{Binding oEntityCLS.listaCategoria }"                                              
+                  x:Name="lstCategoria12" 
+                  HasUnevenRows="True" Margin="5" ItemAppearing="lstCategoria12_ItemAppearing" >
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ViewCell>
+
+
+                                <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="7" BorderColor="#848484" IsClippedToBounds="True" >
+                                    <StackLayout Orientation="Vertical">
+                                        <Label  TextColor="#2E64FE" FontSize="16">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} {1}">
+                                                    <Binding Path="nombre"/>
+                                                    <Binding Path="apellido"/>
+                                                </MultiBinding>
+                                            </Label.Text>
+
+                                        </Label>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="*"/>
+
+
+
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+
+                                            </Grid.RowDefinitions>
+
+
+                                            <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                FontAttributes="Bold"/>
+
+                                            <Label Text="{Binding Zona}"  Grid.Column="0" Grid.Row="1"   FontAttributes="Bold"   HorizontalTextAlignment="Start" />
+                                            <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="1" FontAttributes="Bold"  HorizontalTextAlignment="Start"/>
+
+                                        </Grid>
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </ViewCell>
+
+
+                        </DataTemplate>
+
+
+                    </ListView.ItemTemplate>
+
+
+
+                </ListView>
+
+
+
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

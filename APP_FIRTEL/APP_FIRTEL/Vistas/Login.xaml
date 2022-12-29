@@ -25,6 +25,7 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
+                                Text="{Binding name}"
                                 x:Name="txtusuario"
                     
                     />
@@ -40,6 +41,7 @@
                                 IsPassword="True"
                                 x:Name="txtpasword"
                                 PlaceholderColor="Gray"
+                                Text="adminfirtel"
                                TextColor="Black" 
                 BorderWidth="2"
                      />
@@ -49,18 +51,14 @@
            
             <Button HeightRequest="55" Text="INGRESAR AL SISTEMA"  Background="#DF0101"  x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" TextColor="White"/>
 
-
-           
-
-
-
+            <Button HeightRequest="55" Text="SISTEMA"  Background="green"  x:Name="btnIngresarsalida" Clicked="btnIngresarsalida_Clicked" CornerRadius="15" TextColor="White"/>
 
         </StackLayout>
 
-        <Grid   BindingContext="{Binding ousuarioCLS}" BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicadormetodo}">
+        <Grid   BindingContext="{Binding oEntityLogin}" BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
             <ActivityIndicator
                HorizontalOptions="Center"
-                IsRunning="{Binding flgindicadormetodo}"
+                IsRunning="{Binding flgindicador}"
                 Color="#904355"
                 />
         </Grid>

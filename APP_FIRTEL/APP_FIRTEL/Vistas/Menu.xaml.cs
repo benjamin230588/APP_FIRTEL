@@ -20,7 +20,7 @@ namespace APP_FIRTEL.Vistas
             listamenu = new List<MenuCLS>();
             listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
             listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
-            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Consulta" });
+            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });
             listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
             BindingContext = this;
         }
@@ -34,8 +34,8 @@ namespace APP_FIRTEL.Vistas
                     App.Navigate.PushAsync(new Averias()); break;
                 case "Instalaciones":
                     App.Navigate.PushAsync(new Averias()); break;
-                case "Consulta":
-                    App.Navigate.PushAsync(new Averias()); break;
+                case "Clientes":
+                    App.Navigate.PushAsync(new Cliente()); break;
                 case "Salir":
                     App.Current.MainPage = new NavigationPage(new Login()); ; break;
             }

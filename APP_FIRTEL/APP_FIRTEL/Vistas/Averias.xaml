@@ -5,9 +5,12 @@
              Title="Averias">
     
     <ContentPage.Content>
-        <StackLayout>
-           
-            <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
 
                 <CollectionView Margin="5" ItemsSource="{Binding listaCategoria }" x:Name="listaaveriacol" SelectionMode="Single" SelectionChanged="listaaveriacol_SelectionChanged">
                     <CollectionView.ItemsLayout>
@@ -53,7 +56,12 @@
 
 
             </ScrollView>
-        </StackLayout>
+            <Button Grid.Row="0" Text="Filtrar" BorderColor="#2b3c3c" BorderWidth="0" FontAttributes="Bold" 
+                    BackgroundColor="#FFC733" BorderRadius="70"
+                    TextColor="Black" HorizontalOptions="End" WidthRequest="90" 
+                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro" Clicked="btnfiltro_Clicked"/>
+
+        </Grid>
 
     </ContentPage.Content>
 </ContentPage>

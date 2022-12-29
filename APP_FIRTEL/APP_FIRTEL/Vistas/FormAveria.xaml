@@ -4,14 +4,12 @@
             
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
-              xmlns:vm="clr-namespace:APP_FIRTEL.ViewModels"
+            
               
               x:Class="APP_FIRTEL.Vistas.FormAveria"
              Title="Editar Averia"
              >
-    <ContentPage.BindingContext>
-        <vm:MonkeyViewModel/>
-    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>

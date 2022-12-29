@@ -1,4 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.ViewModels;
+using MiPrimeraAplicacionEnXamarinForm.Generic;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -17,11 +19,11 @@ namespace APP_FIRTEL.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        public LoginCLS ousuarioCLS { get; set; } = new LoginCLS();
+        public LoginModel oEntityLogin { get; set; } = new LoginModel();
         public Login()
         {
             InitializeComponent();
-            ousuarioCLS.flgindicadormetodo = false;
+            oEntityLogin.flgindicador = false;
             BindingContext = this;
             //((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Orange;
 
@@ -36,71 +38,35 @@ namespace APP_FIRTEL.Vistas
                 Acceso model = new Acceso();
                 model.usuario = txtusuario.Text;
                 model.pasword = txtpasword.Text;
-                ousuarioCLS.flgindicadormetodo = true;
-                res = await Post<Acceso>(Constantes.urllogin ,model);
+                oEntityLogin.flgindicador = true;
+                res = await GenericLH.Post<Acceso>(Constantes.urllogin ,model);
                 if (res.result == 1)
                 {
                     Application.Current.MainPage = new Pagainaprincipal();
                 }
                 else
                 {
-                    DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
+                    await DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
 
                 }
 
-                ousuarioCLS.flgindicadormetodo = false;
+                oEntityLogin.flgindicador = false;
             }
             catch (Exception ex)
             {
-                ousuarioCLS.flgindicadormetodo = false;
+                oEntityLogin.flgindicador = false;
+                await DisplayAlert("Error", "Error Producido", "Cancelar");
             }
                
-            //var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_login, Method.POST, null, model);
-            //if (restResponse.StatusCode == HttpStatusCode.OK)
-            //{
-
-            //    res = JsonConvert.DeserializeObject<Reply>(restResponse.Content);
-            //    if (res.result == 1)
-            //    {
-            //        Application.Current.MainPage = new Pagainaprincipal();
-            //    }
-            //    else
-            //    {
-            //        DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
-
-            //    }
-
-            //}
-            //else
-            //{
-            //    response.success = false;
-            //    response.error = "usuario no encontrado";
-
-            //}
-
-
-            //return Json(response);
+           
 
 
 
 
         }
 
-        public  async Task<Reply> Post<T>(string url, T obj)
+        private void btnIngresarsalida_Clicked(object sender, EventArgs e)
         {
-            HttpClient cliente = new HttpClient();
-            var cadena = JsonConvert.SerializeObject(obj);
-            var body = new StringContent(cadena, Encoding.UTF8, "application/json");
-            var response = await cliente.PostAsync(url, body);
-            if (!response.IsSuccessStatusCode) return new Reply { result = 0 };
-            else
-            {
-                //int respuesta = int.Parse(await response.Content.ReadAsStringAsync());
-                var result = await response.Content.ReadAsStringAsync();
-                Reply res = JsonConvert.DeserializeObject<Reply>(result);
-                return res;
-            }
-
 
         }
     }

@@ -14,7 +14,7 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Login());
+            MainPage = new NavigationPage(new Paginainicio());
         }
 
         protected override void OnStart()

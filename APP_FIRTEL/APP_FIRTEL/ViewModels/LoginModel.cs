@@ -1,20 +1,22 @@
 ﻿using MiPrimeraAplicacionEnXamarinForm.Generic;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace APP_FIRTEL.ViewModels
 {
-    public class LoginModel : BaseBinding
+    public class LoginModel : INotifyPropertyChanged
     {
         private bool _flgindicador;
         private string nombre1;
 
-        public bool flgindicador
-        {
-            get { return _flgindicador; }
-            set { SetValue(ref _flgindicador, value); }
-        }
+        //public bool flgindicador
+        //{
+        //    get { return _flgindicador; }
+        //    set { SetValue(ref _flgindicador, value); }
+        //}
 
         public int idaveria { get; set; }
         public string nombre
@@ -23,7 +25,14 @@ namespace APP_FIRTEL.ViewModels
             set
             {
                 nombre1 = value;
+                OnPropertyChanged();
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

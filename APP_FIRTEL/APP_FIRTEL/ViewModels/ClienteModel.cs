@@ -7,35 +7,35 @@ using Utilitarios_Firtel.viewmodel;
 
 namespace APP_FIRTEL.ViewModels
 {
-    public class ClienteModel : INotifyPropertyChanged
+    public class ClienteModel : BaseBinding
     {
 
-        //private List<EClientes> _listaCategoria;
-        ////public ClienteModel oEntityCLS { get; set; }
-
-        //public List<EClientes> listaCategoria
-        //{
-        //	get { return _listaCategoria; }
-        //	set { SetValue(ref _listaCategoria, value); }
-        //}
-
-
         private List<EClientes> _listaCategoria;
+        //public ClienteModel oEntityCLS { get; set; }
+
         public List<EClientes> listaCategoria
         {
-            get { return _listaCategoria ?? _listaCategoria == new List<EClientes>; }
-            set
-            {
-                if (_listaCategoria != value)
-                {
-                    _listaCategoria = value;
-                    //SetPropertyChanged();
-                    //this._IsLoading = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.listaCategoria)));
-                }
-            }
+            get { return _listaCategoria; }
+            set { SetValue(ref _listaCategoria, value); }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+
+        //private List<EClientes> _listaCategoria;
+        //public List<EClientes> listaCategoria
+        //{
+        //    get { return _listaCategoria ?? _listaCategoria == new List<EClientes>; }
+        //    set
+        //    {
+        //        if (_listaCategoria != value)
+        //        {
+        //            _listaCategoria = value;
+        //            //SetPropertyChanged();
+        //            //this._IsLoading = value;
+        //            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.listaCategoria)));
+        //        }
+        //    }
+        //}
+
+        //public event PropertyChangedEventHandler PropertyChanged;
     }
 }

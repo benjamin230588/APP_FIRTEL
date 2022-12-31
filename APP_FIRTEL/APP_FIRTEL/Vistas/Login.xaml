@@ -25,7 +25,7 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                Text="{Binding name}"
+                                Text="{Binding nombre}"
                                 x:Name="txtusuario"
                     
                     />
@@ -55,12 +55,6 @@
 
         </StackLayout>
 
-        <Grid   BindingContext="{Binding oEntityLogin}" BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
-            <ActivityIndicator
-               HorizontalOptions="Center"
-                IsRunning="{Binding flgindicador}"
-                Color="#904355"
-                />
-        </Grid>
+       
     </Grid>
 </ContentPage>

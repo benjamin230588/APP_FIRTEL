@@ -7,32 +7,39 @@ using System.Text;
 
 namespace APP_FIRTEL.ViewModels
 {
-    public class LoginModel : INotifyPropertyChanged
+    public class LoginModel : BaseBinding
     {
-        private bool _flgindicador;
-        private string nombre1;
+        //private bool _flgindicador;
+        //private string nombre1;
 
         //public bool flgindicador
         //{
         //    get { return _flgindicador; }
         //    set { SetValue(ref _flgindicador, value); }
         //}
+        private bool _flgindicador;
+        private string nombre1;
 
-        public int idaveria { get; set; }
-        public string nombre
+        public bool flgindicador
         {
-            get => nombre1; 
-            set
-            {
-                nombre1 = value;
-                OnPropertyChanged();
-            }
+            get { return _flgindicador; }
+            set { SetValue(ref _flgindicador, value); }
         }
+        //public int idaveria { get; set; }
+        //public string nombre
+        //{
+        //    get => nombre1; 
+        //    set
+        //    {
+        //        nombre1 = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected virtual void OnPropertyChanged([CallerMemberName] string name = null)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        //}
     }
 }

@@ -23,9 +23,9 @@ namespace APP_FIRTEL.Vistas
         public Login()
         {
             InitializeComponent();
-            //oEntityLogin.flgindicador = false;
-             oEntityLogin = new LoginModel();
-            BindingContext = oEntityLogin;
+            oEntityLogin.flgindicador = false;
+             //oEntityLogin = new LoginModel();
+            BindingContext = this;
             //((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Orange;
 
         }
@@ -39,7 +39,7 @@ namespace APP_FIRTEL.Vistas
                 Acceso model = new Acceso();
                 model.usuario = txtusuario.Text;
                 model.pasword = txtpasword.Text;
-                //oEntityLogin.flgindicador = true;
+                oEntityLogin.flgindicador = true;
                 res = await GenericLH.Post<Acceso>(Constantes.urllogin ,model);
                 if (res.result == 1)
                 {
@@ -51,11 +51,11 @@ namespace APP_FIRTEL.Vistas
 
                 }
 
-                //oEntityLogin.flgindicador = false;
+                oEntityLogin.flgindicador = false;
             }
             catch (Exception ex)
             {
-                //oEntityLogin.flgindicador = false;
+                oEntityLogin.flgindicador = false;
                 await DisplayAlert("Error", "Error Producido", "Cancelar");
             }
                
@@ -66,13 +66,6 @@ namespace APP_FIRTEL.Vistas
 
         }
 
-        private void btnIngresarsalida_Clicked(object sender, EventArgs e)
-        {
-            //oEntityLogin.nombre = "benjamin";
-            oEntityLogin = new LoginModel()
-            {
-                nombre = "ricardo"
-            };
-        }
+        
     }
 }

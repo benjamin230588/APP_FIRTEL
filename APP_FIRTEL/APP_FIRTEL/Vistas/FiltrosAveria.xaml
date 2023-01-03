@@ -26,13 +26,13 @@
                     
                     />
                     <custom:DatePickerCtrl  Grid.Column="0"  Grid.Row="1" x:Name="datePicker"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="80"
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="50"
                                 MinimumDate="01/01/1950"/>
 
 
                     
                     <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="50"
                                 MinimumDate="01/01/1950"/>
 
 

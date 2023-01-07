@@ -7,7 +7,7 @@
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
              x:Class="APP_FIRTEL.Vistas.Login"
              NavigationPage.HasNavigationBar="False">
-    <Grid>
+    <Grid BindingContext="{Binding oEntityLogin}">
         <StackLayout Margin="10,0,10,0">
             
             <Image Source="userlogin.png" Margin="0"></Image>
@@ -25,7 +25,7 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                 Text="admin"
+                                 Text="{Binding usuario}"
                                 x:Name="txtusuario"
                     
                     />
@@ -41,7 +41,7 @@
                                 IsPassword="True"
                                 x:Name="txtpasword"
                                 PlaceholderColor="Gray"
-                                Text="adminfirtel"
+                                Text="{Binding pasword}"
                                TextColor="Black" 
                 BorderWidth="2"
                      />
@@ -53,7 +53,7 @@
 
          
         </StackLayout>
-        <Grid   BindingContext="{Binding oEntityLogin}" BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
+        <Grid    BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
             <ActivityIndicator
                HorizontalOptions="Center"
                 IsRunning="{Binding flgindicador}"

@@ -18,28 +18,25 @@ namespace APP_FIRTEL.ViewModels
         //    set { SetValue(ref _flgindicador, value); }
         //}
         private bool _flgindicador;
-        private string nombre1;
+        private string _usuario;
+        private string _pasword;
 
         public bool flgindicador
         {
             get { return _flgindicador; }
             set { SetValue(ref _flgindicador, value); }
         }
-        //public int idaveria { get; set; }
-        //public string nombre
-        //{
-        //    get => nombre1; 
-        //    set
-        //    {
-        //        nombre1 = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
 
-        //public event PropertyChangedEventHandler PropertyChanged;
-        //protected virtual void OnPropertyChanged([CallerMemberName] string name = null)
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        //}
+        public string usuario
+        {
+            get { return _usuario; }
+            set { SetValue(ref _usuario, value); }
+        }
+        public string pasword
+        {
+            get { return _pasword; }
+            set { SetValue(ref _pasword, value); }
+        }
+
     }
 }

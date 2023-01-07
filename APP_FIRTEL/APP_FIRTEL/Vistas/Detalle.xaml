@@ -5,10 +5,78 @@
              Title="Firtel"
             >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="pagina detalle"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+        <StackLayout BackgroundColor="White">
+            <CarouselView ItemsSource="{Binding listah}"
+                      IndicatorView="CarouselViewIndicator"
+                      PeekAreaInsets="40">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" 
+                                   SnapPointsAlignment="Center" SnapPointsType="Mandatory"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="10"
+                               HorizontalOptions="Center"
+                               >
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       HorizontalOptions="Center"
+                                        />
+                                    <BoxView Color="White"
+                                         HeightRequest="4"
+                                         HorizontalOptions="FillAndExpand"/>
+
+                                    <StackLayout>
+                                        <Image Source="{Binding Photo}"
+                                       HorizontalOptions="CenterAndExpand" HeightRequest="250"
+                                       VerticalOptions="FillAndExpand" Aspect="AspectFill"
+                                           
+                                       />
+
+                                    </StackLayout>
+                                    <BoxView Color="White"
+                                         HeightRequest="4"
+                                         HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="{Binding AlterEgo}"
+                                       FontSize="Medium"
+                                       HorizontalOptions="Center" />
+
+                                    <BoxView Color="DarkGray"
+                                         HeightRequest="1"
+                                         HorizontalOptions="FillAndExpand"/>
+
+
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView x:Name="CarouselViewIndicator" 
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="DarkGray"
+                       HorizontalOptions="Center" 
+                       Margin="0,20"/>
+
+
+
         </StackLayout>
     </ContentPage.Content>
+
+    <!-- 
+        <StackLayout BackgroundColor="White">
+            <Button Text="dale"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Red"></Button>
+            <Button Text="otro"></Button>
+        </StackLayout>
+    -->
+
 </ContentPage>

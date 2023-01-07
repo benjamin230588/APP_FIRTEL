@@ -37,8 +37,8 @@ namespace APP_FIRTEL.Vistas
             {
                 Reply res;
                 Acceso model = new Acceso();
-                model.usuario = txtusuario.Text;
-                model.pasword = txtpasword.Text;
+                model.usuario = oEntityLogin.usuario;
+                model.pasword = oEntityLogin.pasword;
                 oEntityLogin.flgindicador = true;
                 res = await GenericLH.Post<Acceso>(Constantes.urllogin ,model);
                 if (res.result == 1)
@@ -56,7 +56,7 @@ namespace APP_FIRTEL.Vistas
             catch (Exception ex)
             {
                 oEntityLogin.flgindicador = false;
-                await DisplayAlert("Error", "Error Producido", "Cancelar");
+                await DisplayAlert("Error", ex.Message , "Cancelar");
             }
                
            

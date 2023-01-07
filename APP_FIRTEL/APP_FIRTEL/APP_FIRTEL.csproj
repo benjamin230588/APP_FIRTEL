@@ -65,4 +65,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Datos\" />
+    <Folder Include="Conexion\" />
+  </ItemGroup>
 </Project>

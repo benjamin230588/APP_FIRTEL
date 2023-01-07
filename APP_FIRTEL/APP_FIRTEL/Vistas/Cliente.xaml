@@ -9,7 +9,8 @@
            
             <SearchBar Placeholder="ingrese cliente" x:Name="searchcliente"
                        SearchButtonPressed="searchcliente_SearchButtonPressed" />
-           
+            
+
             <ScrollView>
                 <ListView  ItemsSource="{Binding oEntityCLS.listaCategoria }"                                              
                   x:Name="lstCategoria12" 

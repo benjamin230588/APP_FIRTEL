@@ -18,7 +18,8 @@ namespace APP_FIRTEL.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Cliente : ContentPage
     {
-        public List<EClientes> listaclienteslst { get; set; }
+		// listar grabar y detalle
+        public List<ECliente> listaclienteslst { get; set; }
 		public ClienteModel oEntityCLS { get; set; }
 		private int cantidad;
 		private int skip;
@@ -26,13 +27,13 @@ namespace APP_FIRTEL.Vistas
 		private int buscador = 1;
 
 
-		private List<EClientes> lista= new List<EClientes>();
+		private List<ECliente> lista= new List<ECliente>();
 		public Cliente()
         {
             InitializeComponent();
 			oEntityCLS = new ClienteModel();
 			//ObservableCollection
-			oEntityCLS.listaCategoria = new List<EClientes>();
+			oEntityCLS.listaCategoria = new List<ECliente>();
 			//listaclienteslst = new List<EClientes>();
 			//oEntityCLS.listaCategoria.Add(new EClientes { idcliente = 1, nombre = "benjamin Josue", apellido = "huaman soto ",direccion="las lomas de lima peru" ,codigocliente="bhdkkkdf",telefono="22334444",docdni="43e4444" });
 		
@@ -142,7 +143,7 @@ namespace APP_FIRTEL.Vistas
 
         private  void lstCategoria12_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
-            var item = (EClientes)e.Item;
+            var item = (ECliente)e.Item;
 			var ultimo = lista.Last();
 
             if (buscador==1)

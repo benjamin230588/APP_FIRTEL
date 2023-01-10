@@ -25,7 +25,7 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                 Text="{Binding usuario}"
+                                 Text="admin"
                                 x:Name="txtusuario"
                     
                     />
@@ -41,7 +41,7 @@
                                 IsPassword="True"
                                 x:Name="txtpasword"
                                 PlaceholderColor="Gray"
-                                Text="{Binding pasword}"
+                                Text="adminfirtel"
                                TextColor="Black" 
                 BorderWidth="2"
                      />

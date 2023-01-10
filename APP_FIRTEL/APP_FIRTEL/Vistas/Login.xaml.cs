@@ -37,8 +37,8 @@ namespace APP_FIRTEL.Vistas
             {
                 Reply res;
                 Acceso model = new Acceso();
-                model.usuario = oEntityLogin.usuario;
-                model.pasword = oEntityLogin.pasword;
+                model.usuario = txtusuario.Text;
+                model.pasword = txtpasword.Text;
                 oEntityLogin.flgindicador = true;
                 res = await GenericLH.Post<Acceso>(Constantes.urllogin ,model);
                 if (res.result == 1)

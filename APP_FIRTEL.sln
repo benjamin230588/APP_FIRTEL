@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP_FIRTEL.iOS", "APP_FIRTE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APP_FIRTEL", "APP_FIRTEL\APP_FIRTEL\APP_FIRTEL.csproj", "{FB203460-9D59-4316-A216-B5912125E14A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios_Firtel", "..\..\..\Javascript\Web_Firtel\Utilitarios_Firtel\Utilitarios_Firtel.csproj", "{ED025EC3-A95C-4571-B5B8-E1FE5AFDD11B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios_Firtel", "..\..\..\Michel_Web\Web_Firtel\Utilitarios_Firtel\Utilitarios_Firtel.csproj", "{ED025EC3-A95C-4571-B5B8-E1FE5AFDD11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

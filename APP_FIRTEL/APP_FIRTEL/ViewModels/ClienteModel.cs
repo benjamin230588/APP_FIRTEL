@@ -10,10 +10,10 @@ namespace APP_FIRTEL.ViewModels
     public class ClienteModel : BaseBinding
     {
 
-        private List<EClientes> _listaCategoria;
+        private List<ECliente> _listaCategoria;
         //public ClienteModel oEntityCLS { get; set; }
 
-        public List<EClientes> listaCategoria
+        public List<ECliente> listaCategoria
         {
             get { return _listaCategoria; }
             set { SetValue(ref _listaCategoria, value); }

@@ -40,16 +40,20 @@
 
                 </Grid>
                 <StackLayout HeightRequest="3"></StackLayout>
-                <custom:CustomPicker
-                                         Image="ic_arrow_drop_down"
-                                        Title="Seleccione Estado"
-                                   TitleColor="Green"
-                                
-                                   FontSize="16"
-                                   
-                                   ItemColor="#000000">
-
-                </custom:CustomPicker>
+                <custom:CustomEntry
+                                CornerRadius="10"
+                                IsCurvedCornersEnabled="true"
+                                BorderColor="Black"
+                                HorizontalTextAlignment="Center"
+                                FontSize="17"
+                                HeightRequest="40"
+                                Placeholder="Ingrese usuario"
+                                PlaceholderColor="Gray"
+                                TextColor="Black" 
+                                Text=""
+                                x:Name="txtusuario11"
+                    
+                    />
                 <StackLayout HeightRequest="3"></StackLayout>
                 <custom:CustomEntry
                                 CornerRadius="10"
@@ -61,7 +65,7 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                Text="admin"
+                                Text=""
                                 x:Name="txtusuario"
                     
                     />

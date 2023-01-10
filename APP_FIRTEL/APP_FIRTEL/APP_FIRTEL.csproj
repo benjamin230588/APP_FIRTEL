@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Javascript\Web_Firtel\Utilitarios_Firtel\Utilitarios_Firtel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Vistas\Averias.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -41,6 +37,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\FormAveria.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\ListaInstalacion.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Login.xaml">
@@ -69,5 +68,11 @@
   <ItemGroup>
     <Folder Include="Datos\" />
     <Folder Include="Conexion\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Utilitarios_Firtel">
+      <HintPath>..\..\..\..\..\Michel_Web\Web_Firtel\Utilitarios_Firtel\bin\Debug\Utilitarios_Firtel.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

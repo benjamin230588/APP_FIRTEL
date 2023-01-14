@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Averias"
-             Title="Averias">
-    
+             Title="Averias" >
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
+            
             <ScrollView Grid.Row="0">
 
                 <CollectionView Margin="5" ItemsSource="{Binding listaCategoria }" x:Name="listaaveriacol" SelectionMode="Single" SelectionChanged="listaaveriacol_SelectionChanged">

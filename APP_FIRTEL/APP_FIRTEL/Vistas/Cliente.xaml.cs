@@ -59,7 +59,7 @@ namespace APP_FIRTEL.Vistas
 
 			Reply res;
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = 0 };
-			PaginacionCliente objres = new PaginacionCliente();
+			ResultadoPaginacion objres = new ResultadoPaginacion();
 			//PaginacionCliente objres = new PaginacionCliente();
 			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
 			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
@@ -67,7 +67,7 @@ namespace APP_FIRTEL.Vistas
 			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<PaginacionCliente>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
 
 			}
 			//List<CategoriaCLS> l =
@@ -76,7 +76,7 @@ namespace APP_FIRTEL.Vistas
 
 			oEntityCLS.listaCategoria = objres.lista;
 			lista.AddRange(oEntityCLS.listaCategoria);
-			cantidad = objres.registro;
+			cantidad = objres.cantidadregistro;
 
 			//oEntityCLS.listaCategoria = l;
 			//lista = oEntityCLS.listaCategoria;
@@ -104,7 +104,7 @@ namespace APP_FIRTEL.Vistas
 			//	final = paginacion + 1;
 			//         }
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = prueba * 30 , nombre= texto };
-			PaginacionCliente objres = new PaginacionCliente();
+			ResultadoPaginacion objres = new ResultadoPaginacion();
 			//PaginacionCliente objres = new PaginacionCliente();
 			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
 			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
@@ -112,7 +112,7 @@ namespace APP_FIRTEL.Vistas
 			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<PaginacionCliente>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
 
 			}
 			//List<CategoriaCLS> l =
@@ -177,7 +177,7 @@ namespace APP_FIRTEL.Vistas
 			//	final = paginacion + 1;
    //         }
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = prueba*30};
-			PaginacionCliente objres = new PaginacionCliente();
+			ResultadoPaginacion objres = new ResultadoPaginacion();
 			//PaginacionCliente objres = new PaginacionCliente();
 			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
 			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
@@ -185,7 +185,7 @@ namespace APP_FIRTEL.Vistas
 			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<PaginacionCliente>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
 
 			}
             //List<CategoriaCLS> l =

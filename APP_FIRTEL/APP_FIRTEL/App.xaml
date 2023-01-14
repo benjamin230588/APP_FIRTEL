@@ -7,6 +7,11 @@
             <OnPlatform x:TypeArguments="x:String" x:Key="Pacifico">
                 <On Platform="Android" Value="Pacifico-Regular.ttf#Pacifico-Regular"/>
             </OnPlatform>
+            <Style x:Key="btnloginfi23" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="TextColor" Value="White" />
+
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

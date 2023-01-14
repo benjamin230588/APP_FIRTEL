@@ -6,19 +6,42 @@
              Title="Login"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
              x:Class="APP_FIRTEL.Vistas.Login"
-             NavigationPage.HasNavigationBar="False">
-    <Grid BindingContext="{Binding oEntityLogin}">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btnloginicio1" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="TextColor" Value="White" />
+
+            </Style>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    <Grid BindingContext="{Binding oEntityLogin}" BackgroundColor="Orange">
+        <!--#region degradado -->
+        <degradado:PancakeView BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0">
+            <degradado:PancakeView.BackgroundGradientStops>
+                <degradado:GradientStopCollection>
+                    <degradado:GradientStop Color="#0040FF" Offset="0.9"/>
+                    <degradado:GradientStop Color="#0174DF" Offset="0.0"/>
+                  
+                </degradado:GradientStopCollection>
+            </degradado:PancakeView.BackgroundGradientStops>
+        </degradado:PancakeView>
+        <!--#endregion-->
         <StackLayout Margin="10,0,10,0">
             
             <Image Source="userlogin.png" Margin="0"></Image>
 
              
             <StackLayout HeightRequest="15"></StackLayout>
-
+            <Frame CornerRadius="10" Padding="0">
                 <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
-                                BorderColor="Black"
+                                BorderColor="#000000"
                                 HorizontalTextAlignment="Center"
                                 FontSize="17"
                                 HeightRequest="40"
@@ -26,11 +49,14 @@
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
                                  Text="admin"
-                                x:Name="txtusuario"
+                                x:Name="txtusuario" 
                     
                     />
+            </Frame>
+                
             <StackLayout HeightRequest="1"></StackLayout>
-            <custom:CustomEntry
+            <Frame CornerRadius="10" Padding="0">
+                <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
                                 BorderColor="#000000"
@@ -43,13 +69,15 @@
                                 PlaceholderColor="Gray"
                                 Text="adminfirtel"
                                TextColor="Black" 
-                BorderWidth="2"
+               
                      />
+            </Frame>
+               
 
             <StackLayout HeightRequest="20"></StackLayout>
 
-           
-            <Button HeightRequest="55" Text="INGRESAR AL SISTEMA"  Background="#DF0101"  x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" TextColor="White"/>
+
+            <Button HeightRequest="55" Text="INGRESAR AL SISTEMA" Style="{StaticResource btnloginicio1}"   x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" />
 
          
         </StackLayout>

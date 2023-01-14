@@ -47,7 +47,7 @@ namespace APP_FIRTEL.Droid
 
 
                     // set the background of the label
-                    //Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
+                    Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
                     Control.SetBackground(_gradientBackground);
                     
 

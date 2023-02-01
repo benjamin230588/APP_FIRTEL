@@ -12,7 +12,7 @@
             
             <ScrollView Grid.Row="0">
 
-                <CollectionView Margin="5" ItemsSource="{Binding listaCategoria }" x:Name="listaaveriacol" SelectionMode="Single" SelectionChanged="listaaveriacol_SelectionChanged">
+                <CollectionView Margin="5" ItemsSource="{Binding ListaAveria }" x:Name="listaaveriafirtel" SelectionMode="Single" >
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7"></GridItemsLayout>
                     </CollectionView.ItemsLayout>
@@ -21,7 +21,7 @@
 
                             <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10" BorderColor="#848484" IsClippedToBounds="True" >
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding nombre}" TextColor="#2E64FE" FontSize="16"></Label>
+                                    <Label Text="{Binding obsaveria}" TextColor="#2E64FE" FontSize="16"></Label>
                                     <Grid Margin="0">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
@@ -33,22 +33,32 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding cliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
-                                                FontAttributes="Bold"/>
+                                        
+                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                                FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="54255111" Grid.Column="2" Grid.Row="0"
+                                                FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" />
 
-                                        <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
-                                                FontAttributes="Bold"/>
+                                        <Label Text="{Binding direccioncliente}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                                FontSize="15" FontAttributes="Bold"/>
 
-                                        <Label Text="{Binding fecha}"  Grid.Column="0" Grid.Row="2" FontAttributes="Bold"/>
-                                        <Label Text="{Binding nombretecnico}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
-                                        <Label Text="{Binding estado}"  Grid.Column="2" Grid.Row="2" TextColor="Red"  HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding fecha_registrostring}"  Grid.Column="0" Grid.Row="2" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="2" FontSize="15" FontAttributes="Bold"/>
 
+                                        <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="2" FontSize="15" TextColor="Red"  HorizontalTextAlignment="Center" />
+
+                                        <Label Text="Plan_50Mbps+TV2"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" FontSize="15" FontAttributes="Bold"/>
+
+                                        <Label Text="#12345"  Grid.Column="2" Grid.Row="3" TextColor="Blue"  HorizontalTextAlignment="Center" />
 
                                     </Grid>
 
                                 </StackLayout>
-
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.Iradetallecommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -59,7 +69,7 @@
             <Button Grid.Row="0" Text="Filtrar" BorderColor="#2b3c3c" BorderWidth="0" FontAttributes="Bold" 
                     BackgroundColor="#FFC733" BorderRadius="70"
                     TextColor="Black" HorizontalOptions="End" WidthRequest="90" 
-                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro" Clicked="btnfiltro_Clicked"/>
+                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro"  Command="{Binding IraFiltrocommand}"/>
 
         </Grid>
 

@@ -40,7 +40,7 @@ namespace APP_FIRTEL.Vistas
                 model.usuario = txtusuario.Text;
                 model.pasword = txtpasword.Text;
                 oEntityLogin.flgindicador = true;
-                res = await GenericLH.Post<Acceso>(Constantes.urllogin ,model);
+                res = await GenericLH.Post<Acceso>(Constantes.url + Constantes.api_login ,model);
                 if (res.result == 1)
                 {
                     Application.Current.MainPage = new Pagainaprincipal();

@@ -25,9 +25,11 @@ namespace APP_FIRTEL.Vistas
             BindingContext = this;
         }
 
-        private void lstMenu_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        
+
+        private void lstMenu_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            MenuCLS omenuCLS = (MenuCLS)e.SelectedItem;
+            MenuCLS omenuCLS = (MenuCLS)e.Item;
             switch (omenuCLS.nombreitem)
             {
                 case "Averias":
@@ -40,7 +42,6 @@ namespace APP_FIRTEL.Vistas
                     App.Current.MainPage = new NavigationPage(new Login()); ; break;
             }
             App.MenuApp.IsPresented = false;
-
         }
     }
 }

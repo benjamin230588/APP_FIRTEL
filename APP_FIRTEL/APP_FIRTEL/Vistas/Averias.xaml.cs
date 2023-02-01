@@ -1,4 +1,5 @@
 ﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,37 +18,22 @@ namespace APP_FIRTEL.Vistas
         public Averias()
         {
             InitializeComponent();
-            listaCategoria = new List<AveriaCLS>();
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-            listaCategoria.Add(new AveriaCLS { idaveria = 1, nombre = "Averia corte de clave de red falta conexion del cliente", fecha = DateTime.Now.ToString("dd/MM/yyyy"), estado = "Pendiente", nombretecnico = "Rafael", cliente = "Mucha Soto Rafael (El Joven)", direccion = "Mercado Ciudad de DIos puerta 12 " });
-
+            
             //listaCategoria.Add(new AveriaCLS { idaveria = 2, nombre = "josue" });
-            BindingContext = this;
+            BindingContext = new AveriaModel(Navigation);
 
 
         }
 
-        private void listaaveriacol_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Navigation.PushAsync(new FormAveria());
-        }
+        //private void listaaveriacol_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    Navigation.PushAsync(new FormAveria());
+        //}
 
-        private void btnfiltro_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new FiltrosAveria());
-        }
+        //private void btnfiltro_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PushAsync(new FiltrosAveria());
+        //}
 
         //private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         //{

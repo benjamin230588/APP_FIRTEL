@@ -6,10 +6,10 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <SearchBar Placeholder="ingrese cliente" x:Name="searchcliente"
-                       SearchButtonPressed="searchcliente_SearchButtonPressed" />
+            <SearchBar Placeholder="ingrese cliente" x:Name="searchcliente"  
+                       SearchButtonPressed="searchcliente_SearchButtonPressed" TextChanged="searchcliente_TextChanged"  />
             <ScrollView>
-                <ListView  ItemsSource="{Binding oEntityCLS.listaCategoria }"                                              
+                <ListView                                              
                   x:Name="lstCategoria12" 
                   HasUnevenRows="True" Margin="5" ItemAppearing="lstCategoria12_ItemAppearing" >
                     <ListView.ItemTemplate>

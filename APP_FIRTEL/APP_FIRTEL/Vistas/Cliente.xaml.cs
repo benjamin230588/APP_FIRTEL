@@ -19,195 +19,127 @@ namespace APP_FIRTEL.Vistas
     public partial class Cliente : ContentPage
     {
 		// listar grabar y detalle
-        public List<ECliente> listaclienteslst { get; set; }
-		public ClienteModel oEntityCLS { get; set; }
+        //public List<ECliente> listaclienteslst { get; set; }
+		//public ClienteModel oEntityCLS { get; set; }
 		private int cantidad;
 		private int skip;
-		private int prueba=0;
+		private int skipcantidad = 0;
 		private int buscador = 1;
+		public string nombreproducto { get; set; }
 
 
 		private List<ECliente> lista= new List<ECliente>();
 		public Cliente()
         {
             InitializeComponent();
-			oEntityCLS = new ClienteModel();
-			//ObservableCollection
-			oEntityCLS.listaCategoria = new List<ECliente>();
-			//listaclienteslst = new List<EClientes>();
-			//oEntityCLS.listaCategoria.Add(new EClientes { idcliente = 1, nombre = "benjamin Josue", apellido = "huaman soto ",direccion="las lomas de lima peru" ,codigocliente="bhdkkkdf",telefono="22334444",docdni="43e4444" });
+			//BindingContext = this;
+			listarCategoriasinicio(0);
 		
-			BindingContext = this;
-			listarCategorias();
-			//lstCategoria234.RefreshCommand = new Command(() =>
-			//{
-
-			//	listarCategorias();
-			//});
-
-			//listaclienteslst.RefreshCommand = new Command(() =>
-			//{
-
-			//	listarCategorias();
-			//});
 		}
 
-		public async void listarCategorias()
+		public async void listarCategorias(int skipcantidad)
 		{
 			//Aparezca el loading
 			//var objeto = new { pagine = 0, skip = 10, nombre = "" };
 
 			Reply res;
-			Paginacion objeto = new Paginacion() { pagine = 30, skip = 0 };
-			ResultadoPaginacion objres = new ResultadoPaginacion();
-			//PaginacionCliente objres = new PaginacionCliente();
-			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
-			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
-			//oEntityCLS.IsLoading = true;
-			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
+			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
+			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+			
+			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
 
 			}
-			//List<CategoriaCLS> l =
-			//	await GenericLH.GetAll<CategoriaCLS>(obtenerURLGetCategoria);
-			/////En esta linea asigno nofoto-png a todas las filas
-
-			oEntityCLS.listaCategoria = objres.lista;
-			lista.AddRange(oEntityCLS.listaCategoria);
+		
+			lista.AddRange(objres.lista);
 			cantidad = objres.cantidadregistro;
-
-			//oEntityCLS.listaCategoria = l;
-			//lista = oEntityCLS.listaCategoria;
+			lstCategoria12.ItemsSource = null;
+			lstCategoria12.ItemsSource = lista;
+			
 
 
 
 		}
+		public async void listarCategoriasinicio(int skipcantidad)
+		{
+			//Aparezca el loading
+			//var objeto = new { pagine = 0, skip = 10, nombre = "" };
 
-        private async void searchcliente_SearchButtonPressed(object sender, EventArgs e)
+			Reply res;
+			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
+			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+
+			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
+			if (res.result == 1)
+			{
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
+
+			}
+
+			lista=objres.lista;
+			cantidad = objres.cantidadregistro;
+			lstCategoria12.ItemsSource = null;
+			lstCategoria12.ItemsSource = lista;
+
+
+
+
+		}
+		private async void searchcliente_SearchButtonPressed(object sender, EventArgs e)
         {
-			buscador = 0;
+			
 
 			SearchBar obj = sender as SearchBar;
-            string texto = obj.Text;
+			string texto = obj.Text;
 			Reply res;
-			prueba = 0;
-			//int paginacion = cantidad % 30;
-			//int final;
-			//if (paginacion == 0)
-			//         {
-			//	final = paginacion;
-			//         }
-			//else
-			//         {
-			//	final = paginacion + 1;
-			//         }
-			Paginacion objeto = new Paginacion() { pagine = 30, skip = prueba * 30 , nombre= texto };
-			ResultadoPaginacion objres = new ResultadoPaginacion();
-			//PaginacionCliente objres = new PaginacionCliente();
-			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
-			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
-			//oEntityCLS.IsLoading = true;
-			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
+			skipcantidad = 0;
+			
+			Paginacion objeto = new Paginacion() { pagine = 30, skip = 0, nombre = texto };
+			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
 
 			}
-			//List<CategoriaCLS> l =
-			//	await GenericLH.GetAll<CategoriaCLS>(obtenerURLGetCategoria);
-			/////En esta linea asigno nofoto-png a todas las filas
 
-			//oEntityCLS.listaCategoria = objres.lista;
-			////AddRange(objres.lista);
-			////oEntityCLS.listaCategoria = l;
-			//lista = oEntityCLS.listaCategoria;
 
-			//List<EClientes> benja = new List<EClientes>();
-			//   lista.AddRange(objres.lista);
-			//benja = lista;
 			lista = objres.lista;
-			//oEntityCLS.listaCategoria.AddRange(lista);
-			//Add(new EClientes { idcliente = 1, nombre = "benjamin Josue", apellido = "huaman soto ",direccion="las lomas de lima peru" ,codigocliente="bhdkkkdf",telefono="22334444",docdni="43e4444" });
-			//lstCategoria12.ItemsSource = null;
-			//lstCategoria12.ItemsSource = oEntityCLS.listaCategoria;
-
-			oEntityCLS.listaCategoria = lista;
+			cantidad = objres.cantidadregistro;
 			lstCategoria12.ItemsSource = null;
-			lstCategoria12.ItemsSource = oEntityCLS.listaCategoria;
-			//if (texto == "") oEntityCLS.listaCategoria = lista;
-			//         else oEntityCLS.listaCategoria = lista.Where(p => p.nombre.ToUpper().Contains(texto.ToUpper())).ToList();
-			//         //DisplayAlert("Error", texto, "Cancelar");
+			lstCategoria12.ItemsSource = lista;
+			
 		}
 
-        private  void lstCategoria12_ItemAppearing(object sender, ItemVisibilityEventArgs e)
+		private  void lstCategoria12_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
             var item = (ECliente)e.Item;
 			var ultimo = lista.Last();
 
-            if (buscador==1)
+            if ( cantidad > lista.Count )
             {
 				if (item.nombre == ultimo.nombre)
 				{
-					prueba++;
+					skipcantidad++;
 					//DisplayAlert("Error", item.nombre, "Cancelar");
-					listarCategoriasotro(prueba);
+					listarCategorias(skipcantidad);
 
 				}
 			}
 			
-            ////}
+           
         }
 
-		public async void listarCategoriasotro(int prueba)
-		{
-			//Aparezca el loading
-			//var objeto = new { pagine = 0, skip = 10, nombre = "" };
-
-			Reply res;
-			//int paginacion = cantidad % 30;
-			//int final;
-			//if (paginacion == 0)
-   //         {
-			//	final = paginacion;
-   //         }
-			//else
-   //         {
-			//	final = paginacion + 1;
-   //         }
-			Paginacion objeto = new Paginacion() { pagine = 30, skip = prueba*30};
-			ResultadoPaginacion objres = new ResultadoPaginacion();
-			//PaginacionCliente objres = new PaginacionCliente();
-			//var restResponse = Restcall.MakeRequest(Constantes.url + Constantes.api_getcliente, Method.POST, null, objeto);
-			//string obtenerURLGetCategoria = App.Current.Resources["GetCategoria"].ToString();
-			//oEntityCLS.IsLoading = true;
-			res = await GenericLH.GetAll<Paginacion>(Constantes.api_getcliente, objeto);
-			if (res.result == 1)
+        private void searchcliente_TextChanged(object sender, TextChangedEventArgs e)
+        {
+			string valor = e.NewTextValue;
+			if (valor == "")
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion>(JsonConvert.SerializeObject(res.data));
-
+				skipcantidad = 0;
+				listarCategoriasinicio(skipcantidad);
 			}
-            //List<CategoriaCLS> l =
-            //	await GenericLH.GetAll<CategoriaCLS>(obtenerURLGetCategoria);
-            /////En esta linea asigno nofoto-png a todas las filas
-
-            //oEntityCLS.listaCategoria = objres.lista;
-            ////AddRange(objres.lista);
-            ////oEntityCLS.listaCategoria = l;
-            //lista = oEntityCLS.listaCategoria;
-
-            //List<EClientes> benja = new List<EClientes>();
-            //   lista.AddRange(objres.lista);
-            //benja = lista;
-            lista.AddRange(objres.lista);
-            oEntityCLS.listaCategoria.AddRange(lista);
-            //Add(new EClientes { idcliente = 1, nombre = "benjamin Josue", apellido = "huaman soto ",direccion="las lomas de lima peru" ,codigocliente="bhdkkkdf",telefono="22334444",docdni="43e4444" });
-            lstCategoria12.ItemsSource = null;
-            lstCategoria12.ItemsSource = oEntityCLS.listaCategoria;
-
-
-        }
-
+		}
     }
 }

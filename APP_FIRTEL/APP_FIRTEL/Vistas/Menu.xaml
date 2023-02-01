@@ -8,7 +8,7 @@
             
             <Label Text="Bienvenido al sistema" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="20" />
         <ListView ItemsSource="{Binding listamenu}" Margin="0,15"  x:Name="lstMenu"  
-                      ItemSelected="lstMenu_ItemSelected" >
+                      ItemTapped="lstMenu_ItemTapped">
 
             <ListView.ItemTemplate>
 

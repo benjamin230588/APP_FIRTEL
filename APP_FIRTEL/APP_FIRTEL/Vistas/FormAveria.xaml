@@ -16,8 +16,8 @@
                 
                 <Grid Margin="8,15,8,15">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="3*"  />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"  />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
@@ -34,39 +34,20 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Column="0" Grid.Row="0" Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
-                   <Label
-                        Text="Rafael Baltazar"
-                        
-                        Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" VerticalOptions="Center" 
-                    
-                    />
+                    <Label  Text="Rafael Baltazar"  Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" VerticalOptions="Center"/>                                                                
 
                     <Label Grid.Column="0" Grid.Row="1" Text="Apellidos" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <Label
-                                
-                      Grid.Column="1"  Grid.Row="1" x:Name="txtapellidopaterno" Text="Mucha Soto" VerticalOptions="Center"
-                    
-                    />
-
-
+                    <Label Grid.Column="1"  Grid.Row="1" x:Name="txtapellidopaterno" Text="Mucha Soto" VerticalOptions="Center"/>
 
                     <Label Grid.Column="0" Grid.Row="2" Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <Label
-                                
-                      Grid.Column="1"  Grid.Row="2" Text="95622222" VerticalOptions="Center"
-                    
-                    />
-                   
+                    <Label Grid.Column="1"  Grid.Row="2" Text="95622222" VerticalOptions="Center"/>
+
+
                     <Label Grid.Column="0" Grid.Row="3" Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <Label
-                                
-                      Grid.Column="1"  Grid.Row="3" Text="Mercado Ciudad de Dios puerta 12" VerticalOptions="Center"
-                    
-                    />
+                    <Label  Grid.Column="1"  Grid.Row="3" Text="Mercado Ciudad de Dios puerta 12" VerticalOptions="Center"  />
 
 
                     <Label Grid.Column="0" Grid.Row="4" Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
-                  
                     <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="4" MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="14"
                                            Text="Averia corte de clave de red falta conexion del cliente"/>
@@ -80,38 +61,25 @@
                                            Text="Averia corte de clave de red falta conexion del cliente"/>
 
                     <Label Grid.Column="0" Grid.Row="7" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                   
-                   
-                    <custom:CustomPicker Grid.Column="1"  Grid.Row="7"
-                                         Image="ic_arrow_drop_down"
-                                        Title="Seleccione Estado"
-                                   TitleColor="Green"
-                                   ItemsSource="{Binding lista}"
-                                         SelectedItem="{Binding defecto}"
-                                   FontSize="16"
-                                   
-                                   ItemColor="#000000">
-
+                    <custom:CustomPicker Grid.Column="1"  Grid.Row="7"  Image="ic_arrow_drop_down" Title="Seleccione Estado" TitleColor="Green"                                                                         
+                                   FontSize="16"   ItemColor="#000000" x:Name="combolista">
                     </custom:CustomPicker>
 
-
-                    <Label Grid.Column="0" Grid.Row="9" Text="F.Registro" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                  
+                   
+                    <Label Grid.Column="0"  Grid.Row="9" Text="F.Registro" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="9" x:Name="datePicker"   HorizontalOptions="FillAndExpand"
-                                             Format="dd/MM/yyyy" 
-                                MinimumDate="01/01/1950"/>
+                                             Format="dd/MM/yyyy"  MinimumDate="01/01/1950"/>
+                               
 
 
                 </Grid>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,0,0,30">
-                    <Button Text="Registrar" Background="Green" TextColor="White" 
+                    <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
                             CornerRadius="15" />
                     <Button Text="Volver" BackgroundColor="Red"
-                            x:Name="btnVolverLogin"
+                            x:Name="btnVolverLogin"  TextColor="White" CornerRadius="15" />
                            
-                            TextColor="White" CornerRadius="15" />
-
                 </StackLayout>
               
                

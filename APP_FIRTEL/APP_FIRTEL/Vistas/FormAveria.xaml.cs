@@ -16,14 +16,24 @@ namespace APP_FIRTEL.Vistas
 		public List<string> lista { get; set; }
 		public FormAveria ()
 		{
+
 			InitializeComponent ();
 			lista = new List<string>();
 			lista.Add("Pendiente");
 			lista.Add("Realizado");
 			lista.Add("Ingresado");
-
 			defecto = "Pendiente";
-			BindingContext = this;
+			combolista.BindingContext = lista;
+			combolista.SetBinding(Picker.ItemsSourceProperty,".");
+			combolista.BindingContext = defecto;
+			//combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+			combolista.SetBinding(Picker.SelectedItemProperty, ".");
+			//combolista.ItemDisplayBinding = new Binding("Name");
+			//.ItemDisplayBinding = new Binding("Name");
+			//picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
+			//defecto = "Pendiente";
+			//BindingContext = this
+			//BindingContext = defecto;
 
 
 		}

@@ -28,7 +28,7 @@ namespace APP_FIRTEL.Vistas
 		public string nombreproducto { get; set; }
 
 
-		private List<ECliente> lista= new List<ECliente>();
+		private List<ClienteCLS> lista= new List<ClienteCLS>();
 		public Cliente()
         {
             InitializeComponent();
@@ -44,12 +44,12 @@ namespace APP_FIRTEL.Vistas
 
 			Reply res;
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
-			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
 			
 			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
 
 			}
 		
@@ -69,12 +69,12 @@ namespace APP_FIRTEL.Vistas
 
 			Reply res;
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
-			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
 
 			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
 
 			}
 
@@ -97,11 +97,11 @@ namespace APP_FIRTEL.Vistas
 			skipcantidad = 0;
 			
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = 0, nombre = texto };
-			ResultadoPaginacion<ECliente> objres = new ResultadoPaginacion<ECliente>();
+			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
 			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
 			if (res.result == 1)
 			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ECliente>>(JsonConvert.SerializeObject(res.data));
+				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
 
 			}
 
@@ -115,7 +115,7 @@ namespace APP_FIRTEL.Vistas
 
 		private  void lstCategoria12_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
-            var item = (ECliente)e.Item;
+            var item = (ClienteCLS)e.Item;
 			var ultimo = lista.Last();
 
             if ( cantidad > lista.Count )
@@ -140,6 +140,12 @@ namespace APP_FIRTEL.Vistas
 				skipcantidad = 0;
 				listarCategoriasinicio(skipcantidad);
 			}
+		}
+
+        private void lstCategoria12_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+			ClienteCLS objCliente = (ClienteCLS)e.Item;
+			Navigation.PushAsync(new FormCliente(objCliente, "Detalle Cliente"));
 		}
     }
 }

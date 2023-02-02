@@ -4,10 +4,10 @@
              x:Class="APP_FIRTEL.Vistas.FiltrosAveria"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
              Title="Filtros">
-    <ContentPage.Content>
-        <StackLayout>
-            <StackLayout VerticalOptions="FillAndExpand" Margin="10,15">
-                <Grid  RowSpacing="5">
+      <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout  Margin="10,15">
+                 <Grid  RowSpacing="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*"  />
@@ -54,31 +54,18 @@
                                 x:Name="txtusuario11"
                     
                     />
-                <StackLayout HeightRequest="3"></StackLayout>
-                <custom:CustomEntry
-                                CornerRadius="10"
-                                IsCurvedCornersEnabled="true"
-                                BorderColor="Black"
-                                HorizontalTextAlignment="Center"
-                                FontSize="17"
-                                HeightRequest="40"
-                                Placeholder="Ingrese usuario"
-                                PlaceholderColor="Gray"
-                                TextColor="Black" 
-                                Text=""
-                                x:Name="txtusuario"
-                    
-                    />
+
             </StackLayout>
-            
+            </ScrollView>
+            <StackLayout HeightRequest="10"></StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="7,2">
                 <Button Text="Cancelar" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White"/>
                 <Button Text="Aplicar"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White"/>
             </StackLayout>
 
-            <StackLayout HeightRequest="15"></StackLayout>
+            <StackLayout HeightRequest="10"></StackLayout>
 
         </StackLayout>
-    </ContentPage.Content>
+ 
 </ContentPage>

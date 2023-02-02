@@ -41,11 +41,7 @@ namespace APP_FIRTEL.ViewModels
         #region PROCESOS
         public async void Mostrarpokemon()
         {
-           // var funcion = new Dpokemon();
-          //  var  listaCategoria = new List<AveriaCLS>();
-
             Reply res;
-           // Paginacion objeto = new Paginacion() { pagine = 30, skip = 0 };
             var objeto = new Paginacion { pagine = 30, skip = 0, desde ="01/01/2023", hasta ="30/01/2023", idcliente ="", idestado = "" };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
@@ -56,30 +52,24 @@ namespace APP_FIRTEL.ViewModels
                 objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
 
             }
-
-            //lista.AddRange(objres.lista);
-            //cantidad = objres.cantidadregistro;
-            //lstCategoria12.ItemsSource = null;
-            //lstCategoria12.ItemsSource = lista;
-            //Convert.ToDateTime(v.fecha_registro.ToString("dd-MM-yyy")));
             objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
              
             ListaAveria = objres.lista;
         }
 
-
-
+        #endregion
+        #region PROCESOS
         public async Task IraFiltroAveria()
         {
             await Navigation.PushAsync(new FiltrosAveria());
         }
         public async Task Iradetalle(AveriaCLS parametros)
         {
-            await Navigation.PushAsync(new FormAveria());
+            await Navigation.PushAsync(new FormAveria(parametros));
         }
 
-        //#endregion
-        //#region COMANDOS
+        #endregion
+        #region COMANDOS
         public ICommand IraFiltrocommand => new Command(async () => await IraFiltroAveria());
         public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
 

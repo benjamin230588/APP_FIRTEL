@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+             x:Class="APP_FIRTEL.Vistas.FormCliente"
+               Title="{Binding titulo}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelfont" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <StackLayout BindingContext="{Binding objcliente}">
+        <Grid Margin="8,15,8,15" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"  />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+
+                <RowDefinition Height="40"/>
+
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="50"/>
+
+                <RowDefinition Height="90" />
+                <RowDefinition Height="37"/>
+                <RowDefinition Height="4"/>
+
+
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <Frame Grid.Column="1"  Grid.Row="0" CornerRadius="30" HasShadow="False" Padding="15,0" BorderColor="Black">
+                <Label  Text="{Binding nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center" TextColor="Black"/>
+
+            </Frame>
+
+            <Label Grid.Column="0" Grid.Row="1" Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+            <Label  Grid.Column="1"  Grid.Row="1" Text="{Binding Direccion}" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+
+
+            <Label Grid.Column="0" Grid.Row="2" Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+            <Label Grid.Column="1"  Grid.Row="2" Text="{Binding objcliente.telefono}" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
+
+
+           
+
+           
+
+            <Label Grid.Column="0" Grid.Row="4" Text="F.Ingreso" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <Label Grid.Column="1" Grid.Row="4" Text="01/05/2022" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+
+            <Label Grid.Column="0" Grid.Row="5" Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+            <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="5" MaxLength="75" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="14"
+                                           Text="Averia corte de clave de red falta conexion del cliente"/>
+
+            
+
+
+
+
+        </Grid>
+        <Frame CornerRadius="30" HasShadow="True" IsClippedToBounds="True">
+            <Label  Text="{Binding nombrecompleto}"   x:Name="txtnombre22" VerticalOptions="Center" Style="{StaticResource labelfont}" TextColor="Black"/>
+
+        </Frame>
+    </StackLayout>
+    
+</ContentPage>

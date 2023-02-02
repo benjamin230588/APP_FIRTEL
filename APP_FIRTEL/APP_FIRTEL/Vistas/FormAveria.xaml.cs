@@ -1,4 +1,6 @@
-﻿using System;
+﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,20 +16,23 @@ namespace APP_FIRTEL.Vistas
 	{
 		public string  defecto { get; set; }
 		public List<string> lista { get; set; }
-		public FormAveria ()
+		public FormAveria (AveriaCLS objeto)
 		{
 
 			InitializeComponent ();
+
+			
 			lista = new List<string>();
 			lista.Add("Pendiente");
 			lista.Add("Realizado");
 			lista.Add("Ingresado");
 			defecto = "Pendiente";
 			combolista.BindingContext = lista;
-			combolista.SetBinding(Picker.ItemsSourceProperty,".");
-			combolista.BindingContext = defecto;
-			//combolista.SetBinding(Picker.ItemsSourceProperty, ".");
-			combolista.SetBinding(Picker.SelectedItemProperty, ".");
+			BindingContext = new FormAveriaModel(Navigation, objeto);
+			//combolista.SetBinding(Picker.ItemsSourceProperty,".");
+			//combolista.BindingContext = defecto;
+			////combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+			//combolista.SetBinding(Picker.SelectedItemProperty, ".");
 			//combolista.ItemDisplayBinding = new Binding("Name");
 			//.ItemDisplayBinding = new Binding("Name");
 			//picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");

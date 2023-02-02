@@ -11,20 +11,13 @@
             <ScrollView>
                 <ListView                                              
                   x:Name="lstCategoria12" 
-                  HasUnevenRows="True" Margin="5" ItemAppearing="lstCategoria12_ItemAppearing" >
+                  HasUnevenRows="True" Margin="5" ItemAppearing="lstCategoria12_ItemAppearing" ItemTapped="lstCategoria12_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="7" BorderColor="#848484" IsClippedToBounds="True" >
                                     <StackLayout Orientation="Vertical">
-                                        <Label  TextColor="#2E64FE" FontSize="16">
-                                            <Label.Text>
-                                                <MultiBinding StringFormat="{}{0} {1}">
-                                                    <Binding Path="nombre"/>
-                                                    <Binding Path="apellido"/>
-                                                </MultiBinding>
-                                            </Label.Text>
-                                        </Label>
+                                        <Label  Text="{Binding nombrecompleto}" TextColor="#2E64FE" FontSize="16"/>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="2*"/>

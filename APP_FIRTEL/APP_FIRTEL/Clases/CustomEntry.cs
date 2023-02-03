@@ -62,6 +62,19 @@ namespace APP_FIRTEL.Clases
             get { return (bool)GetValue(IsCurvedCornersEnabledProperty); }
             set { SetValue(IsCurvedCornersEnabledProperty, value); }
         }
+
+        public static readonly BindableProperty CurvedBackgroundColorProperty =
+          BindableProperty.Create(
+              nameof(CornerRadius),
+              typeof(Color),
+              typeof(CustomLabel),
+              Color.Default);
+
+        public Color CurvedBackgroundColor
+        {
+            get { return (Color)GetValue(CurvedBackgroundColorProperty); }
+            set { SetValue(CurvedBackgroundColorProperty, value); }
+        }
     }
 
 }

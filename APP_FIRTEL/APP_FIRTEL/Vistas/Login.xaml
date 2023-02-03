@@ -37,7 +37,7 @@
 
              
             <StackLayout HeightRequest="15"></StackLayout>
-            <Frame CornerRadius="10" Padding="0">
+         
                 <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
@@ -48,14 +48,15 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                 Text="admin"
+                                Text="admin"
+                                CurvedBackgroundColor="White"
                                 x:Name="txtusuario" IsReadOnly="True" 
                     
                     />
-            </Frame>
+            
                 
             <StackLayout HeightRequest="1"></StackLayout>
-            <Frame CornerRadius="10" Padding="0">
+           
                 <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
@@ -68,10 +69,13 @@
                                 x:Name="txtpasword"
                                 PlaceholderColor="Gray"
                                 Text="adminfirtel"
+                                BorderWidth="2"
+                                CurvedBackgroundColor="White"
+                   
                                TextColor="Black"
                
                      />
-            </Frame>
+            
                
 
             <StackLayout HeightRequest="20"></StackLayout>
@@ -85,7 +89,7 @@
             <ActivityIndicator
                HorizontalOptions="Center"
                 IsRunning="{Binding flgindicador}"
-                Color="#904355"
+                Color="Green"
                 />
         </Grid>
 

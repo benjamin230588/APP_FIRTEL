@@ -34,7 +34,7 @@ namespace APP_FIRTEL.Droid
                     // creating gradient drawable for the curved background
                     var _gradientBackground = new GradientDrawable();
                     _gradientBackground.SetShape(ShapeType.Rectangle);
-                    _gradientBackground.SetColor(view.BackgroundColor.ToAndroid());
+                    _gradientBackground.SetColor(view.CurvedBackgroundColor.ToAndroid());
                     
 
                     // Thickness of the stroke line

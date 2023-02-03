@@ -16,7 +16,7 @@ namespace APP_FIRTEL.Clases
         public string nombre { get; set; }
         public string nombresegundo { get; set; }
         public string apellido { get; set; }
-        public string nombrecompleto { get; set; }
+      
         public Nullable<int> nacionalidad { get; set; }
         public string docdni { get; set; }
         public string telefono { get; set; }
@@ -27,6 +27,7 @@ namespace APP_FIRTEL.Clases
         public Nullable<int> planbw { get; set; }
         public string cantidadtv { get; set; }
         public Nullable<System.DateTime> fechaalta { get; set; }
+      
         public string cajanap { get; set; }
         public Nullable<int> vendedor { get; set; }
         public string pppoe { get; set; }
@@ -46,6 +47,13 @@ namespace APP_FIRTEL.Clases
         public Nullable<int> usu_modificacion { get; set; }
         public System.DateTime fec_creacion { get; set; }
         public Nullable<System.DateTime> fec_modificacion { get; set; }
+
+        public string nombrevendedor { get; set; }
+        public string nombreplan { get; set; }
+        public string nombredistrito { get; set; }
+        public string nombretecnologia { get; set; }
+        public string nombrecompleto { get; set; }
+        public string fechaaltastring { get; set; }
 
     }
 }

@@ -68,10 +68,10 @@
                                            Text="Averia corte de clave de red falta conexion del cliente"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Image="ic_arrow_drop_down" Title="Seleccione Estado" TitleColor="Green"                                                                         
-                                  ItemsSource="{Binding .}"
-                                  FontSize="16"   ItemColor="#000000" x:Name="combolista">
-                    </custom:CustomPicker>
+                    <custom.CustomPicker Grid.Column="1"  Grid.Row="6"   Title="Seleccione Estado" TitleColor="Green"                                                                         
+                                  ItemsSource="{Binding Listaestado}"                                       
+                                  FontSize="16"   x:Name="combolista">
+                    </custom.CustomPicker>
 
 
                     

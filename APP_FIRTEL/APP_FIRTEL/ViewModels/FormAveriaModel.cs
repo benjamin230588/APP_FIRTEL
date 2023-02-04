@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Utilitarios_Firtel.viewmodel;
 using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
@@ -12,6 +13,7 @@ namespace APP_FIRTEL.ViewModels
     {
         #region VARIABLES
         string _Texto;
+        List<Eestadosaveria> _listaestado = new List<Eestadosaveria>();
         //List<AveriaCLS> _ListaAveria;
         #endregion
         #region CONSTRUCTOR
@@ -19,6 +21,7 @@ namespace APP_FIRTEL.ViewModels
         {
             Navigation = navigation;
             parametrosRecibe = objeto;
+            Listaestado = cargaestado();
         }
         #endregion
         #region OBJETOS
@@ -27,7 +30,22 @@ namespace APP_FIRTEL.ViewModels
 
 
 
+        public List<Eestadosaveria> Listaestado
+        {
+            get { return _listaestado; }
+            set { SetValue(ref _listaestado, value); }
 
+        }
+        public List<Eestadosaveria> cargaestado()
+        {
+            return new List<Eestadosaveria>()
+            {
+               new Eestadosaveria() { idestado = 1, descripcion = "Pendiente" },
+               new Eestadosaveria() { idestado = 2, descripcion = "Proceso" },
+               new Eestadosaveria() { idestado = 3, descripcion = "Realizado" }
+            };
+
+        }
         //public async Task IraFiltroAveria()
         //{
         //    await Navigation.PushAsync(new FiltrosAveria());

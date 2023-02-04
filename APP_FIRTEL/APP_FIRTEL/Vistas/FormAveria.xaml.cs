@@ -14,20 +14,20 @@ namespace APP_FIRTEL.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FormAveria : ContentPage
 	{
-		public string  defecto { get; set; }
-		public List<string> lista { get; set; }
+		//public string  defecto { get; set; }
+		//public List<string> lista { get; set; }
 		public FormAveria (AveriaCLS objeto)
 		{
 
 			InitializeComponent ();
 
 			
-			lista = new List<string>();
-			lista.Add("Pendiente");
-			lista.Add("Realizado");
-			lista.Add("Ingresado");
-			defecto = "Pendiente";
-			combolista.BindingContext = lista;
+			//lista = new List<string>();
+			//lista.Add("Pendiente");
+			//lista.Add("Realizado");
+			//lista.Add("Ingresado");
+			//defecto = "Pendiente";
+			//combolista.BindingContext = lista;
 			BindingContext = new FormAveriaModel(Navigation, objeto);
 			//combolista.SetBinding(Picker.ItemsSourceProperty,".");
 			//combolista.BindingContext = defecto;

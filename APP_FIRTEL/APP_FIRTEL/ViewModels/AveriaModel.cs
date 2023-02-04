@@ -18,16 +18,22 @@ namespace APP_FIRTEL.ViewModels
         #region VARIABLES
         string _Texto;
         List<AveriaCLS> _ListaAveria;
+       
+
         #endregion
         #region CONSTRUCTOR
         public AveriaModel(INavigation navigation)
         {
             Navigation = navigation;
             Mostrarpokemon();
+          
+
+
         }
         #endregion
-        #region OBJETOS
+            #region OBJETOS
 
+       
         public List<AveriaCLS> ListaAveria
         {
             get { return _ListaAveria; }
@@ -37,6 +43,7 @@ namespace APP_FIRTEL.ViewModels
                 OnPropertyChanged();
             }
         }
+        
         #endregion
         #region PROCESOS
         public async void Mostrarpokemon()
@@ -67,6 +74,12 @@ namespace APP_FIRTEL.ViewModels
         {
             await Navigation.PushAsync(new FormAveria(parametros));
         }
+       
+            //_listaestado.Add(new Eestadosaveria() { idestado = 1, descripcion = "Pendiente" });
+            //_listaestado.Add(new Eestadosaveria() { idestado = 2, descripcion = "Proceso" });
+            //_listaestado.Add(new Eestadosaveria() { idestado = 3, descripcion = "Realizado" });
+
+        
 
         #endregion
         #region COMANDOS

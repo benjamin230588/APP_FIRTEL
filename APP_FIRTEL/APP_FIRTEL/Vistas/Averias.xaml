@@ -21,7 +21,7 @@
 
                             <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10" BorderColor="#848484" IsClippedToBounds="True" >
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding obsaveria}" TextColor="#2E64FE" FontSize="16"></Label>
+                                    
                                     <Grid Margin="0">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
@@ -34,24 +34,25 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
-                                        
-                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                        <Label Text="{Binding obsaveria}" Grid.Column="0" Grid.Row="0"  TextColor="#2E64FE" FontSize="16"  Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
                                                 FontSize="15" FontAttributes="Bold"/>
-                                        <Label Text="54255111" Grid.Column="2" Grid.Row="0"
+                                        <Label Text="{Binding codigocliente,StringFormat='N°{0}'}" Grid.Column="2" Grid.Row="1"
                                                 FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" />
 
-                                        <Label Text="{Binding direccioncliente}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                        <Label Text="{Binding direccioncliente}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
                                                 FontSize="15" FontAttributes="Bold"/>
 
-                                        <Label Text="{Binding fecha_registrostring}"  Grid.Column="0" Grid.Row="2" FontSize="15" FontAttributes="Bold"/>
-                                        <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="2" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding fecha_registrostring}"  Grid.Column="0" Grid.Row="3" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="3" FontSize="15" FontAttributes="Bold"/>
 
-                                        <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="2" FontSize="15" TextColor="Red"  HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="3" FontSize="15" TextColor="Red"  HorizontalTextAlignment="Center" />
 
-                                        <Label Text="Plan_50Mbps+TV2"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="15" FontAttributes="Bold"/>
 
-                                        <Label Text="#12345"  Grid.Column="2" Grid.Row="3" TextColor="Blue"  HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="Center" />
 
                                     </Grid>
 

@@ -60,7 +60,7 @@
             <StackLayout HeightRequest="10"></StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="7,2">
-                <Button Text="Cancelar" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White"/>
+                <Button Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White"/>
                 <Button Text="Aplicar"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White"/>
             </StackLayout>
 

@@ -47,19 +47,19 @@
 
 
                     <Label Grid.Column="0" Grid.Row="1" Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <Label Grid.Column="1"  Grid.Row="1" Text="95622222" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
+                    <Label Grid.Column="1"  Grid.Row="1" Text="{Binding  parametrosRecibe.telefono}" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
 
 
                     <Label Grid.Column="0" Grid.Row="2" Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <Label  Grid.Column="1"  Grid.Row="2" Text="Mercado Ciudad de Dios puerta 12" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+                    <Label  Grid.Column="1"  Grid.Row="2" Text="{Binding  parametrosRecibe.direccioncliente}" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
 
 
                     <Label Grid.Column="0" Grid.Row="3" Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
                     <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="3" MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
-                                           Text="Averia corte de clave de red falta conexion del cliente"/>
+                                           Text="{Binding  parametrosRecibe.obsaveria}"/>
 
-                    <Label Grid.Column="0" Grid.Row="4" Text="F.Ingreso" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <Label Grid.Column="0" Grid.Row="4" Text="F.Registro" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                     <Label Grid.Column="1" Grid.Row="4" Text="01/05/2022" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
 
                     <Label Grid.Column="0" Grid.Row="5" Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
@@ -85,11 +85,12 @@
             
         </ScrollView>
         <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,0,10,10">
+            <Button Text="Volver" BackgroundColor="Red"
+                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15" />
             <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
                             CornerRadius="15"  HorizontalOptions="FillAndExpand" />
-            <Button Text="Volver" BackgroundColor="Red"
-                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15" />
+           
 
         </StackLayout>
     </StackLayout>

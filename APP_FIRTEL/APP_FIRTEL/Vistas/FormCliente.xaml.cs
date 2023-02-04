@@ -23,29 +23,17 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();       
             objcliente = obj;       
             titulo = nombretitulo;
+           
             BindingContext = this;
             //dtfecha.NullableDate = null;
 
 
         }
 
-        private void btndale_Clicked(object sender, EventArgs e)
+        private async void btnvolvercliente_Clicked(object sender, EventArgs e)
         {
-            //dtfecha.Format = "";
-            dtfecha.NullableDate = null;
-
-        }
-
-        //private void btndale_Clicked(object sender, EventArgs e)
-        //{
-        //    var fecha = dtfecha.Date;
-
-        //}
-
-        private void dtfecha_DateSelected(object sender, DateChangedEventArgs e)
-        {
-           // dtfecha.Format = "dd/MM/yyyy";
-            //dtfecha.Date = DateTime.Now;
+            // var prueba =cmboestado23.SelectedItem;
+            await Navigation.PopAsync();
         }
     }
 }

@@ -38,6 +38,7 @@ namespace APP_FIRTEL.Clases
         public string nombrecliente { get; set; }
         public string direccioncliente { get; set; }
         public string telefono { get; set; }
+        public string plancliente { get; set; }
         //public int idaveria { get; set; }
         //public string nombre { get; set; }
         //public string direccion { get; set; }

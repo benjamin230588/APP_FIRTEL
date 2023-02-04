@@ -44,7 +44,7 @@ namespace APP_FIRTEL.Droid
             Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
             Control.SetBackground(_gradientBackground);
             
-            Control.SetTextIsSelectable(true);
+           // Control.SetTextIsSelectable(true);
         }
         //Px to Dp Conver  
         public static float DpToPixels(Context context, float valueInDp)

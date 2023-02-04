@@ -16,28 +16,37 @@
 
     </ContentPage.Resources>
     <StackLayout>
-        <Grid Margin="8,15,8,15">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <Grid Margin="8,15,8,15" RowSpacing="11">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75" />
                 <ColumnDefinition Width="*"  />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
 
-                <RowDefinition Height="40" />
-                <RowDefinition Height="37"/>
-                <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
 
 
-            </Grid.RowDefinitions>
+
+                </Grid.RowDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
             <custom:CustomLabel Grid.Column="1"  Grid.Row="0"   Text="{Binding objcliente.nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center"
-                                HeightRequest="35"   CurvedCornerRadius="30" BorderColor="#000000" Padding="15,10" Style="{StaticResource labelfont}" />
+                                HeightRequest="35"   CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}" />
 
             <Label Grid.Column="0" Grid.Row="1" Text="Codigo" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
             <custom:CustomLabel Grid.Column="1" Grid.Row="1" Text="{Binding objcliente.codigocliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
@@ -56,21 +65,34 @@
             <custom:CustomLabel Grid.Column="1" Grid.Row="5" Text="{Binding objcliente.nombreplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
             <Label Grid.Column="0" Grid.Row="6" Text="Vendedor" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="6" Text="{Binding objcliente.nombreplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <custom:CustomLabel Grid.Column="1" Grid.Row="6" Text="{Binding objcliente.nombrevendedor}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
             <Label Grid.Column="0" Grid.Row="7" Text="Distrito" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="7" Text="{Binding objcliente.nombreplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <custom:CustomLabel Grid.Column="1" Grid.Row="7" Text="{Binding objcliente.nombredistrito}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="8" Text="Fecha" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:ExtendedDatePicker Grid.Column="1" Grid.Row="8" x:Name="dtfecha" Format="dd/MM/yyyy"  DateSelected="dtfecha_DateSelected"   />
+            <Label Grid.Column="0" Grid.Row="8" Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel Grid.Column="1" Grid.Row="8" Text="{Binding objcliente.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+
+            <Label Grid.Column="0" Grid.Row="9" Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel Grid.Column="1" Grid.Row="9" Text="{Binding objcliente.cajanap}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+
+            <Label Grid.Column="0" Grid.Row="10" Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel Grid.Column="1" Grid.Row="10" Text="{Binding objcliente.pppoe}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+
+            <Label Grid.Column="0" Grid.Row="11" Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel Grid.Column="1" Grid.Row="11" Text="{Binding objcliente.importeplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+
+            <Label Grid.Column="0" Grid.Row="12" Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
+                <custom:CustomLabel Grid.Column="1" Grid.Row="12" Text="{Binding objcliente.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
 
 
-
-
-        </Grid>
-        <Button Text="dale" x:Name="btndale" Clicked="btndale_Clicked" />
-
+            </Grid>
+        </ScrollView>
+        <StackLayout>
+            <Button Text="Volver" x:Name="btnvolvercliente" Margin="15,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
+        </StackLayout> 
+        
     </StackLayout>
     
 </ContentPage>

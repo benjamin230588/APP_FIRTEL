@@ -1,4 +1,4 @@
-﻿using MiPrimeraAplicacionEnXamarinForm.Generic;
+﻿using APP_FIRTEL.Generic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,16 +27,26 @@ namespace APP_FIRTEL.ViewModels
             set { SetValue(ref _flgindicador, value); }
         }
 
+        //public string usuario
+        //{
+        //    get { return _usuario; }
+        //    set { SetValue(ref _usuario, value); }
+        //}
+       //public string pasword
+        //{
+        //    get { return _pasword; }
+        //    set { SetValue(ref _pasword, value); }
+        //} 
+
         public string usuario
         {
             get { return _usuario; }
-            set { SetValue(ref _usuario, value); }
+            set { _usuario=value; }
         }
         public string pasword
         {
             get { return _pasword; }
-            set { SetValue(ref _pasword, value); }
+            set { _pasword = value; }
         }
-
     }
 }

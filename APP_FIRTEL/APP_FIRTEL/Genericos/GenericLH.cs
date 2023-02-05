@@ -11,7 +11,7 @@ using System.IO;
 using System.Linq;
 using Utilitarios_Firtel;
 
-namespace MiPrimeraAplicacionEnXamarinForm.Generic
+namespace APP_FIRTEL.Generic
 {
 	public class GenericLH
 	{

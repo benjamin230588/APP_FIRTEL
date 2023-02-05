@@ -20,23 +20,21 @@
         <ScrollView VerticalOptions="FillAndExpand">
             <StackLayout>
 
-                <Grid Margin="8,15,8,15">
+                <Grid Margin="8,15,8,15" RowSpacing="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*"  />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
-                       
                         <RowDefinition Height="40"/>
-
                         <RowDefinition Height="40"/>
                         <RowDefinition Height="90"/>
                         <RowDefinition Height="50"/>
 
                         <RowDefinition Height="90" />
-                        <RowDefinition Height="37"/>
-                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
 
                        
                     </Grid.RowDefinitions>
@@ -68,13 +66,15 @@
                                            Text="Averia corte de clave de red falta conexion del cliente"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom.CustomPicker Grid.Column="1"  Grid.Row="6"   Title="Seleccione Estado" TitleColor="Green"                                                                         
-                                  ItemsSource="{Binding Listaestado}"                                       
-                                  FontSize="16"   x:Name="combolista">
-                    </custom.CustomPicker>
+                    <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Image="ic_arrow_drop_down" Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                                  ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding Selectturno}"
+                                  FontSize="16"   ItemColor="" x:Name="combolista">
+                    </custom:CustomPicker>
 
-
-                    
+                    <Label Grid.Column="0" Grid.Row="7" Text="Fecha" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="7" x:Name="datePicker"   HorizontalOptions="FillAndExpand"
+                                             Format="dd/MM/yyyy" Date="{Binding Txtfecha}"
+                                MinimumDate="01/01/1950"/>
 
 
 
@@ -89,7 +89,7 @@
                             x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15" />
             <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
-                            CornerRadius="15"  HorizontalOptions="FillAndExpand" />
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand"  Command="{Binding GrabarAveriaComand}"/>
            
 
         </StackLayout>

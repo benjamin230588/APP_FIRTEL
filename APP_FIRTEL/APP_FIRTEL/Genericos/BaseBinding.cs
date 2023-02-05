@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace MiPrimeraAplicacionEnXamarinForm.Generic
+namespace APP_FIRTEL.Generic
 {
 	public class BaseBinding : INotifyPropertyChanged
 	{

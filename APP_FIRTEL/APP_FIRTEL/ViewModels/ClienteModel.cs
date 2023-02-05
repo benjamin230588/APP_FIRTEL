@@ -1,4 +1,4 @@
-﻿using MiPrimeraAplicacionEnXamarinForm.Generic;
+﻿using APP_FIRTEL.Generic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

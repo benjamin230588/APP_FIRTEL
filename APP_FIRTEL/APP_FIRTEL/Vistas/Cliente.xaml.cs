@@ -1,6 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.ViewModels;
-using MiPrimeraAplicacionEnXamarinForm.Generic;
+using APP_FIRTEL.Generic;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

@@ -48,9 +48,9 @@
                                 Placeholder="Ingrese usuario"
                                 PlaceholderColor="Gray"
                                 TextColor="Black" 
-                                Text="admin"
+                                 Text="{Binding usuario}"
                                 CurvedBackgroundColor="White"
-                                x:Name="txtusuario" IsReadOnly="True" 
+                                x:Name="txtusuario"  
                     
                     />
             
@@ -68,7 +68,7 @@
                                 IsPassword="True"
                                 x:Name="txtpasword"
                                 PlaceholderColor="Gray"
-                                Text="adminfirtel"
+                                Text="{Binding pasword}"
                                 BorderWidth="2"
                                 CurvedBackgroundColor="White"
                    

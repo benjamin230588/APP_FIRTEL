@@ -1,6 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.ViewModels;
-using MiPrimeraAplicacionEnXamarinForm.Generic;
+using APP_FIRTEL.Generic;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -24,7 +24,10 @@ namespace APP_FIRTEL.Vistas
         {
             InitializeComponent();
             oEntityLogin.flgindicador = false;
-             //oEntityLogin = new LoginModel();
+            oEntityLogin.usuario = "admin";
+            oEntityLogin.pasword="adminfirtel";
+
+            //oEntityLogin = new LoginModel();
             BindingContext = this;
             //((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Orange;
 
@@ -37,9 +40,14 @@ namespace APP_FIRTEL.Vistas
             {
                 Reply res;
                 Acceso model = new Acceso();
-                model.usuario = txtusuario.Text;
-                model.pasword = txtpasword.Text;
+                //model.usuario = txtusuario.Text;
+                //model.pasword = txtpasword.Text;
+                model.usuario = oEntityLogin.usuario;
+                model.pasword = oEntityLogin.pasword;
                 oEntityLogin.flgindicador = true;
+
+               
+                
                 res = await GenericLH.Post<Acceso>(Constantes.url + Constantes.api_login ,model);
                 if (res.result == 1)
                 {

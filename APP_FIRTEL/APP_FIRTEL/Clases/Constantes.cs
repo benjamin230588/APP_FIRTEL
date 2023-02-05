@@ -20,5 +20,7 @@ namespace APP_FIRTEL.Clases
        // public const string api_getaveria = "/Averias/Index";
         public const string api_getmessage = "/api/Messages";
         public const string SESSION_USUARIO_PERMISOS = "UsuarioLogueadoPermisos";
+
+        public const string api_grabaraveria = "/Averias/Grabar";
     }
 }

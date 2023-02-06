@@ -58,7 +58,7 @@
 
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.Iradetallecommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.Irformaveriacommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                             </Frame>
                         </DataTemplate>

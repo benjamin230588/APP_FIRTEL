@@ -67,7 +67,7 @@
 
                     <Label Grid.Column="0" Grid.Row="6" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Image="ic_arrow_drop_down" Title="Seleccione Estado"  TitleColor="Black"                                                                         
-                                  ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding Selectturno}"
+                                  ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding objaveriacls.nombreestado}"
                                   FontSize="16"   ItemColor="" x:Name="combolista">
                     </custom:CustomPicker>
 

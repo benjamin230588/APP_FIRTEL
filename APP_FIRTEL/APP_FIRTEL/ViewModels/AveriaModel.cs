@@ -70,7 +70,7 @@ namespace APP_FIRTEL.ViewModels
         {
             await Navigation.PushAsync(new FiltrosAveria());
         }
-        public async Task Iradetalle(AveriaCLS parametros)
+        public async Task Iradetalleaveria(AveriaCLS parametros)
         {
             await Navigation.PushAsync(new FormAveria(parametros));
         }
@@ -84,7 +84,7 @@ namespace APP_FIRTEL.ViewModels
         #endregion
         #region COMANDOS
         public ICommand IraFiltrocommand => new Command(async () => await IraFiltroAveria());
-        public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
+        public ICommand Irformaveriacommand => new Command<AveriaCLS>(async (p) => await Iradetalleaveria(p));
 
         #endregion
     }

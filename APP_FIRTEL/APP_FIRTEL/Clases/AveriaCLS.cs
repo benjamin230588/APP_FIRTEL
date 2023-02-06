@@ -48,6 +48,7 @@ namespace APP_FIRTEL.Clases
 
         //public int idtecnico { get; set; }
         //public string nombretecnico { get; set; }
+        public string nombreestado { get; set; }
 
 
     }

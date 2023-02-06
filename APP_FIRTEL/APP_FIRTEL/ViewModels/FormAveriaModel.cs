@@ -19,21 +19,24 @@ namespace APP_FIRTEL.ViewModels
         List<string> _listaestado = new List<string>();
         string selectturno;
         DateTime txtfecha;
+        AveriaCLS _objaveriacls;
         //List<AveriaCLS> _ListaAveria;
         #endregion
         #region CONSTRUCTOR
         public FormAveriaModel(INavigation navigation, AveriaCLS objeto)
         {
             Navigation = navigation;
-            parametrosRecibe = objeto;
+           // parametrosRecibe = objeto;
             Listaestado = cargaestado();
             Txtfecha = DateTime.Now;
+            objaveriacls = new AveriaCLS();
+            objaveriacls = objeto;
 
             //Selectturno = "Pendiente";
         }
         #endregion
         #region OBJETOS
-        public AveriaCLS parametrosRecibe { get; set; }
+       // public AveriaCLS parametrosRecibe { get; set; }
         #endregion
 
 
@@ -42,6 +45,13 @@ namespace APP_FIRTEL.ViewModels
         {
             get { return _listaestado; }
             set { SetValue(ref _listaestado, value); }
+
+        }
+
+        public AveriaCLS objaveriacls
+        {
+            get { return _objaveriacls; }
+            set { SetValue(ref _objaveriacls, value); }
 
         }
 
@@ -64,12 +74,8 @@ namespace APP_FIRTEL.ViewModels
 
             }
         }
-        //string idturno;
-        //public string Idturno
-        //{
-        //    get { return idturno; }
-        //    set { SetValue(ref idturno, value); }
-        //}
+
+        #region PROCESOS
         public List<string> cargaestado()
         {
             return new List<string>() { "Pendiente", "Proceso", "Realizado" };
@@ -81,13 +87,11 @@ namespace APP_FIRTEL.ViewModels
 
             if (!string.IsNullOrEmpty(Txtfecha.ToString()))
             {
-                //var funcion = new Dsolicitudesrecojo();
-                EAveria prueba = new EAveria();
-                //var fecha = Txtfecha.ToString("dd-MM-yy");
-                var estado = Selectturno;
-                var idestado = selectturno == "Pendiente" ? 1 : selectturno == "Proceso" ? 2 :3;
+               
+                var nombreestado = objaveriacls.nombreestado;
+                var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 :3;
                 AveriaCLS objeto = new AveriaCLS();
-                
+               
                 objeto.usu_creacion = 1;
                 objeto.fec_creacion = DateTime.Now;
                 objeto.flg_anulado = true;
@@ -111,13 +115,8 @@ namespace APP_FIRTEL.ViewModels
 
             }
         } 
-
-        
-
+        #endregion
        
-
-        //#endregion
-        //#region COMANDOS
         public ICommand GrabarAveriaComand => new Command(async () => await GrabarAveria());
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
 

@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Utilitarios_Firtel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Globalization;
 
 namespace APP_FIRTEL.Vistas
 {
@@ -26,9 +27,10 @@ namespace APP_FIRTEL.Vistas
             oEntityLogin.flgindicador = false;
             oEntityLogin.usuario = "admin";
             oEntityLogin.pasword="adminfirtel";
-
-            //oEntityLogin = new LoginModel();
+          
             BindingContext = this;
+            // System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            //oEntityLogin = new LoginModel();
             //((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Orange;
 
         }
@@ -44,10 +46,8 @@ namespace APP_FIRTEL.Vistas
                 //model.pasword = txtpasword.Text;
                 model.usuario = oEntityLogin.usuario;
                 model.pasword = oEntityLogin.pasword;
-                oEntityLogin.flgindicador = true;
-
-               
                 
+                oEntityLogin.flgindicador = true;
                 res = await GenericLH.Post<Acceso>(Constantes.url + Constantes.api_login ,model);
                 if (res.result == 1)
                 {

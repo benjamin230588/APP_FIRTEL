@@ -18,9 +18,9 @@ namespace APP_FIRTEL.Vistas
         {
             InitializeComponent();
             listamenu = new List<MenuCLS>();
+            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });         
             listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
             listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
-            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });
             listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
             BindingContext = this;
         }

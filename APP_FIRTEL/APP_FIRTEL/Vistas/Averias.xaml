@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Averias"
+             xmlns:custom="clr-namespace:APP_FIRTEL.Convertidores"
              Title="Averias" >
 
-    <ContentPage.Content>
-        <Grid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:Convertcolores x:Key="StringToColorConverter"/>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -19,10 +25,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
 
-                            <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10" BorderColor="#848484" IsClippedToBounds="True" >
+                            <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10,10,13,10" BorderColor="#848484" IsClippedToBounds="True" >
                                 <StackLayout Orientation="Vertical">
                                     
-                                    <Grid Margin="0">
+                                    <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
@@ -30,35 +36,35 @@
 
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding obsaveria}" Grid.Column="0" Grid.Row="0"  TextColor="#2E64FE" FontSize="16"  Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding obsaveria}" Grid.Column="0" Grid.Row="0"  TextColor="#2E64FE"   Grid.ColumnSpan="3" Style="{StaticResource titulocolectionview}"/>
                                         <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
-                                                FontSize="15" FontAttributes="Bold"/>
+                                                FontAttributes="Bold" Style="{StaticResource subtitulocolectionview}" />
                                         <Label Text="{Binding codigocliente,StringFormat='N°{0}'}" Grid.Column="2" Grid.Row="1"
-                                                FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                                                 FontAttributes="Bold" HorizontalTextAlignment="End" Style="{StaticResource labelcolection}" />
 
                                         <Label Text="{Binding direccioncliente}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
-                                                FontSize="15" FontAttributes="Bold"/>
+                                                 FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding fecha_registrostring}"  Grid.Column="0" Grid.Row="3" FontSize="15" FontAttributes="Bold"/>
-                                        <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="3" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                            <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="3" FontSize="15" TextColor="Red"  HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="3"  TextColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="15" FontAttributes="Bold"/>
+                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 
                                     </Grid>
 
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.Irformaveriacommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.IrFormaveriacommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                             </Frame>
                         </DataTemplate>
@@ -70,9 +76,9 @@
             <Button Grid.Row="0" Text="Filtrar" BorderColor="#2b3c3c" BorderWidth="0" FontAttributes="Bold" 
                     BackgroundColor="#FFC733" BorderRadius="70"
                     TextColor="Black" HorizontalOptions="End" WidthRequest="90" 
-                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro"  Command="{Binding IraFiltrocommand}"/>
+                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro"  Command="{Binding IrFiltroAveriacommand}"/>
 
         </Grid>
 
-    </ContentPage.Content>
+   
 </ContentPage>

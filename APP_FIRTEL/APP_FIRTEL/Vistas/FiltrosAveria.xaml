@@ -15,25 +15,18 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
                         <RowDefinition />
-                     
+                        <RowDefinition />
+
                     </Grid.RowDefinitions>
 
                     <Label Grid.Column="0" Grid.Row="0" Text="Desde" FontAttributes="Bold" FontSize="17" HorizontalOptions="Start"/>
-                    <Label
-                        Text="Hasta"
-                        
-                        Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" HorizontalOptions="Start" FontAttributes="Bold" FontSize="17"
-                    
-                    />
+                    <Label  Text="Hasta" Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" HorizontalOptions="Start" FontAttributes="Bold" FontSize="17"  />
                     <custom:DatePickerCtrl  Grid.Column="0"  Grid.Row="1" x:Name="datePicker"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"
-                                MinimumDate="01/01/1950"/>
-
-
-                    
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"   MinimumDate="01/01/1950"/>
+                                              
                     <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"
-                                MinimumDate="01/01/1950"/>
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"  MinimumDate="01/01/1950"/>
+                               
 
 
 

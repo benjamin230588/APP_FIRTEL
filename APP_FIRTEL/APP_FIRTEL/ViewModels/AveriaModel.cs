@@ -25,7 +25,7 @@ namespace APP_FIRTEL.ViewModels
         public AveriaModel(INavigation navigation)
         {
             Navigation = navigation;
-            Mostrarpokemon();
+            MostrarListaAverias();
           
 
 
@@ -46,10 +46,10 @@ namespace APP_FIRTEL.ViewModels
         
         #endregion
         #region PROCESOS
-        public async void Mostrarpokemon()
+        public async void MostrarListaAverias()
         {
             Reply res;
-            var objeto = new Paginacion { pagine = 30, skip = 0, desde ="01/01/2023", hasta ="30/01/2023", idcliente ="", idestado = "" };
+            var objeto = new Paginacion { pagine = 30, skip = 0, desde ="01/01/2023", hasta ="28/02/2023", idcliente ="", idestado = "" };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
 
@@ -59,7 +59,7 @@ namespace APP_FIRTEL.ViewModels
                 objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
 
             }
-            objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
+           // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
              
             ListaAveria = objres.lista;
         }
@@ -70,7 +70,7 @@ namespace APP_FIRTEL.ViewModels
         {
             await Navigation.PushAsync(new FiltrosAveria());
         }
-        public async Task Iradetalleaveria(AveriaCLS parametros)
+        public async Task IraFormaveria(AveriaCLS parametros)
         {
             await Navigation.PushAsync(new FormAveria(parametros));
         }
@@ -83,8 +83,8 @@ namespace APP_FIRTEL.ViewModels
 
         #endregion
         #region COMANDOS
-        public ICommand IraFiltrocommand => new Command(async () => await IraFiltroAveria());
-        public ICommand Irformaveriacommand => new Command<AveriaCLS>(async (p) => await Iradetalleaveria(p));
+        public ICommand IrFiltroAveriacommand => new Command(async () => await IraFiltroAveria());
+        public ICommand IrFormaveriacommand => new Command<AveriaCLS>(async (p) => await IraFormaveria(p));
 
         #endregion
     }

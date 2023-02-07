@@ -14,7 +14,7 @@ namespace APP_FIRTEL.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Averias : ContentPage
     {
-        public List<AveriaCLS> listaCategoria { get; set; }
+        //public List<AveriaCLS> listaCategoria { get; set; }
         public Averias()
         {
             InitializeComponent();

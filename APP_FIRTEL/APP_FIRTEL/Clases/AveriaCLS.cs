@@ -21,8 +21,7 @@ namespace APP_FIRTEL.Clases
 
         //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> fecha_registro { get; set; }
-        public string fecha_registrostring { get; set; }
-        //public Nullable<int> Estado { get; set; }
+       
         public Nullable<System.DateTime> fechaprogramada { get; set; }
 
         public string obsalta { get; set; }

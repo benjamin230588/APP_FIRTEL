@@ -26,17 +26,17 @@
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition  Height="Auto"/>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
                                             </Grid.RowDefinitions>
-                                            <Label  Text="{Binding nombrecompleto}" Grid.Column="0" Grid.Row="0" TextColor="#2E64FE"  FontSize="16"/>
-                                            <Label Text="{Binding codigocliente,StringFormat='N°{0}'}"  Grid.Column="1" Grid.Row="0"   FontAttributes="Bold" TextColor="Red"  HorizontalTextAlignment="end" />
+                                            <Label  Text="{Binding nombrecompleto}" Grid.Column="0" Grid.Row="0" TextColor="#2E64FE"  Style="{StaticResource titulocolectionview}"/>
+                                            <Label Text="{Binding codigocliente,StringFormat='N°{0}'}"  Grid.Column="1" Grid.Row="0"   FontAttributes="Bold" TextColor="Red"  HorizontalTextAlignment="end" Style="{StaticResource labelcolection}"/>
 
-                                            <Label Text="{Binding Direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  FontAttributes="Bold"/>
-                                            <Label Text="{Binding Zona}"  Grid.Column="0" Grid.Row="2"   FontAttributes="Bold"   HorizontalTextAlignment="Start" />
-                                            <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold"  HorizontalTextAlignment="End"/>
-                                            <Label Text="{Binding nombreplan}"  Grid.Column="0" Grid.Row="3"   FontAttributes="Bold"   HorizontalTextAlignment="Start" />
-                                            <Label Text="{Binding fechaalta,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold"  HorizontalTextAlignment="End"/>
+                                            <Label Text="{Binding Direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  FontAttributes="Bold" Style="{StaticResource subtitulocolectionview}" />
+                                            <Label Text="{Binding Zona}"  Grid.Column="0" Grid.Row="2"   FontAttributes="Bold"   HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
+                                            <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
+                                            <Label Text="{Binding nombreplan}"  Grid.Column="0" Grid.Row="3"   FontAttributes="Bold"   HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
+                                            <Label Text="{Binding fechaalta,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 
                                         </Grid>
                                     </StackLayout>

@@ -20,6 +20,9 @@ namespace APP_FIRTEL.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        // en esta pagina aplique style locales explicitos poniendole un nombre al Key
+        // en el archivo app.xaml aplique un estilo global explicito porque tiene un key
+        // tambien puedo aplicar style locales y globales de manera implicita sin ponerle la palabra clave key
         public LoginModel oEntityLogin { get; set; } = new LoginModel();
         public Login()
         {

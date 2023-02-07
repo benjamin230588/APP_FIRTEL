@@ -28,15 +28,15 @@ namespace APP_FIRTEL.ViewModels
             Navigation = navigation;
            // parametrosRecibe = objeto;
             Listaestado = cargaestado();
-            Txtfecha = DateTime.Now;
+            //Txtfecha = DateTime.Now;
             objaveriacls = new AveriaCLS();
             objaveriacls = objeto;
-
+            objaveriacls.nombreEstado = objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
         }
         #endregion
         #region OBJETOS
-       // public AveriaCLS parametrosRecibe { get; set; }
+        // public AveriaCLS parametrosRecibe { get; set; }
         #endregion
 
 
@@ -55,25 +55,7 @@ namespace APP_FIRTEL.ViewModels
 
         }
 
-        public DateTime Txtfecha
-        {
-            get { return txtfecha; }
-
-            set { SetValue(ref txtfecha, value); }
-        }
-
-
-
-        public string Selectturno
-        {
-            get { return selectturno; }
-            set
-            {
-                SetProperty(ref selectturno, value);
-                //Idturno = selectturno;
-
-            }
-        }
+        
 
         #region PROCESOS
         public List<string> cargaestado()
@@ -85,7 +67,7 @@ namespace APP_FIRTEL.ViewModels
         public async Task GrabarAveria()
         {
 
-            if (!string.IsNullOrEmpty(Txtfecha.ToString()))
+            if (1==1)
             {
                
                 var nombreestado = objaveriacls.nombreestado;
@@ -95,7 +77,7 @@ namespace APP_FIRTEL.ViewModels
                 objeto.usu_creacion = 1;
                 objeto.fec_creacion = DateTime.Now;
                 objeto.flg_anulado = true;
-                objeto.fecha_registro = Txtfecha;
+                objeto.fecha_registro = objaveriacls.fecha_registro;
                 objeto.Estado = idestado;
 
 

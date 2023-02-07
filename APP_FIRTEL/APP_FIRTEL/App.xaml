@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary x:Name="dictionary">
             <OnPlatform x:TypeArguments="x:String" x:Key="Pacifico">
                 <On Platform="Android" Value="Pacifico-Regular.ttf#Pacifico-Regular"/>
             </OnPlatform>

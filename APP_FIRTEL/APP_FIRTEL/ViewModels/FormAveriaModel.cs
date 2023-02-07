@@ -31,7 +31,8 @@ namespace APP_FIRTEL.ViewModels
             //Txtfecha = DateTime.Now;
             objaveriacls = new AveriaCLS();
             objaveriacls = objeto;
-            objaveriacls.nombreEstado = objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
+           // objaveriacls.nombreEstado = 
+             //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
         }
         #endregion
@@ -60,7 +61,7 @@ namespace APP_FIRTEL.ViewModels
         #region PROCESOS
         public List<string> cargaestado()
         {
-            return new List<string>() { "Pendiente", "Proceso", "Realizado" };
+            return new List<string>() { "Pendiente", "Proceso", "Realizado","Terminado" };
 
 
         }
@@ -71,24 +72,24 @@ namespace APP_FIRTEL.ViewModels
             {
                
                 var nombreestado = objaveriacls.nombreestado;
-                var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 :3;
-                AveriaCLS objeto = new AveriaCLS();
-               
-                objeto.usu_creacion = 1;
-                objeto.fec_creacion = DateTime.Now;
-                objeto.flg_anulado = true;
-                objeto.fecha_registro = objaveriacls.fecha_registro;
-                objeto.Estado = idestado;
+                var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado =="Realizado" ? 3 : 4 ;
+                //AveriaCLS objeto = new AveriaCLS();
+
+                objaveriacls.usu_creacion = 1;
+                objaveriacls.fec_creacion = DateTime.Now;
+                objaveriacls.flg_anulado = true;
+                //objeto.fecha_registro = objaveriacls.fecha_registro;
+                objaveriacls.Estado = idestado;
 
 
 
                 //crear el objeto averia que debo enviar
                 Reply res;
-                res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objeto);
+                res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
                 //if (res.result == 1) 
                 //{
-                await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
-
+                //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
+                await Volver();
                 
             }
             else
@@ -96,9 +97,13 @@ namespace APP_FIRTEL.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
 
             }
-        } 
+        }
         #endregion
-       
+        public async Task Volver()
+        {
+            await Navigation.PopAsync();
+        }
+
         public ICommand GrabarAveriaComand => new Command(async () => await GrabarAveria());
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
 

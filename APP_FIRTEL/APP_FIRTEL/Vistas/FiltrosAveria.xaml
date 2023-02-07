@@ -14,47 +14,56 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
-                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition />
 
                     </Grid.RowDefinitions>
 
                     <Label Grid.Column="0" Grid.Row="0" Text="Desde" FontAttributes="Bold" FontSize="17" HorizontalOptions="Start"/>
-                    <Label  Text="Hasta" Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" HorizontalOptions="Start" FontAttributes="Bold" FontSize="17"  />
-                    <custom:DatePickerCtrl  Grid.Column="0"  Grid.Row="1" x:Name="datePicker"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"   MinimumDate="01/01/1950"/>
-                                              
-                    <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55"   
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="40"  MinimumDate="01/01/1950"/>
-                               
+                    <Label  Grid.Column="1"  Grid.Row="0" Text="Hasta"   HorizontalOptions="Start" FontAttributes="Bold" FontSize="17"  />
+                    <custom:DatePickerCtrl  Grid.Column="0"  Grid.Row="1" x:Name="datePicker" Date="{Binding Fdesde}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+
+                    <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55" Date="{Binding Fhasta}" 
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"  MinimumDate="01/01/1950"/>
 
 
+                    <StackLayout Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label Text="Estados" FontAttributes="Bold" FontSize="17"/>
+                        <ListView ItemsSource="{Binding oEntityCLS}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame BackgroundColor="#FAFAFA"  CornerRadius="5" Margin="2" Padding="0" BorderColor="#848484"  >
+                                            
+                                            <Grid RowSpacing="0" Margin="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="4*" />
+                                            </Grid.ColumnDefinitions>
+                                            <CheckBox Grid.Column="0" IsChecked="{Binding bseleccionado}" />
+                                            <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" />
+                                            </Grid>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
 
 
                 </Grid>
-                <StackLayout HeightRequest="3"></StackLayout>
-                <custom:CustomEntry
-                                CornerRadius="10"
-                                IsCurvedCornersEnabled="true"
-                                BorderColor="Black"
-                                HorizontalTextAlignment="Center"
-                                FontSize="17"
-                                HeightRequest="40"
-                                Placeholder="Ingrese usuario"
-                                PlaceholderColor="Gray"
-                                TextColor="Black" 
-                                Text=""
-                                x:Name="txtusuario11"
-                    
-                    />
+             
+              
 
             </StackLayout>
             </ScrollView>
             <StackLayout HeightRequest="10"></StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="7,2">
-                <Button Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White"/>
-                <Button Text="Aplicar"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White"/>
+                <Button x:Name="btnvolveraveria" Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White" Clicked="btnvolveraveria_Clicked" />
+                <Button x:Name="btnfiltraraveria" Text="Aplicar"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltraraveria_Clicked"/>
             </StackLayout>
 
             <StackLayout HeightRequest="10"></StackLayout>

@@ -55,15 +55,15 @@
                     <Label Grid.Column="0" Grid.Row="3" Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
                     <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="3" MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
-                                           Text="{Binding  objaveriacls.obsaveria}"/>
+                                           Text="{Binding  objaveriacls.obsaveria}" IsReadOnly="True"/>
 
                     <Label Grid.Column="0" Grid.Row="4" Text="F.Registro" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <Label Grid.Column="1" Grid.Row="4" Text="01/05/2022" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+                    <Label Grid.Column="1" Grid.Row="4" Text="{Binding objaveriacls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
 
                     <Label Grid.Column="0" Grid.Row="5" Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
                     <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="5" MaxLength="75" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="14"
-                                           Text="Averia corte de clave de red falta conexion del cliente"/>
+                                           Text="{Binding  objaveriacls.obsalta}"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Image="ic_arrow_drop_down" Title="Seleccione Estado"  TitleColor="Black"                                                                         
@@ -73,7 +73,7 @@
 
                     <Label Grid.Column="0" Grid.Row="7" Text="Fecha" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="7" x:Name="datePicker"   HorizontalOptions="FillAndExpand"
-                                             Format="dd/MM/yyyy" Date="{Binding objaveriacls.fecha_registro}"
+                                             Format="dd/MM/yyyy" Date="{Binding objaveriacls.fechaprogramada}"
                                 MinimumDate="01/01/1950"/>
 
 

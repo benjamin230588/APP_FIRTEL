@@ -14,7 +14,7 @@ namespace APP_FIRTEL.Clases
         public string obsaveria { get; set; }
 
         public Nullable<int> idgrado { get; set; }
-        public string nombregrado { get; set; }
+        
         public string idtipoaveria { get; set; }
         public Nullable<int> Estado { get; set; }
         public string nombreEstado { get; set; }

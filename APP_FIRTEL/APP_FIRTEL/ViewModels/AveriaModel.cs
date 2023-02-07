@@ -25,10 +25,7 @@ namespace APP_FIRTEL.ViewModels
         public AveriaModel(INavigation navigation)
         {
             Navigation = navigation;
-            MostrarListaAverias();
-          
-
-
+           
         }
         #endregion
             #region OBJETOS
@@ -46,10 +43,10 @@ namespace APP_FIRTEL.ViewModels
         
         #endregion
         #region PROCESOS
-        public async void MostrarListaAverias()
+        public async Task MostrarListaAverias(string desde, string hasta,string estado)
         {
             Reply res;
-            var objeto = new Paginacion { pagine = 30, skip = 0, desde ="01/01/2023", hasta ="28/02/2023", idcliente ="", idestado = "" };
+            var objeto = new Paginacion { pagine = 30, skip = 0, desde =desde, hasta =hasta, idcliente ="", idestado = estado };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
 

@@ -15,7 +15,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,5,5,10" Padding="10,10" BorderColor="#848484" IsClippedToBounds="True" >
+                                <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,2,5,2" Padding="10,10" BorderColor="#848484" IsClippedToBounds="True" >
                                     <StackLayout Orientation="Vertical">
                                       
                                         <Grid>

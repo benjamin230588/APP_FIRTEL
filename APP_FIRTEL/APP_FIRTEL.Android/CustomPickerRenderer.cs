@@ -48,12 +48,13 @@ namespace APP_FIRTEL.Droid
 				Control.Click += Control_Click; ;
 			}
 
-            if (Control != null && this.Element != null && !string.IsNullOrEmpty(element.Image))
-            {
+            //if (Control != null && this.Element != null && !string.IsNullOrEmpty(element.Image))
+            //{
 
 
-                Control.Background = AddPickerStyles(element.Image);
-            }
+               
+            //}
+            Control.Background = AddPickerStyles();
             //Control.Background = null;
             //Control.Background = AddPickerStyles(element.Image);
 
@@ -151,7 +152,7 @@ namespace APP_FIRTEL.Droid
 			listDialog = null;
 		}
 		//	customBG.SetCornerRadius(3);
-		public LayerDrawable AddPickerStyles(string imagePath)
+		public LayerDrawable AddPickerStyles()
 		{
 			//ShapeDrawable border = new ShapeDrawable();
 			//border.Paint.Color = Android.Graphics.Color.Gray;
@@ -164,11 +165,11 @@ namespace APP_FIRTEL.Droid
 			gd.SetColor(Android.Graphics.Color.Transparent);
 			gd.SetStroke(2, Android.Graphics.Color.Rgb(0, 0, 0));
 
-			Drawable[] layers = { gd, GetDrawable(imagePath)};
-			LayerDrawable layerDrawable = new LayerDrawable(layers);
-			layerDrawable.SetLayerInset(0, 0, 0, 0, 0);
+            Drawable[] layers = { gd};
+            LayerDrawable layerDrawable = new LayerDrawable(layers);
+            layerDrawable.SetLayerInset(0, 0, 0, 0, 0);
 
-			return layerDrawable;
+            return layerDrawable;
 		}
 
 		private BitmapDrawable GetDrawable(string imagePath)

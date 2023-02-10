@@ -106,6 +106,7 @@ namespace APP_FIRTEL.ViewModels
 
         public ICommand GrabarAveriaComand => new Command(async () => await GrabarAveria());
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
+        public ICommand VolverAveriacommand => new Command(async () => await Volver());
 
 
     }

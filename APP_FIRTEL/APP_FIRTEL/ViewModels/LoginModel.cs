@@ -48,5 +48,7 @@ namespace APP_FIRTEL.ViewModels
             get { return _pasword; }
             set { _pasword = value; }
         }
+
+        //public string plataforma { get; set;}
     }
 }

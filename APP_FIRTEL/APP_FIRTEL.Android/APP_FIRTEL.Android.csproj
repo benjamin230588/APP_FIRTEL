@@ -72,9 +72,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BorderedEditorRenderer.cs" />
+    <Compile Include="CheckboxRenderer.cs" />
     <Compile Include="CurvedLabelRenderer.cs" />
     <Compile Include="CustomEntryRenderer.cs" />
     <Compile Include="CustomPickerRenderer.cs" />
+    <Compile Include="CustomSwitchRenderer.cs" />
     <Compile Include="DatePickerCtrlRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="renderprueba.cs" />

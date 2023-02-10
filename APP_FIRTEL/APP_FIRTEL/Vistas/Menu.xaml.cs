@@ -1,4 +1,5 @@
 ﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.Genericos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +19,31 @@ namespace APP_FIRTEL.Vistas
         {
             InitializeComponent();
             listamenu = new List<MenuCLS>();
-            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });         
-            listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
-            listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
-            listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
+          
             BindingContext = this;
+            listarMenu();
         }
 
-        
+        private void listarMenu()
+        {
+            int idtipousuario = Setings.IdTipoUsuario;
+            if( idtipousuario==1)
+            {
+                listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
+
+            }
+            else
+            {
+              
+                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
+            }
+            
+        }
 
         private void lstMenu_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -39,7 +57,9 @@ namespace APP_FIRTEL.Vistas
                 case "Clientes":
                     App.Navigate.PushAsync(new Cliente()); break;
                 case "Salir":
-                    App.Current.MainPage = new NavigationPage(new Login()); ; break;
+                    App.Current.MainPage = new NavigationPage(new Login()); 
+                    Setings.RecordarContra = false;
+                    break;
             }
             App.MenuApp.IsPresented = false;
         }

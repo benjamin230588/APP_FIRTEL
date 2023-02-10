@@ -1,4 +1,5 @@
-﻿using APP_FIRTEL.Recursos;
+﻿using APP_FIRTEL.Genericos;
+using APP_FIRTEL.Recursos;
 using APP_FIRTEL.Vistas;
 using System;
 using Xamarin.Essentials;
@@ -20,7 +21,15 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
             LoadStyles();
-            MainPage = new NavigationPage(new Login());
+            if (Setings.RecordarContra == true)
+            {
+                Application.Current.MainPage = new Pagainaprincipal();
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Login());
+            }
+                
         }
         void LoadStyles()
         {

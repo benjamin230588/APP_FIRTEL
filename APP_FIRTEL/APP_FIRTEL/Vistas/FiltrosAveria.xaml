@@ -34,15 +34,19 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Frame BackgroundColor="#FAFAFA"  CornerRadius="5" Margin="2" Padding="0" BorderColor="#848484"  >
+                                        <Frame HeightRequest="30" BackgroundColor="#FAFAFA"  CornerRadius="5" Margin="0,2,0,4" Padding="1,1,1,7" BorderColor="#848484"  >
                                             
-                                            <Grid RowSpacing="0" Margin="2">
+                                            <Grid RowSpacing="3" Margin="2">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*" />
                                                 <ColumnDefinition Width="4*" />
                                             </Grid.ColumnDefinitions>
-                                            <CheckBox Grid.Column="0" IsChecked="{Binding bseleccionado}" />
-                                            <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" />
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="50"/>
+                                                                                 
+                                                </Grid.RowDefinitions>
+                                                <CheckBox Grid.Column="0"  IsChecked="{Binding bseleccionado}"  HorizontalOptions="CenterAndExpand" Margin="0,0,0,9"/>
+                                            <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" FontSize="17" />
                                             </Grid>
                                         </Frame>
                                     </ViewCell>

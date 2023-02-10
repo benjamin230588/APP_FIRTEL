@@ -5,6 +5,7 @@
              BackgroundColor="#FAFAFA"
              Title="Login"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+            
              x:Class="APP_FIRTEL.Vistas.Login"
              NavigationPage.HasNavigationBar="False"
              xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
@@ -19,14 +20,14 @@
         </ResourceDictionary>
         
     </ContentPage.Resources>
-    <Grid BindingContext="{Binding oEntityLogin}" BackgroundColor="Orange">
+    <Grid BindingContext="{Binding oEntityLogin}" >
         <!--#region degradado -->
         <degradado:PancakeView BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0">
             <degradado:PancakeView.BackgroundGradientStops>
                 <degradado:GradientStopCollection>
                     <degradado:GradientStop Color="#0040FF" Offset="0.9"/>
                     <degradado:GradientStop Color="#0174DF" Offset="0.0"/>
-                  
+
                 </degradado:GradientStopCollection>
             </degradado:PancakeView.BackgroundGradientStops>
         </degradado:PancakeView>
@@ -82,8 +83,13 @@
 
 
             <Button HeightRequest="55" Text="INGRESAR AL SISTEMA" Style="{StaticResource btnloginicio1}"   x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" />
-
-         
+            <StackLayout HeightRequest="20"></StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+                <Label Text="Desea recordar contraseña?" TextColor="White" VerticalOptions="Start" FontSize="16" />
+                <Switch  IsToggled="True" ScaleX="1.5" ScaleY="1.3" x:Name="validacontra" ThumbColor="Red" Toggled="validacontra_Toggled" />
+                 
+            </StackLayout>
+            
         </StackLayout>
         <Grid    BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
             <ActivityIndicator
@@ -92,6 +98,7 @@
                 Color="Green"
                 />
         </Grid>
+       
 
     </Grid>
 </ContentPage>

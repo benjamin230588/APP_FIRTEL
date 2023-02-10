@@ -66,17 +66,12 @@
                                            Text="{Binding  objaveriacls.obsalta}"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Image="ic_arrow_drop_down" Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                    <custom:CustomPicker Grid.Column="1"  Grid.Row="6"  Title="Seleccione Estado"  TitleColor="Black"                                                                         
                                   ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding objaveriacls.nombreEstado}"
                                   FontSize="16"   ItemColor="" x:Name="combolista">
                     </custom:CustomPicker>
 
-                    <Label Grid.Column="0" Grid.Row="7" Text="Fecha" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="7" x:Name="datePicker"   HorizontalOptions="FillAndExpand"
-                                             Format="dd/MM/yyyy" Date="{Binding objaveriacls.fechaprogramada}"
-                                MinimumDate="01/01/1950"/>
-
-
+                   
 
                 </Grid>
                
@@ -86,7 +81,8 @@
         </ScrollView>
         <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,0,10,10">
             <Button Text="Volver" BackgroundColor="Red"
-                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15" />
+                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
+                    Command="{Binding VolverAveriacommand}"/>
             <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
                             CornerRadius="15"  HorizontalOptions="FillAndExpand"  Command="{Binding GrabarAveriaComand}"/>

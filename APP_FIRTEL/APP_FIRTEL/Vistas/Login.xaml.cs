@@ -14,6 +14,8 @@ using Utilitarios_Firtel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Globalization;
+using APP_FIRTEL.Genericos;
+using Utilitarios_Firtel.viewmodel;
 
 namespace APP_FIRTEL.Vistas
 {
@@ -27,10 +29,11 @@ namespace APP_FIRTEL.Vistas
         public Login()
         {
             InitializeComponent();
+            //var name = App.Current.Resources["name"].ToString();
             oEntityLogin.flgindicador = false;
             oEntityLogin.usuario = "admin";
             oEntityLogin.pasword="adminfirtel";
-          
+            
             BindingContext = this;
             // System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             //oEntityLogin = new LoginModel();
@@ -43,21 +46,33 @@ namespace APP_FIRTEL.Vistas
             //var response = new ResponseModel("Home/Index");
             try
             {
+                //prueba123.SwitchThumbColor = Color.Yellow;
+              
+
                 Reply res;
                 Acceso model = new Acceso();
                 //model.usuario = txtusuario.Text;
                 //model.pasword = txtpasword.Text;
                 model.usuario = oEntityLogin.usuario;
                 model.pasword = oEntityLogin.pasword;
-                
+                model.plataforma = 2;
+                Eusuario objeto = new Eusuario();
                 oEntityLogin.flgindicador = true;
                 res = await GenericLH.Post<Acceso>(Constantes.url + Constantes.api_login ,model);
                 if (res.result == 1)
                 {
+                    objeto = JsonConvert.DeserializeObject<Eusuario>(JsonConvert.SerializeObject(res.data));
+
+                    Setings.IdUsuario = objeto.idusuario;
+                    Setings.IdTipoUsuario = objeto.idperfilcab ?? 0;
+                    Setings.RecordarContra = validacontra.IsToggled;
+
                     Application.Current.MainPage = new Pagainaprincipal();
                 }
                 else
                 {
+                    Setings.IdUsuario = 0;
+                    Setings.IdTipoUsuario = 0;
                     await DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
 
                 }
@@ -69,14 +84,20 @@ namespace APP_FIRTEL.Vistas
                 oEntityLogin.flgindicador = false;
                 await DisplayAlert("Error", ex.Message , "Cancelar");
             }
-               
-           
-
-
-
-
+              
         }
 
-        
+        private void validacontra_Toggled(object sender, ToggledEventArgs e)
+        {
+            if (validacontra.IsToggled)
+            {
+                validacontra.ThumbColor = Color.Red;
+            }
+            else
+            {
+                validacontra.ThumbColor = Color.White;
+            }
+
+        }
     }
 }

@@ -90,6 +90,7 @@ namespace APP_FIRTEL.ViewModels
                 //{
                 //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
                 await Volver();
+                //actualizar la pantalla anterior 
                 
             }
             else

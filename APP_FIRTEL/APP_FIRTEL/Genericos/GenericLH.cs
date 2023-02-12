@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
 using Utilitarios_Firtel;
+using System.Collections.ObjectModel;
 
 namespace APP_FIRTEL.Generic
 {
@@ -83,6 +84,18 @@ namespace APP_FIRTEL.Generic
 			}
 
 
+		}
+
+		public static ObservableCollection<T> ToCollection<T>(List<T> items)
+		{
+			ObservableCollection<T> collection = new ObservableCollection<T>();
+
+			for (int i = 0; i < items.Count; i++)
+			{
+				collection.Add(items[i]);
+			}
+
+			return collection;
 		}
 
 

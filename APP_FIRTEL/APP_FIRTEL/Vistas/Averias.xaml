@@ -18,7 +18,8 @@
             
             <ScrollView Grid.Row="0">
 
-                <CollectionView Margin="5" ItemsSource="{Binding ListaAveria }" x:Name="listaaveriafirtel" SelectionMode="Single" >
+            <CollectionView Margin="5"  x:Name="listaaveriafirtel" ItemsSource="{Binding ListaAveria}" SelectionMode="Single" 
+                    RemainingItemsThreshold="3"   RemainingItemsThresholdReached="listaaveriafirtel_RemainingItemsThresholdReached"          >
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7"></GridItemsLayout>
                     </CollectionView.ItemsLayout>
@@ -63,9 +64,7 @@
                                     </Grid>
 
                                 </StackLayout>
-                                <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Path=BindingContext.IrFormaveriacommand,Source={x:Reference listaaveriafirtel}}" CommandParameter="{Binding .}"/>
-                                </Frame.GestureRecognizers>
+                               
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

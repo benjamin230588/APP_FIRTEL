@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Utilitarios_Firtel;
 using Utilitarios_Firtel.viewmodel;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
 
 namespace APP_FIRTEL.ViewModels
 {
@@ -17,8 +18,13 @@ namespace APP_FIRTEL.ViewModels
     {
         #region VARIABLES
         string _Texto;
-        List<AveriaCLS> _ListaAveria;
-       
+        int variable = 0;
+        //public readonly ObservableCollection<AveriaCLS> ListaAveria= new ObservableCollection<AveriaCLS>();
+        public List<ListaEstado> listaestado { get; set; }
+        public string fechadesde { get; set; }
+        public string fechahasta { get; set; }
+        private List<AveriaCLS> listaave = new List<AveriaCLS>();
+
 
         #endregion
         #region CONSTRUCTOR
@@ -31,22 +37,43 @@ namespace APP_FIRTEL.ViewModels
             #region OBJETOS
 
        
-        public List<AveriaCLS> ListaAveria
-        {
-            get { return _ListaAveria; }
-            set
-            {
-                SetValue(ref _ListaAveria, value);
-                OnPropertyChanged();
-            }
-        }
+        //public ObservableCollection<AveriaCLS> ListaAveria
+        //{
+        //    get {}
+        //    set
+        //    {
+        //        //SetValue(ref _ListaAveria, value);
+        //        //OnPropertyChanged();
+        //    }
+        //}
         
         #endregion
         #region PROCESOS
-        public async Task MostrarListaAverias(string desde, string hasta,string estado)
+        //public async Task MostrarListaAverias()
+        //{
+        //    Reply res;
+        //    string cadenaestado = "";
+        //    foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
+        //    cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+        //    var objeto = new Paginacion { pagine = 30, skip = 0, desde = fechadesde, hasta = fechahasta, idcliente ="", idestado = cadenaestado };
+
+        //    ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
+
+        //    res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
+        //    if (res.result == 1)
+        //    {
+        //        objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+
+        //    }
+        //   // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
+             
+        //    //listaave = objres.lista;
+        //    ListaAveria = objres.lista;
+        //}
+        public async Task MostrarListaAverias(string desde, string hasta, string estado)
         {
             Reply res;
-            var objeto = new Paginacion { pagine = 30, skip = 0, desde =desde, hasta =hasta, idcliente ="", idestado = estado };
+            var objeto = new Paginacion { pagine = 30, skip = 0, desde = desde, hasta = hasta, idcliente = "", idestado = estado };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
 
@@ -56,9 +83,39 @@ namespace APP_FIRTEL.ViewModels
                 objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
 
             }
-           // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
-             
-            ListaAveria = objres.lista;
+            // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
+
+            //ListaAveria = objres.lista;
+            //ListaAveria.Add(objres.lista[0]);
+            //ListaAveria.Add(objres.lista[1]);
+            //ListaAveria.Add(objres.lista[2]);
+            //ListaAveria.Add(objres.lista[3]);
+            //ListaAveria.Add(objres.lista[4]);
+        }
+        public async Task MostrarListaAverias2()
+        {
+            Reply res;
+            string desde = "01/01/2023";
+            string hasta = "02/01/2023";
+            string estado = "1";
+            if (variable >= 5) return;
+            var objeto = new Paginacion { pagine = 30, skip = 0, desde = desde, hasta = hasta, idcliente = "", idestado = estado };
+
+            ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
+
+            res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
+            if (res.result == 1)
+            {
+                objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+
+            }
+            // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
+
+            //ListaAveria.Add(objres.lista[0]);
+            //ListaAveria.Add(objres.lista[0]);
+            //ListaAveria.Add(objres.lista[0]);
+            variable += 1;
+
         }
 
         #endregion
@@ -82,6 +139,7 @@ namespace APP_FIRTEL.ViewModels
         #region COMANDOS
         public ICommand IrFiltroAveriacommand => new Command(async () => await IraFiltroAveria());
         public ICommand IrFormaveriacommand => new Command<AveriaCLS>(async (p) => await IraFormaveria(p));
+        public ICommand Irdeslizarcommand => new Command(async () => await MostrarListaAverias2());
 
         #endregion
     }

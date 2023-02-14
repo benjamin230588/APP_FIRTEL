@@ -24,7 +24,12 @@ namespace APP_FIRTEL.ViewModels
         public string fechadesde { get; set; }
         public string fechahasta { get; set; }
         private List<AveriaCLS> listaave = new List<AveriaCLS>();
-
+        private bool _flgindicador;
+        public bool flgindicador
+        {
+            get { return _flgindicador; }
+            set { SetValue(ref _flgindicador, value); }
+        }
 
         #endregion
         #region CONSTRUCTOR

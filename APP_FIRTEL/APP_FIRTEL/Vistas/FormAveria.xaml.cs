@@ -29,18 +29,24 @@ namespace APP_FIRTEL.Vistas
 			//defecto = "Pendiente";
 			//combolista.BindingContext = lista;
 			BindingContext = new FormAveriaModel(Navigation, objeto);
-			//combolista.SetBinding(Picker.ItemsSourceProperty,".");
-			//combolista.BindingContext = defecto;
-			////combolista.SetBinding(Picker.ItemsSourceProperty, ".");
-			//combolista.SetBinding(Picker.SelectedItemProperty, ".");
-			//combolista.ItemDisplayBinding = new Binding("Name");
+   //         combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+   //         combolista.BindingContext = defecto;
+   //         //combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+   //         combolista.SetBinding(Picker.SelectedItemProperty, ".");
+   //         combolista.ItemDisplayBinding = new Binding("Name");
 			//.ItemDisplayBinding = new Binding("Name");
-			//picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
-			//defecto = "Pendiente";
-			//BindingContext = this
-			//BindingContext = defecto;
+   //         picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
+   //         defecto = "Pendiente";
+   //         BindingContext = this
+
+   //         BindingContext = defecto;
 
 
-		}
-	}
+        }
+
+        //private void btnRegistrarUsuario_Clicked(object sender, EventArgs e)
+        //{
+
+        //}
+    }
 }

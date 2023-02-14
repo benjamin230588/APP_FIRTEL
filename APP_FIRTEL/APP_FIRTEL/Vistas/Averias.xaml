@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Averias"
              xmlns:custom="clr-namespace:APP_FIRTEL.Convertidores"
-             Title="Averias" >
+             Title="Averias" 
+             x:Name="thispage" >
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -18,10 +19,12 @@
             
             <ScrollView Grid.Row="0">
 
-            <CollectionView Margin="5"  x:Name="listaaveriafirtel" ItemsSource="{Binding ListaAveria}" SelectionMode="Single" 
-                    RemainingItemsThreshold="3"   RemainingItemsThresholdReached="listaaveriafirtel_RemainingItemsThresholdReached"          >
+            <CollectionView Margin="5"  x:Name="listaaveriafirtel"  SelectionMode="Single" 
+                    RemainingItemsThreshold="3"   RemainingItemsThresholdReached="listaaveriafirtel_RemainingItemsThresholdReached">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7"></GridItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7">
+                            
+                        </GridItemsLayout>
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -64,8 +67,10 @@
                                     </Grid>
 
                                 </StackLayout>
-                               
-                            </Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.IrFormaveriacommand,Source={x:Reference thispage}}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -77,7 +82,15 @@
                     TextColor="Black" HorizontalOptions="End" WidthRequest="90" 
                     HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro"  Command="{Binding IrFiltroAveriacommand}"/>
 
+        <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="{Binding flgindicador}">
+            <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsRunning="{Binding flgindicador}"
+                    Color="#DF013A"
+                    />
         </Grid>
+
+    </Grid>
 
    
 </ContentPage>

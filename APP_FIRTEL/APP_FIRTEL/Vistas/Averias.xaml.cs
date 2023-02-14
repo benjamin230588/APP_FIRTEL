@@ -22,11 +22,13 @@ namespace APP_FIRTEL.Vistas
         private int cantidad;
         public List<ListaEstado> listaestado { get; set; }
         public string fechadesde { get; set; }
+        public static bool actualiza = false;
         public string fechahasta { get; set; }
         //public  List<AveriaCLS> listatu = new List<AveriaCLS>();
         public static Averias instance;
-        public AveriaModel vm;
-        int estadoclave = 0;
+        public AveriaModel vm { get; set; }
+        private int skipcantidad = 0;
+        // int estadoclave = 0;
         public  ObservableCollection<AveriaCLS> ListaAveria { get; set; } 
 
 
@@ -46,8 +48,12 @@ namespace APP_FIRTEL.Vistas
             ListaAveria = new ObservableCollection<AveriaCLS>();
 
             //listaCategoria.Add(new AveriaCLS { idaveria = 2, nombre = "josue" });
-            //vm = new AveriaModel(Navigation);
-            BindingContext = this;
+            vm = new AveriaModel(Navigation);
+            BindingContext = vm;
+            listaaveriafirtel.BindingContext = ListaAveria;
+            listaaveriafirtel.SetBinding(CollectionView.ItemsSourceProperty, ".");
+            //gridcontenido.bi
+            
             listaestado = new List<ListaEstado>(){
                 new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true},
                  new ListaEstado () { idestado=2 , nombre="Pendiente" ,bseleccionado=true},
@@ -55,6 +61,7 @@ namespace APP_FIRTEL.Vistas
                    new ListaEstado () { idestado=4 , nombre="Pendiente" ,bseleccionado=true}
 
             };
+            vm.flgindicador = true;
             DateTime dateactual = DateTime.Now;
 
             //Asi obtenemos el primer dia del mes actual
@@ -66,46 +73,23 @@ namespace APP_FIRTEL.Vistas
 
             fechadesde = oPrimerDiaDelMes.ToString("dd/MM/yyyy");
             fechahasta = oUltimoDiaDelMes.ToString("dd/MM/yyyy");
-
+            skipcantidad = 0;
+            this.Appearing += Averias_Appearing;
             //consultaAverias();
-            actualizarlista();
+            actualizarlista(fechadesde,fechahasta,listaestado);
 
 
         }
-        //private async void consultaAverias()
-        //{
+       
 
-        //    string cadenaestado = "";
-        //    foreach (ListaEstado objCat in vm.listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
-        //    cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-
-
-        //    actualizarlista();
-        //    // vm.fechadesde, vm.fechahasta, cadenaestado
-        //}
-        //private async void actualizarlista()
-        //{
-        //    string cadenaestado = "";
-        //    foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
-        //    cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-
-        //    vm.MostrarListaAverias(fechadesde,fechahasta,cadenaestado);
-        //}
-        //private void listaaveriafirtel_RemainingItemsThresholdReached(object sender, EventArgs e)
-        //{
-        //    MostrarListaAverias2();
-
-
-        //}
-
-
-        private async void actualizarlista()
+        public async void actualizarlista(string desde1,string hasta1, List<ListaEstado> listaestadoave)
         {
             Reply res;
             string cadenaestado = "";
-            foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
+            skipcantidad = 0;
+            foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
             cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-            var objeto = new Paginacion { pagine = 30, skip = 0, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado };
+            var objeto = new Paginacion { pagine = 10, skip = skipcantidad*10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
 
@@ -115,32 +99,24 @@ namespace APP_FIRTEL.Vistas
                 objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
 
             }
-            // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
-
-
-            //ListaAveria = GenericLH.ToCollection<AveriaCLS>(objres.lista);
-            //ListaAveria.Add(objres.lista[0]);
-            //ListaAveria.Add(objres.lista[1]);
-            //ListaAveria.Add(objres.lista[2]);
-            //ListaAveria.Add(objres.lista[3]);
+          
             cantidad = objres.cantidadregistro;
+            ListaAveria.Clear();
             for (int i = 0; i < objres.lista.Count; i++)
             {
                 ListaAveria.Add(objres.lista[i]);
             }
+            vm.flgindicador = false;
         }
 
-        public async void MostrarListaAverias2()
+        public async void MostrarListaAverias2(int skipcantidad)
         {
             Reply res;
-            string desde = "01/01/2023";
-            string hasta = "02/01/2023";
-            string estado = "1";
-            //if (variable >= 3)
-            //{
-            //    return;
-            //}
-            var objeto = new Paginacion { pagine = 30, skip = 0, desde = desde, hasta = hasta, idcliente = "", idestado = estado };
+           
+            string cadenaestado = "";
+            foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
+            cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+            var objeto = new Paginacion { pagine = 10, skip = skipcantidad*10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado };
 
             ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
 
@@ -151,44 +127,38 @@ namespace APP_FIRTEL.Vistas
 
             }
             // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
-
+            cantidad = objres.cantidadregistro;
             //listatu.AddRange(objres.lista);
             for (int i = 0; i < objres.lista.Count; i++)
             {
                 ListaAveria.Add(objres.lista[i]);
             }
 
-            //ListaAveria.Add(objres.lista[0]);
-            //ListaAveria.Add(objres.lista[1]);
-            ////listaaveriafirtel.ItemsSource = listatu;
-            //variable = variable + 1;
+            
 
         }
 
         private void listaaveriafirtel_RemainingItemsThresholdReached(object sender, EventArgs e)
+        
         {
             if (cantidad > ListaAveria.Count)
             {
-                estadoclave = estadoclave + 1;
-                MostrarListaAverias2();
+                skipcantidad++;
+                MostrarListaAverias2(skipcantidad);
             }
             
             
         }
+        private  void Averias_Appearing(object sender, EventArgs e)
+        {
+            if(actualiza==true)
+            {
+                actualizarlista(fechadesde, fechahasta, listaestado);
+                actualiza = false;
+            }
+            
+        }
 
-        //private void listaaveriacol_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    Navigation.PushAsync(new FormAveria());
-        //}
 
-        //private void btnfiltro_Clicked(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new FiltrosAveria());
-        //}
-
-        //private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    Navigation.PushAsync(new FormAveria());
-        //}
     }
 }

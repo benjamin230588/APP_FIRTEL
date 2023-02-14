@@ -29,7 +29,7 @@ namespace APP_FIRTEL.Vistas
             Averias obj = Averias.GetInstance();
             foreach (ListaEstado objCat in oEntityCLS)
             {
-                foreach (ListaEstado obj2 in obj.vm.listaestado)
+                foreach (ListaEstado obj2 in obj.listaestado)
                 {
                     if (objCat.idestado == obj2.idestado)
                     {
@@ -38,8 +38,8 @@ namespace APP_FIRTEL.Vistas
                 }
             }
 
-            Fdesde = Convert.ToDateTime(obj.vm.fechadesde);
-            Fhasta = Convert.ToDateTime(obj.vm.fechahasta);
+            Fdesde = Convert.ToDateTime(obj.fechadesde);
+            Fhasta = Convert.ToDateTime(obj.fechahasta);
 
             BindingContext = this;
 
@@ -56,23 +56,25 @@ namespace APP_FIRTEL.Vistas
         {
             //Averias obj = Averias.GetInstance();
             Averias obj = Averias.GetInstance();
-            obj.vm.fechadesde = Fdesde.ToString("dd/MM/yyyy");
-            obj.vm.fechahasta = Fhasta.ToString("dd/MM/yyyy");
+            obj.fechadesde = Fdesde.ToString("dd/MM/yyyy");
+            obj.fechahasta = Fhasta.ToString("dd/MM/yyyy");
 
             //List<PaginaCLS> p = oEntityCLS.listaPagina;
             List<ListaEstado> paginasMarcadas = oEntityCLS.Where(pag => pag.bseleccionado == true).ToList();
-            obj.vm.listaestado = paginasMarcadas;
-            string cadenaestado = "";
-            foreach (ListaEstado objCat in paginasMarcadas) cadenaestado = cadenaestado + "," + objCat.idestado;
-            cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+            obj.listaestado = paginasMarcadas;
+            //string cadenaestado = "";
+            //foreach (ListaEstado objCat in paginasMarcadas) cadenaestado = cadenaestado + "," + objCat.idestado;
+            //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
 
             await Navigation.PopAsync();
-            await obj.vm.MostrarListaAverias2();
+            obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado);
 
 
-           
-          
+
+
+
 
         }
+       
     }
 }

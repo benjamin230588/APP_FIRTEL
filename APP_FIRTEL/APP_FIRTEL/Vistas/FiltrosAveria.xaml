@@ -34,21 +34,20 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Frame HeightRequest="30" BackgroundColor="#FAFAFA"  CornerRadius="5" Margin="0,2,0,4" Padding="1,1,1,7" BorderColor="#848484"  >
-                                            
-                                            <Grid RowSpacing="3" Margin="2">
+                                         
+                                            <Grid RowSpacing="5" Margin="1,1,1,1">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*" />
                                                 <ColumnDefinition Width="4*" />
                                             </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
-                                                    <RowDefinition Height="50"/>
+                                                    <RowDefinition Height="auto"/>
                                                                                  
                                                 </Grid.RowDefinitions>
-                                                <CheckBox Grid.Column="0"  IsChecked="{Binding bseleccionado}"  HorizontalOptions="CenterAndExpand" Margin="0,0,0,9"/>
-                                            <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" FontSize="17" />
+                                            <custom:CustomCheckbox  Grid.Column="0"  IsChecked="{Binding bseleccionado}" CheckColor="#1C1C1C" SizeRequest="40" HorizontalOptions="CenterAndExpand"/>
+                                                <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" FontSize="17" />
                                             </Grid>
-                                        </Frame>
+                                        
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

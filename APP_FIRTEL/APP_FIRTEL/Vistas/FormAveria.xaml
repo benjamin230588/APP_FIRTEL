@@ -85,7 +85,7 @@
                     Command="{Binding VolverAveriacommand}"/>
             <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
-                            CornerRadius="15"  HorizontalOptions="FillAndExpand"  Command="{Binding GrabarAveriaComand}"/>
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarAveriaComand}" />
            
 
         </StackLayout>

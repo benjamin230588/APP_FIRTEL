@@ -91,11 +91,11 @@
             </StackLayout>
             
         </StackLayout>
-        <Grid    BackgroundColor="Black" Opacity=".8" IsVisible="{Binding flgindicador}">
+        <Grid    BackgroundColor="#848484" Opacity=".8" IsVisible="{Binding flgindicador}">
             <ActivityIndicator
                HorizontalOptions="Center"
                 IsRunning="{Binding flgindicador}"
-                Color="Green"
+                Color="#DF013A"
                 />
         </Grid>
        

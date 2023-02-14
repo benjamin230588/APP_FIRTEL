@@ -1,5 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Generic;
+using APP_FIRTEL.Vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,8 +89,10 @@ namespace APP_FIRTEL.ViewModels
                 res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
                 //if (res.result == 1) 
                 //{
+                Averias.actualiza = true;
                 //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
                 await Volver();
+               
                 //actualizar la pantalla anterior 
                 
             }

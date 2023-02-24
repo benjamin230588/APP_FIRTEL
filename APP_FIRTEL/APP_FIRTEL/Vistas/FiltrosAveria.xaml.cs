@@ -1,6 +1,8 @@
 ﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.Genericos;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +21,26 @@ namespace APP_FIRTEL.Vistas
         public FiltrosAveria()
         {
             InitializeComponent();
-            oEntityCLS = new List<ListaEstado>(){
+            int idtipousuario = Setings.IdTipoUsuario;
+            if (idtipousuario == 1)
+            {
+                oEntityCLS = new List<ListaEstado>(){
                 new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=false},
                 new ListaEstado () { idestado=2 , nombre="Proceso" , bseleccionado=false},
                 new ListaEstado () { idestado=3 , nombre="Realizado"  ,bseleccionado=false},
                 new ListaEstado () { idestado=4 , nombre="Terminado" , bseleccionado=false},
             };
+            }
+            else
+            {
+                oEntityCLS = new List<ListaEstado>(){
+                new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=false},
+                new ListaEstado () { idestado=2 , nombre="Proceso" , bseleccionado=false},
+                new ListaEstado () { idestado=3 , nombre="Realizado"  ,bseleccionado=false},
+               
+            };
+
+            }
 
             Averias obj = Averias.GetInstance();
             foreach (ListaEstado objCat in oEntityCLS)
@@ -38,9 +54,20 @@ namespace APP_FIRTEL.Vistas
                 }
             }
 
-            Fdesde = Convert.ToDateTime(obj.fechadesde);
-            Fhasta = Convert.ToDateTime(obj.fechahasta);
+            //Fdesde = Convert.ToDateTime(obj.fechadesde);
+            DateTime.TryParseExact(obj.fechadesde,             //Primero la variable
+                                                     "dd/MM/yyyy",         //El formato esperado
+                                                     CultureInfo.InvariantCulture, //Información de cultura
+                                                     DateTimeStyles.None,  //Formato de análisis
+                                                     out DateTime Fdesde1);
+            DateTime.TryParseExact(obj.fechahasta,             //Primero la variable
+                                                     "dd/MM/yyyy",         //El formato esperado
+                                                     CultureInfo.InvariantCulture, //Información de cultura
+                                                     DateTimeStyles.None,  //Formato de análisis
+                                                     out DateTime Fhasta1);
 
+            Fdesde = Fdesde1;
+            Fhasta = Fhasta1;
             BindingContext = this;
 
         }

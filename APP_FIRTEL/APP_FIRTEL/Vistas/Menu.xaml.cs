@@ -15,11 +15,13 @@ namespace APP_FIRTEL.Vistas
     public partial class Menu : ContentPage
     {
         public List<MenuCLS> listamenu { get; set; }
+        public string mensajeusuario { get; set; }
         public Menu()
         {
             InitializeComponent();
+            string nomusuario = Setings.nomusuario;
             listamenu = new List<MenuCLS>();
-          
+            mensajeusuario = nomusuario;
             BindingContext = this;
             listarMenu();
         }

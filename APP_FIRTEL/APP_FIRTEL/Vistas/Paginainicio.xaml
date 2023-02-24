@@ -4,17 +4,75 @@
              x:Class="APP_FIRTEL.Vistas.Paginainicio"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <custom:CustomCheckbox IsChecked="{Binding oEntityLogin}" CheckColor="Green" SizeRequest="50" HorizontalOptions="CenterAndExpand"/>
+        <ScrollView Orientation="Vertical" 
+     VerticalOptions="FillAndExpand"
+     x:Name="attachmentScroller">
+
+            <StackLayout  x:Name="AttachmentsView" HeightRequest="1000"
+                Orientation="Vertical" HorizontalOptions="Fill">
+
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+              
+               
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                
+              
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+               
+            
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
+                
+                <Label Text="ff"></Label>
+                <Label Text="ff"></Label>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Switch IsToggled="True"  ScaleX="1.5" ScaleY="1.3" HorizontalOptions="CenterAndExpand" OnColor="Green"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Switch IsToggled="True" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
-            </StackLayout>
-            <Button x:Name="btndale" Text="dale" Clicked="btndale_Clicked"></Button>
-        </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -35,7 +35,7 @@ namespace APP_FIRTEL.Clases
         //datos clientes
         public string codigocliente { get; set; }
         public string nombrecliente { get; set; }
-        public string direccioncliente { get; set; }
+        
         public string telefono { get; set; }
         public string plancliente { get; set; }
         //public int idaveria { get; set; }
@@ -48,7 +48,16 @@ namespace APP_FIRTEL.Clases
         //public int idtecnico { get; set; }
         //public string nombretecnico { get; set; }
         public string nombreestado { get; set; }
+        public Nullable<decimal> cobro { get; set; }
 
+        public string direccion { get; set; }
+        public string zona { get; set; }
+        public Nullable<int> iddistrito { get; set; }
+        public string flg_estado { get; set; }
+        public Nullable<int> idplan { get; set; }
+        public Nullable<decimal> importeplan { get; set; }
+        public Nullable<int> idtecnologia { get; set; }
+        public string cantidadtv { get; set; }
 
     }
 }

@@ -52,14 +52,11 @@ namespace APP_FIRTEL.Vistas
             BindingContext = vm;
             listaaveriafirtel.BindingContext = ListaAveria;
             listaaveriafirtel.SetBinding(CollectionView.ItemsSourceProperty, ".");
+            
             //gridcontenido.bi
             
             listaestado = new List<ListaEstado>(){
-                new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true},
-                 new ListaEstado () { idestado=2 , nombre="Pendiente" ,bseleccionado=true},
-                  new ListaEstado () { idestado=3 , nombre="Pendiente" ,bseleccionado=true},
-                   new ListaEstado () { idestado=4 , nombre="Pendiente" ,bseleccionado=true}
-
+                new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true}
             };
             vm.flgindicador = true;
             DateTime dateactual = DateTime.Now;
@@ -71,10 +68,17 @@ namespace APP_FIRTEL.Vistas
             //agregamos 1 mes al objeto anterior y restamos 1 día.
             DateTime oUltimoDiaDelMes = oPrimerDiaDelMes.AddMonths(1).AddDays(-1);
 
-            fechadesde = oPrimerDiaDelMes.ToString("dd/MM/yyyy");
+            fechadesde = "01/01/2023";
             fechahasta = oUltimoDiaDelMes.ToString("dd/MM/yyyy");
             skipcantidad = 0;
             this.Appearing += Averias_Appearing;
+            lstrefrescador.Command = new Command(() =>
+            {
+
+                //listarDatos();
+                actualizarlista(fechadesde, fechahasta, listaestado);
+                lstrefrescador.IsRefreshing = false;
+            });
             //consultaAverias();
             actualizarlista(fechadesde,fechahasta,listaestado);
 

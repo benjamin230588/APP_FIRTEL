@@ -17,7 +17,7 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();
             App.Navigate = Navigation;
             App.MenuApp = this;
-            App.Navigate.PushAsync(new Averias());
+            //App.Navigate.PushAsync(new Averias());
         }
     }
 }

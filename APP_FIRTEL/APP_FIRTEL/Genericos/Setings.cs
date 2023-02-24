@@ -21,6 +21,9 @@ namespace APP_FIRTEL.Genericos
 
         private const string SettingsKeyIdUsuario = "idusuario";
         private static readonly int SettingsDefaultIdUsuario = 0;
+
+        private const string SettingsKeynomusuario = "nomusuario";
+        private static readonly string SettingsDefaultnomusuario = "";
         //idtipousuario
         private const string SettingsKeyIdTipoUsuario = "idtipousuario";
         private static readonly int SettingsDefaultIdTipoUsuario = 0;
@@ -40,6 +43,18 @@ namespace APP_FIRTEL.Genericos
             set
             {
                 AppSettings.AddOrUpdateValue(SettingsKeyIdUsuario, value);
+            }
+        }
+
+        public static string nomusuario
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(SettingsKeynomusuario, SettingsDefaultnomusuario);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(SettingsKeynomusuario, value);
             }
         }
         //idtipousuario

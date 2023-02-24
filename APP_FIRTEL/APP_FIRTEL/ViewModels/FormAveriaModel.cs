@@ -1,5 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Generic;
+using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,12 @@ namespace APP_FIRTEL.ViewModels
         DateTime txtfecha;
         AveriaCLS _objaveriacls;
         //List<AveriaCLS> _ListaAveria;
+        private bool _flgindicador;
+        public bool flgindicador
+        {
+            get { return _flgindicador; }
+            set { SetValue(ref _flgindicador, value); }
+        }
         #endregion
         #region CONSTRUCTOR
         public FormAveriaModel(INavigation navigation, AveriaCLS objeto)
@@ -32,6 +39,7 @@ namespace APP_FIRTEL.ViewModels
             //Txtfecha = DateTime.Now;
             objaveriacls = new AveriaCLS();
             objaveriacls = objeto;
+            flgindicador = false;
            // objaveriacls.nombreEstado = 
              //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
@@ -62,17 +70,21 @@ namespace APP_FIRTEL.ViewModels
         #region PROCESOS
         public List<string> cargaestado()
         {
-            return new List<string>() { "Pendiente", "Proceso", "Realizado","Terminado" };
+            int idtipousuario = Setings.IdTipoUsuario;
+            if(idtipousuario==1)
+                return new List<string>() { "Pendiente", "Proceso", "Realizado","Terminado" };
+            else
+                return new List<string>() { "Pendiente", "Proceso", "Realizado" };
+
 
 
         }
         public async Task GrabarAveria()
         {
 
-            if (1==1)
-            {
-               
-                var nombreestado = objaveriacls.nombreestado;
+           
+                flgindicador = true;
+                var nombreestado = objaveriacls.nombreEstado;
                 var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado =="Realizado" ? 3 : 4 ;
                 //AveriaCLS objeto = new AveriaCLS();
 
@@ -87,20 +99,23 @@ namespace APP_FIRTEL.ViewModels
                 //crear el objeto averia que debo enviar
                 Reply res;
                 res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
-                //if (res.result == 1) 
-                //{
-                Averias.actualiza = true;
-                //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
-                await Volver();
-               
-                //actualizar la pantalla anterior 
-                
-            }
-            else
-            {
-                await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
+                if (res.result == 1)
+                {
+                    Averias.actualiza = true;
+                    //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
+                    await Volver();
+                    flgindicador = false;
 
-            }
+                }
+                else
+                {
+                    flgindicador = false;
+                    await Application.Current.MainPage.DisplayAlert("Error", "Sucedio unerror", "OK");
+                }
+                
+               
+
+           
         }
         #endregion
         public async Task Volver()

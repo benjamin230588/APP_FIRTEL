@@ -32,8 +32,8 @@ namespace APP_FIRTEL.Vistas
             //var name = App.Current.Resources["name"].ToString();
             oEntityLogin.flgindicador = false;
             oEntityLogin.usuario = "admin";
-            oEntityLogin.pasword="adminfirtel";
-            
+            oEntityLogin.pasword = "adminfirtel";
+
             BindingContext = this;
             // System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             //oEntityLogin = new LoginModel();
@@ -64,6 +64,8 @@ namespace APP_FIRTEL.Vistas
                     objeto = JsonConvert.DeserializeObject<Eusuario>(JsonConvert.SerializeObject(res.data));
 
                     Setings.IdUsuario = objeto.idusuario;
+                    Setings.nomusuario = objeto.Usuario;
+
                     Setings.IdTipoUsuario = objeto.idperfilcab ?? 0;
                     Setings.RecordarContra = validacontra.IsToggled;
 

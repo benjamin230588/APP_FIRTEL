@@ -34,7 +34,15 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();
 			//BindingContext = this;
 			listarCategoriasinicio(0);
-		
+			
+			lstCategoria12.RefreshCommand = new Command(() =>
+			{
+				
+				listarCategoriasinicio(0);
+				lstCategoria12.IsRefreshing = false;
+
+			});
+
 		}
 
 		public async void listarCategorias(int skipcantidad)
@@ -60,13 +68,13 @@ namespace APP_FIRTEL.Vistas
 			
 
 
-
 		}
 		public async void listarCategoriasinicio(int skipcantidad)
 		{
 			//Aparezca el loading
 			//var objeto = new { pagine = 0, skip = 10, nombre = "" };
-
+			
+			skipcantidad = 0;
 			Reply res;
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
 			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
@@ -82,6 +90,7 @@ namespace APP_FIRTEL.Vistas
 			cantidad = objres.cantidadregistro;
 			lstCategoria12.ItemsSource = null;
 			lstCategoria12.ItemsSource = lista;
+			gridcontenido.IsVisible = false;
 
 
 

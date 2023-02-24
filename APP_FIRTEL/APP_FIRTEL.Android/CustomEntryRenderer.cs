@@ -62,10 +62,10 @@ namespace APP_FIRTEL.Droid
 
                 // Set padding for the internal text from border
                 Control.SetPadding(
-                    (int)DpToPixels(this.Context, Convert.ToSingle(12)),
-                    Control.PaddingTop,
-                    (int)DpToPixels(this.Context, Convert.ToSingle(12)),
-                    Control.PaddingBottom);
+                    (int)DpToPixels(this.Context, Convert.ToSingle(5)),
+                    8,
+                    (int)DpToPixels(this.Context, Convert.ToSingle(5)),
+                    8);
             }
         }
         public static float DpToPixels(Context context, float valueInDp)

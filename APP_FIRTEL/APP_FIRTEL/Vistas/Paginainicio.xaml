@@ -2,77 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Paginainicio"
-              xmlns:custom="clr-namespace:APP_FIRTEL.Clases">
-    <ContentPage.Content>
-        <ScrollView Orientation="Vertical" 
-     VerticalOptions="FillAndExpand"
-     x:Name="attachmentScroller">
+              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+             xmlns:pinch="clr-namespace:Xamarin.Forms.PinchZoomImage;assembly=Xamarin.Forms.PinchZoomImage" >
 
-            <StackLayout  x:Name="AttachmentsView" HeightRequest="1000"
-                Orientation="Vertical" HorizontalOptions="Fill">
 
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-              
-               
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                
-              
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-               
+    <Grid Padding="20">
+        <pinch:PinchZoom>
+            <pinch:PinchZoom.Content>
+                <Image   Source="https://pm1.narvii.com/6239/abaf6bf870d0afc180390c0f9c0c61531c489c01_hq.jpg"/>
+            </pinch:PinchZoom.Content>
+        </pinch:PinchZoom>
+
+    </Grid>
             
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-                
-                <Label Text="ff"></Label>
-                <Label Text="ff"></Label>
-            </StackLayout>
 
-        </ScrollView>
-    </ContentPage.Content>
+
 </ContentPage>

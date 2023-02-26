@@ -7,10 +7,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Utilitarios_Firtel;
-using Utilitarios_Firtel.viewmodel;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using Utilitarios_App.viewmodel;
+using Utilitarios_App;
 
 namespace APP_FIRTEL.ViewModels
 {

@@ -51,7 +51,7 @@
         <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="false">
             <ActivityIndicator
                     HorizontalOptions="Center"
-                    IsRunning="True"
+                    IsRunning="true"
                     Color="#DF013A"
                     />
         </Grid>

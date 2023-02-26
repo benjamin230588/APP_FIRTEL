@@ -8,8 +8,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Utilitarios_Firtel;
-using Utilitarios_Firtel.viewmodel;
+using Utilitarios_App;
 using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels

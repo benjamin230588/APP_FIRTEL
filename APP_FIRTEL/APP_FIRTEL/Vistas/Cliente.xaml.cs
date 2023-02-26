@@ -8,10 +8,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Utilitarios_Firtel;
-using Utilitarios_Firtel.viewmodel;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Utilitarios_App;
+using Utilitarios_App.viewmodel;
 
 namespace APP_FIRTEL.Vistas
 {
@@ -33,6 +34,7 @@ namespace APP_FIRTEL.Vistas
         {
             InitializeComponent();
 			//BindingContext = this;
+			gridcontenido.IsVisible = true;
 			listarCategoriasinicio(0);
 			
 			lstCategoria12.RefreshCommand = new Command(() =>

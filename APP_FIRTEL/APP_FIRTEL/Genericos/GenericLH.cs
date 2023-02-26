@@ -9,8 +9,9 @@ using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
-using Utilitarios_Firtel;
 using System.Collections.ObjectModel;
+using Plugin.Media.Abstractions;
+using Utilitarios_App;
 
 namespace APP_FIRTEL.Generic
 {
@@ -73,6 +74,7 @@ namespace APP_FIRTEL.Generic
 			HttpClient cliente = new HttpClient();
 			var cadena = JsonConvert.SerializeObject(obj);
 			var body = new StringContent(cadena, Encoding.UTF8, "application/json");
+			//cliente.he
 			var response = await cliente.PostAsync(url, body);
 			if (!response.IsSuccessStatusCode) return new Reply { result = 0 };
 			else
@@ -96,6 +98,20 @@ namespace APP_FIRTEL.Generic
 			}
 
 			return collection;
+		}
+		public static ImageSource convertirMediaFileAImageSource(MediaFile media)
+		{
+			return ImageSource.FromStream(() =>
+			{
+				return media.GetStream();
+			});
+		}
+
+		public static ImageSource convertirArrayDeBytesAImageSource(byte[] arraybytes)
+		{
+			//byte[] buffer = Convert.FromBase64String(base64);
+			///MemoryStream ms = new MemoryStream(arraybytes);
+			return ImageSource.FromStream(() => new MemoryStream(arraybytes));
 		}
 
 

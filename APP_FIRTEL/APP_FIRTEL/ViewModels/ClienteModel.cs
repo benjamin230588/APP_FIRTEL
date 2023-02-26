@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using Utilitarios_Firtel.viewmodel;
+using Utilitarios_App.viewmodel;
+using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
 {
@@ -17,6 +18,13 @@ namespace APP_FIRTEL.ViewModels
         {
             get { return _listaCategoria; }
             set { SetValue(ref _listaCategoria, value); }
+        }
+
+        private ImageSource _Imagen;
+        public ImageSource Imagen
+        {
+            get { return _Imagen; }
+            set { SetValue(ref _Imagen, value); }
         }
 
 

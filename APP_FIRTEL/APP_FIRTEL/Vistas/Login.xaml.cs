@@ -10,12 +10,13 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Utilitarios_Firtel;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Globalization;
 using APP_FIRTEL.Genericos;
-using Utilitarios_Firtel.viewmodel;
+using Utilitarios_App.viewmodel;
+using Utilitarios_App;
 
 namespace APP_FIRTEL.Vistas
 {

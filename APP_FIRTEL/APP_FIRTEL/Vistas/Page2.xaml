@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.Page2"
+              xmlns:local="clr-namespace:APP_FIRTEL.Convertidores" >
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <local:PinchToZoomContainer>
+                <local:PinchToZoomContainer.Content>
+                    <Image Source="https://pm1.narvii.com/6239/abaf6bf870d0afc180390c0f9c0c61531c489c01_hq.jpg" />
+                </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

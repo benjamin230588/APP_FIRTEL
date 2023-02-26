@@ -1,38 +1,49 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace APP_FIRTEL.Clases
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace Utilitarios_App.viewmodel
 {
-    public class ClienteCLS
+    public class ECliente
     {
         //[JsonIgnore]
-        //public string invento { get; set; }
-
+        //public HttpPostedFileBase filearchivo { get; set; }
+        public string rutaarchivo { get; set; }
+        public string nombrearchivo { get; set; }
         public int idcliente { get; set; }
         public Nullable<int> idcorrelativo { get; set; }
         public string codigocliente { get; set; }
         public string nombre { get; set; }
         public string nombresegundo { get; set; }
+
+        public string nombrevendedor { get; set; }
+        public string nombreplan { get; set; }
+        public string nombredistrito { get; set; }
+        public string nombretecnologia { get; set; }
+
+
+        public string nombrecompleto { get; set; }
         public string apellido { get; set; }
-      
         public Nullable<int> nacionalidad { get; set; }
         public string docdni { get; set; }
         public string telefono { get; set; }
         public string telefono2 { get; set; }
         public string Direccion { get; set; }
         public string Zona { get; set; }
-        public Nullable<int> Distrito { get; set; }
-        public Nullable<int> planbw { get; set; }
+        public Nullable<int> iddistrito { get; set; }
+        public Nullable<int> idplan { get; set; }
         public string cantidadtv { get; set; }
         public Nullable<System.DateTime> fechaalta { get; set; }
-      
         public string cajanap { get; set; }
-        public Nullable<int> vendedor { get; set; }
+        public Nullable<int> idvendedor { get; set; }
         public string pppoe { get; set; }
         public string comentario { get; set; }
-        public Nullable<int> tecnologia { get; set; }
+        public Nullable<int> idtecnologia { get; set; }
         public string flg_estado { get; set; }
         //[DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         //[Display(Name = "To Date")]
@@ -48,16 +59,11 @@ namespace APP_FIRTEL.Clases
         public System.DateTime fec_creacion { get; set; }
         public Nullable<System.DateTime> fec_modificacion { get; set; }
 
-        public string nombrevendedor { get; set; }
-        public string nombreplan { get; set; }
-        public string nombredistrito { get; set; }
-        public string nombretecnologia { get; set; }
-        public string nombrecompleto { get; set; }
-        public string fechaaltastring { get; set; }
+        public string coordenadas { get; set; }
+        public string cdf_fibra { get; set; }
+        public string cdf_tv { get; set; }
+        public Nullable<int> condiciondomicilio { get; set; }
 
         public byte[] cadenaflujo { get; set; }
-        public int alto { get; set; }
-        public int ancho { get; set; }
-
     }
 }

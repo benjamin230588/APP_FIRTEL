@@ -35,8 +35,8 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();       
             objcliente = obj;       
             titulo = nombretitulo;
-			oCategoriaModel.Imagen = obj.cadenaflujo == null ? null : GenericLH.convertirArrayDeBytesAImageSource(obj.cadenaflujo);
-			if(obj.cadenaflujo == null)
+			oCategoriaModel.Imagen = obj.nombrearchivo == null ? null : obj.rutaarchivo;
+			if(obj.nombrearchivo == null)
             {
 				objcliente.alto = 50;
 				objcliente.ancho = 100;
@@ -46,7 +46,7 @@ namespace APP_FIRTEL.Vistas
             {
 				
 				objcliente.alto = 300;
-				objcliente.ancho = 500;
+				objcliente.ancho = 330;
 
 			}
 			
@@ -59,47 +59,16 @@ namespace APP_FIRTEL.Vistas
         private async void btnvolvercliente_Clicked(object sender, EventArgs e)
         {
 			// var prueba =cmboestado23.SelectedItem;
-			//await Navigation.PopAsync();
-		   string url23 = "http://192.168.1.34:45455/Clientes/Grabar";
-			byte[] buffer = new byte[0];
-			Stream s = oMediaFile.GetStream();
-			using (MemoryStream ms = new MemoryStream())
-			{
-				s.CopyTo(ms);
-			   buffer = ms.ToArray();
-				
-			}
-			Stream datos2 = new MemoryStream(buffer);
-			HttpClient cliente = new HttpClient();
-			using (var multipartFormContent = new MultipartFormDataContent())
-			{
-				//Load the file and set the file's Content-Type header
-				var fileStreamContent = new StreamContent(datos2);
-				fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
-
-				//Add the file
-				multipartFormContent.Add(fileStreamContent, name: "file", fileName: "ho11use.jpg");
-
-				//Send it
-				//var jsonPayload = "that payload from the above sample";
-				var jsonPayload = JsonConvert.SerializeObject(new ClienteCLS() { idcliente = 29 });
-				var jsonBytes = Encoding.UTF8.GetBytes(jsonPayload);
-				var jsonContent = new StreamContent(new MemoryStream(jsonBytes));
-				jsonContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
-
-				multipartFormContent.Add(jsonContent, "modelo", "metadata.json");
-
-				var response = await cliente.PostAsync(url23, multipartFormContent);
-				response.EnsureSuccessStatusCode();
-				
-			}
+			await Navigation.PopAsync();
+		   
+			
 
 		}
 
-        private async void tabPreviewImage_Tapped(object sender, EventArgs e)
-        {
-			await CrossMedia.Current.Initialize();
-			oMediaFile = await CrossMedia.Current.PickPhotoAsync();
+   //     private async void tabPreviewImage_Tapped(object sender, EventArgs e)
+   //     {
+			//await CrossMedia.Current.Initialize();
+			//oMediaFile = await CrossMedia.Current.PickPhotoAsync();
 
 
 			
@@ -126,11 +95,11 @@ namespace APP_FIRTEL.Vistas
 			//		break;
 
 			//}
-			if (oMediaFile != null)
-			{
-				oCategoriaModel.Imagen = GenericLH.convertirMediaFileAImageSource(oMediaFile);
-			}
+		//	if (oMediaFile != null)
+		//	{
+		//		oCategoriaModel.Imagen = GenericLH.convertirMediaFileAImageSource(oMediaFile);
+		//	}
 
-		}
+		//}
 	}
 }

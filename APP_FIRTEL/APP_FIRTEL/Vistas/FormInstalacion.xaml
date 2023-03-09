@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.FormInstalacion"
+              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+              Title="Editar Instalacion">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelfont" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <Grid>
+        <StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Grid Margin="8,15,8,15" RowSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="83" />
+                            <ColumnDefinition Width="*"  />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="35"/>
+                           
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                        <Label Grid.Column="1" Grid.Row="0" Text="{Binding objInstalacioncls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+
+                        <Label Grid.Column="0" Grid.Row="1" Text="Nombre" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                        <custom:CustomEntry Grid.Column="1"  Grid.Row="1" Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objInstalacioncls.nombre}" Style="{StaticResource labelfont}"  />
+
+                    </Grid>
+
+
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,0,10,10">
+                <Button Text="Volver" BackgroundColor="Red"
+                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
+                    Command="{Binding VolverInstalacioncommand}"/>
+                <Button Text="Grabar" Background="Green" TextColor="White" 
+                            x:Name="btnRegistrarUsuario"
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarInstalacionComand}" />
+
+
+            </StackLayout>
+        </StackLayout>
+        <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="{Binding flgindicador}">
+            <ActivityIndicator
+               HorizontalOptions="Center"
+                IsRunning="{Binding flgindicador}"
+                Color="#DF013A"
+                />
+        </Grid>
+    </Grid>
+
+</ContentPage>

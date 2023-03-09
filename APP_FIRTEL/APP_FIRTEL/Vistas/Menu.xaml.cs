@@ -55,7 +55,7 @@ namespace APP_FIRTEL.Vistas
                 case "Averias":
                     App.Navigate.PushAsync(new Averias()); break;
                 case "Instalaciones":
-                    App.Navigate.PushAsync(new ListaInstalacion()); break;
+                    App.Navigate.PushAsync(new Instalacion()); break;
                 case "Clientes":
                     App.Navigate.PushAsync(new Cliente()); break;
                 case "Salir":

@@ -58,6 +58,8 @@ namespace APP_FIRTEL.Clases
         public byte[] cadenaflujo { get; set; }
         public int alto { get; set; }
         public int ancho { get; set; }
+        public string rutaarchivo { get; set; }
+        public string nombrearchivo { get; set; }
 
     }
 }

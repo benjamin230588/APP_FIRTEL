@@ -50,6 +50,7 @@
     <Compile Include="viewmodel\EAveria.cs" />
     <Compile Include="viewmodel\ECliente.cs" />
     <Compile Include="viewmodel\Eparametro.cs" />
+    <Compile Include="viewmodel\Epostventa.cs" />
     <Compile Include="viewmodel\Eusuario.cs" />
     <Compile Include="viewmodel\Evendedor.cs" />
     <Compile Include="viewmodel\ResultadoPaginacion.cs" />

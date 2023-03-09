@@ -21,7 +21,7 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
             LoadStyles();
-            // Application.Current.MainPage = new Page2();
+           // Application.Current.MainPage = new Paginaopciones();
             if (Setings.RecordarContra == true)
             {
                 Application.Current.MainPage = new Pagainaprincipal();

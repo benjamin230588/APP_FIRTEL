@@ -20,8 +20,8 @@ namespace APP_FIRTEL.ViewModels
             set { SetValue(ref _listaCategoria, value); }
         }
 
-        private ImageSource _Imagen;
-        public ImageSource Imagen
+        private string _Imagen;
+        public string Imagen
         {
             get { return _Imagen; }
             set { SetValue(ref _Imagen, value); }

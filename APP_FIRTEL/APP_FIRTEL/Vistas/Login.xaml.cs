@@ -32,8 +32,8 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();
             //var name = App.Current.Resources["name"].ToString();
             oEntityLogin.flgindicador = false;
-            oEntityLogin.usuario = "admin";
-            oEntityLogin.pasword = "adminfirtel";
+            //oEntityLogin.usuario = "admin";
+            //oEntityLogin.pasword = "adminfirtel";
 
             BindingContext = this;
             // System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");

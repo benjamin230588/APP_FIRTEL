@@ -87,15 +87,24 @@
             <Label Grid.Column="0" Grid.Row="12" Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
                 <custom:CustomLabel Grid.Column="1" Grid.Row="12" Text="{Binding objcliente.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-                <StackLayout Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2">
+         
+            
 
-                <Image
-            HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" Source="{Binding oCategoriaModel.Imagen}">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="tabPreviewImage" Tapped="tabPreviewImage_Tapped"  />
-                    </Image.GestureRecognizers>
-                </Image>
-            </StackLayout>
+                <Frame Padding="0" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2"
+                   HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" 
+                   BackgroundColor="White"
+                   CornerRadius="30"
+                  
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                                    >
+                    <Frame.Content>
+
+                     <Image  Aspect="Fill"
+                        Source="{Binding oCategoriaModel.Imagen}"/>
+                    </Frame.Content>
+                </Frame>
+
 
             </Grid>
            

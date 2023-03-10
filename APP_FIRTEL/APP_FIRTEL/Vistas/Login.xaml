@@ -5,7 +5,7 @@
              BackgroundColor="#FAFAFA"
              Title="Login"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
-            
+            xmlns:triggers="clr-namespace:APP_FIRTEL.Triggers"
              x:Class="APP_FIRTEL.Vistas.Login"
              NavigationPage.HasNavigationBar="False"
              xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
@@ -38,7 +38,7 @@
 
              
             <StackLayout HeightRequest="15"></StackLayout>
-         
+           
                 <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
@@ -54,10 +54,17 @@
                                 x:Name="txtusuario"  
                     
                     />
+
+
+
+
+            <Grid
+                Grid.Row="0"
+            Grid.Column="0"
+                 HorizontalOptions="FillAndExpand"
+            HeightRequest="40"
             
-                
-            <StackLayout HeightRequest="1"></StackLayout>
-           
+            IsClippedToBounds="True">
                 <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
@@ -76,8 +83,52 @@
                                TextColor="Black"
                
                      />
-            
-               
+                <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0,0,10,0"
+                Margin="0,0,8,0"
+                HeightRequest="27"
+                HorizontalOptions="End"
+                BackgroundColor="White"
+                IsClippedToBounds="True"
+                VerticalOptions="Center"
+                WidthRequest="25">
+                    <Button x:Name="ShowPasswordButton" BackgroundColor="White">
+                        <Button.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="-4,-6,-4,-6" />
+                                <On Platform="iOS" Value="0" />
+                            </OnPlatform>
+                        </Button.Margin>
+                        <Button.Triggers>
+                            <EventTrigger Event="Clicked">
+                                <triggers:ShowPasswordTriggerAction
+                                EntryPasswordName="txtpasword"
+                                IconImageName="ShowPasswordButtonIcon" />
+                            </EventTrigger>
+                        </Button.Triggers>
+                        
+                        
+                    </Button>
+                    <Image
+                    x:Name="ShowPasswordButtonIcon"
+                    HeightRequest="30"
+                    HorizontalOptions="Center"
+                    InputTransparent="True"
+                    VerticalOptions="Fill"
+                    WidthRequest="30" >
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS">showicon.png</On>
+                                <On Platform="Android">showicon.png</On>
+                                <On Platform="UWP">Assets/showicon.png</On>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                </Grid>
+            </Grid>
+          
 
             <StackLayout HeightRequest="20"></StackLayout>
 

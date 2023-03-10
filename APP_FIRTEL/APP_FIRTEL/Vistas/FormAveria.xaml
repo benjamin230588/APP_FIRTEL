@@ -18,86 +18,64 @@
     <Grid>
         <StackLayout>
         <ScrollView VerticalOptions="FillAndExpand">
-            <StackLayout>
+                <StackLayout Margin="10,4">
 
-                    <Grid Margin="8,15,8,15" RowSpacing="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="83" />
-                            <ColumnDefinition Width="*"  />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="35"/>
-
-                            <RowDefinition Height="95" />
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="90"/>
-
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="20"/>
-                            
-                        </Grid.RowDefinitions>
-
-                        <Label Grid.Column="0" Grid.Row="0" Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
-                        <Label    Grid.Column="1"  Grid.Row="0" x:Name="txtnombre" VerticalOptions="Center" Style="{StaticResource labelfont}">
+                    <Label  Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel  x:Name="txtnombre" Style="{StaticResource labelfont}"
+                                            CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center">
                             <Label.Text>
                                 <MultiBinding StringFormat="{}{0} {1}">
                                     <Binding Path="objaveriacls.codigocliente"/>
                                     <Binding Path="objaveriacls.nombrecliente"/>
                                 </MultiBinding>
                             </Label.Text>
-                        </Label>
+                        </custom:CustomLabel>
 
-                        <Label Grid.Column="0" Grid.Row="1" Text="Plan" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                      <Label Grid.Column="1"  Grid.Row="1" Text="{Binding  objaveriacls.plancliente}" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
+                 
+                    <Label  Text="Plan" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel  Text="{Binding  objaveriacls.plancliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}"/>
 
-                     <Label Grid.Column="0" Grid.Row="2" Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                    <Label Grid.Column="1"  Grid.Row="2" Text="{Binding  objaveriacls.telefono}" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
+                     <Label  Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel Text="{Binding  objaveriacls.telefono}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
 
 
-                     <Label Grid.Column="0" Grid.Row="3" Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                     <Label  Grid.Column="1"  Grid.Row="3" Text="{Binding  objaveriacls.direccion}" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+                     <Label Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel   Text="{Binding  objaveriacls.direccion}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
 
-                      <Label Grid.Column="0" Grid.Row="4" Text="Zona" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                      <Label  Grid.Column="1"  Grid.Row="4" Text="{Binding  objaveriacls.zona}" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+                      <Label Text="Zona" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel Text="{Binding  objaveriacls.zona}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
 
-                        <Label Grid.Column="0" Grid.Row="5" Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
-                    <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="5" MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
-                                IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                        <Label  Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
+                    <custom:BorderedEditor Keyboard="Text"  MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsaveria}" IsReadOnly="True"/>
 
-                    <Label Grid.Column="0" Grid.Row="6" Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
-                    <Label Grid.Column="1" Grid.Row="6" Text="{Binding objaveriacls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+                    <Label  Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objaveriacls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
 
-                     <Label Grid.Column="0" Grid.Row="7" Text="Fecha&#10;Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
-                        <Label Grid.Column="1" Grid.Row="7" Text="{Binding objaveriacls.fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+                     <Label Text="Fecha Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objaveriacls.fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
 
-                     <Label Grid.Column="0" Grid.Row="8" Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
-                    <custom:BorderedEditor Keyboard="Text" Grid.Column="1" Grid.Row="8" MaxLength="75" CornerRadius="10"
-                                IsCurvedCornersEnabled="true" HeightRequest="350"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                     <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsalta}"/>
 
-                    <Label Grid.Column="0" Grid.Row="9" Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                    <custom:CustomPicker Grid.Column="1"  Grid.Row="9"  Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                    <Label  Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomPicker  Title="Seleccione Estado"  TitleColor="Black"                                                                         
                                   ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding objaveriacls.nombreEstado}"
                                   FontSize="16"   ItemColor="" x:Name="combolista">
                     </custom:CustomPicker>
 
-                    <Label Grid.Column="0" Grid.Row="10" Text="Por Cobrar" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                     <custom:CustomEntry Grid.Column="1"  Grid.Row="10" Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objaveriacls.cobro}" Style="{StaticResource labelfont}"  />
+                    <Label  Text="Por Cobrar" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                     <custom:CustomEntry Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objaveriacls.cobro}" Style="{StaticResource labelfont}"  />
 
-                    </Grid>
-               
+                           
 
             </StackLayout>
             
         </ScrollView>
-        <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,0,10,10">
+        <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,30,10,10">
             <Button Text="Volver" BackgroundColor="Red"
                             x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
                     Command="{Binding VolverAveriacommand}"/>

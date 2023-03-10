@@ -17,25 +17,59 @@
     <Grid>
         <StackLayout>
             <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout>
-                    <Grid Margin="8,15,8,15" RowSpacing="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="83" />
-                            <ColumnDefinition Width="*"  />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="35"/>
-                           
-                        </Grid.RowDefinitions>
+                <StackLayout  Margin="10,4">
+                   
 
-                        <Label Grid.Column="0" Grid.Row="0" Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
-                        <Label Grid.Column="1" Grid.Row="0" Text="{Binding objInstalacioncls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
+                        <Label Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                        <Label Text="{Binding objInstalacioncls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
 
-                        <Label Grid.Column="0" Grid.Row="1" Text="Nombre" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                        <custom:CustomEntry Grid.Column="1"  Grid.Row="1" Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objInstalacioncls.nombre}" Style="{StaticResource labelfont}"  />
+                        <Label  Text="Nombre" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                        <custom:CustomEntry  Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objInstalacioncls.nombre}" Style="{StaticResource labelfont}"  />
 
-                    </Grid>
+
+                    <Label  Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry   Text="{Binding objInstalacioncls.nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center"
+                                HeightRequest="35"    BorderColor="#000000"  Style="{StaticResource labelfont}" />
+
+                    <Label Text="Codigo" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry Text="{Binding objInstalacioncls.codigocliente}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
+
+                    <Label  Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomEntry   Text="{Binding objInstalacioncls.Direccion}"  BorderColor="#000000"   Style="{StaticResource labelfont}" VerticalOptions="Center"    />
+
+
+                    <Label Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomEntry Text="{Binding objInstalacioncls.telefono}"  VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
+
+                    <Label  Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.Zona}" VerticalOptions="Center" BorderColor="#000000"   Style="{StaticResource labelfont}" />
+
+                    <Label  Text="Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombreplan}" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Vendedor" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombrevendedor}" VerticalOptions="Center" BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+
+                    <Label Text="Distrito" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombredistrito}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cajanap}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.pppoe}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.importeplan}" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+
+
 
 
                 </StackLayout>

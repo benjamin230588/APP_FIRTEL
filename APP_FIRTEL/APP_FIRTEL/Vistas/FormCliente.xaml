@@ -16,81 +16,56 @@
 
     </ContentPage.Resources>
     <StackLayout>
-        <ScrollView VerticalOptions="FillAndExpand">
-            <Grid Margin="8,15,8,15" RowSpacing="11">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75" />
-                <ColumnDefinition Width="*"  />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+    <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+       <StackLayout Orientation="Vertical" Margin="7,4">
+      
+          
 
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto"/>
-
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-
-
-
-
-                </Grid.RowDefinitions>
-
-            <Label Grid.Column="0" Grid.Row="0" Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1"  Grid.Row="0"   Text="{Binding objcliente.nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center"
+            <Label  Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel   Text="{Binding objcliente.nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center"
                                 HeightRequest="35"   CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}" />
 
-            <Label Grid.Column="0" Grid.Row="1" Text="Codigo" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="1" Text="{Binding objcliente.codigocliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
+            <Label Text="Codigo" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel Text="{Binding objcliente.codigocliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
 
-            <Label Grid.Column="0" Grid.Row="2" Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-            <custom:CustomLabel  Grid.Column="1"  Grid.Row="2" Text="{Binding objcliente.Direccion}" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" VerticalOptions="Center"    />
+            <Label  Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+            <custom:CustomLabel   Text="{Binding objcliente.Direccion}" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" VerticalOptions="Center"    />
 
 
-            <Label Grid.Column="0" Grid.Row="3" Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-            <custom:CustomLabel Grid.Column="1"  Grid.Row="3" Text="{Binding objcliente.telefono}"  VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
+            <Label Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+            <custom:CustomLabel Text="{Binding objcliente.telefono}"  VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
 
-            <Label Grid.Column="0" Grid.Row="4" Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="4" Text="{Binding objcliente.Zona}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
+            <Label  Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel  Text="{Binding objcliente.Zona}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}" />
 
-            <Label Grid.Column="0" Grid.Row="5" Text="Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="5" Text="{Binding objcliente.nombreplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel  Text="{Binding objcliente.nombreplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="6" Text="Vendedor" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="6" Text="{Binding objcliente.nombrevendedor}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Vendedor" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel  Text="{Binding objcliente.nombrevendedor}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="7" Text="Distrito" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="7" Text="{Binding objcliente.nombredistrito}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label Text="Distrito" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel  Text="{Binding objcliente.nombredistrito}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="8" Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                <custom:CustomLabel Grid.Column="1" Grid.Row="8" Text="{Binding objcliente.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel  Text="{Binding objcliente.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="9" Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel Grid.Column="1" Grid.Row="9" Text="{Binding objcliente.cajanap}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+            <custom:CustomLabel  Text="{Binding objcliente.cajanap}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="10" Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                <custom:CustomLabel Grid.Column="1" Grid.Row="10" Text="{Binding objcliente.pppoe}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel  Text="{Binding objcliente.pppoe}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="11" Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                <custom:CustomLabel Grid.Column="1" Grid.Row="11" Text="{Binding objcliente.importeplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <custom:CustomLabel  Text="{Binding objcliente.importeplan}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-            <Label Grid.Column="0" Grid.Row="12" Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
-                <custom:CustomLabel Grid.Column="1" Grid.Row="12" Text="{Binding objcliente.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+            <Label  Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
+                <custom:CustomLabel  Text="{Binding objcliente.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
          
             
 
-                <Frame Padding="0" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2"
+                <Frame Padding="0"
                    HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" 
                    BackgroundColor="White"
                    CornerRadius="30"
@@ -106,15 +81,16 @@
                 </Frame>
 
 
-            </Grid>
+         
            
-        </ScrollView>
+        
      
        
-        <StackLayout>
-            <Button Text="Volver" x:Name="btnvolvercliente" Margin="15,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
-        </StackLayout> 
-        
+        </StackLayout>
+    </ScrollView>
+    <StackLayout>
+        <Button Text="Volver" x:Name="btnvolvercliente" Margin="5,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
+    </StackLayout>
     </StackLayout>
     
 </ContentPage>

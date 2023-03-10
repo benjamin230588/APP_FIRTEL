@@ -52,11 +52,11 @@ namespace APP_FIRTEL.Vistas
 
             //gridcontenido.bi
 
-            //listaestado = new List<ListaEstado>(){
-            //    new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true}
-            //};
+            listaestado = new List<ListaEstado>(){
+                new ListaEstado () { idestado=1 , nombre="Abierto" ,bseleccionado=true}
+            };
 
-            listaestado = new List<ListaEstado>();
+            //listaestado = new List<ListaEstado>();
             vm.flgindicador = true;
             DateTime dateactual = DateTime.Now;
 
@@ -90,8 +90,8 @@ namespace APP_FIRTEL.Vistas
             Reply res;
             string cadenaestado = "";
             skipcantidad = 0;
-            //foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
-            //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+            foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
+            cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
             var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado };
 
             ResultadoPaginacion<PostventaCLS> objres = new ResultadoPaginacion<PostventaCLS>();

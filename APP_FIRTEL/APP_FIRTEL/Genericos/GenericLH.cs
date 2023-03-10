@@ -12,6 +12,7 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using Plugin.Media.Abstractions;
 using Utilitarios_App;
+using System.Net.Http.Headers;
 
 namespace APP_FIRTEL.Generic
 {
@@ -87,8 +88,53 @@ namespace APP_FIRTEL.Generic
 
 
 		}
+		public static async Task<Reply> Postfile<T>(MediaFile oMediaFile, string url, T obj)
+		{
+			string url23 =url;
+			byte[] buffer = new byte[0];
+			Stream s = oMediaFile.GetStream();
+			using (MemoryStream ms = new MemoryStream())
+			{
+				s.CopyTo(ms);
+				buffer = ms.ToArray();
 
-		public static ObservableCollection<T> ToCollection<T>(List<T> items)
+			}
+			Stream datos2 = new MemoryStream(buffer);
+			HttpClient cliente = new HttpClient();
+			using (var multipartFormContent = new MultipartFormDataContent())
+			{
+				//Load the file and set the file's Content-Type header
+				var fileStreamContent = new StreamContent(datos2);
+				fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
+
+				//Add the file
+				multipartFormContent.Add(fileStreamContent, name: "file", fileName: "ho11use.jpg");
+
+				//Send it
+				//var jsonPayload = "that payload from the above sample";
+				var jsonPayload = JsonConvert.SerializeObject(obj);
+				var jsonBytes = Encoding.UTF8.GetBytes(jsonPayload);
+				var jsonContent = new StreamContent(new MemoryStream(jsonBytes));
+				jsonContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+				multipartFormContent.Add(jsonContent, "modelo", "metadata.json");
+
+				var response = await cliente.PostAsync(url23, multipartFormContent);
+				//response.EnsureSuccessStatusCode();
+				if (!response.IsSuccessStatusCode) return new Reply { result = 0 };
+				else
+				{
+					//int respuesta = int.Parse(await response.Content.ReadAsStringAsync());
+					var result = await response.Content.ReadAsStringAsync();
+					Reply res = JsonConvert.DeserializeObject<Reply>(result);
+					return res;
+				}
+
+
+			}
+		}
+
+			public static ObservableCollection<T> ToCollection<T>(List<T> items)
 		{
 			ObservableCollection<T> collection = new ObservableCollection<T>();
 

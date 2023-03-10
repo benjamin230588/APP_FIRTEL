@@ -21,15 +21,15 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
             LoadStyles();
-           // Application.Current.MainPage = new Paginaopciones();
-            if (Setings.RecordarContra == true)
-            {
-                Application.Current.MainPage = new Pagainaprincipal();
-            }
-            else
-            {
-                MainPage = new NavigationPage(new Login());
-            }
+            Application.Current.MainPage = new Page2();
+            //if (Setings.RecordarContra == true)
+            //{
+            //    Application.Current.MainPage = new Pagainaprincipal();
+            //}
+            //else
+            //{
+            //    MainPage = new NavigationPage(new Login());
+            //}
 
         }
         void LoadStyles()

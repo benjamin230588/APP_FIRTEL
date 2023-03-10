@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.FormInstalacion"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+               xmlns:local="clr-namespace:APP_FIRTEL.Convertidores"
               Title="Editar Instalacion">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -20,58 +21,121 @@
                 <StackLayout  Margin="10,4">
                    
 
-                        <Label Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
-                        <Label Text="{Binding objInstalacioncls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" FontAttributes="Bold" Style="{StaticResource labelfont}"/>
 
-                        <Label  Text="Nombre" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
-                        <custom:CustomEntry  Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objInstalacioncls.nombre}" Style="{StaticResource labelfont}"  />
+                    <Label  Text="Nombre" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry   Text="{Binding objInstalacioncls.nombre}"   x:Name="txtnombre" VerticalOptions="Center"
+                                HeightRequest="35"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
+                    <Label Text="Segundo Nombre" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry Text="{Binding objInstalacioncls.nombresegundo}" x:Name="txtnombresegundo" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
-                    <Label  Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry   Text="{Binding objInstalacioncls.nombrecompleto}"   x:Name="txtnombre" VerticalOptions="Center"
-                                HeightRequest="35"    BorderColor="#000000"  Style="{StaticResource labelfont}" />
+                    <Label  Text="Apellido" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomEntry   Text="{Binding objInstalacioncls.apellido}" x:Name="txtapellido" HeightRequest="35" BorderColor="#000000"   Style="{StaticResource labelfont}" VerticalOptions="Center"    />
+                   
+                    <Label Text="Documento de Identidad" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomEntry Text="{Binding objInstalacioncls.dni}"  HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
-                    <Label Text="Codigo" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry Text="{Binding objInstalacioncls.codigocliente}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="Googlemaps.png" x:Name="imgmaps" Clicked="imgmaps_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
 
-                    <Label  Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom:CustomEntry   Text="{Binding objInstalacioncls.Direccion}"  BorderColor="#000000"   Style="{StaticResource labelfont}" VerticalOptions="Center"    />
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
 
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+                    </StackLayout>
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.coordenadas}" x:Name="txtcoordenadas" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
-                    <Label Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
-                    <custom:CustomEntry Text="{Binding objInstalacioncls.telefono}"  VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
+                   
+                    <Label  Text="Direccion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.direccion}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
 
                     <Label  Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.Zona}" VerticalOptions="Center" BorderColor="#000000"   Style="{StaticResource labelfont}" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.zona}" HeightRequest="35" VerticalOptions="Center" BorderColor="#000000"   Style="{StaticResource labelfont}" />
+
+                    <Label Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                                           Text="{Binding  objaveriacls.observacion}"/>
+
+
+                    <Label  Text="Telefono" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.celular}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Cantidad TV" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Costo Instalacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.importeinstalacion}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_registro}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+
 
                     <Label  Text="Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombreplan}" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
-                    <Label  Text="Vendedor" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombrevendedor}" VerticalOptions="Center" BorderColor="#000000"  Style="{StaticResource labelfont}"/>
+                    <Label  Text="Estado" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
-                    <Label Text="Distrito" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.nombredistrito}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
-
-                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
-
-                    <Label  Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cajanap}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
-
-                    <Label  Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.pppoe}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
-
-                    <Label  Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.importeplan}" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
-
-                    <Label  Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+                    <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                                           Text="{Binding  objaveriacls.observacion2}"/>
 
 
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label  Text="Cargar Imagen"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="Googlemaps.png" x:Name="imgcargaimagen" Clicked="imgcargaimagen_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
 
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
 
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+                    </StackLayout>
+                    <StackLayout>
 
+                        <Grid Padding="20">
+                            <local:PinchToZoomContainer x:Name="cargadorimg" IsVisible="{Binding flgimggrabar}">
+                                <local:PinchToZoomContainer.Content>
+                                    <Image HeightRequest="300" WidthRequest="450"
+                                     Source="{Binding Imagenpost}">
+                                        
+                                    </Image>
+                                </local:PinchToZoomContainer.Content>
+                            </local:PinchToZoomContainer>
+                           
+                        </Grid>
+                    </StackLayout>
+
+                   
                 </StackLayout>
 
             </ScrollView>

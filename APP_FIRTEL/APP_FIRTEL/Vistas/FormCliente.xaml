@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+              xmlns:local="clr-namespace:APP_FIRTEL.Convertidores"
                x:Class="APP_FIRTEL.Vistas.FormCliente"
                Title="{Binding titulo}">
     <ContentPage.Resources>
@@ -65,20 +66,7 @@
          
             
 
-                <Frame Padding="0"
-                   HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" 
-                   BackgroundColor="White"
-                   CornerRadius="30"
-                  
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                                    >
-                    <Frame.Content>
-
-                     <Image  Aspect="Fill"
-                        Source="{Binding oCategoriaModel.Imagen}"/>
-                    </Frame.Content>
-                </Frame>
+               
 
 
          
@@ -88,7 +76,25 @@
        
         </StackLayout>
     </ScrollView>
-    <StackLayout>
+        <Frame Padding="0"
+                   HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" 
+                   BackgroundColor="White"
+                   CornerRadius="30"
+                  
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                                    >
+            <Frame.Content>
+                <local:PinchToZoomContainer x:Name="cargadorimg" IsVisible="{Binding flgimggrabar}">
+                    <local:PinchToZoomContainer.Content>
+                        <Image  Aspect="Fill"
+                                Source="{Binding oCategoriaModel.Imagen}"/>
+                    </local:PinchToZoomContainer.Content>
+                </local:PinchToZoomContainer>
+
+            </Frame.Content>
+        </Frame>
+        <StackLayout>
         <Button Text="Volver" x:Name="btnvolvercliente" Margin="5,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
     </StackLayout>
     </StackLayout>

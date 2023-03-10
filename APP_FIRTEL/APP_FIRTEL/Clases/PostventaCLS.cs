@@ -30,8 +30,12 @@ namespace APP_FIRTEL.Clases
         public System.DateTime fec_creacion { get; set; }
         public Nullable<System.DateTime> fec_modificacion { get; set; }
         public string observacion { get; set; }
+        public string observacion2 { get; set; }
         public string plancliente { get; set; }
         public string nombreEstado { get; set; }
         public string nombrecliente { get; set; }
+
+        public Nullable<int> idvendedor { get; set; }
+        public string cantidadtv { get; set; }
     }
 }

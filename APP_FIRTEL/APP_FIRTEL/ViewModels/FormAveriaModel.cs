@@ -23,6 +23,7 @@ namespace APP_FIRTEL.ViewModels
         AveriaCLS _objaveriacls;
         //List<AveriaCLS> _ListaAveria;
         private bool _flgindicador;
+       
         public bool flgindicador
         {
             get { return _flgindicador; }
@@ -87,8 +88,8 @@ namespace APP_FIRTEL.ViewModels
                 var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado =="Realizado" ? 3 : 4 ;
                 //AveriaCLS objeto = new AveriaCLS();
 
-                objaveriacls.usu_creacion = 1;
-                objaveriacls.fec_creacion = DateTime.Now;
+                objaveriacls.usu_modificacion = 1;
+                objaveriacls.fec_modificacion = DateTime.Now;
                 objaveriacls.flg_anulado = true;
                 //objeto.fecha_registro = objaveriacls.fecha_registro;
                 objaveriacls.Estado = idestado;
@@ -109,7 +110,7 @@ namespace APP_FIRTEL.ViewModels
                 else
                 {
                     flgindicador = false;
-                    await Application.Current.MainPage.DisplayAlert("Error", "Sucedio unerror", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Error", "Sucedio un error", "OK");
                 }
                 
                

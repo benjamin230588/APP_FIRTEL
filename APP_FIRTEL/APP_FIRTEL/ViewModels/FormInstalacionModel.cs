@@ -27,6 +27,24 @@ namespace APP_FIRTEL.ViewModels
             get { return _flgindicador; }
             set { SetValue(ref _flgindicador, value); }
         }
+        private bool _flgimggrabar;
+        public bool flgimggrabar
+        {
+            get { return _flgimggrabar; }
+            set { SetValue(ref _flgimggrabar, value); }
+        }
+        private bool _flgvisualiza;
+        public bool flgvisualiza
+        {
+            get { return _flgvisualiza; }
+            set { SetValue(ref _flgvisualiza, value); }
+        }
+        private ImageSource _Imagenpost;
+        public ImageSource Imagenpost
+        {
+            get { return _Imagenpost; }
+            set { SetValue(ref _Imagenpost, value); }
+        }
         #endregion
         #region CONSTRUCTOR
         public FormInstalacionModel(INavigation navigation, PostventaCLS objeto)
@@ -38,6 +56,9 @@ namespace APP_FIRTEL.ViewModels
             objInstalacioncls = new PostventaCLS();
             objInstalacioncls = objeto;
             flgindicador = false;
+            flgimggrabar = true;
+            flgvisualiza = false;
+
             // objaveriacls.nombreEstado = 
             //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
@@ -70,9 +91,9 @@ namespace APP_FIRTEL.ViewModels
         {
             int idtipousuario = Setings.IdTipoUsuario;
             if (idtipousuario == 1)
-                return new List<string>() { "Pendiente", "Proceso", "Realizado", "Terminado" };
+                return new List<string>() { "Abierto", "En Proceso", "Terminado","Cerrado" };
             else
-                return new List<string>() { "Pendiente", "Proceso", "Realizado" };
+                return new List<string>() { "Abierto", "En Proceso", "Terminado" };
 
 
 
@@ -83,11 +104,11 @@ namespace APP_FIRTEL.ViewModels
 
             flgindicador = true;
             var nombreestado = objInstalacioncls.nombreEstado;
-            var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
+          //  var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
             //AveriaCLS objeto = new AveriaCLS();
 
-            objInstalacioncls.usu_creacion = 1;
-            objInstalacioncls.fec_creacion = DateTime.Now;
+            objInstalacioncls.usu_modificacion = 1;
+            objInstalacioncls.fec_modificacion = DateTime.Now;
             objInstalacioncls.flg_anulado = true;
             //objeto.fecha_registro = objaveriacls.fecha_registro;
            // objaveriacls.Estado = idestado;
@@ -96,7 +117,7 @@ namespace APP_FIRTEL.ViewModels
 
             //crear el objeto averia que debo enviar
             Reply res;
-            res = await GenericLH.Post<PostventaCLS>(Constantes.url + Constantes.api_grabaraveria, objInstalacioncls);
+            res = await GenericLH.Post<PostventaCLS>(Constantes.url + Constantes.api_grabarpostventa, objInstalacioncls);
             if (res.result == 1)
             {
                 Instalacion.actualiza = true;
@@ -108,7 +129,7 @@ namespace APP_FIRTEL.ViewModels
             else
             {
                 flgindicador = false;
-                await Application.Current.MainPage.DisplayAlert("Error", "Sucedio unerror", "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", "Sucedio un error", "OK");
             }
 
 

@@ -3,7 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                Title="Instalaciones" 
              x:Class="APP_FIRTEL.Vistas.Instalacion"
+              xmlns:custom="clr-namespace:APP_FIRTEL.Convertidores"
               x:Name="thispage" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:ConvertcoloresInsta x:Key="StringToColorConverterinst"/>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
     <Grid Padding="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -29,9 +36,10 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="2*"/>
                                             <ColumnDefinition Width="*"/>
-                                            
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+
 
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
@@ -41,18 +49,23 @@
                                             <RowDefinition Height="Auto"/>
                                            
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
                                                 FontAttributes="Bold" Style="{StaticResource titulocolectionview}" TextColor="Blue" />
                                        
-                                        <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                                        
+                                        <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
                                                  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                        
+                                        <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="2"  FontAttributes="Bold" HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
+                                        <Label Text="{Binding celular}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding zona}"  Grid.Column="0" Grid.Row="2" FontAttributes="Bold"   HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
-                                        <Label Text="{Binding celular}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold" HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
+                                        <Frame Grid.Column="2" Grid.Row="2" Padding="0" CornerRadius="10">
+                                            <Label Text="{Binding nombreEstado}"   TextColor="White" BackgroundColor="{Binding flg_estado,Converter={StaticResource StringToColorConverterinst}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
+                                        </Frame>
+                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                        <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="3" TextColor="Blue"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
 
-                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
-
-                                        <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="1" Grid.Row="3"  FontAttributes="Bold" HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
+                                       
                                     </Grid>
 
                                 </StackLayout>

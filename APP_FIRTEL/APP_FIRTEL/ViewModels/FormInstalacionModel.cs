@@ -2,8 +2,11 @@
 using APP_FIRTEL.Generic;
 using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -17,6 +20,20 @@ namespace APP_FIRTEL.ViewModels
         #region VARIABLES
         string _Texto;
         List<string> _listaestado = new List<string>();
+        List<string> _listaplanes = new List<string>();
+        public int _alto;
+        public string nombrefile { get; set; }
+        public int alto
+        {
+            get { return _alto; }
+            set { SetValue(ref _alto, value); }
+        }
+        private int _ancho;
+        public int ancho
+        {
+            get { return _ancho; }
+            set { SetValue(ref _ancho, value); }
+        }
         string selectturno;
         DateTime txtfecha;
         PostventaCLS _objinstalacioncls;
@@ -45,6 +62,14 @@ namespace APP_FIRTEL.ViewModels
             get { return _Imagenpost; }
             set { SetValue(ref _Imagenpost, value); }
         }
+        private MediaFile _Imgmedia;
+        public MediaFile Imgmedia
+        {
+            get { return _Imgmedia; }
+            set { SetValue(ref _Imgmedia, value); }
+        }
+       
+        
         #endregion
         #region CONSTRUCTOR
         public FormInstalacionModel(INavigation navigation, PostventaCLS objeto)
@@ -52,13 +77,26 @@ namespace APP_FIRTEL.ViewModels
             Navigation = navigation;
             // parametrosRecibe = objeto;
             Listaestado = cargaestado();
+            Listaplanes = cargaplanes();
             //Txtfecha = DateTime.Now;
             objInstalacioncls = new PostventaCLS();
             objInstalacioncls = objeto;
             flgindicador = false;
-            flgimggrabar = true;
-            flgvisualiza = false;
-
+            if (objeto.nombrearchivo==null)
+            {
+                alto = 150;
+                ancho = 330;
+                
+            }
+            else
+            {
+                alto = 300;
+                ancho = 330;
+                traebytes(objeto.rutaarchivo);
+            }
+           
+        
+           
             // objaveriacls.nombreEstado = 
             //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
@@ -76,7 +114,12 @@ namespace APP_FIRTEL.ViewModels
             set { SetValue(ref _listaestado, value); }
 
         }
+        public List<string> Listaplanes
+        {
+            get { return _listaplanes; }
+            set { SetValue(ref _listaplanes, value); }
 
+        }
         public PostventaCLS objInstalacioncls
         {
             get { return _objinstalacioncls; }
@@ -91,33 +134,102 @@ namespace APP_FIRTEL.ViewModels
         {
             int idtipousuario = Setings.IdTipoUsuario;
             if (idtipousuario == 1)
-                return new List<string>() { "Abierto", "En Proceso", "Terminado","Cerrado" };
+                return new List<string>() { "Abierto", "Proceso", "Terminado"};
             else
-                return new List<string>() { "Abierto", "En Proceso", "Terminado" };
+                return new List<string>() { "Abierto", "Proceso", "Terminado" };
 
 
 
         }
+        public List<string> cargaplanes()
+        {
+            //int idtipousuario = Setings.IdTipoUsuario;
+            //if (idtipousuario == 1)
+                return new List<string>() { "Plan_30Mbps", "Plan_50Mbps", "Plan_60Mbps", 
+                    "Plan_100Mbps" , "Plan_200Mbps","Plan_30Mbps+TV","Plan_50Mbps+TV","Plan_60Mbps+TV","Plan_100Mbps+TV","TV" };
+            //else
+            //    return new List<string>() { "Abierto", "En Proceso", "Terminado" };
+
+
+
+        }
+        public async void traebytes(string url)
+        {
+            byte[] bytes;
+            
+                using (HttpClient client = new HttpClient())
+                {
+                    byte[] fileArray = await client.GetByteArrayAsync(url);
+                    bytes = fileArray;
+                }
+            Imagenpost = ImageSource.FromStream(() => new MemoryStream(bytes));
+               
+         }
+           
+
+
+            //////ImageConverter Class convert Image object to Byte array.
+            //byte[] bytes = imageg.by
+
+
+
+        
         public async Task GrabarInstalacion()
         {
 
 
             flgindicador = true;
             var nombreestado = objInstalacioncls.nombreEstado;
-          //  var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
+            var nombreplan = objInstalacioncls.plancliente;
+            var idestado = nombreestado == "Abierto" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Terminado" ? 3 : 4;
             //AveriaCLS objeto = new AveriaCLS();
+            int idplan = 0;
+            switch (nombreplan)
+            {
+                case "Plan_30Mbps":
+                    idplan = 7;
+                    break;
+                case "Plan_50Mbps":
+                    idplan = 15;
+                    break;
+                case "Plan_60Mbps":
+                    idplan = 20;
+                    break;
+                case "Plan_100Mbps":
+                    idplan = 19;
+                    break;
+                case "Plan_200Mbps":
+                    idplan = 9;
+                    break;
+                case "Plan_30Mbps+TV":
+                    idplan = 14;
+                    break;
+                case "Plan_50Mbps+TV":
+                    idplan = 4;
+                    break;
+                case "Plan_60Mbps+TV":
+                    idplan = 11;
+                    break;
+                case "Plan_100Mbps+TV":
+                    idplan = 17;
+                    break;
+                case "TV":
+                    idplan = 12;
+                    break;
+            }
 
             objInstalacioncls.usu_modificacion = 1;
             objInstalacioncls.fec_modificacion = DateTime.Now;
             objInstalacioncls.flg_anulado = true;
             //objeto.fecha_registro = objaveriacls.fecha_registro;
-           // objaveriacls.Estado = idestado;
+            objInstalacioncls.flg_estado = idestado;
+            objInstalacioncls.idplan = idplan;
 
 
 
             //crear el objeto averia que debo enviar
             Reply res;
-            res = await GenericLH.Post<PostventaCLS>(Constantes.url + Constantes.api_grabarpostventa, objInstalacioncls);
+            res = await GenericLH.Postfile<PostventaCLS>(Imgmedia,nombrefile, Constantes.url + Constantes.api_grabarpostventa, objInstalacioncls);
             if (res.result == 1)
             {
                 Instalacion.actualiza = true;

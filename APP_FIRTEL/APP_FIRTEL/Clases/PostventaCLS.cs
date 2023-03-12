@@ -37,5 +37,11 @@ namespace APP_FIRTEL.Clases
 
         public Nullable<int> idvendedor { get; set; }
         public string cantidadtv { get; set; }
+
+        public int alto { get; set; }
+        public int ancho { get; set; }
+        public string rutaarchivo { get; set; }
+        public string nombrearchivo { get; set; }
+        public string nombrearchivoupdate { get; set; }
     }
 }

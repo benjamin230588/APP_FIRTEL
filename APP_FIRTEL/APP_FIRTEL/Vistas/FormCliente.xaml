@@ -52,9 +52,10 @@
                 <custom:CustomLabel  Text="{Binding objcliente.fechaalta,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
             <Label  Text="Caja Nap" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-            <custom:CustomLabel  Text="{Binding objcliente.cajanap}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
+              <custom:CustomEntry   Text="{Binding objcliente.cajanap}"   x:Name="txtnomjj" VerticalOptions="Center"
+                                HeightRequest="35"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
-            <Label  Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                <Label  Text="PPPOE" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                 <custom:CustomLabel  Text="{Binding objcliente.pppoe}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
             <Label  Text="Importe Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
@@ -63,20 +64,7 @@
             <Label  Text="Fecha Cambio" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
                 <custom:CustomLabel  Text="{Binding objcliente.fechacambio,StringFormat='{00:dd/MM/yyyy}'}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000"  Padding="15,5" Style="{StaticResource labelfont}"/>
 
-         
-            
-
-               
-
-
-         
-           
-        
-     
-       
-        </StackLayout>
-    </ScrollView>
-        <Frame Padding="0"
+             <Frame Padding="0"
                    HeightRequest="{Binding objcliente.alto}" WidthRequest="{Binding objcliente.ancho}" 
                    BackgroundColor="White"
                    CornerRadius="30"
@@ -84,16 +72,20 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                                     >
-            <Frame.Content>
-                <local:PinchToZoomContainer x:Name="cargadorimg" IsVisible="{Binding flgimggrabar}">
-                    <local:PinchToZoomContainer.Content>
-                        <Image  Aspect="Fill"
-                                Source="{Binding oCategoriaModel.Imagen}"/>
-                    </local:PinchToZoomContainer.Content>
-                </local:PinchToZoomContainer>
+                    <Frame.Content>
 
-            </Frame.Content>
-        </Frame>
+                        <Image  Aspect="Fill"
+                        Source="{Binding oCategoriaModel.Imagen}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="tabPreviewImage" Tapped="tabPreviewImage_Tapped"  />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame.Content>
+              </Frame>
+
+            </StackLayout>
+    </ScrollView>
+        
         <StackLayout>
         <Button Text="Volver" x:Name="btnvolvercliente" Margin="5,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
     </StackLayout>

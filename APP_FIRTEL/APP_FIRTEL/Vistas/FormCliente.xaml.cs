@@ -65,41 +65,46 @@ namespace APP_FIRTEL.Vistas
 
 		}
 
-   //     private async void tabPreviewImage_Tapped(object sender, EventArgs e)
-   //     {
-			//await CrossMedia.Current.Initialize();
-			//oMediaFile = await CrossMedia.Current.PickPhotoAsync();
+        private async void tabPreviewImage_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Visualizadorimg(objcliente.rutaarchivo,null,1));
+        }
+
+        //     private async void tabPreviewImage_Tapped(object sender, EventArgs e)
+        //     {
+        //await CrossMedia.Current.Initialize();
+        //oMediaFile = await CrossMedia.Current.PickPhotoAsync();
 
 
-			
-			////DisplayActionSheet()
-			//string opcion = await DisplayActionSheet("Seleccione una Opciòn", "Cancelar", null, "Galeria", "Camara");
-			//switch (opcion)
-			//{
-			//	//En caso que elijes una foto de tu galeria
-			//	case "Galeria":
-				
-			//		; break;
-			//	//En el caso que te tomas una foto y lo subes
-			//	case "Camara":
-			//		await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
-			//		{
-			//			Directory = "Pictures",
-			//			Name = "Prueba.jpg",
-			//			PhotoSize = PhotoSize.Small
-			//		});
-			//		; break;
-			//	//Que no seleccionas ninguna opcion
-			//	default:
-			//		oMediaFile = null;
-			//		break;
 
-			//}
-		//	if (oMediaFile != null)
-		//	{
-		//		oCategoriaModel.Imagen = GenericLH.convertirMediaFileAImageSource(oMediaFile);
-		//	}
+        ////DisplayActionSheet()
+        //string opcion = await DisplayActionSheet("Seleccione una Opciòn", "Cancelar", null, "Galeria", "Camara");
+        //switch (opcion)
+        //{
+        //	//En caso que elijes una foto de tu galeria
+        //	case "Galeria":
 
-		//}
-	}
+        //		; break;
+        //	//En el caso que te tomas una foto y lo subes
+        //	case "Camara":
+        //		await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+        //		{
+        //			Directory = "Pictures",
+        //			Name = "Prueba.jpg",
+        //			PhotoSize = PhotoSize.Small
+        //		});
+        //		; break;
+        //	//Que no seleccionas ninguna opcion
+        //	default:
+        //		oMediaFile = null;
+        //		break;
+
+        //}
+        //	if (oMediaFile != null)
+        //	{
+        //		oCategoriaModel.Imagen = GenericLH.convertirMediaFileAImageSource(oMediaFile);
+        //	}
+
+        //}
+    }
 }

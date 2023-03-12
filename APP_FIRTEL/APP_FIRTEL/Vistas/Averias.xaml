@@ -22,20 +22,20 @@
         <RefreshView  x:Name="lstrefrescador" RefreshColor="Red">
                 <ScrollView Grid.Row="0" Orientation="Vertical"  VerticalOptions="FillAndExpand">
             <CollectionView Margin="5"  x:Name="listaaveriafirtel"  SelectionMode="Single" 
-                    RemainingItemsThreshold="3"   RemainingItemsThresholdReached="listaaveriafirtel_RemainingItemsThresholdReached">
+                    RemainingItemsThreshold="3"  RemainingItemsThresholdReached="listaaveriafirtel_RemainingItemsThresholdReached">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7">
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7"  >
 
                     </GridItemsLayout>
 
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-
+                       
                         <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10,10,13,10" BorderColor="#848484" IsClippedToBounds="True" >
-                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Vertical"  >
 
-                                <Grid>
+                                    <Grid >
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
@@ -60,10 +60,10 @@
 
                                     <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
                                     <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
-
-                                    <Label Text="{Binding nombreEstado}"  Grid.Column="2" Grid.Row="3"  TextColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
-
-                                    <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                        <Frame Grid.Column="2" Grid.Row="3"  Padding="0" CornerRadius="10">
+                                            <Label Text="{Binding nombreEstado}"  TextColor="White"  BackgroundColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
+                                        </Frame>
+                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
                                     <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 
@@ -74,7 +74,8 @@
                                 <TapGestureRecognizer Command="{Binding Path=BindingContext.IrFormaveriacommand,Source={x:Reference thispage}}" CommandParameter="{Binding .}"/>
                             </Frame.GestureRecognizers>
                         </Frame>
-                    </DataTemplate>
+                        
+                        </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>

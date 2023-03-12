@@ -35,6 +35,10 @@
                     <Label Text="Documento de Identidad" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:CustomEntry Text="{Binding objInstalacioncls.dni}"  HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
+                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_registro}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+                    <StackLayout HeightRequest="5"></StackLayout>
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                         <ImageButton Source="Googlemaps.png" x:Name="imgmaps" Clicked="imgmaps_Clicked"                                                                       
@@ -66,41 +70,45 @@
                     <Label  Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.zona}" HeightRequest="35" VerticalOptions="Center" BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
-                    <Label Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <Label Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
                     <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
-                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
-                                           Text="{Binding  objaveriacls.observacion}"/>
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black"  FontSize="15"
+                                           Text="{Binding  objInstalacioncls.observacion}" IsReadOnly="True"/>
 
 
                     <Label  Text="Telefono" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.celular}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
+                    <Label  Text="Plan Internet Tv" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomPicker  Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                                  ItemsSource="{Binding Listaplanes}"   SelectedItem="{Binding objInstalacioncls.plancliente}"
+                                  FontSize="16"   ItemColor="" x:Name="comboplanes">
+                    </custom:CustomPicker>
+                    
                     <Label  Text="Cantidad TV" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
                     <Label  Text="Costo Instalacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.importeinstalacion}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
-                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_registro}"  
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+                    
 
+                    
 
-                    <Label  Text="Plan" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
+                    <Label  Text="Estado Instalacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:CustomPicker  Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                                  ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding objInstalacioncls.nombreEstado}"
+                                  FontSize="16"   ItemColor="" x:Name="comboestado">
+                    </custom:CustomPicker>
 
-                    <Label  Text="Estado" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.cantidadtv}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
-
-                    <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
                     <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
-                                           Text="{Binding  objaveriacls.observacion2}"/>
+                                           Text="{Binding  objInstalacioncls.observacion2}"/>
 
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Label  Text="Cargar Imagen"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                        <ImageButton Source="Googlemaps.png" x:Name="imgcargaimagen" Clicked="imgcargaimagen_Clicked"                                                                       
+                        <ImageButton Source="subiring.png" x:Name="imgcargaimagen" Clicked="imgcargaimagen_Clicked"                                                                       
                                      >
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
@@ -120,26 +128,30 @@
                             </VisualStateManager.VisualStateGroups>
                         </ImageButton>
                     </StackLayout>
-                    <StackLayout>
+                  
 
-                        <Grid Padding="20">
-                            <local:PinchToZoomContainer x:Name="cargadorimg" IsVisible="{Binding flgimggrabar}">
-                                <local:PinchToZoomContainer.Content>
-                                    <Image HeightRequest="300" WidthRequest="450"
-                                     Source="{Binding Imagenpost}">
-                                        
-                                    </Image>
-                                </local:PinchToZoomContainer.Content>
-                            </local:PinchToZoomContainer>
-                           
-                        </Grid>
-                    </StackLayout>
+                  <Frame Padding="0"
+                    HeightRequest="{Binding alto}" WidthRequest="{Binding ancho}"
+                   BackgroundColor="White"
+                   CornerRadius="30"                
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"                                   >
+                        <Frame.Content>
+                            <Image  Aspect="Fill"
+                                  Source="{Binding Imagenpost}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="tabPreviewImage" Tapped="tabPreviewImage_Tapped"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame.Content>
+                    </Frame>
+                    <StackLayout HeightRequest="15"></StackLayout>
 
-                   
+
                 </StackLayout>
 
             </ScrollView>
-            <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,0,10,10">
+            <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,15,10,10">
                 <Button Text="Volver" BackgroundColor="Red"
                             x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
                     Command="{Binding VolverInstalacioncommand}"/>

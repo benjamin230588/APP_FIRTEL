@@ -88,27 +88,34 @@ namespace APP_FIRTEL.Generic
 
 
 		}
-		public static async Task<Reply> Postfile<T>(MediaFile oMediaFile, string url, T obj)
+		public static async Task<Reply> Postfile<T>(MediaFile oMediaFile, string nombrefile,string url, T obj)
 		{
 			string url23 =url;
-			byte[] buffer = new byte[0];
-			Stream s = oMediaFile.GetStream();
-			using (MemoryStream ms = new MemoryStream())
-			{
-				s.CopyTo(ms);
-				buffer = ms.ToArray();
-
-			}
-			Stream datos2 = new MemoryStream(buffer);
+			
+			
 			HttpClient cliente = new HttpClient();
 			using (var multipartFormContent = new MultipartFormDataContent())
 			{
-				//Load the file and set the file's Content-Type header
-				var fileStreamContent = new StreamContent(datos2);
-				fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
+                //Load the file and set the file's Content-Type header
+                if (oMediaFile !=null)
+                {
+					Stream datos2;
+					
+						byte[] buffer = new byte[0];
+						Stream s = oMediaFile.GetStream();
+						using (MemoryStream ms = new MemoryStream())
+						{
+							s.CopyTo(ms);
+							buffer = ms.ToArray();
 
-				//Add the file
-				multipartFormContent.Add(fileStreamContent, name: "file", fileName: "ho11use.jpg");
+						}
+						datos2 = new MemoryStream(buffer);
+						var fileStreamContent = new StreamContent(datos2);
+						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
+
+						//Add the file
+						multipartFormContent.Add(fileStreamContent, name: "file", fileName: nombrefile);				
+				}
 
 				//Send it
 				//var jsonPayload = "that payload from the above sample";

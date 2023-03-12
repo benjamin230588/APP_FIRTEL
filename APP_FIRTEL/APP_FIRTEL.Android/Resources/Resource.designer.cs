@@ -10577,6 +10577,1803 @@ namespace APP_FIRTEL.Droid
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_bottom_start = global::APP_FIRTEL.Droid.Resource.Xml.standalone_badge_gravity_bottom_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_top_start = global::APP_FIRTEL.Droid.Resource.Xml.standalone_badge_gravity_top_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_offset = global::APP_FIRTEL.Droid.Resource.Xml.standalone_badge_offset;
+			global::XamEffects.Droid.Resource.Animation.abc_fade_in = global::APP_FIRTEL.Droid.Resource.Animation.abc_fade_in;
+			global::XamEffects.Droid.Resource.Animation.abc_fade_out = global::APP_FIRTEL.Droid.Resource.Animation.abc_fade_out;
+			global::XamEffects.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::APP_FIRTEL.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_popup_enter = global::APP_FIRTEL.Droid.Resource.Animation.abc_popup_enter;
+			global::XamEffects.Droid.Resource.Animation.abc_popup_exit = global::APP_FIRTEL.Droid.Resource.Animation.abc_popup_exit;
+			global::XamEffects.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::APP_FIRTEL.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_in_bottom = global::APP_FIRTEL.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_in_top = global::APP_FIRTEL.Droid.Resource.Animation.abc_slide_in_top;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_out_bottom = global::APP_FIRTEL.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_out_top = global::APP_FIRTEL.Droid.Resource.Animation.abc_slide_out_top;
+			global::XamEffects.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::APP_FIRTEL.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::XamEffects.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::APP_FIRTEL.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::XamEffects.Droid.Resource.Animation.design_snackbar_in = global::APP_FIRTEL.Droid.Resource.Animation.design_snackbar_in;
+			global::XamEffects.Droid.Resource.Animation.design_snackbar_out = global::APP_FIRTEL.Droid.Resource.Animation.design_snackbar_out;
+			global::XamEffects.Droid.Resource.Animator.design_appbar_state_list_animator = global::APP_FIRTEL.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::XamEffects.Droid.Resource.Attribute.actionBarDivider = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarDivider;
+			global::XamEffects.Droid.Resource.Attribute.actionBarItemBackground = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarItemBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionBarPopupTheme = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionBarSize = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarSize;
+			global::XamEffects.Droid.Resource.Attribute.actionBarSplitStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarTabStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabTextStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTheme = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionBarWidgetTheme = global::APP_FIRTEL.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionDropDownStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionDropDownStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionLayout = global::APP_FIRTEL.Droid.Resource.Attribute.actionLayout;
+			global::XamEffects.Droid.Resource.Attribute.actionMenuTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.actionMenuTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.actionMenuTextColor;
+			global::XamEffects.Droid.Resource.Attribute.actionModeBackground = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCloseDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCopyDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCutDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeFindDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModePasteDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModePopupWindowStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeShareDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeSplitBackground = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionModeStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionOverflowButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionOverflowMenuStyle = global::APP_FIRTEL.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionProviderClass = global::APP_FIRTEL.Droid.Resource.Attribute.actionProviderClass;
+			global::XamEffects.Droid.Resource.Attribute.actionViewClass = global::APP_FIRTEL.Droid.Resource.Attribute.actionViewClass;
+			global::XamEffects.Droid.Resource.Attribute.activityChooserViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::APP_FIRTEL.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogCenterButtons = global::APP_FIRTEL.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogStyle = global::APP_FIRTEL.Droid.Resource.Attribute.alertDialogStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogTheme = global::APP_FIRTEL.Droid.Resource.Attribute.alertDialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.allowStacking = global::APP_FIRTEL.Droid.Resource.Attribute.allowStacking;
+			global::XamEffects.Droid.Resource.Attribute.alpha = global::APP_FIRTEL.Droid.Resource.Attribute.alpha;
+			global::XamEffects.Droid.Resource.Attribute.arrowHeadLength = global::APP_FIRTEL.Droid.Resource.Attribute.arrowHeadLength;
+			global::XamEffects.Droid.Resource.Attribute.arrowShaftLength = global::APP_FIRTEL.Droid.Resource.Attribute.arrowShaftLength;
+			global::XamEffects.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.background = global::APP_FIRTEL.Droid.Resource.Attribute.background;
+			global::XamEffects.Droid.Resource.Attribute.backgroundSplit = global::APP_FIRTEL.Droid.Resource.Attribute.backgroundSplit;
+			global::XamEffects.Droid.Resource.Attribute.backgroundStacked = global::APP_FIRTEL.Droid.Resource.Attribute.backgroundStacked;
+			global::XamEffects.Droid.Resource.Attribute.backgroundTint = global::APP_FIRTEL.Droid.Resource.Attribute.backgroundTint;
+			global::XamEffects.Droid.Resource.Attribute.backgroundTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.backgroundTintMode;
+			global::XamEffects.Droid.Resource.Attribute.barLength = global::APP_FIRTEL.Droid.Resource.Attribute.barLength;
+			global::XamEffects.Droid.Resource.Attribute.behavior_autoHide = global::APP_FIRTEL.Droid.Resource.Attribute.behavior_autoHide;
+			global::XamEffects.Droid.Resource.Attribute.behavior_hideable = global::APP_FIRTEL.Droid.Resource.Attribute.behavior_hideable;
+			global::XamEffects.Droid.Resource.Attribute.behavior_overlapTop = global::APP_FIRTEL.Droid.Resource.Attribute.behavior_overlapTop;
+			global::XamEffects.Droid.Resource.Attribute.behavior_peekHeight = global::APP_FIRTEL.Droid.Resource.Attribute.behavior_peekHeight;
+			global::XamEffects.Droid.Resource.Attribute.behavior_skipCollapsed = global::APP_FIRTEL.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::XamEffects.Droid.Resource.Attribute.borderWidth = global::APP_FIRTEL.Droid.Resource.Attribute.borderWidth;
+			global::XamEffects.Droid.Resource.Attribute.borderlessButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.bottomSheetDialogTheme = global::APP_FIRTEL.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.bottomSheetStyle = global::APP_FIRTEL.Droid.Resource.Attribute.bottomSheetStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonGravity = global::APP_FIRTEL.Droid.Resource.Attribute.buttonGravity;
+			global::XamEffects.Droid.Resource.Attribute.buttonPanelSideLayout = global::APP_FIRTEL.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::XamEffects.Droid.Resource.Attribute.buttonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.buttonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonStyleSmall = global::APP_FIRTEL.Droid.Resource.Attribute.buttonStyleSmall;
+			global::XamEffects.Droid.Resource.Attribute.buttonTint = global::APP_FIRTEL.Droid.Resource.Attribute.buttonTint;
+			global::XamEffects.Droid.Resource.Attribute.buttonTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.buttonTintMode;
+			global::XamEffects.Droid.Resource.Attribute.cardBackgroundColor = global::APP_FIRTEL.Droid.Resource.Attribute.cardBackgroundColor;
+			global::XamEffects.Droid.Resource.Attribute.cardCornerRadius = global::APP_FIRTEL.Droid.Resource.Attribute.cardCornerRadius;
+			global::XamEffects.Droid.Resource.Attribute.cardElevation = global::APP_FIRTEL.Droid.Resource.Attribute.cardElevation;
+			global::XamEffects.Droid.Resource.Attribute.cardMaxElevation = global::APP_FIRTEL.Droid.Resource.Attribute.cardMaxElevation;
+			global::XamEffects.Droid.Resource.Attribute.cardPreventCornerOverlap = global::APP_FIRTEL.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::XamEffects.Droid.Resource.Attribute.cardUseCompatPadding = global::APP_FIRTEL.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::XamEffects.Droid.Resource.Attribute.checkboxStyle = global::APP_FIRTEL.Droid.Resource.Attribute.checkboxStyle;
+			global::XamEffects.Droid.Resource.Attribute.checkedTextViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.closeIcon = global::APP_FIRTEL.Droid.Resource.Attribute.closeIcon;
+			global::XamEffects.Droid.Resource.Attribute.closeItemLayout = global::APP_FIRTEL.Droid.Resource.Attribute.closeItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.collapseContentDescription = global::APP_FIRTEL.Droid.Resource.Attribute.collapseContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.collapseIcon = global::APP_FIRTEL.Droid.Resource.Attribute.collapseIcon;
+			global::XamEffects.Droid.Resource.Attribute.collapsedTitleGravity = global::APP_FIRTEL.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::XamEffects.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.color = global::APP_FIRTEL.Droid.Resource.Attribute.color;
+			global::XamEffects.Droid.Resource.Attribute.colorAccent = global::APP_FIRTEL.Droid.Resource.Attribute.colorAccent;
+			global::XamEffects.Droid.Resource.Attribute.colorBackgroundFloating = global::APP_FIRTEL.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::XamEffects.Droid.Resource.Attribute.colorButtonNormal = global::APP_FIRTEL.Droid.Resource.Attribute.colorButtonNormal;
+			global::XamEffects.Droid.Resource.Attribute.colorControlActivated = global::APP_FIRTEL.Droid.Resource.Attribute.colorControlActivated;
+			global::XamEffects.Droid.Resource.Attribute.colorControlHighlight = global::APP_FIRTEL.Droid.Resource.Attribute.colorControlHighlight;
+			global::XamEffects.Droid.Resource.Attribute.colorControlNormal = global::APP_FIRTEL.Droid.Resource.Attribute.colorControlNormal;
+			global::XamEffects.Droid.Resource.Attribute.colorPrimary = global::APP_FIRTEL.Droid.Resource.Attribute.colorPrimary;
+			global::XamEffects.Droid.Resource.Attribute.colorPrimaryDark = global::APP_FIRTEL.Droid.Resource.Attribute.colorPrimaryDark;
+			global::XamEffects.Droid.Resource.Attribute.colorSwitchThumbNormal = global::APP_FIRTEL.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::XamEffects.Droid.Resource.Attribute.commitIcon = global::APP_FIRTEL.Droid.Resource.Attribute.commitIcon;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetEnd = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetEnd;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetEndWithActions = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetLeft = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetLeft;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetRight = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetRight;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetStart = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetStart;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::APP_FIRTEL.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Attribute.contentPadding = global::APP_FIRTEL.Droid.Resource.Attribute.contentPadding;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingBottom = global::APP_FIRTEL.Droid.Resource.Attribute.contentPaddingBottom;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingLeft = global::APP_FIRTEL.Droid.Resource.Attribute.contentPaddingLeft;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingRight = global::APP_FIRTEL.Droid.Resource.Attribute.contentPaddingRight;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingTop = global::APP_FIRTEL.Droid.Resource.Attribute.contentPaddingTop;
+			global::XamEffects.Droid.Resource.Attribute.contentScrim = global::APP_FIRTEL.Droid.Resource.Attribute.contentScrim;
+			global::XamEffects.Droid.Resource.Attribute.controlBackground = global::APP_FIRTEL.Droid.Resource.Attribute.controlBackground;
+			global::XamEffects.Droid.Resource.Attribute.counterEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.counterEnabled;
+			global::XamEffects.Droid.Resource.Attribute.counterMaxLength = global::APP_FIRTEL.Droid.Resource.Attribute.counterMaxLength;
+			global::XamEffects.Droid.Resource.Attribute.counterOverflowTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.counterTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.counterTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.customNavigationLayout = global::APP_FIRTEL.Droid.Resource.Attribute.customNavigationLayout;
+			global::XamEffects.Droid.Resource.Attribute.defaultQueryHint = global::APP_FIRTEL.Droid.Resource.Attribute.defaultQueryHint;
+			global::XamEffects.Droid.Resource.Attribute.dialogPreferredPadding = global::APP_FIRTEL.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::XamEffects.Droid.Resource.Attribute.dialogTheme = global::APP_FIRTEL.Droid.Resource.Attribute.dialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.displayOptions = global::APP_FIRTEL.Droid.Resource.Attribute.displayOptions;
+			global::XamEffects.Droid.Resource.Attribute.divider = global::APP_FIRTEL.Droid.Resource.Attribute.divider;
+			global::XamEffects.Droid.Resource.Attribute.dividerHorizontal = global::APP_FIRTEL.Droid.Resource.Attribute.dividerHorizontal;
+			global::XamEffects.Droid.Resource.Attribute.dividerPadding = global::APP_FIRTEL.Droid.Resource.Attribute.dividerPadding;
+			global::XamEffects.Droid.Resource.Attribute.dividerVertical = global::APP_FIRTEL.Droid.Resource.Attribute.dividerVertical;
+			global::XamEffects.Droid.Resource.Attribute.drawableSize = global::APP_FIRTEL.Droid.Resource.Attribute.drawableSize;
+			global::XamEffects.Droid.Resource.Attribute.drawerArrowStyle = global::APP_FIRTEL.Droid.Resource.Attribute.drawerArrowStyle;
+			global::XamEffects.Droid.Resource.Attribute.dropDownListViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::APP_FIRTEL.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Attribute.editTextBackground = global::APP_FIRTEL.Droid.Resource.Attribute.editTextBackground;
+			global::XamEffects.Droid.Resource.Attribute.editTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.editTextColor;
+			global::XamEffects.Droid.Resource.Attribute.editTextStyle = global::APP_FIRTEL.Droid.Resource.Attribute.editTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.elevation = global::APP_FIRTEL.Droid.Resource.Attribute.elevation;
+			global::XamEffects.Droid.Resource.Attribute.errorEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.errorEnabled;
+			global::XamEffects.Droid.Resource.Attribute.errorTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.errorTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::XamEffects.Droid.Resource.Attribute.expanded = global::APP_FIRTEL.Droid.Resource.Attribute.expanded;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleGravity = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleGravity;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMargin = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleMargin;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginBottom = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginEnd = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginStart = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginTop = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.fabSize = global::APP_FIRTEL.Droid.Resource.Attribute.fabSize;
+			global::XamEffects.Droid.Resource.Attribute.foregroundInsidePadding = global::APP_FIRTEL.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::XamEffects.Droid.Resource.Attribute.gapBetweenBars = global::APP_FIRTEL.Droid.Resource.Attribute.gapBetweenBars;
+			global::XamEffects.Droid.Resource.Attribute.goIcon = global::APP_FIRTEL.Droid.Resource.Attribute.goIcon;
+			global::XamEffects.Droid.Resource.Attribute.headerLayout = global::APP_FIRTEL.Droid.Resource.Attribute.headerLayout;
+			global::XamEffects.Droid.Resource.Attribute.height = global::APP_FIRTEL.Droid.Resource.Attribute.height;
+			global::XamEffects.Droid.Resource.Attribute.hideOnContentScroll = global::APP_FIRTEL.Droid.Resource.Attribute.hideOnContentScroll;
+			global::XamEffects.Droid.Resource.Attribute.hintAnimationEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::XamEffects.Droid.Resource.Attribute.hintEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.hintEnabled;
+			global::XamEffects.Droid.Resource.Attribute.hintTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.hintTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.homeAsUpIndicator = global::APP_FIRTEL.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Attribute.homeLayout = global::APP_FIRTEL.Droid.Resource.Attribute.homeLayout;
+			global::XamEffects.Droid.Resource.Attribute.icon = global::APP_FIRTEL.Droid.Resource.Attribute.icon;
+			global::XamEffects.Droid.Resource.Attribute.iconifiedByDefault = global::APP_FIRTEL.Droid.Resource.Attribute.iconifiedByDefault;
+			global::XamEffects.Droid.Resource.Attribute.imageButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.imageButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.indeterminateProgressStyle = global::APP_FIRTEL.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::XamEffects.Droid.Resource.Attribute.initialActivityCount = global::APP_FIRTEL.Droid.Resource.Attribute.initialActivityCount;
+			global::XamEffects.Droid.Resource.Attribute.insetForeground = global::APP_FIRTEL.Droid.Resource.Attribute.insetForeground;
+			global::XamEffects.Droid.Resource.Attribute.isLightTheme = global::APP_FIRTEL.Droid.Resource.Attribute.isLightTheme;
+			global::XamEffects.Droid.Resource.Attribute.itemBackground = global::APP_FIRTEL.Droid.Resource.Attribute.itemBackground;
+			global::XamEffects.Droid.Resource.Attribute.itemIconTint = global::APP_FIRTEL.Droid.Resource.Attribute.itemIconTint;
+			global::XamEffects.Droid.Resource.Attribute.itemPadding = global::APP_FIRTEL.Droid.Resource.Attribute.itemPadding;
+			global::XamEffects.Droid.Resource.Attribute.itemTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.itemTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.itemTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.itemTextColor;
+			global::XamEffects.Droid.Resource.Attribute.keylines = global::APP_FIRTEL.Droid.Resource.Attribute.keylines;
+			global::XamEffects.Droid.Resource.Attribute.layout = global::APP_FIRTEL.Droid.Resource.Attribute.layout;
+			global::XamEffects.Droid.Resource.Attribute.layoutManager = global::APP_FIRTEL.Droid.Resource.Attribute.layoutManager;
+			global::XamEffects.Droid.Resource.Attribute.layout_anchor = global::APP_FIRTEL.Droid.Resource.Attribute.layout_anchor;
+			global::XamEffects.Droid.Resource.Attribute.layout_anchorGravity = global::APP_FIRTEL.Droid.Resource.Attribute.layout_anchorGravity;
+			global::XamEffects.Droid.Resource.Attribute.layout_behavior = global::APP_FIRTEL.Droid.Resource.Attribute.layout_behavior;
+			global::XamEffects.Droid.Resource.Attribute.layout_collapseMode = global::APP_FIRTEL.Droid.Resource.Attribute.layout_collapseMode;
+			global::XamEffects.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::APP_FIRTEL.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::XamEffects.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::APP_FIRTEL.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::XamEffects.Droid.Resource.Attribute.layout_insetEdge = global::APP_FIRTEL.Droid.Resource.Attribute.layout_insetEdge;
+			global::XamEffects.Droid.Resource.Attribute.layout_keyline = global::APP_FIRTEL.Droid.Resource.Attribute.layout_keyline;
+			global::XamEffects.Droid.Resource.Attribute.layout_scrollFlags = global::APP_FIRTEL.Droid.Resource.Attribute.layout_scrollFlags;
+			global::XamEffects.Droid.Resource.Attribute.layout_scrollInterpolator = global::APP_FIRTEL.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::XamEffects.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::APP_FIRTEL.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::XamEffects.Droid.Resource.Attribute.listDividerAlertDialog = global::APP_FIRTEL.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::XamEffects.Droid.Resource.Attribute.listItemLayout = global::APP_FIRTEL.Droid.Resource.Attribute.listItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.listLayout = global::APP_FIRTEL.Droid.Resource.Attribute.listLayout;
+			global::XamEffects.Droid.Resource.Attribute.listMenuViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.listMenuViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.listPopupWindowStyle = global::APP_FIRTEL.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeight = global::APP_FIRTEL.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::APP_FIRTEL.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::APP_FIRTEL.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::APP_FIRTEL.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::APP_FIRTEL.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::XamEffects.Droid.Resource.Attribute.logo = global::APP_FIRTEL.Droid.Resource.Attribute.logo;
+			global::XamEffects.Droid.Resource.Attribute.logoDescription = global::APP_FIRTEL.Droid.Resource.Attribute.logoDescription;
+			global::XamEffects.Droid.Resource.Attribute.maxActionInlineWidth = global::APP_FIRTEL.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::XamEffects.Droid.Resource.Attribute.maxButtonHeight = global::APP_FIRTEL.Droid.Resource.Attribute.maxButtonHeight;
+			global::XamEffects.Droid.Resource.Attribute.measureWithLargestChild = global::APP_FIRTEL.Droid.Resource.Attribute.measureWithLargestChild;
+			global::XamEffects.Droid.Resource.Attribute.menu = global::APP_FIRTEL.Droid.Resource.Attribute.menu;
+			global::XamEffects.Droid.Resource.Attribute.multiChoiceItemLayout = global::APP_FIRTEL.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.navigationContentDescription = global::APP_FIRTEL.Droid.Resource.Attribute.navigationContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.navigationIcon = global::APP_FIRTEL.Droid.Resource.Attribute.navigationIcon;
+			global::XamEffects.Droid.Resource.Attribute.navigationMode = global::APP_FIRTEL.Droid.Resource.Attribute.navigationMode;
+			global::XamEffects.Droid.Resource.Attribute.overlapAnchor = global::APP_FIRTEL.Droid.Resource.Attribute.overlapAnchor;
+			global::XamEffects.Droid.Resource.Attribute.paddingBottomNoButtons = global::APP_FIRTEL.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::XamEffects.Droid.Resource.Attribute.paddingEnd = global::APP_FIRTEL.Droid.Resource.Attribute.paddingEnd;
+			global::XamEffects.Droid.Resource.Attribute.paddingStart = global::APP_FIRTEL.Droid.Resource.Attribute.paddingStart;
+			global::XamEffects.Droid.Resource.Attribute.paddingTopNoTitle = global::APP_FIRTEL.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::XamEffects.Droid.Resource.Attribute.panelBackground = global::APP_FIRTEL.Droid.Resource.Attribute.panelBackground;
+			global::XamEffects.Droid.Resource.Attribute.panelMenuListTheme = global::APP_FIRTEL.Droid.Resource.Attribute.panelMenuListTheme;
+			global::XamEffects.Droid.Resource.Attribute.panelMenuListWidth = global::APP_FIRTEL.Droid.Resource.Attribute.panelMenuListWidth;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleContentDescription = global::APP_FIRTEL.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleDrawable = global::APP_FIRTEL.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleTint = global::APP_FIRTEL.Droid.Resource.Attribute.passwordToggleTint;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::XamEffects.Droid.Resource.Attribute.popupMenuStyle = global::APP_FIRTEL.Droid.Resource.Attribute.popupMenuStyle;
+			global::XamEffects.Droid.Resource.Attribute.popupTheme = global::APP_FIRTEL.Droid.Resource.Attribute.popupTheme;
+			global::XamEffects.Droid.Resource.Attribute.popupWindowStyle = global::APP_FIRTEL.Droid.Resource.Attribute.popupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.preserveIconSpacing = global::APP_FIRTEL.Droid.Resource.Attribute.preserveIconSpacing;
+			global::XamEffects.Droid.Resource.Attribute.pressedTranslationZ = global::APP_FIRTEL.Droid.Resource.Attribute.pressedTranslationZ;
+			global::XamEffects.Droid.Resource.Attribute.progressBarPadding = global::APP_FIRTEL.Droid.Resource.Attribute.progressBarPadding;
+			global::XamEffects.Droid.Resource.Attribute.progressBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.progressBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.queryBackground = global::APP_FIRTEL.Droid.Resource.Attribute.queryBackground;
+			global::XamEffects.Droid.Resource.Attribute.queryHint = global::APP_FIRTEL.Droid.Resource.Attribute.queryHint;
+			global::XamEffects.Droid.Resource.Attribute.radioButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.radioButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.ratingBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyleIndicator = global::APP_FIRTEL.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyleSmall = global::APP_FIRTEL.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::XamEffects.Droid.Resource.Attribute.reverseLayout = global::APP_FIRTEL.Droid.Resource.Attribute.reverseLayout;
+			global::XamEffects.Droid.Resource.Attribute.rippleColor = global::APP_FIRTEL.Droid.Resource.Attribute.rippleColor;
+			global::XamEffects.Droid.Resource.Attribute.scrimAnimationDuration = global::APP_FIRTEL.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::XamEffects.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::APP_FIRTEL.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::XamEffects.Droid.Resource.Attribute.searchHintIcon = global::APP_FIRTEL.Droid.Resource.Attribute.searchHintIcon;
+			global::XamEffects.Droid.Resource.Attribute.searchIcon = global::APP_FIRTEL.Droid.Resource.Attribute.searchIcon;
+			global::XamEffects.Droid.Resource.Attribute.searchViewStyle = global::APP_FIRTEL.Droid.Resource.Attribute.searchViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.seekBarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.seekBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.selectableItemBackground = global::APP_FIRTEL.Droid.Resource.Attribute.selectableItemBackground;
+			global::XamEffects.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::APP_FIRTEL.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::XamEffects.Droid.Resource.Attribute.showAsAction = global::APP_FIRTEL.Droid.Resource.Attribute.showAsAction;
+			global::XamEffects.Droid.Resource.Attribute.showDividers = global::APP_FIRTEL.Droid.Resource.Attribute.showDividers;
+			global::XamEffects.Droid.Resource.Attribute.showText = global::APP_FIRTEL.Droid.Resource.Attribute.showText;
+			global::XamEffects.Droid.Resource.Attribute.showTitle = global::APP_FIRTEL.Droid.Resource.Attribute.showTitle;
+			global::XamEffects.Droid.Resource.Attribute.singleChoiceItemLayout = global::APP_FIRTEL.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.spanCount = global::APP_FIRTEL.Droid.Resource.Attribute.spanCount;
+			global::XamEffects.Droid.Resource.Attribute.spinBars = global::APP_FIRTEL.Droid.Resource.Attribute.spinBars;
+			global::XamEffects.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::APP_FIRTEL.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::XamEffects.Droid.Resource.Attribute.spinnerStyle = global::APP_FIRTEL.Droid.Resource.Attribute.spinnerStyle;
+			global::XamEffects.Droid.Resource.Attribute.splitTrack = global::APP_FIRTEL.Droid.Resource.Attribute.splitTrack;
+			global::XamEffects.Droid.Resource.Attribute.srcCompat = global::APP_FIRTEL.Droid.Resource.Attribute.srcCompat;
+			global::XamEffects.Droid.Resource.Attribute.stackFromEnd = global::APP_FIRTEL.Droid.Resource.Attribute.stackFromEnd;
+			global::XamEffects.Droid.Resource.Attribute.state_above_anchor = global::APP_FIRTEL.Droid.Resource.Attribute.state_above_anchor;
+			global::XamEffects.Droid.Resource.Attribute.state_collapsed = global::APP_FIRTEL.Droid.Resource.Attribute.state_collapsed;
+			global::XamEffects.Droid.Resource.Attribute.state_collapsible = global::APP_FIRTEL.Droid.Resource.Attribute.state_collapsible;
+			global::XamEffects.Droid.Resource.Attribute.statusBarBackground = global::APP_FIRTEL.Droid.Resource.Attribute.statusBarBackground;
+			global::XamEffects.Droid.Resource.Attribute.statusBarScrim = global::APP_FIRTEL.Droid.Resource.Attribute.statusBarScrim;
+			global::XamEffects.Droid.Resource.Attribute.subMenuArrow = global::APP_FIRTEL.Droid.Resource.Attribute.subMenuArrow;
+			global::XamEffects.Droid.Resource.Attribute.submitBackground = global::APP_FIRTEL.Droid.Resource.Attribute.submitBackground;
+			global::XamEffects.Droid.Resource.Attribute.subtitle = global::APP_FIRTEL.Droid.Resource.Attribute.subtitle;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.subtitleTextColor;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextStyle = global::APP_FIRTEL.Droid.Resource.Attribute.subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.suggestionRowLayout = global::APP_FIRTEL.Droid.Resource.Attribute.suggestionRowLayout;
+			global::XamEffects.Droid.Resource.Attribute.switchMinWidth = global::APP_FIRTEL.Droid.Resource.Attribute.switchMinWidth;
+			global::XamEffects.Droid.Resource.Attribute.switchPadding = global::APP_FIRTEL.Droid.Resource.Attribute.switchPadding;
+			global::XamEffects.Droid.Resource.Attribute.switchStyle = global::APP_FIRTEL.Droid.Resource.Attribute.switchStyle;
+			global::XamEffects.Droid.Resource.Attribute.switchTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.switchTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.tabBackground = global::APP_FIRTEL.Droid.Resource.Attribute.tabBackground;
+			global::XamEffects.Droid.Resource.Attribute.tabContentStart = global::APP_FIRTEL.Droid.Resource.Attribute.tabContentStart;
+			global::XamEffects.Droid.Resource.Attribute.tabGravity = global::APP_FIRTEL.Droid.Resource.Attribute.tabGravity;
+			global::XamEffects.Droid.Resource.Attribute.tabIndicatorColor = global::APP_FIRTEL.Droid.Resource.Attribute.tabIndicatorColor;
+			global::XamEffects.Droid.Resource.Attribute.tabIndicatorHeight = global::APP_FIRTEL.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::XamEffects.Droid.Resource.Attribute.tabMaxWidth = global::APP_FIRTEL.Droid.Resource.Attribute.tabMaxWidth;
+			global::XamEffects.Droid.Resource.Attribute.tabMinWidth = global::APP_FIRTEL.Droid.Resource.Attribute.tabMinWidth;
+			global::XamEffects.Droid.Resource.Attribute.tabMode = global::APP_FIRTEL.Droid.Resource.Attribute.tabMode;
+			global::XamEffects.Droid.Resource.Attribute.tabPadding = global::APP_FIRTEL.Droid.Resource.Attribute.tabPadding;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingBottom = global::APP_FIRTEL.Droid.Resource.Attribute.tabPaddingBottom;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingEnd = global::APP_FIRTEL.Droid.Resource.Attribute.tabPaddingEnd;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingStart = global::APP_FIRTEL.Droid.Resource.Attribute.tabPaddingStart;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingTop = global::APP_FIRTEL.Droid.Resource.Attribute.tabPaddingTop;
+			global::XamEffects.Droid.Resource.Attribute.tabSelectedTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::XamEffects.Droid.Resource.Attribute.tabTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.tabTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.tabTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.tabTextColor;
+			global::XamEffects.Droid.Resource.Attribute.textAllCaps = global::APP_FIRTEL.Droid.Resource.Attribute.textAllCaps;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItem = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceListItem;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItemSmall = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::XamEffects.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::APP_FIRTEL.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::XamEffects.Droid.Resource.Attribute.textColorAlertDialogListItem = global::APP_FIRTEL.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::XamEffects.Droid.Resource.Attribute.textColorSearchUrl = global::APP_FIRTEL.Droid.Resource.Attribute.textColorSearchUrl;
+			global::XamEffects.Droid.Resource.Attribute.theme = global::APP_FIRTEL.Droid.Resource.Attribute.theme;
+			global::XamEffects.Droid.Resource.Attribute.thickness = global::APP_FIRTEL.Droid.Resource.Attribute.thickness;
+			global::XamEffects.Droid.Resource.Attribute.thumbTextPadding = global::APP_FIRTEL.Droid.Resource.Attribute.thumbTextPadding;
+			global::XamEffects.Droid.Resource.Attribute.thumbTint = global::APP_FIRTEL.Droid.Resource.Attribute.thumbTint;
+			global::XamEffects.Droid.Resource.Attribute.thumbTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.thumbTintMode;
+			global::XamEffects.Droid.Resource.Attribute.tickMark = global::APP_FIRTEL.Droid.Resource.Attribute.tickMark;
+			global::XamEffects.Droid.Resource.Attribute.tickMarkTint = global::APP_FIRTEL.Droid.Resource.Attribute.tickMarkTint;
+			global::XamEffects.Droid.Resource.Attribute.tickMarkTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.tickMarkTintMode;
+			global::XamEffects.Droid.Resource.Attribute.tint = global::APP_FIRTEL.Droid.Resource.Attribute.tint;
+			global::XamEffects.Droid.Resource.Attribute.tintMode = global::APP_FIRTEL.Droid.Resource.Attribute.tintMode;
+			global::XamEffects.Droid.Resource.Attribute.title = global::APP_FIRTEL.Droid.Resource.Attribute.title;
+			global::XamEffects.Droid.Resource.Attribute.titleEnabled = global::APP_FIRTEL.Droid.Resource.Attribute.titleEnabled;
+			global::XamEffects.Droid.Resource.Attribute.titleMargin = global::APP_FIRTEL.Droid.Resource.Attribute.titleMargin;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginBottom = global::APP_FIRTEL.Droid.Resource.Attribute.titleMarginBottom;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginEnd = global::APP_FIRTEL.Droid.Resource.Attribute.titleMarginEnd;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginStart = global::APP_FIRTEL.Droid.Resource.Attribute.titleMarginStart;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginTop = global::APP_FIRTEL.Droid.Resource.Attribute.titleMarginTop;
+			global::XamEffects.Droid.Resource.Attribute.titleMargins = global::APP_FIRTEL.Droid.Resource.Attribute.titleMargins;
+			global::XamEffects.Droid.Resource.Attribute.titleTextAppearance = global::APP_FIRTEL.Droid.Resource.Attribute.titleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.titleTextColor = global::APP_FIRTEL.Droid.Resource.Attribute.titleTextColor;
+			global::XamEffects.Droid.Resource.Attribute.titleTextStyle = global::APP_FIRTEL.Droid.Resource.Attribute.titleTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.toolbarId = global::APP_FIRTEL.Droid.Resource.Attribute.toolbarId;
+			global::XamEffects.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::APP_FIRTEL.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.toolbarStyle = global::APP_FIRTEL.Droid.Resource.Attribute.toolbarStyle;
+			global::XamEffects.Droid.Resource.Attribute.track = global::APP_FIRTEL.Droid.Resource.Attribute.track;
+			global::XamEffects.Droid.Resource.Attribute.trackTint = global::APP_FIRTEL.Droid.Resource.Attribute.trackTint;
+			global::XamEffects.Droid.Resource.Attribute.trackTintMode = global::APP_FIRTEL.Droid.Resource.Attribute.trackTintMode;
+			global::XamEffects.Droid.Resource.Attribute.useCompatPadding = global::APP_FIRTEL.Droid.Resource.Attribute.useCompatPadding;
+			global::XamEffects.Droid.Resource.Attribute.voiceIcon = global::APP_FIRTEL.Droid.Resource.Attribute.voiceIcon;
+			global::XamEffects.Droid.Resource.Attribute.windowActionBar = global::APP_FIRTEL.Droid.Resource.Attribute.windowActionBar;
+			global::XamEffects.Droid.Resource.Attribute.windowActionBarOverlay = global::APP_FIRTEL.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::XamEffects.Droid.Resource.Attribute.windowActionModeOverlay = global::APP_FIRTEL.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedHeightMajor = global::APP_FIRTEL.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedHeightMinor = global::APP_FIRTEL.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedWidthMajor = global::APP_FIRTEL.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedWidthMinor = global::APP_FIRTEL.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowMinWidthMajor = global::APP_FIRTEL.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowMinWidthMinor = global::APP_FIRTEL.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowNoTitle = global::APP_FIRTEL.Droid.Resource.Attribute.windowNoTitle;
+			global::XamEffects.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::APP_FIRTEL.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::XamEffects.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::APP_FIRTEL.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::XamEffects.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::APP_FIRTEL.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::XamEffects.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::APP_FIRTEL.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::APP_FIRTEL.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::APP_FIRTEL.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::XamEffects.Droid.Resource.Color.abc_btn_colored_text_material = global::APP_FIRTEL.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::XamEffects.Droid.Resource.Color.abc_color_highlight_material = global::APP_FIRTEL.Droid.Resource.Color.abc_color_highlight_material;
+			global::XamEffects.Droid.Resource.Color.abc_hint_foreground_material_dark = global::APP_FIRTEL.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_hint_foreground_material_light = global::APP_FIRTEL.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::APP_FIRTEL.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::APP_FIRTEL.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_material_dark = global::APP_FIRTEL.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_material_light = global::APP_FIRTEL.Droid.Resource.Color.abc_primary_text_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text = global::APP_FIRTEL.Droid.Resource.Color.abc_search_url_text;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_normal = global::APP_FIRTEL.Droid.Resource.Color.abc_search_url_text_normal;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_pressed = global::APP_FIRTEL.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_selected = global::APP_FIRTEL.Droid.Resource.Color.abc_search_url_text_selected;
+			global::XamEffects.Droid.Resource.Color.abc_secondary_text_material_dark = global::APP_FIRTEL.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_secondary_text_material_light = global::APP_FIRTEL.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_tint_btn_checkable = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::XamEffects.Droid.Resource.Color.abc_tint_default = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_default;
+			global::XamEffects.Droid.Resource.Color.abc_tint_edittext = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_edittext;
+			global::XamEffects.Droid.Resource.Color.abc_tint_seek_thumb = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::XamEffects.Droid.Resource.Color.abc_tint_spinner = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_spinner;
+			global::XamEffects.Droid.Resource.Color.abc_tint_switch_track = global::APP_FIRTEL.Droid.Resource.Color.abc_tint_switch_track;
+			global::XamEffects.Droid.Resource.Color.accent_material_dark = global::APP_FIRTEL.Droid.Resource.Color.accent_material_dark;
+			global::XamEffects.Droid.Resource.Color.accent_material_light = global::APP_FIRTEL.Droid.Resource.Color.accent_material_light;
+			global::XamEffects.Droid.Resource.Color.background_floating_material_dark = global::APP_FIRTEL.Droid.Resource.Color.background_floating_material_dark;
+			global::XamEffects.Droid.Resource.Color.background_floating_material_light = global::APP_FIRTEL.Droid.Resource.Color.background_floating_material_light;
+			global::XamEffects.Droid.Resource.Color.background_material_dark = global::APP_FIRTEL.Droid.Resource.Color.background_material_dark;
+			global::XamEffects.Droid.Resource.Color.background_material_light = global::APP_FIRTEL.Droid.Resource.Color.background_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_disabled_material_light = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_inverse_material_light = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_material_dark = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_material_light = global::APP_FIRTEL.Droid.Resource.Color.bright_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.button_material_dark = global::APP_FIRTEL.Droid.Resource.Color.button_material_dark;
+			global::XamEffects.Droid.Resource.Color.button_material_light = global::APP_FIRTEL.Droid.Resource.Color.button_material_light;
+			global::XamEffects.Droid.Resource.Color.cardview_dark_background = global::APP_FIRTEL.Droid.Resource.Color.cardview_dark_background;
+			global::XamEffects.Droid.Resource.Color.cardview_light_background = global::APP_FIRTEL.Droid.Resource.Color.cardview_light_background;
+			global::XamEffects.Droid.Resource.Color.cardview_shadow_end_color = global::APP_FIRTEL.Droid.Resource.Color.cardview_shadow_end_color;
+			global::XamEffects.Droid.Resource.Color.cardview_shadow_start_color = global::APP_FIRTEL.Droid.Resource.Color.cardview_shadow_start_color;
+			global::XamEffects.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::APP_FIRTEL.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::XamEffects.Droid.Resource.Color.design_error = global::APP_FIRTEL.Droid.Resource.Color.design_error;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_end_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_mid_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_start_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::APP_FIRTEL.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::XamEffects.Droid.Resource.Color.design_snackbar_background_color = global::APP_FIRTEL.Droid.Resource.Color.design_snackbar_background_color;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::APP_FIRTEL.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_disabled_material_light = global::APP_FIRTEL.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_material_dark = global::APP_FIRTEL.Droid.Resource.Color.dim_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_material_light = global::APP_FIRTEL.Droid.Resource.Color.dim_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.foreground_material_dark = global::APP_FIRTEL.Droid.Resource.Color.foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.foreground_material_light = global::APP_FIRTEL.Droid.Resource.Color.foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.highlighted_text_material_dark = global::APP_FIRTEL.Droid.Resource.Color.highlighted_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.highlighted_text_material_light = global::APP_FIRTEL.Droid.Resource.Color.highlighted_text_material_light;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_800 = global::APP_FIRTEL.Droid.Resource.Color.material_blue_grey_800;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_900 = global::APP_FIRTEL.Droid.Resource.Color.material_blue_grey_900;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_950 = global::APP_FIRTEL.Droid.Resource.Color.material_blue_grey_950;
+			global::XamEffects.Droid.Resource.Color.material_deep_teal_200 = global::APP_FIRTEL.Droid.Resource.Color.material_deep_teal_200;
+			global::XamEffects.Droid.Resource.Color.material_deep_teal_500 = global::APP_FIRTEL.Droid.Resource.Color.material_deep_teal_500;
+			global::XamEffects.Droid.Resource.Color.material_grey_100 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_100;
+			global::XamEffects.Droid.Resource.Color.material_grey_300 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_300;
+			global::XamEffects.Droid.Resource.Color.material_grey_50 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_50;
+			global::XamEffects.Droid.Resource.Color.material_grey_600 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_600;
+			global::XamEffects.Droid.Resource.Color.material_grey_800 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_800;
+			global::XamEffects.Droid.Resource.Color.material_grey_850 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_850;
+			global::XamEffects.Droid.Resource.Color.material_grey_900 = global::APP_FIRTEL.Droid.Resource.Color.material_grey_900;
+			global::XamEffects.Droid.Resource.Color.notification_action_color_filter = global::APP_FIRTEL.Droid.Resource.Color.notification_action_color_filter;
+			global::XamEffects.Droid.Resource.Color.notification_icon_bg_color = global::APP_FIRTEL.Droid.Resource.Color.notification_icon_bg_color;
+			global::XamEffects.Droid.Resource.Color.notification_material_background_media_default_color = global::APP_FIRTEL.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::XamEffects.Droid.Resource.Color.primary_dark_material_dark = global::APP_FIRTEL.Droid.Resource.Color.primary_dark_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_dark_material_light = global::APP_FIRTEL.Droid.Resource.Color.primary_dark_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_material_dark = global::APP_FIRTEL.Droid.Resource.Color.primary_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_material_light = global::APP_FIRTEL.Droid.Resource.Color.primary_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_text_default_material_dark = global::APP_FIRTEL.Droid.Resource.Color.primary_text_default_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_text_default_material_light = global::APP_FIRTEL.Droid.Resource.Color.primary_text_default_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_text_disabled_material_dark = global::APP_FIRTEL.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_text_disabled_material_light = global::APP_FIRTEL.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.ripple_material_dark = global::APP_FIRTEL.Droid.Resource.Color.ripple_material_dark;
+			global::XamEffects.Droid.Resource.Color.ripple_material_light = global::APP_FIRTEL.Droid.Resource.Color.ripple_material_light;
+			global::XamEffects.Droid.Resource.Color.secondary_text_default_material_dark = global::APP_FIRTEL.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::XamEffects.Droid.Resource.Color.secondary_text_default_material_light = global::APP_FIRTEL.Droid.Resource.Color.secondary_text_default_material_light;
+			global::XamEffects.Droid.Resource.Color.secondary_text_disabled_material_dark = global::APP_FIRTEL.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.secondary_text_disabled_material_light = global::APP_FIRTEL.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_disabled_material_light = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_material_dark = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_material_light = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_normal_material_dark = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_normal_material_light = global::APP_FIRTEL.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_height_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_width_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::APP_FIRTEL.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::APP_FIRTEL.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::APP_FIRTEL.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_corner_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_control_corner_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_inset_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_control_inset_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_padding_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_control_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_min_width_major = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_padding_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::APP_FIRTEL.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::APP_FIRTEL.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::APP_FIRTEL.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_floating_window_z = global::APP_FIRTEL.Droid.Resource.Dimension.abc_floating_window_z;
+			global::XamEffects.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_panel_menu_list_width = global::APP_FIRTEL.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_progress_bar_height_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_search_view_preferred_height = global::APP_FIRTEL.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_search_view_preferred_width = global::APP_FIRTEL.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_switch_padding = global::APP_FIRTEL.Droid.Resource.Dimension.abc_switch_padding;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_body_1_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_body_2_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_button_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_caption_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_1_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_2_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_3_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_4_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_headline_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_large_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_medium_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_menu_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_small_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_subhead_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_title_material = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::APP_FIRTEL.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::XamEffects.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::APP_FIRTEL.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::XamEffects.Droid.Resource.Dimension.cardview_default_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.cardview_default_elevation;
+			global::XamEffects.Droid.Resource.Dimension.cardview_default_radius = global::APP_FIRTEL.Droid.Resource.Dimension.cardview_default_radius;
+			global::XamEffects.Droid.Resource.Dimension.design_appbar_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_appbar_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_height = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_margin = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::APP_FIRTEL.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_border_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_border_width;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_image_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_image_size;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_size_mini = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_size_mini;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_size_normal = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_size_normal;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::APP_FIRTEL.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_icon_padding = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_icon_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_padding_bottom = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::APP_FIRTEL.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_elevation = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_min_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_text_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_max_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_tab_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::APP_FIRTEL.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_text_size = global::APP_FIRTEL.Droid.Resource.Dimension.design_tab_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_text_size_2line = global::APP_FIRTEL.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::XamEffects.Droid.Resource.Dimension.disabled_alpha_material_dark = global::APP_FIRTEL.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.disabled_alpha_material_light = global::APP_FIRTEL.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_colored = global::APP_FIRTEL.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_dark = global::APP_FIRTEL.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_light = global::APP_FIRTEL.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.hint_alpha_material_dark = global::APP_FIRTEL.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.hint_alpha_material_light = global::APP_FIRTEL.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::APP_FIRTEL.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::APP_FIRTEL.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::APP_FIRTEL.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::APP_FIRTEL.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::APP_FIRTEL.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::XamEffects.Droid.Resource.Dimension.notification_action_icon_size = global::APP_FIRTEL.Droid.Resource.Dimension.notification_action_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_action_text_size = global::APP_FIRTEL.Droid.Resource.Dimension.notification_action_text_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_big_circle_margin = global::APP_FIRTEL.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::XamEffects.Droid.Resource.Dimension.notification_content_margin_start = global::APP_FIRTEL.Droid.Resource.Dimension.notification_content_margin_start;
+			global::XamEffects.Droid.Resource.Dimension.notification_large_icon_height = global::APP_FIRTEL.Droid.Resource.Dimension.notification_large_icon_height;
+			global::XamEffects.Droid.Resource.Dimension.notification_large_icon_width = global::APP_FIRTEL.Droid.Resource.Dimension.notification_large_icon_width;
+			global::XamEffects.Droid.Resource.Dimension.notification_main_column_padding_top = global::APP_FIRTEL.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::XamEffects.Droid.Resource.Dimension.notification_media_narrow_margin = global::APP_FIRTEL.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::XamEffects.Droid.Resource.Dimension.notification_right_icon_size = global::APP_FIRTEL.Droid.Resource.Dimension.notification_right_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_right_side_padding_top = global::APP_FIRTEL.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::XamEffects.Droid.Resource.Dimension.notification_small_icon_background_padding = global::APP_FIRTEL.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::XamEffects.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::APP_FIRTEL.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::XamEffects.Droid.Resource.Dimension.notification_subtext_size = global::APP_FIRTEL.Droid.Resource.Dimension.notification_subtext_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_top_pad = global::APP_FIRTEL.Droid.Resource.Dimension.notification_top_pad;
+			global::XamEffects.Droid.Resource.Dimension.notification_top_pad_large_text = global::APP_FIRTEL.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::XamEffects.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_borderless_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_check_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_colored_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::APP_FIRTEL.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_top_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_control_background_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_control_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_dialog_material_background = global::APP_FIRTEL.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::XamEffects.Droid.Resource.Drawable.abc_edit_text_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_edit_text_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_ab_back_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_clear_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_search_api_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_item_background_holo_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_item_background_holo_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_focused_holo = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_longpressed_holo = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_holo_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::APP_FIRTEL.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::XamEffects.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::APP_FIRTEL.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_small_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::APP_FIRTEL.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_track_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_switch_thumb_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_tab_indicator_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_cursor_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::APP_FIRTEL.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::APP_FIRTEL.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_material = global::APP_FIRTEL.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_vector_test = global::APP_FIRTEL.Droid.Resource.Drawable.abc_vector_test;
+			global::XamEffects.Droid.Resource.Drawable.avd_hide_password = global::APP_FIRTEL.Droid.Resource.Drawable.avd_hide_password;
+			global::XamEffects.Droid.Resource.Drawable.avd_show_password = global::APP_FIRTEL.Droid.Resource.Drawable.avd_show_password;
+			global::XamEffects.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::APP_FIRTEL.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::XamEffects.Droid.Resource.Drawable.design_fab_background = global::APP_FIRTEL.Droid.Resource.Drawable.design_fab_background;
+			global::XamEffects.Droid.Resource.Drawable.design_ic_visibility = global::APP_FIRTEL.Droid.Resource.Drawable.design_ic_visibility;
+			global::XamEffects.Droid.Resource.Drawable.design_ic_visibility_off = global::APP_FIRTEL.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::XamEffects.Droid.Resource.Drawable.design_password_eye = global::APP_FIRTEL.Droid.Resource.Drawable.design_password_eye;
+			global::XamEffects.Droid.Resource.Drawable.design_snackbar_background = global::APP_FIRTEL.Droid.Resource.Drawable.design_snackbar_background;
+			global::XamEffects.Droid.Resource.Drawable.navigation_empty_icon = global::APP_FIRTEL.Droid.Resource.Drawable.navigation_empty_icon;
+			global::XamEffects.Droid.Resource.Drawable.notification_action_background = global::APP_FIRTEL.Droid.Resource.Drawable.notification_action_background;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg_low;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low_normal = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low_pressed = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_normal = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg_normal;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_normal_pressed = global::APP_FIRTEL.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::XamEffects.Droid.Resource.Drawable.notification_icon_background = global::APP_FIRTEL.Droid.Resource.Drawable.notification_icon_background;
+			global::XamEffects.Droid.Resource.Drawable.notification_template_icon_bg = global::APP_FIRTEL.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_template_icon_low_bg = global::APP_FIRTEL.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_tile_bg = global::APP_FIRTEL.Droid.Resource.Drawable.notification_tile_bg;
+			global::XamEffects.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::APP_FIRTEL.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamEffects.Droid.Resource.Id.action0 = global::APP_FIRTEL.Droid.Resource.Id.action0;
+			global::XamEffects.Droid.Resource.Id.action_bar = global::APP_FIRTEL.Droid.Resource.Id.action_bar;
+			global::XamEffects.Droid.Resource.Id.action_bar_activity_content = global::APP_FIRTEL.Droid.Resource.Id.action_bar_activity_content;
+			global::XamEffects.Droid.Resource.Id.action_bar_container = global::APP_FIRTEL.Droid.Resource.Id.action_bar_container;
+			global::XamEffects.Droid.Resource.Id.action_bar_root = global::APP_FIRTEL.Droid.Resource.Id.action_bar_root;
+			global::XamEffects.Droid.Resource.Id.action_bar_spinner = global::APP_FIRTEL.Droid.Resource.Id.action_bar_spinner;
+			global::XamEffects.Droid.Resource.Id.action_bar_subtitle = global::APP_FIRTEL.Droid.Resource.Id.action_bar_subtitle;
+			global::XamEffects.Droid.Resource.Id.action_bar_title = global::APP_FIRTEL.Droid.Resource.Id.action_bar_title;
+			global::XamEffects.Droid.Resource.Id.action_container = global::APP_FIRTEL.Droid.Resource.Id.action_container;
+			global::XamEffects.Droid.Resource.Id.action_context_bar = global::APP_FIRTEL.Droid.Resource.Id.action_context_bar;
+			global::XamEffects.Droid.Resource.Id.action_divider = global::APP_FIRTEL.Droid.Resource.Id.action_divider;
+			global::XamEffects.Droid.Resource.Id.action_image = global::APP_FIRTEL.Droid.Resource.Id.action_image;
+			global::XamEffects.Droid.Resource.Id.action_menu_divider = global::APP_FIRTEL.Droid.Resource.Id.action_menu_divider;
+			global::XamEffects.Droid.Resource.Id.action_menu_presenter = global::APP_FIRTEL.Droid.Resource.Id.action_menu_presenter;
+			global::XamEffects.Droid.Resource.Id.action_mode_bar = global::APP_FIRTEL.Droid.Resource.Id.action_mode_bar;
+			global::XamEffects.Droid.Resource.Id.action_mode_bar_stub = global::APP_FIRTEL.Droid.Resource.Id.action_mode_bar_stub;
+			global::XamEffects.Droid.Resource.Id.action_mode_close_button = global::APP_FIRTEL.Droid.Resource.Id.action_mode_close_button;
+			global::XamEffects.Droid.Resource.Id.action_text = global::APP_FIRTEL.Droid.Resource.Id.action_text;
+			global::XamEffects.Droid.Resource.Id.actions = global::APP_FIRTEL.Droid.Resource.Id.actions;
+			global::XamEffects.Droid.Resource.Id.activity_chooser_view_content = global::APP_FIRTEL.Droid.Resource.Id.activity_chooser_view_content;
+			global::XamEffects.Droid.Resource.Id.add = global::APP_FIRTEL.Droid.Resource.Id.add;
+			global::XamEffects.Droid.Resource.Id.alertTitle = global::APP_FIRTEL.Droid.Resource.Id.alertTitle;
+			global::XamEffects.Droid.Resource.Id.all = global::APP_FIRTEL.Droid.Resource.Id.all;
+			global::XamEffects.Droid.Resource.Id.always = global::APP_FIRTEL.Droid.Resource.Id.always;
+			global::XamEffects.Droid.Resource.Id.auto = global::APP_FIRTEL.Droid.Resource.Id.auto;
+			global::XamEffects.Droid.Resource.Id.beginning = global::APP_FIRTEL.Droid.Resource.Id.beginning;
+			global::XamEffects.Droid.Resource.Id.bottom = global::APP_FIRTEL.Droid.Resource.Id.bottom;
+			global::XamEffects.Droid.Resource.Id.buttonPanel = global::APP_FIRTEL.Droid.Resource.Id.buttonPanel;
+			global::XamEffects.Droid.Resource.Id.cancel_action = global::APP_FIRTEL.Droid.Resource.Id.cancel_action;
+			global::XamEffects.Droid.Resource.Id.center = global::APP_FIRTEL.Droid.Resource.Id.center;
+			global::XamEffects.Droid.Resource.Id.center_horizontal = global::APP_FIRTEL.Droid.Resource.Id.center_horizontal;
+			global::XamEffects.Droid.Resource.Id.center_vertical = global::APP_FIRTEL.Droid.Resource.Id.center_vertical;
+			global::XamEffects.Droid.Resource.Id.checkbox = global::APP_FIRTEL.Droid.Resource.Id.checkbox;
+			global::XamEffects.Droid.Resource.Id.chronometer = global::APP_FIRTEL.Droid.Resource.Id.chronometer;
+			global::XamEffects.Droid.Resource.Id.clip_horizontal = global::APP_FIRTEL.Droid.Resource.Id.clip_horizontal;
+			global::XamEffects.Droid.Resource.Id.clip_vertical = global::APP_FIRTEL.Droid.Resource.Id.clip_vertical;
+			global::XamEffects.Droid.Resource.Id.collapseActionView = global::APP_FIRTEL.Droid.Resource.Id.collapseActionView;
+			global::XamEffects.Droid.Resource.Id.container = global::APP_FIRTEL.Droid.Resource.Id.container;
+			global::XamEffects.Droid.Resource.Id.contentPanel = global::APP_FIRTEL.Droid.Resource.Id.contentPanel;
+			global::XamEffects.Droid.Resource.Id.coordinator = global::APP_FIRTEL.Droid.Resource.Id.coordinator;
+			global::XamEffects.Droid.Resource.Id.custom = global::APP_FIRTEL.Droid.Resource.Id.custom;
+			global::XamEffects.Droid.Resource.Id.customPanel = global::APP_FIRTEL.Droid.Resource.Id.customPanel;
+			global::XamEffects.Droid.Resource.Id.decor_content_parent = global::APP_FIRTEL.Droid.Resource.Id.decor_content_parent;
+			global::XamEffects.Droid.Resource.Id.default_activity_button = global::APP_FIRTEL.Droid.Resource.Id.default_activity_button;
+			global::XamEffects.Droid.Resource.Id.design_bottom_sheet = global::APP_FIRTEL.Droid.Resource.Id.design_bottom_sheet;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_action_area = global::APP_FIRTEL.Droid.Resource.Id.design_menu_item_action_area;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_action_area_stub = global::APP_FIRTEL.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_text = global::APP_FIRTEL.Droid.Resource.Id.design_menu_item_text;
+			global::XamEffects.Droid.Resource.Id.design_navigation_view = global::APP_FIRTEL.Droid.Resource.Id.design_navigation_view;
+			global::XamEffects.Droid.Resource.Id.disableHome = global::APP_FIRTEL.Droid.Resource.Id.disableHome;
+			global::XamEffects.Droid.Resource.Id.edit_query = global::APP_FIRTEL.Droid.Resource.Id.edit_query;
+			global::XamEffects.Droid.Resource.Id.end = global::APP_FIRTEL.Droid.Resource.Id.end;
+			global::XamEffects.Droid.Resource.Id.end_padder = global::APP_FIRTEL.Droid.Resource.Id.end_padder;
+			global::XamEffects.Droid.Resource.Id.enterAlways = global::APP_FIRTEL.Droid.Resource.Id.enterAlways;
+			global::XamEffects.Droid.Resource.Id.enterAlwaysCollapsed = global::APP_FIRTEL.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::XamEffects.Droid.Resource.Id.exitUntilCollapsed = global::APP_FIRTEL.Droid.Resource.Id.exitUntilCollapsed;
+			global::XamEffects.Droid.Resource.Id.expand_activities_button = global::APP_FIRTEL.Droid.Resource.Id.expand_activities_button;
+			global::XamEffects.Droid.Resource.Id.expanded_menu = global::APP_FIRTEL.Droid.Resource.Id.expanded_menu;
+			global::XamEffects.Droid.Resource.Id.fill = global::APP_FIRTEL.Droid.Resource.Id.fill;
+			global::XamEffects.Droid.Resource.Id.fill_horizontal = global::APP_FIRTEL.Droid.Resource.Id.fill_horizontal;
+			global::XamEffects.Droid.Resource.Id.fill_vertical = global::APP_FIRTEL.Droid.Resource.Id.fill_vertical;
+			global::XamEffects.Droid.Resource.Id.@fixed = global::APP_FIRTEL.Droid.Resource.Id.@fixed;
+			global::XamEffects.Droid.Resource.Id.home = global::APP_FIRTEL.Droid.Resource.Id.home;
+			global::XamEffects.Droid.Resource.Id.homeAsUp = global::APP_FIRTEL.Droid.Resource.Id.homeAsUp;
+			global::XamEffects.Droid.Resource.Id.icon = global::APP_FIRTEL.Droid.Resource.Id.icon;
+			global::XamEffects.Droid.Resource.Id.icon_group = global::APP_FIRTEL.Droid.Resource.Id.icon_group;
+			global::XamEffects.Droid.Resource.Id.ifRoom = global::APP_FIRTEL.Droid.Resource.Id.ifRoom;
+			global::XamEffects.Droid.Resource.Id.image = global::APP_FIRTEL.Droid.Resource.Id.image;
+			global::XamEffects.Droid.Resource.Id.info = global::APP_FIRTEL.Droid.Resource.Id.info;
+			global::XamEffects.Droid.Resource.Id.item_touch_helper_previous_elevation = global::APP_FIRTEL.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::XamEffects.Droid.Resource.Id.largeLabel = global::APP_FIRTEL.Droid.Resource.Id.largeLabel;
+			global::XamEffects.Droid.Resource.Id.left = global::APP_FIRTEL.Droid.Resource.Id.left;
+			global::XamEffects.Droid.Resource.Id.line1 = global::APP_FIRTEL.Droid.Resource.Id.line1;
+			global::XamEffects.Droid.Resource.Id.line3 = global::APP_FIRTEL.Droid.Resource.Id.line3;
+			global::XamEffects.Droid.Resource.Id.listMode = global::APP_FIRTEL.Droid.Resource.Id.listMode;
+			global::XamEffects.Droid.Resource.Id.list_item = global::APP_FIRTEL.Droid.Resource.Id.list_item;
+			global::XamEffects.Droid.Resource.Id.masked = global::APP_FIRTEL.Droid.Resource.Id.masked;
+			global::XamEffects.Droid.Resource.Id.media_actions = global::APP_FIRTEL.Droid.Resource.Id.media_actions;
+			global::XamEffects.Droid.Resource.Id.middle = global::APP_FIRTEL.Droid.Resource.Id.middle;
+			global::XamEffects.Droid.Resource.Id.mini = global::APP_FIRTEL.Droid.Resource.Id.mini;
+			global::XamEffects.Droid.Resource.Id.multiply = global::APP_FIRTEL.Droid.Resource.Id.multiply;
+			global::XamEffects.Droid.Resource.Id.navigation_header_container = global::APP_FIRTEL.Droid.Resource.Id.navigation_header_container;
+			global::XamEffects.Droid.Resource.Id.never = global::APP_FIRTEL.Droid.Resource.Id.never;
+			global::XamEffects.Droid.Resource.Id.none = global::APP_FIRTEL.Droid.Resource.Id.none;
+			global::XamEffects.Droid.Resource.Id.normal = global::APP_FIRTEL.Droid.Resource.Id.normal;
+			global::XamEffects.Droid.Resource.Id.notification_background = global::APP_FIRTEL.Droid.Resource.Id.notification_background;
+			global::XamEffects.Droid.Resource.Id.notification_main_column = global::APP_FIRTEL.Droid.Resource.Id.notification_main_column;
+			global::XamEffects.Droid.Resource.Id.notification_main_column_container = global::APP_FIRTEL.Droid.Resource.Id.notification_main_column_container;
+			global::XamEffects.Droid.Resource.Id.parallax = global::APP_FIRTEL.Droid.Resource.Id.parallax;
+			global::XamEffects.Droid.Resource.Id.parentPanel = global::APP_FIRTEL.Droid.Resource.Id.parentPanel;
+			global::XamEffects.Droid.Resource.Id.pin = global::APP_FIRTEL.Droid.Resource.Id.pin;
+			global::XamEffects.Droid.Resource.Id.progress_circular = global::APP_FIRTEL.Droid.Resource.Id.progress_circular;
+			global::XamEffects.Droid.Resource.Id.progress_horizontal = global::APP_FIRTEL.Droid.Resource.Id.progress_horizontal;
+			global::XamEffects.Droid.Resource.Id.radio = global::APP_FIRTEL.Droid.Resource.Id.radio;
+			global::XamEffects.Droid.Resource.Id.right = global::APP_FIRTEL.Droid.Resource.Id.right;
+			global::XamEffects.Droid.Resource.Id.right_icon = global::APP_FIRTEL.Droid.Resource.Id.right_icon;
+			global::XamEffects.Droid.Resource.Id.right_side = global::APP_FIRTEL.Droid.Resource.Id.right_side;
+			global::XamEffects.Droid.Resource.Id.screen = global::APP_FIRTEL.Droid.Resource.Id.screen;
+			global::XamEffects.Droid.Resource.Id.scroll = global::APP_FIRTEL.Droid.Resource.Id.scroll;
+			global::XamEffects.Droid.Resource.Id.scrollIndicatorDown = global::APP_FIRTEL.Droid.Resource.Id.scrollIndicatorDown;
+			global::XamEffects.Droid.Resource.Id.scrollIndicatorUp = global::APP_FIRTEL.Droid.Resource.Id.scrollIndicatorUp;
+			global::XamEffects.Droid.Resource.Id.scrollView = global::APP_FIRTEL.Droid.Resource.Id.scrollView;
+			global::XamEffects.Droid.Resource.Id.scrollable = global::APP_FIRTEL.Droid.Resource.Id.scrollable;
+			global::XamEffects.Droid.Resource.Id.search_badge = global::APP_FIRTEL.Droid.Resource.Id.search_badge;
+			global::XamEffects.Droid.Resource.Id.search_bar = global::APP_FIRTEL.Droid.Resource.Id.search_bar;
+			global::XamEffects.Droid.Resource.Id.search_button = global::APP_FIRTEL.Droid.Resource.Id.search_button;
+			global::XamEffects.Droid.Resource.Id.search_close_btn = global::APP_FIRTEL.Droid.Resource.Id.search_close_btn;
+			global::XamEffects.Droid.Resource.Id.search_edit_frame = global::APP_FIRTEL.Droid.Resource.Id.search_edit_frame;
+			global::XamEffects.Droid.Resource.Id.search_go_btn = global::APP_FIRTEL.Droid.Resource.Id.search_go_btn;
+			global::XamEffects.Droid.Resource.Id.search_mag_icon = global::APP_FIRTEL.Droid.Resource.Id.search_mag_icon;
+			global::XamEffects.Droid.Resource.Id.search_plate = global::APP_FIRTEL.Droid.Resource.Id.search_plate;
+			global::XamEffects.Droid.Resource.Id.search_src_text = global::APP_FIRTEL.Droid.Resource.Id.search_src_text;
+			global::XamEffects.Droid.Resource.Id.search_voice_btn = global::APP_FIRTEL.Droid.Resource.Id.search_voice_btn;
+			global::XamEffects.Droid.Resource.Id.select_dialog_listview = global::APP_FIRTEL.Droid.Resource.Id.select_dialog_listview;
+			global::XamEffects.Droid.Resource.Id.shortcut = global::APP_FIRTEL.Droid.Resource.Id.shortcut;
+			global::XamEffects.Droid.Resource.Id.showCustom = global::APP_FIRTEL.Droid.Resource.Id.showCustom;
+			global::XamEffects.Droid.Resource.Id.showHome = global::APP_FIRTEL.Droid.Resource.Id.showHome;
+			global::XamEffects.Droid.Resource.Id.showTitle = global::APP_FIRTEL.Droid.Resource.Id.showTitle;
+			global::XamEffects.Droid.Resource.Id.smallLabel = global::APP_FIRTEL.Droid.Resource.Id.smallLabel;
+			global::XamEffects.Droid.Resource.Id.snackbar_action = global::APP_FIRTEL.Droid.Resource.Id.snackbar_action;
+			global::XamEffects.Droid.Resource.Id.snackbar_text = global::APP_FIRTEL.Droid.Resource.Id.snackbar_text;
+			global::XamEffects.Droid.Resource.Id.snap = global::APP_FIRTEL.Droid.Resource.Id.snap;
+			global::XamEffects.Droid.Resource.Id.spacer = global::APP_FIRTEL.Droid.Resource.Id.spacer;
+			global::XamEffects.Droid.Resource.Id.split_action_bar = global::APP_FIRTEL.Droid.Resource.Id.split_action_bar;
+			global::XamEffects.Droid.Resource.Id.src_atop = global::APP_FIRTEL.Droid.Resource.Id.src_atop;
+			global::XamEffects.Droid.Resource.Id.src_in = global::APP_FIRTEL.Droid.Resource.Id.src_in;
+			global::XamEffects.Droid.Resource.Id.src_over = global::APP_FIRTEL.Droid.Resource.Id.src_over;
+			global::XamEffects.Droid.Resource.Id.start = global::APP_FIRTEL.Droid.Resource.Id.start;
+			global::XamEffects.Droid.Resource.Id.status_bar_latest_event_content = global::APP_FIRTEL.Droid.Resource.Id.status_bar_latest_event_content;
+			global::XamEffects.Droid.Resource.Id.submenuarrow = global::APP_FIRTEL.Droid.Resource.Id.submenuarrow;
+			global::XamEffects.Droid.Resource.Id.submit_area = global::APP_FIRTEL.Droid.Resource.Id.submit_area;
+			global::XamEffects.Droid.Resource.Id.tabMode = global::APP_FIRTEL.Droid.Resource.Id.tabMode;
+			global::XamEffects.Droid.Resource.Id.text = global::APP_FIRTEL.Droid.Resource.Id.text;
+			global::XamEffects.Droid.Resource.Id.text2 = global::APP_FIRTEL.Droid.Resource.Id.text2;
+			global::XamEffects.Droid.Resource.Id.textSpacerNoButtons = global::APP_FIRTEL.Droid.Resource.Id.textSpacerNoButtons;
+			global::XamEffects.Droid.Resource.Id.textSpacerNoTitle = global::APP_FIRTEL.Droid.Resource.Id.textSpacerNoTitle;
+			global::XamEffects.Droid.Resource.Id.textinput_counter = global::APP_FIRTEL.Droid.Resource.Id.textinput_counter;
+			global::XamEffects.Droid.Resource.Id.textinput_error = global::APP_FIRTEL.Droid.Resource.Id.textinput_error;
+			global::XamEffects.Droid.Resource.Id.time = global::APP_FIRTEL.Droid.Resource.Id.time;
+			global::XamEffects.Droid.Resource.Id.title = global::APP_FIRTEL.Droid.Resource.Id.title;
+			global::XamEffects.Droid.Resource.Id.titleDividerNoCustom = global::APP_FIRTEL.Droid.Resource.Id.titleDividerNoCustom;
+			global::XamEffects.Droid.Resource.Id.title_template = global::APP_FIRTEL.Droid.Resource.Id.title_template;
+			global::XamEffects.Droid.Resource.Id.top = global::APP_FIRTEL.Droid.Resource.Id.top;
+			global::XamEffects.Droid.Resource.Id.topPanel = global::APP_FIRTEL.Droid.Resource.Id.topPanel;
+			global::XamEffects.Droid.Resource.Id.touch_outside = global::APP_FIRTEL.Droid.Resource.Id.touch_outside;
+			global::XamEffects.Droid.Resource.Id.transition_current_scene = global::APP_FIRTEL.Droid.Resource.Id.transition_current_scene;
+			global::XamEffects.Droid.Resource.Id.transition_scene_layoutid_cache = global::APP_FIRTEL.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::XamEffects.Droid.Resource.Id.up = global::APP_FIRTEL.Droid.Resource.Id.up;
+			global::XamEffects.Droid.Resource.Id.useLogo = global::APP_FIRTEL.Droid.Resource.Id.useLogo;
+			global::XamEffects.Droid.Resource.Id.view_offset_helper = global::APP_FIRTEL.Droid.Resource.Id.view_offset_helper;
+			global::XamEffects.Droid.Resource.Id.visible = global::APP_FIRTEL.Droid.Resource.Id.visible;
+			global::XamEffects.Droid.Resource.Id.withText = global::APP_FIRTEL.Droid.Resource.Id.withText;
+			global::XamEffects.Droid.Resource.Id.wrap_content = global::APP_FIRTEL.Droid.Resource.Id.wrap_content;
+			global::XamEffects.Droid.Resource.Integer.abc_config_activityDefaultDur = global::APP_FIRTEL.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::XamEffects.Droid.Resource.Integer.abc_config_activityShortDur = global::APP_FIRTEL.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::XamEffects.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::APP_FIRTEL.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::XamEffects.Droid.Resource.Integer.bottom_sheet_slide_duration = global::APP_FIRTEL.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::XamEffects.Droid.Resource.Integer.cancel_button_image_alpha = global::APP_FIRTEL.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::XamEffects.Droid.Resource.Integer.design_snackbar_text_max_lines = global::APP_FIRTEL.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::XamEffects.Droid.Resource.Integer.hide_password_duration = global::APP_FIRTEL.Droid.Resource.Integer.hide_password_duration;
+			global::XamEffects.Droid.Resource.Integer.show_password_duration = global::APP_FIRTEL.Droid.Resource.Integer.show_password_duration;
+			global::XamEffects.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::APP_FIRTEL.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::XamEffects.Droid.Resource.Layout.abc_action_bar_title_item = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::XamEffects.Droid.Resource.Layout.abc_action_bar_up_container = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::XamEffects.Droid.Resource.Layout.abc_action_menu_item_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_action_menu_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_menu_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_action_mode_bar = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_mode_bar;
+			global::XamEffects.Droid.Resource.Layout.abc_action_mode_close_item_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::XamEffects.Droid.Resource.Layout.abc_activity_chooser_view = global::APP_FIRTEL.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::XamEffects.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::APP_FIRTEL.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_title_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::XamEffects.Droid.Resource.Layout.abc_dialog_title_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_dialog_title_material;
+			global::XamEffects.Droid.Resource.Layout.abc_expanded_menu_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::APP_FIRTEL.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_icon = global::APP_FIRTEL.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_radio = global::APP_FIRTEL.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::XamEffects.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_popup_menu_item_layout = global::APP_FIRTEL.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_content_include = global::APP_FIRTEL.Droid.Resource.Layout.abc_screen_content_include;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_simple = global::APP_FIRTEL.Droid.Resource.Layout.abc_screen_simple;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::APP_FIRTEL.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_toolbar = global::APP_FIRTEL.Droid.Resource.Layout.abc_screen_toolbar;
+			global::XamEffects.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::APP_FIRTEL.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::XamEffects.Droid.Resource.Layout.abc_search_view = global::APP_FIRTEL.Droid.Resource.Layout.abc_search_view;
+			global::XamEffects.Droid.Resource.Layout.abc_select_dialog_material = global::APP_FIRTEL.Droid.Resource.Layout.abc_select_dialog_material;
+			global::XamEffects.Droid.Resource.Layout.design_bottom_navigation_item = global::APP_FIRTEL.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::XamEffects.Droid.Resource.Layout.design_bottom_sheet_dialog = global::APP_FIRTEL.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::XamEffects.Droid.Resource.Layout.design_layout_snackbar = global::APP_FIRTEL.Droid.Resource.Layout.design_layout_snackbar;
+			global::XamEffects.Droid.Resource.Layout.design_layout_snackbar_include = global::APP_FIRTEL.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::XamEffects.Droid.Resource.Layout.design_layout_tab_icon = global::APP_FIRTEL.Droid.Resource.Layout.design_layout_tab_icon;
+			global::XamEffects.Droid.Resource.Layout.design_layout_tab_text = global::APP_FIRTEL.Droid.Resource.Layout.design_layout_tab_text;
+			global::XamEffects.Droid.Resource.Layout.design_menu_item_action_area = global::APP_FIRTEL.Droid.Resource.Layout.design_menu_item_action_area;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_item;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_header = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_item_header;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_separator = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_item_separator;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_subheader = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_menu = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_menu;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_menu_item = global::APP_FIRTEL.Droid.Resource.Layout.design_navigation_menu_item;
+			global::XamEffects.Droid.Resource.Layout.notification_action = global::APP_FIRTEL.Droid.Resource.Layout.notification_action;
+			global::XamEffects.Droid.Resource.Layout.notification_action_tombstone = global::APP_FIRTEL.Droid.Resource.Layout.notification_action_tombstone;
+			global::XamEffects.Droid.Resource.Layout.notification_media_action = global::APP_FIRTEL.Droid.Resource.Layout.notification_media_action;
+			global::XamEffects.Droid.Resource.Layout.notification_media_cancel_action = global::APP_FIRTEL.Droid.Resource.Layout.notification_media_cancel_action;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_big_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_custom = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_narrow = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_custom_big = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_custom_big;
+			global::XamEffects.Droid.Resource.Layout.notification_template_icon_group = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_icon_group;
+			global::XamEffects.Droid.Resource.Layout.notification_template_lines_media = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_lines_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_media = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_media_custom = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_media_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_part_chronometer = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::XamEffects.Droid.Resource.Layout.notification_template_part_time = global::APP_FIRTEL.Droid.Resource.Layout.notification_template_part_time;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_item_material = global::APP_FIRTEL.Droid.Resource.Layout.select_dialog_item_material;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_multichoice_material = global::APP_FIRTEL.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_singlechoice_material = global::APP_FIRTEL.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::XamEffects.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::APP_FIRTEL.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::XamEffects.Droid.Resource.String.ApplicationName = global::APP_FIRTEL.Droid.Resource.String.ApplicationName;
+			global::XamEffects.Droid.Resource.String.Hello = global::APP_FIRTEL.Droid.Resource.String.Hello;
+			global::XamEffects.Droid.Resource.String.abc_action_bar_home_description = global::APP_FIRTEL.Droid.Resource.String.abc_action_bar_home_description;
+			global::XamEffects.Droid.Resource.String.abc_action_bar_up_description = global::APP_FIRTEL.Droid.Resource.String.abc_action_bar_up_description;
+			global::XamEffects.Droid.Resource.String.abc_action_menu_overflow_description = global::APP_FIRTEL.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::XamEffects.Droid.Resource.String.abc_action_mode_done = global::APP_FIRTEL.Droid.Resource.String.abc_action_mode_done;
+			global::XamEffects.Droid.Resource.String.abc_activity_chooser_view_see_all = global::APP_FIRTEL.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::XamEffects.Droid.Resource.String.abc_activitychooserview_choose_application = global::APP_FIRTEL.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::XamEffects.Droid.Resource.String.abc_capital_off = global::APP_FIRTEL.Droid.Resource.String.abc_capital_off;
+			global::XamEffects.Droid.Resource.String.abc_capital_on = global::APP_FIRTEL.Droid.Resource.String.abc_capital_on;
+			global::XamEffects.Droid.Resource.String.abc_search_hint = global::APP_FIRTEL.Droid.Resource.String.abc_search_hint;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_clear = global::APP_FIRTEL.Droid.Resource.String.abc_searchview_description_clear;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_query = global::APP_FIRTEL.Droid.Resource.String.abc_searchview_description_query;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_search = global::APP_FIRTEL.Droid.Resource.String.abc_searchview_description_search;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_submit = global::APP_FIRTEL.Droid.Resource.String.abc_searchview_description_submit;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_voice = global::APP_FIRTEL.Droid.Resource.String.abc_searchview_description_voice;
+			global::XamEffects.Droid.Resource.String.abc_shareactionprovider_share_with = global::APP_FIRTEL.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::XamEffects.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::APP_FIRTEL.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::XamEffects.Droid.Resource.String.abc_toolbar_collapse_description = global::APP_FIRTEL.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::XamEffects.Droid.Resource.String.appbar_scrolling_view_behavior = global::APP_FIRTEL.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::XamEffects.Droid.Resource.String.bottom_sheet_behavior = global::APP_FIRTEL.Droid.Resource.String.bottom_sheet_behavior;
+			global::XamEffects.Droid.Resource.String.character_counter_pattern = global::APP_FIRTEL.Droid.Resource.String.character_counter_pattern;
+			global::XamEffects.Droid.Resource.String.password_toggle_content_description = global::APP_FIRTEL.Droid.Resource.String.password_toggle_content_description;
+			global::XamEffects.Droid.Resource.String.path_password_eye = global::APP_FIRTEL.Droid.Resource.String.path_password_eye;
+			global::XamEffects.Droid.Resource.String.path_password_eye_mask_strike_through = global::APP_FIRTEL.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::XamEffects.Droid.Resource.String.path_password_eye_mask_visible = global::APP_FIRTEL.Droid.Resource.String.path_password_eye_mask_visible;
+			global::XamEffects.Droid.Resource.String.path_password_strike_through = global::APP_FIRTEL.Droid.Resource.String.path_password_strike_through;
+			global::XamEffects.Droid.Resource.String.search_menu_title = global::APP_FIRTEL.Droid.Resource.String.search_menu_title;
+			global::XamEffects.Droid.Resource.String.status_bar_notification_info_overflow = global::APP_FIRTEL.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::XamEffects.Droid.Resource.Style.AlertDialog_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::XamEffects.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Animation_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::APP_FIRTEL.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::XamEffects.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::APP_FIRTEL.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::APP_FIRTEL.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::XamEffects.Droid.Resource.Style.Base_CardView = global::APP_FIRTEL.Droid.Resource.Style.Base_CardView;
+			global::XamEffects.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::APP_FIRTEL.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::APP_FIRTEL.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::APP_FIRTEL.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::APP_FIRTEL.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::XamEffects.Droid.Resource.Style.CardView = global::APP_FIRTEL.Droid.Resource.Style.CardView;
+			global::XamEffects.Droid.Resource.Style.CardView_Dark = global::APP_FIRTEL.Droid.Resource.Style.CardView_Dark;
+			global::XamEffects.Droid.Resource.Style.CardView_Light = global::APP_FIRTEL.Droid.Resource.Style.CardView_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Platform_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::APP_FIRTEL.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_V21_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_V25_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::APP_FIRTEL.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::XamEffects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::APP_FIRTEL.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::APP_FIRTEL.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Counter = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Error = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Hint = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Tab = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::APP_FIRTEL.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_Design = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design_Light;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_NoActionBar = global::APP_FIRTEL.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::APP_FIRTEL.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_EditText = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SearchView = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::APP_FIRTEL.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_AppBarLayout = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_NavigationView = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_Snackbar = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_TabLayout = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_TextInputLayout = global::APP_FIRTEL.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_background = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_background;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_displayOptions = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_divider = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_divider;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_elevation;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_height = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_height;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_homeLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_icon = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_icon;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_itemPadding = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_logo = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_logo;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_navigationMode = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_popupTheme = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_subtitle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_title = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_title;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBarLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::APP_FIRTEL.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuItemView = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMenuItemView;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuView = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMenuView;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_background = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_background;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_height = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_height;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView = global::APP_FIRTEL.Droid.Resource.Styleable.ActivityChooserView;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::APP_FIRTEL.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_android_layout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_listLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_showTitle = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_android_background = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_expanded = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::APP_FIRTEL.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatImageView;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_android_src = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_tint = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextView;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::APP_FIRTEL.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_menu = global::APP_FIRTEL.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::APP_FIRTEL.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::APP_FIRTEL.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::APP_FIRTEL.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::XamEffects.Droid.Resource.Styleable.ButtonBarLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ButtonBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::APP_FIRTEL.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::XamEffects.Droid.Resource.Styleable.CardView = global::APP_FIRTEL.Droid.Resource.Styleable.CardView;
+			global::XamEffects.Droid.Resource.Styleable.CardView_android_minHeight = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::XamEffects.Droid.Resource.Styleable.CardView_android_minWidth = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardCornerRadius = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardElevation = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardElevation;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardMaxElevation = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPadding = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_contentPadding;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingRight = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingTop = global::APP_FIRTEL.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::APP_FIRTEL.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem = global::APP_FIRTEL.Droid.Resource.Styleable.ColorStateListItem;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_alpha = global::APP_FIRTEL.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::APP_FIRTEL.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_android_color = global::APP_FIRTEL.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton = global::APP_FIRTEL.Droid.Resource.Styleable.CompoundButton;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_android_button = global::APP_FIRTEL.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_buttonTint = global::APP_FIRTEL.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::APP_FIRTEL.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_color = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::APP_FIRTEL.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::APP_FIRTEL.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::APP_FIRTEL.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::APP_FIRTEL.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::APP_FIRTEL.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::APP_FIRTEL.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow = global::APP_FIRTEL.Droid.Resource.Styleable.ListPopupWindow;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::APP_FIRTEL.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::APP_FIRTEL.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_enabled = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_id = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_visible = global::APP_FIRTEL.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionLayout = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionViewClass = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_checkable = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_checked = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_enabled = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_icon = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_id = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_id;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_onClick = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_title = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_title;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_visible = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_showAsAction = global::APP_FIRTEL.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::XamEffects.Droid.Resource.Styleable.MenuView = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_headerBackground = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemBackground = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_subMenuArrow = global::APP_FIRTEL.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_background = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_android_background;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_elevation;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_headerLayout = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemBackground = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemIconTint = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_menu = global::APP_FIRTEL.Droid.Resource.Styleable.NavigationView_menu;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindow;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindowBackgroundState = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::APP_FIRTEL.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView = global::APP_FIRTEL.Droid.Resource.Styleable.RecycleListView;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::APP_FIRTEL.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::APP_FIRTEL.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_android_orientation = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_layoutManager = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_spanCount = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::APP_FIRTEL.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::XamEffects.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::APP_FIRTEL.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::XamEffects.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::APP_FIRTEL.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::XamEffects.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::APP_FIRTEL.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::APP_FIRTEL.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::XamEffects.Droid.Resource.Styleable.SearchView = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_focusable = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_imeOptions = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_inputType = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_maxWidth = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_closeIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_commitIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_goIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_goIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_layout = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_layout;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_queryBackground = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_queryHint = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_queryHint;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_searchHintIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_searchIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_submitBackground = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_voiceIcon = global::APP_FIRTEL.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout = global::APP_FIRTEL.Droid.Resource.Styleable.SnackbarLayout;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::APP_FIRTEL.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_elevation = global::APP_FIRTEL.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::APP_FIRTEL.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::XamEffects.Droid.Resource.Styleable.Spinner = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_entries = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner_android_entries;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_popupBackground = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_prompt = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_popupTheme = global::APP_FIRTEL.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_showText = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_track = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_track;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_trackTint = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::XamEffects.Droid.Resource.Styleable.TabItem = global::APP_FIRTEL.Droid.Resource.Styleable.TabItem;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_icon = global::APP_FIRTEL.Droid.Resource.Styleable.TabItem_android_icon;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_layout = global::APP_FIRTEL.Droid.Resource.Styleable.TabItem_android_layout;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_text = global::APP_FIRTEL.Droid.Resource.Styleable.TabItem_android_text;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabBackground = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabContentStart = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabGravity = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMode = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPadding = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textColor = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textSize = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_typeface = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::APP_FIRTEL.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_android_hint = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_android_gravity = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_android_minHeight = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_buttonGravity = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_collapseIcon = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_logo = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_logo;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_logoDescription = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_navigationIcon = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_popupTheme = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitle = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_title = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_title;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMargin = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMargins = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleTextColor = global::APP_FIRTEL.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::XamEffects.Droid.Resource.Styleable.View = global::APP_FIRTEL.Droid.Resource.Styleable.View;
+			global::XamEffects.Droid.Resource.Styleable.View_android_focusable = global::APP_FIRTEL.Droid.Resource.Styleable.View_android_focusable;
+			global::XamEffects.Droid.Resource.Styleable.View_android_theme = global::APP_FIRTEL.Droid.Resource.Styleable.View_android_theme;
+			global::XamEffects.Droid.Resource.Styleable.View_paddingEnd = global::APP_FIRTEL.Droid.Resource.Styleable.View_paddingEnd;
+			global::XamEffects.Droid.Resource.Styleable.View_paddingStart = global::APP_FIRTEL.Droid.Resource.Styleable.View_paddingStart;
+			global::XamEffects.Droid.Resource.Styleable.View_theme = global::APP_FIRTEL.Droid.Resource.Styleable.View_theme;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper = global::APP_FIRTEL.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::APP_FIRTEL.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::APP_FIRTEL.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::APP_FIRTEL.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat = global::APP_FIRTEL.Droid.Resource.Styleable.ViewStubCompat;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_id = global::APP_FIRTEL.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::APP_FIRTEL.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::APP_FIRTEL.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -14933,16 +16730,19 @@ namespace APP_FIRTEL.Droid
 			public const int splash_screen = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int test_custom_background = 2131165336;
+			public const int subiring = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int tooltip_frame_dark = 2131165337;
+			public const int test_custom_background = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int tooltip_frame_light = 2131165338;
+			public const int tooltip_frame_dark = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int userlogin = 2131165339;
+			public const int tooltip_frame_light = 2131165339;
+			
+			// aapt resource value: 0x7F07009C
+			public const int userlogin = 2131165340;
 			
 			static Drawable()
 			{
@@ -16457,275 +18257,281 @@ namespace APP_FIRTEL.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0E0000
-			public const int abc_action_bar_home_description = 2131623936;
-			
-			// aapt resource value: 0x7F0E0001
-			public const int abc_action_bar_up_description = 2131623937;
-			
 			// aapt resource value: 0x7F0E0002
-			public const int abc_action_menu_overflow_description = 2131623938;
+			public const int abc_action_bar_home_description = 2131623938;
 			
 			// aapt resource value: 0x7F0E0003
-			public const int abc_action_mode_done = 2131623939;
-			
-			// aapt resource value: 0x7F0E0005
-			public const int abc_activitychooserview_choose_application = 2131623941;
+			public const int abc_action_bar_up_description = 2131623939;
 			
 			// aapt resource value: 0x7F0E0004
-			public const int abc_activity_chooser_view_see_all = 2131623940;
+			public const int abc_action_menu_overflow_description = 2131623940;
 			
-			// aapt resource value: 0x7F0E0006
-			public const int abc_capital_off = 2131623942;
+			// aapt resource value: 0x7F0E0005
+			public const int abc_action_mode_done = 2131623941;
 			
 			// aapt resource value: 0x7F0E0007
-			public const int abc_capital_on = 2131623943;
+			public const int abc_activitychooserview_choose_application = 2131623943;
+			
+			// aapt resource value: 0x7F0E0006
+			public const int abc_activity_chooser_view_see_all = 2131623942;
 			
 			// aapt resource value: 0x7F0E0008
-			public const int abc_menu_alt_shortcut_label = 2131623944;
+			public const int abc_capital_off = 2131623944;
 			
 			// aapt resource value: 0x7F0E0009
-			public const int abc_menu_ctrl_shortcut_label = 2131623945;
+			public const int abc_capital_on = 2131623945;
 			
 			// aapt resource value: 0x7F0E000A
-			public const int abc_menu_delete_shortcut_label = 2131623946;
+			public const int abc_menu_alt_shortcut_label = 2131623946;
 			
 			// aapt resource value: 0x7F0E000B
-			public const int abc_menu_enter_shortcut_label = 2131623947;
+			public const int abc_menu_ctrl_shortcut_label = 2131623947;
 			
 			// aapt resource value: 0x7F0E000C
-			public const int abc_menu_function_shortcut_label = 2131623948;
+			public const int abc_menu_delete_shortcut_label = 2131623948;
 			
 			// aapt resource value: 0x7F0E000D
-			public const int abc_menu_meta_shortcut_label = 2131623949;
+			public const int abc_menu_enter_shortcut_label = 2131623949;
 			
 			// aapt resource value: 0x7F0E000E
-			public const int abc_menu_shift_shortcut_label = 2131623950;
+			public const int abc_menu_function_shortcut_label = 2131623950;
 			
 			// aapt resource value: 0x7F0E000F
-			public const int abc_menu_space_shortcut_label = 2131623951;
+			public const int abc_menu_meta_shortcut_label = 2131623951;
 			
 			// aapt resource value: 0x7F0E0010
-			public const int abc_menu_sym_shortcut_label = 2131623952;
+			public const int abc_menu_shift_shortcut_label = 2131623952;
 			
 			// aapt resource value: 0x7F0E0011
-			public const int abc_prepend_shortcut_label = 2131623953;
-			
-			// aapt resource value: 0x7F0E0013
-			public const int abc_searchview_description_clear = 2131623955;
-			
-			// aapt resource value: 0x7F0E0014
-			public const int abc_searchview_description_query = 2131623956;
-			
-			// aapt resource value: 0x7F0E0015
-			public const int abc_searchview_description_search = 2131623957;
-			
-			// aapt resource value: 0x7F0E0016
-			public const int abc_searchview_description_submit = 2131623958;
-			
-			// aapt resource value: 0x7F0E0017
-			public const int abc_searchview_description_voice = 2131623959;
+			public const int abc_menu_space_shortcut_label = 2131623953;
 			
 			// aapt resource value: 0x7F0E0012
-			public const int abc_search_hint = 2131623954;
+			public const int abc_menu_sym_shortcut_label = 2131623954;
+			
+			// aapt resource value: 0x7F0E0013
+			public const int abc_prepend_shortcut_label = 2131623955;
+			
+			// aapt resource value: 0x7F0E0015
+			public const int abc_searchview_description_clear = 2131623957;
+			
+			// aapt resource value: 0x7F0E0016
+			public const int abc_searchview_description_query = 2131623958;
+			
+			// aapt resource value: 0x7F0E0017
+			public const int abc_searchview_description_search = 2131623959;
 			
 			// aapt resource value: 0x7F0E0018
-			public const int abc_shareactionprovider_share_with = 2131623960;
+			public const int abc_searchview_description_submit = 2131623960;
 			
 			// aapt resource value: 0x7F0E0019
-			public const int abc_shareactionprovider_share_with_application = 2131623961;
+			public const int abc_searchview_description_voice = 2131623961;
+			
+			// aapt resource value: 0x7F0E0014
+			public const int abc_search_hint = 2131623956;
 			
 			// aapt resource value: 0x7F0E001A
-			public const int abc_toolbar_collapse_description = 2131623962;
+			public const int abc_shareactionprovider_share_with = 2131623962;
 			
 			// aapt resource value: 0x7F0E001B
-			public const int appbar_scrolling_view_behavior = 2131623963;
+			public const int abc_shareactionprovider_share_with_application = 2131623963;
 			
 			// aapt resource value: 0x7F0E001C
-			public const int bottom_sheet_behavior = 2131623964;
+			public const int abc_toolbar_collapse_description = 2131623964;
 			
 			// aapt resource value: 0x7F0E001D
-			public const int character_counter_content_description = 2131623965;
+			public const int appbar_scrolling_view_behavior = 2131623965;
+			
+			// aapt resource value: 0x7F0E0000
+			public const int ApplicationName = 2131623936;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int character_counter_overflowed_content_description = 2131623966;
+			public const int bottom_sheet_behavior = 2131623966;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int character_counter_pattern = 2131623967;
+			public const int character_counter_content_description = 2131623967;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int chip_text = 2131623968;
+			public const int character_counter_overflowed_content_description = 2131623968;
 			
 			// aapt resource value: 0x7F0E0021
-			public const int clear_text_end_icon_content_description = 2131623969;
+			public const int character_counter_pattern = 2131623969;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int copy_toast_msg = 2131623970;
+			public const int chip_text = 2131623970;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int error_icon_content_description = 2131623971;
+			public const int clear_text_end_icon_content_description = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int exposed_dropdown_menu_content_description = 2131623972;
+			public const int copy_toast_msg = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int fab_transformation_scrim_behavior = 2131623973;
+			public const int error_icon_content_description = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int fab_transformation_sheet_behavior = 2131623974;
+			public const int exposed_dropdown_menu_content_description = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int fallback_menu_item_copy_link = 2131623975;
+			public const int fab_transformation_scrim_behavior = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int fallback_menu_item_open_in_browser = 2131623976;
+			public const int fab_transformation_sheet_behavior = 2131623976;
 			
 			// aapt resource value: 0x7F0E0029
-			public const int fallback_menu_item_share_link = 2131623977;
+			public const int fallback_menu_item_copy_link = 2131623977;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int hide_bottom_view_on_scroll_behavior = 2131623978;
+			public const int fallback_menu_item_open_in_browser = 2131623978;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int icon_content_description = 2131623979;
+			public const int fallback_menu_item_share_link = 2131623979;
+			
+			// aapt resource value: 0x7F0E0001
+			public const int Hello = 2131623937;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int item_view_role_description = 2131623980;
+			public const int hide_bottom_view_on_scroll_behavior = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int material_slider_range_end = 2131623981;
+			public const int icon_content_description = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int material_slider_range_start = 2131623982;
+			public const int item_view_role_description = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int mtrl_badge_numberless_content_description = 2131623983;
+			public const int material_slider_range_end = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int mtrl_chip_close_icon_content_description = 2131623984;
+			public const int material_slider_range_start = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int mtrl_exceed_max_badge_number_content_description = 2131623985;
+			public const int mtrl_badge_numberless_content_description = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int mtrl_exceed_max_badge_number_suffix = 2131623986;
+			public const int mtrl_chip_close_icon_content_description = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int mtrl_picker_a11y_next_month = 2131623987;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int mtrl_picker_a11y_prev_month = 2131623988;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int mtrl_picker_announce_current_selection = 2131623989;
+			public const int mtrl_picker_a11y_next_month = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int mtrl_picker_cancel = 2131623990;
+			public const int mtrl_picker_a11y_prev_month = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int mtrl_picker_confirm = 2131623991;
+			public const int mtrl_picker_announce_current_selection = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int mtrl_picker_date_header_selected = 2131623992;
+			public const int mtrl_picker_cancel = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int mtrl_picker_date_header_title = 2131623993;
+			public const int mtrl_picker_confirm = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int mtrl_picker_date_header_unselected = 2131623994;
+			public const int mtrl_picker_date_header_selected = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int mtrl_picker_day_of_week_column_header = 2131623995;
+			public const int mtrl_picker_date_header_title = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int mtrl_picker_invalid_format = 2131623996;
+			public const int mtrl_picker_date_header_unselected = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int mtrl_picker_invalid_format_example = 2131623997;
+			public const int mtrl_picker_day_of_week_column_header = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int mtrl_picker_invalid_format_use = 2131623998;
+			public const int mtrl_picker_invalid_format = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int mtrl_picker_invalid_range = 2131623999;
+			public const int mtrl_picker_invalid_format_example = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int mtrl_picker_navigate_to_year_description = 2131624000;
+			public const int mtrl_picker_invalid_format_use = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int mtrl_picker_out_of_range = 2131624001;
+			public const int mtrl_picker_invalid_range = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int mtrl_picker_range_header_only_end_selected = 2131624002;
+			public const int mtrl_picker_navigate_to_year_description = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int mtrl_picker_range_header_only_start_selected = 2131624003;
+			public const int mtrl_picker_out_of_range = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int mtrl_picker_range_header_selected = 2131624004;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int mtrl_picker_range_header_title = 2131624005;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int mtrl_picker_range_header_unselected = 2131624006;
+			public const int mtrl_picker_range_header_selected = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int mtrl_picker_save = 2131624007;
+			public const int mtrl_picker_range_header_title = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int mtrl_picker_text_input_date_hint = 2131624008;
+			public const int mtrl_picker_range_header_unselected = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624009;
+			public const int mtrl_picker_save = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624010;
+			public const int mtrl_picker_text_input_date_hint = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int mtrl_picker_text_input_day_abbr = 2131624011;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int mtrl_picker_text_input_month_abbr = 2131624012;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int mtrl_picker_text_input_year_abbr = 2131624013;
+			public const int mtrl_picker_text_input_day_abbr = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624014;
+			public const int mtrl_picker_text_input_month_abbr = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int mtrl_picker_toggle_to_day_selection = 2131624015;
+			public const int mtrl_picker_text_input_year_abbr = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624016;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int mtrl_picker_toggle_to_year_selection = 2131624017;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int overflow_tab_title = 2131624018;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int password_toggle_content_description = 2131624019;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int path_password_eye = 2131624020;
+			public const int overflow_tab_title = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int path_password_eye_mask_strike_through = 2131624021;
+			public const int password_toggle_content_description = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int path_password_eye_mask_visible = 2131624022;
+			public const int path_password_eye = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int path_password_strike_through = 2131624023;
+			public const int path_password_eye_mask_strike_through = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int search_menu_title = 2131624024;
+			public const int path_password_eye_mask_visible = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int status_bar_notification_info_overflow = 2131624025;
+			public const int path_password_strike_through = 2131624025;
+			
+			// aapt resource value: 0x7F0E005A
+			public const int search_menu_title = 2131624026;
+			
+			// aapt resource value: 0x7F0E005B
+			public const int status_bar_notification_info_overflow = 2131624027;
 			
 			static String()
 			{

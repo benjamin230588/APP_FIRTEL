@@ -38,8 +38,8 @@
 
              
             <StackLayout HeightRequest="15"></StackLayout>
-           
-                <custom:CustomEntry
+
+            <custom:CustomEntry
                                 CornerRadius="10"
                                 IsCurvedCornersEnabled="true"
                                 BorderColor="#000000"
@@ -51,9 +51,10 @@
                                 TextColor="Black" 
                                  Text="{Binding usuario}"
                                 CurvedBackgroundColor="White"
-                                x:Name="txtusuario"  
-                    
-                    />
+                                x:Name="txtusuario"
+               />
+
+
 
 
 

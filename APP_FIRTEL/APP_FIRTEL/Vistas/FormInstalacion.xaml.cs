@@ -97,8 +97,36 @@ namespace APP_FIRTEL.Vistas
 			//}
 			if (oMediaFile != null)
 			{
+				char delimitador = '/';
+				
+				string[] valores = oMediaFile.Path.Split(delimitador);
+				string nombrefile1 =valores[valores.Length - 1];
+				string[] nombrefile2 = nombrefile1.Split('.');
+				string nombrefile = vm.objInstalacioncls.idpostventa + "_post."+ nombrefile2[1];
 				vm.Imagenpost = GenericLH.convertirMediaFileAImageSource(oMediaFile);
+				vm.Imgmedia = oMediaFile;
+				vm.nombrefile = nombrefile;
+				vm.objInstalacioncls.nombrearchivo = nombrefile;
+			
+				vm.alto = 300;
+				vm.ancho = 330;
 			}
+		}
+
+        private async void tabPreviewImage_Tapped(object sender, EventArgs e)
+        {
+			if(oMediaFile != null)
+            {
+				ImageSource imgenvio = GenericLH.convertirMediaFileAImageSource(oMediaFile);
+				await Navigation.PushAsync(new Visualizadorimg("", imgenvio, 2));
+			}
+            else if (vm.objInstalacioncls.nombrearchivo != null)
+            {
+				await Navigation.PushAsync(new Visualizadorimg(vm.objInstalacioncls.rutaarchivo, null, 1));
+				
+            }
+
+			
 		}
     }
 }

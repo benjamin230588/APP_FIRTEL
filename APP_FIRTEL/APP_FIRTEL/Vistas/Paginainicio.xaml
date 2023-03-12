@@ -3,16 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.Paginainicio"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
              xmlns:pinch="clr-namespace:Xamarin.Forms.PinchZoomImage;assembly=Xamarin.Forms.PinchZoomImage" >
 
 
-    <Grid Padding="20">
-        <pinch:PinchZoom>
-            <pinch:PinchZoom.Content>
-                <Image   Source="https://pm1.narvii.com/6239/abaf6bf870d0afc180390c0f9c0c61531c489c01_hq.jpg"/>
-            </pinch:PinchZoom.Content>
-        </pinch:PinchZoom>
-
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*" RowSpacing="50"
+          xe:TouchEffect.Color="Red">
+        <Label Grid.Row="0" Text="Test touch effect"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" BackgroundColor="Green" />
+        <Label Grid.Row="1" Text="Test touch effect"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
     </Grid>
             
 

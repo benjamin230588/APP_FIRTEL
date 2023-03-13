@@ -101,8 +101,8 @@ namespace APP_FIRTEL.Generic
                 if (oMediaFile !=null)
                 {
 					Stream datos2;
-					
-						byte[] buffer = new byte[0];
+
+					byte[] buffer;
 						Stream s = oMediaFile.GetStream();
 						using (MemoryStream ms = new MemoryStream())
 						{
@@ -111,15 +111,24 @@ namespace APP_FIRTEL.Generic
 
 						}
 					//tengo bytes ahora redimesionar
-					byte[] pruebaimg;
-					using (MagickImage redi = new MagickImage(buffer))
-					{
-						redi.Resize(500, 0);
-						pruebaimg = redi.ToByteArray();
-						datos2 = new MemoryStream(pruebaimg);
-					}
+					//byte[] pruebaimg;
+					//using (MagickImage redi = new MagickImage(buffer))
+					//{
+					//    redi.Resize(500, 0);
+					//    pruebaimg = redi.ToByteArray();
+					//    datos2 = new MemoryStream(pruebaimg);
+					//}
 
-					//datos2 = new MemoryStream(buffer);
+					//Bitmap originalImage = BitmapFactory.DecodeByteArray(imageData, 0, imageData.Length);
+					//Bitmap resizedImage = Bitmap.CreateScaledBitmap(originalImage, (int)width, (int)height, false);
+
+					//using (MemoryStream ms = new MemoryStream())
+					//{
+					//	resizedImage.Compress(Bitmap.CompressFormat.Jpeg, 100, ms);
+					//	return ms.ToArray();
+					//}
+
+					datos2 = new MemoryStream(buffer);
 						var fileStreamContent = new StreamContent(datos2);
 						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
 

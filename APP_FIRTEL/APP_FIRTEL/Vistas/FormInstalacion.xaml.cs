@@ -5,6 +5,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,9 +69,14 @@ namespace APP_FIRTEL.Vistas
         private async void imgcargaimagen_Clicked(object sender, EventArgs e)
         {
 			await CrossMedia.Current.Initialize();
-			oMediaFile = await CrossMedia.Current.PickPhotoAsync();
+			oMediaFile = await CrossMedia.Current.PickPhotoAsync(
+			new PickMediaOptions() { PhotoSize = PhotoSize.Custom,CustomPhotoSize=85 });
 
-
+			//FileInfo fileinfo = new FileInfo(oMediaFile.Path);
+			//var tamano = fileinfo.Length;
+			//CrossMedia.Current.PickPhotoAsync(oMediaFile.Path);
+			//oMediaFile.a
+			//byte[] resizedImage = await Plugin.Media.CrossMedia.Current. .Current.re(originalImageBytes, 500, 1000);
 
 			////DisplayActionSheet()
 			//string opcion = await DisplayActionSheet("Seleccione una Opciòn", "Cancelar", null, "Galeria", "Camara");

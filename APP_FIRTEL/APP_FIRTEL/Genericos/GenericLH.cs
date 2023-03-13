@@ -13,6 +13,7 @@ using System.Collections.ObjectModel;
 using Plugin.Media.Abstractions;
 using Utilitarios_App;
 using System.Net.Http.Headers;
+using ImageMagick;
 
 namespace APP_FIRTEL.Generic
 {
@@ -109,7 +110,16 @@ namespace APP_FIRTEL.Generic
 							buffer = ms.ToArray();
 
 						}
-						datos2 = new MemoryStream(buffer);
+					//tengo bytes ahora redimesionar
+					byte[] pruebaimg;
+					using (MagickImage redi = new MagickImage(buffer))
+					{
+						redi.Resize(500, 0);
+						pruebaimg = redi.ToByteArray();
+						datos2 = new MemoryStream(pruebaimg);
+					}
+
+					//datos2 = new MemoryStream(buffer);
 						var fileStreamContent = new StreamContent(datos2);
 						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
 

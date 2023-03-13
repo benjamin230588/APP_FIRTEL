@@ -81,21 +81,43 @@ namespace APP_FIRTEL.Vistas
 
         private async void btnfiltraraveria_Clicked(object sender, EventArgs e)
         {
-            //Averias obj = Averias.GetInstance();
-            Averias obj = Averias.GetInstance();
-            obj.fechadesde = Fdesde.ToString("dd/MM/yyyy");
-            obj.fechahasta = Fhasta.ToString("dd/MM/yyyy");
+           List<ListaEstado> paginasMarcadas = oEntityCLS.Where(pag => pag.bseleccionado == true).ToList();
+            if (paginasMarcadas.Count > 0)
+            {
+                var difere = Fhasta - Fdesde;
+                var diferedias = difere.Days;
 
-            //List<PaginaCLS> p = oEntityCLS.listaPagina;
-            List<ListaEstado> paginasMarcadas = oEntityCLS.Where(pag => pag.bseleccionado == true).ToList();
-            obj.listaestado = paginasMarcadas;
-            //string cadenaestado = "";
-            //foreach (ListaEstado objCat in paginasMarcadas) cadenaestado = cadenaestado + "," + objCat.idestado;
-            //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+                if (diferedias>=0)
+                {
+                    //Averias obj = Averias.GetInstance();
+                    Averias obj = Averias.GetInstance();
+                    obj.fechadesde = Fdesde.ToString("dd/MM/yyyy");
+                    obj.fechahasta = Fhasta.ToString("dd/MM/yyyy");
 
-            await Navigation.PopAsync();
-            obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado);
+                    //List<PaginaCLS> p = oEntityCLS.listaPagina;
+                    obj.listaestado = paginasMarcadas;
+                    //string cadenaestado = "";
+                    //foreach (ListaEstado objCat in paginasMarcadas) cadenaestado = cadenaestado + "," + objCat.idestado;
+                    //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
 
+                    await Navigation.PopAsync();
+                    obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado);
+
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Fecha desde no debe ser mayor a Hasta", "Cancelar");
+
+                }
+
+
+
+            }
+            else
+            {
+                await DisplayAlert("Error", "Debe de seleccionar un Estado", "Cancelar");
+
+            }
 
 
 

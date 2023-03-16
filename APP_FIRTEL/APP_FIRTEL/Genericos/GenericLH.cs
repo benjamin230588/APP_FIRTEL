@@ -89,7 +89,7 @@ namespace APP_FIRTEL.Generic
 
 
 		}
-		public static async Task<Reply> Postfile<T>(MediaFile oMediaFile, string nombrefile,string url, T obj)
+		public static async Task<Reply> Postfile<T>(byte[] oMediaFile, string nombrefile,string url, T obj)
 		{
 			string url23 =url;
 			
@@ -98,21 +98,21 @@ namespace APP_FIRTEL.Generic
 			using (var multipartFormContent = new MultipartFormDataContent())
 			{
                 //Load the file and set the file's Content-Type header
-                if (oMediaFile !=null)
+                if (oMediaFile.Length != 0 )
                 {
 					Stream datos2;
 
-					byte[] buffer;
-						Stream s = oMediaFile.GetStream();
-						using (MemoryStream ms = new MemoryStream())
-						{
-							s.CopyTo(ms);
-							buffer = ms.ToArray();
+					//byte[] buffer;
+					//	Stream s = oMediaFile.GetStream();
+					//	using (MemoryStream ms = new MemoryStream())
+					//	{
+					//		s.CopyTo(ms);
+					//		buffer = ms.ToArray();
 
-						}
+					//	}
 					
 
-						datos2 = new MemoryStream(buffer);
+						datos2 = new MemoryStream(oMediaFile);
 						var fileStreamContent = new StreamContent(datos2);
 						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
 

@@ -62,8 +62,8 @@ namespace APP_FIRTEL.ViewModels
             get { return _Imagenpost; }
             set { SetValue(ref _Imagenpost, value); }
         }
-        private MediaFile _Imgmedia;
-        public MediaFile Imgmedia
+        private byte[] _Imgmedia;
+        public byte[] Imgmedia
         {
             get { return _Imgmedia; }
             set { SetValue(ref _Imgmedia, value); }

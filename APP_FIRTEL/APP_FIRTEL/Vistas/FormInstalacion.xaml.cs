@@ -5,8 +5,11 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -92,39 +95,43 @@ namespace APP_FIRTEL.Vistas
         private async void imgcargaimagen_Clicked(object sender, EventArgs e)
         {
 			await CrossMedia.Current.Initialize();
-			oMediaFile = await CrossMedia.Current.PickPhotoAsync(
-			new PickMediaOptions() { PhotoSize = PhotoSize.Custom,CustomPhotoSize=20 });
+			oMediaFile = await CrossMedia.Current.PickPhotoAsync();
+            string ruta = oMediaFile.Path;
+            FileInfo fileinfo = new FileInfo(oMediaFile.Path);
+            var tamano = fileinfo.Length;
+            byte[] objetoarray= new byte[0]; 
+            if(tamano > 150000)
+            {
+                objetoarray = Resizeimg(ruta);
+            }
+            //CrossMedia.Current.PickPhotoAsync(oMediaFile.Path);
+            //oMediaFile.a
+            //byte[] resizedImage = await Plugin.Media.CrossMedia.Current. .Current.re(originalImageBytes, 500, 1000);
 
-			//FileInfo fileinfo = new FileInfo(oMediaFile.Path);
-			//var tamano = fileinfo.Length;
-			//CrossMedia.Current.PickPhotoAsync(oMediaFile.Path);
-			//oMediaFile.a
-			//byte[] resizedImage = await Plugin.Media.CrossMedia.Current. .Current.re(originalImageBytes, 500, 1000);
+            ////DisplayActionSheet()
+            //string opcion = await DisplayActionSheet("Seleccione una Opciòn", "Cancelar", null, "Galeria", "Camara");
+            //switch (opcion)
+            //{
+            //	//En caso que elijes una foto de tu galeria
+            //	case "Galeria":
 
-			////DisplayActionSheet()
-			//string opcion = await DisplayActionSheet("Seleccione una Opciòn", "Cancelar", null, "Galeria", "Camara");
-			//switch (opcion)
-			//{
-			//	//En caso que elijes una foto de tu galeria
-			//	case "Galeria":
+            //		; break;
+            //	//En el caso que te tomas una foto y lo subes
+            //	case "Camara":
+            //		await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+            //		{
+            //			Directory = "Pictures",
+            //			Name = "Prueba.jpg",
+            //			PhotoSize = PhotoSize.Small
+            //		});
+            //		; break;
+            //	//Que no seleccionas ninguna opcion
+            //	default:
+            //		oMediaFile = null;
+            //		break;
 
-			//		; break;
-			//	//En el caso que te tomas una foto y lo subes
-			//	case "Camara":
-			//		await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
-			//		{
-			//			Directory = "Pictures",
-			//			Name = "Prueba.jpg",
-			//			PhotoSize = PhotoSize.Small
-			//		});
-			//		; break;
-			//	//Que no seleccionas ninguna opcion
-			//	default:
-			//		oMediaFile = null;
-			//		break;
-
-			//}
-			if (oMediaFile != null)
+            //}
+            if (oMediaFile != null)
 			{
 				char delimitador = '/';
 				
@@ -133,7 +140,8 @@ namespace APP_FIRTEL.Vistas
 				string[] nombrefile2 = nombrefile1.Split('.');
 				string nombrefile = vm.objInstalacioncls.idpostventa + "_post."+ nombrefile2[1];
 				vm.Imagenpost = GenericLH.convertirMediaFileAImageSource(oMediaFile);
-				vm.Imgmedia = oMediaFile;
+				//pasar al btes de frente
+				vm.Imgmedia = objetoarray;
 				vm.nombrefile = nombrefile;
 				vm.objInstalacioncls.nombrearchivo = nombrefile;
 			
@@ -176,5 +184,37 @@ namespace APP_FIRTEL.Vistas
 			}
 
 		}
-    }
+		 private byte[] Resizeimg(string Img)
+		{
+
+			Bitmap image = (Bitmap)Bitmap.FromFile(Img);
+
+			//float nPercent = ((float)porCiento / 100);
+			int destinoWidth = 400;
+			int destinoHeight = 400;
+
+			//Bitmap image2 = ResizeBitmap(image, destinoWidth, destinoHeight);
+			Bitmap Imagen2 = new Bitmap(destinoWidth, destinoHeight);
+			using (Graphics g = Graphics.FromImage((System.Drawing.Image)Imagen2))
+			{
+				g.DrawImage(image, 0, 0, destinoWidth, destinoHeight);
+			}
+
+			image.Dispose();
+
+			var objetoaarray=ConvertImageToByteArray(Imagen2);
+			return objetoaarray;
+		
+
+		}
+
+		 private byte[] ConvertImageToByteArray(System.Drawing.Image imageIn)
+		{
+			using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+			{
+				imageIn.Save(ms, ImageFormat.Jpeg);
+				return ms.ToArray();
+			}
+		}
+	}
 }

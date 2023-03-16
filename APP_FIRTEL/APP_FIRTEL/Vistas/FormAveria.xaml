@@ -46,8 +46,8 @@
                     <custom:CustomLabel Text="{Binding  objaveriacls.zona}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
 
                         <Label  Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
-                    <custom:BorderedEditor Keyboard="Text"  MaxLength="75" x:Name="txtdescripcion" CornerRadius="10"
-                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                    <custom:BorderedEditor Keyboard="Text"  MaxLength="800" x:Name="txtdescripcion" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsaveria}" IsReadOnly="True"/>
 
                     <Label  Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
@@ -57,8 +57,8 @@
                     <custom:CustomLabel  Text="{Binding objaveriacls.fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
 
                      <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
-                    <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
-                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="800" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsalta}"/>
 
                     <Label  Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>

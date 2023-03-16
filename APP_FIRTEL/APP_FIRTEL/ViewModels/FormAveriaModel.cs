@@ -38,7 +38,8 @@ namespace APP_FIRTEL.ViewModels
             Listaestado = cargaestado();
             //Txtfecha = DateTime.Now;
             objaveriacls = new AveriaCLS();
-            objaveriacls = objeto;
+            //myClass b = (AveriaCLS)objeto.Clone();
+            objaveriacls = (AveriaCLS)objeto.Clone();
             flgindicador = false;
            // objaveriacls.nombreEstado = 
              //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";

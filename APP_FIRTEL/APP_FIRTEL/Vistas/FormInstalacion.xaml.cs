@@ -37,31 +37,54 @@ namespace APP_FIRTEL.Vistas
         {
             //string cadena = "12.23rrr3";
             //double numero = 123.45;
-             char delimitador = ',';
-            string nombrecliente = txtnombre.Text + " " + txtnombresegundo.Text +  " " + txtapellido.Text;
-            string coordenadas = txtcoordenadas.Text.Trim();
-            string[] valores = coordenadas.Split(delimitador);
-            if (!Double.TryParse(valores[0], out double lat))
+            
+            try
+            {
+				char delimitador = ',';
+				string nombrecliente = txtnombre.Text + " " + txtnombresegundo.Text + " " + txtapellido.Text;
+                string coordenadas = txtcoordenadas.Text.Trim();
+                string[] valores = coordenadas.Split(delimitador);
+                if (!Double.TryParse(valores[0], out double lat))
+                {
+                    await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
+                    return;
+                }
+                if (!Double.TryParse(valores[1], out double longi))
+                {
+                    await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
+                    return;
+                }
+
+
+                var location = new Xamarin.Essentials.Location(lat, longi);
+                var options = new MapLaunchOptions
+                {
+                    Name = nombrecliente,
+                    NavigationMode = NavigationMode.None
+
+                };
+                //Launching Maps
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
             {
                 await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
-                return;
+
             }
-            if (!Double.TryParse(valores[1], out double longi))
-            {
-                await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
-                return;
-            }
+            //         try
+            //         {
+            //	var request = new GeolocationRequest(GeolocationAccuracy.Best);
+            //	var location = await Geolocation.GetLocationAsync(request);
+            //	if (location != null)
+            //	{
+            //		txtcoordenadas.Text = "Lat: " + location.Latitude + " Long: " + location.Longitude;
+            //	}
+            //}
+            //         catch (Exception ex)
+            //         {
 
+            //         }
 
-            var location = new Xamarin.Essentials.Location(lat,longi);
-            var options = new MapLaunchOptions
-            {
-                Name = nombrecliente,
-                NavigationMode = NavigationMode.None
-
-            };
-            //Launching Maps
-            await Map.OpenAsync(location, options);
         }
 
         
@@ -70,7 +93,7 @@ namespace APP_FIRTEL.Vistas
         {
 			await CrossMedia.Current.Initialize();
 			oMediaFile = await CrossMedia.Current.PickPhotoAsync(
-			new PickMediaOptions() { PhotoSize = PhotoSize.Custom,CustomPhotoSize=85 });
+			new PickMediaOptions() { PhotoSize = PhotoSize.Custom,CustomPhotoSize=20 });
 
 			//FileInfo fileinfo = new FileInfo(oMediaFile.Path);
 			//var tamano = fileinfo.Length;
@@ -133,6 +156,25 @@ namespace APP_FIRTEL.Vistas
             }
 
 			
+		}
+
+        private async void imgmapscoor_Clicked(object sender, EventArgs e)
+        {
+			try
+			{
+				var request = new GeolocationRequest(GeolocationAccuracy.Best);
+				var location = await Geolocation.GetLocationAsync(request);
+				if (location != null)
+				{
+					txtcoordenadas.Text = location.Latitude + "," + location.Longitude;
+				}
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Error", "Falta permitir GPS ", "Cancelar");
+
+			}
+
 		}
     }
 }

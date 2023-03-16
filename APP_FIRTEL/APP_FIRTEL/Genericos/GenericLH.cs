@@ -110,25 +110,9 @@ namespace APP_FIRTEL.Generic
 							buffer = ms.ToArray();
 
 						}
-					//tengo bytes ahora redimesionar
-					//byte[] pruebaimg;
-					//using (MagickImage redi = new MagickImage(buffer))
-					//{
-					//    redi.Resize(500, 0);
-					//    pruebaimg = redi.ToByteArray();
-					//    datos2 = new MemoryStream(pruebaimg);
-					//}
+					
 
-					//Bitmap originalImage = BitmapFactory.DecodeByteArray(imageData, 0, imageData.Length);
-					//Bitmap resizedImage = Bitmap.CreateScaledBitmap(originalImage, (int)width, (int)height, false);
-
-					//using (MemoryStream ms = new MemoryStream())
-					//{
-					//	resizedImage.Compress(Bitmap.CompressFormat.Jpeg, 100, ms);
-					//	return ms.ToArray();
-					//}
-
-					datos2 = new MemoryStream(buffer);
+						datos2 = new MemoryStream(buffer);
 						var fileStreamContent = new StreamContent(datos2);
 						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
 

@@ -230,6 +230,21 @@ namespace APP_FIRTEL.Droid
 
             var text = view.FindViewById<TextView>(Resource.Id.textview1);
             //text.Typeface = mFont;
+            //if (position==1)
+            //{
+            //    text.SetTextColor(Android.Graphics.Color.Red);
+
+            //}
+            //else if (position==2)
+            //{
+            //    text.SetTextColor(Android.Graphics.Color.);
+
+            //}
+            //else
+            //{
+            //    text.SetTextColor(mColor);
+
+            //}
             text.SetTextColor(mColor);
 
             var obj = mList.ElementAt(position);

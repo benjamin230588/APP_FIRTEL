@@ -43,5 +43,10 @@ namespace APP_FIRTEL.Clases
         public string rutaarchivo { get; set; }
         public string nombrearchivo { get; set; }
         public string nombrearchivoupdate { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

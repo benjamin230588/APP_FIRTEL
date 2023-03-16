@@ -59,5 +59,10 @@ namespace APP_FIRTEL.Clases
         public Nullable<int> idtecnologia { get; set; }
         public string cantidadtv { get; set; }
 
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
     }
 }

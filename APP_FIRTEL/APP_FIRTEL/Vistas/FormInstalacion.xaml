@@ -39,12 +39,31 @@
                     <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_registro}"  
                                              Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
                     <StackLayout HeightRequest="5"></StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="15">
+                    <StackLayout Orientation="Horizontal" Spacing="35">
                         <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                         <ImageButton Source="Googlemaps.png" x:Name="imgmaps" Clicked="imgmaps_Clicked"                                                                       
                                      >
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+                        <ImageButton Source="ubicacionactual.png" x:Name="imgmapscoor" Clicked="imgmapscoor_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates1">
                                     <VisualState x:Name="Normal">
                                         <VisualState.Setters>
                                             <Setter Property="Scale" Value="1"/>
@@ -101,7 +120,7 @@
                     </custom:CustomPicker>
 
                     <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
-                    <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="800" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objInstalacioncls.observacion2}"/>
 

@@ -80,7 +80,8 @@ namespace APP_FIRTEL.ViewModels
             Listaplanes = cargaplanes();
             //Txtfecha = DateTime.Now;
             objInstalacioncls = new PostventaCLS();
-            objInstalacioncls = objeto;
+            // objInstalacioncls = objeto;
+            objInstalacioncls = (PostventaCLS)objeto.Clone();
             flgindicador = false;
             if (objeto.nombrearchivo==null)
             {

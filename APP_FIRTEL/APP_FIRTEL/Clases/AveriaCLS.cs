@@ -23,6 +23,9 @@ namespace APP_FIRTEL.Clases
         public Nullable<System.DateTime> fecha_registro { get; set; }
        
         public Nullable<System.DateTime> fechaprogramada { get; set; }
+        public string horaprogramada { get; set; }
+        public string ordenprioridad { get; set; }
+        public string coordenadas { get; set; }
 
         public string obsalta { get; set; }
         public string comentario { get; set; }

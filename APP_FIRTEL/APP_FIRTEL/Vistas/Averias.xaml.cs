@@ -56,17 +56,20 @@ namespace APP_FIRTEL.Vistas
             //gridcontenido.bi
             
             listaestado = new List<ListaEstado>(){
-                new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true}
+                new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=true},
+                new ListaEstado () { idestado=2 , nombre="Proceso" , bseleccionado=true},
             };
             vm.flgindicador = true;
-            DateTime dateactual = DateTime.Now;
+
 
             //Asi obtenemos el primer dia del mes actual
-            DateTime oPrimerDiaDelMes = new DateTime(dateactual.Year, dateactual.Month, 1);
-
+            //DateTime oPrimerDiaDelMes = new DateTime(dateactual.Year, dateactual.Month, 1);
+            //DateTime dateactual = DateTime.Now;
+            DateTime oPrimerDiaDelMes = DateTime.Now;
+            DateTime oUltimoDiaDelMes= oPrimerDiaDelMes.AddDays(15);
             //Y de la siguiente forma obtenemos el ultimo dia del mes
             //agregamos 1 mes al objeto anterior y restamos 1 día.
-            DateTime oUltimoDiaDelMes = oPrimerDiaDelMes.AddMonths(1).AddDays(-1);
+           // DateTime oUltimoDiaDelMes = oPrimerDiaDelMes.AddMonths(1).AddDays(-1);
 
             fechadesde = "01/01/2023";
             fechahasta = oUltimoDiaDelMes.ToString("dd/MM/yyyy");
@@ -91,26 +94,36 @@ namespace APP_FIRTEL.Vistas
             Reply res;
             string cadenaestado = "";
             skipcantidad = 0;
-            foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
-            cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-            var objeto = new Paginacion { pagine = 10, skip = skipcantidad*10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado };
-
-            ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
-
-            res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
-            if (res.result == 1)
+            try
             {
-                objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+                foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
+                cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado };
+
+                ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
+
+                res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
+                if (res.result == 1)
+                {
+                    objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+
+                }
+
+                cantidad = objres.cantidadregistro;
+                ListaAveria.Clear();
+                for (int i = 0; i < objres.lista.Count; i++)
+                {
+                    ListaAveria.Add(objres.lista[i]);
+                }
+                vm.flgindicador = false;
 
             }
-          
-            cantidad = objres.cantidadregistro;
-            ListaAveria.Clear();
-            for (int i = 0; i < objres.lista.Count; i++)
+            catch (Exception ex)
             {
-                ListaAveria.Add(objres.lista[i]);
+                await DisplayAlert("Error", "Error de Conexion", "Cancelar");
+                vm.flgindicador = false;
             }
-            vm.flgindicador = false;
+            
         }
 
         public async void MostrarListaAverias2(int skipcantidad)
@@ -118,25 +131,39 @@ namespace APP_FIRTEL.Vistas
             Reply res;
            
             string cadenaestado = "";
-            foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
-            cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-            var objeto = new Paginacion { pagine = 10, skip = skipcantidad*10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado };
-
-            ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
-
-            res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
-            if (res.result == 1)
+            try
             {
-                objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+                foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
+                cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado };
 
+                ResultadoPaginacion<AveriaCLS> objres = new ResultadoPaginacion<AveriaCLS>();
+
+                res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
+                if (res.result == 1)
+                {
+                    objres = JsonConvert.DeserializeObject<ResultadoPaginacion<AveriaCLS>>(JsonConvert.SerializeObject(res.data));
+
+                }
+                // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
+                cantidad = objres.cantidadregistro;
+                //listatu.AddRange(objres.lista);
+                for (int i = 0; i < objres.lista.Count; i++)
+                {
+                    bool valida = ListaAveria.Where(x => x.idaveria == objres.lista[i].idaveria).Any();
+                    if (!valida)
+                    {
+                        ListaAveria.Add(objres.lista[i]);
+
+                    }
+                    //                ListaAveria.Add(objres.lista[i]);
+                }
             }
-            // objres.lista.ForEach((v) => v.fecha_registrostring = v.fecha_registro != null ? ((DateTime)v.fecha_registro).ToString("dd-MM-yyyy"):"");
-            cantidad = objres.cantidadregistro;
-            //listatu.AddRange(objres.lista);
-            for (int i = 0; i < objres.lista.Count; i++)
+            catch (Exception ex)
             {
-                ListaAveria.Add(objres.lista[i]);
+                await DisplayAlert("Error", "Error de Conexion", "Cancelar");
             }
+           
 
             
 
@@ -162,6 +189,11 @@ namespace APP_FIRTEL.Vistas
             }
             
         }
+        //private bool validarlista(int idaveria)
+        //{
+
+        //    ListaAveria.Where(x => x.idaveria != idaveria).Any();
+        //}
 
 
     }

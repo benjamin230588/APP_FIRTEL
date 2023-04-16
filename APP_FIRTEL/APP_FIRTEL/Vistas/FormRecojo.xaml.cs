@@ -11,46 +11,47 @@ using Xamarin.Forms.Xaml;
 
 namespace APP_FIRTEL.Vistas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FormAveria : ContentPage
-	{
-		//public string  defecto { get; set; }
-		//public List<string> lista { get; set; }
-		public FormAveria (AveriaCLS objeto)
-		{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FormRecojo : ContentPage
+    {
+       
+        public FormRecojo(RecojoCLS objeto)
+        {
 
-			InitializeComponent ();
+            InitializeComponent();
 
-			
-			//lista = new List<string>();
-			//lista.Add("Pendiente");
-			//lista.Add("Realizado");
-			//lista.Add("Ingresado");
-			//defecto = "Pendiente";
-			//combolista.BindingContext = lista;
-			BindingContext = new FormAveriaModel(Navigation, objeto);
-   //         combolista.SetBinding(Picker.ItemsSourceProperty, ".");
-   //         combolista.BindingContext = defecto;
-   //         //combolista.SetBinding(Picker.ItemsSourceProperty, ".");
-   //         combolista.SetBinding(Picker.SelectedItemProperty, ".");
-   //         combolista.ItemDisplayBinding = new Binding("Name");
-			//.ItemDisplayBinding = new Binding("Name");
-   //         picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
-   //         defecto = "Pendiente";
-   //         BindingContext = this
 
-   //         BindingContext = defecto;
+            //lista = new List<string>();
+            //lista.Add("Pendiente");
+            //lista.Add("Realizado");
+            //lista.Add("Ingresado");
+            //defecto = "Pendiente";
+            //combolista.BindingContext = lista;
+            BindingContext = new FormRecojoModel(Navigation, objeto);
+            //         combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+            //         combolista.BindingContext = defecto;
+            //         //combolista.SetBinding(Picker.ItemsSourceProperty, ".");
+            //         combolista.SetBinding(Picker.SelectedItemProperty, ".");
+            //         combolista.ItemDisplayBinding = new Binding("Name");
+            //.ItemDisplayBinding = new Binding("Name");
+            //         picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
+            //         defecto = "Pendiente";
+            //         BindingContext = this
+
+            //         BindingContext = defecto;
 
 
         }
 
-        private async void imgmaps_Clicked(object sender, EventArgs e)
-        {
+       
+
+        private async void imgmaps_Clicked_1(object sender, EventArgs e)
+        { 
             try
             {
                 char delimitador = ',';
                 string nombrecliente = txtnombre.Text;
-                    //+ " " + txtnombresegundo.Text + " " + txtapellido.Text;
+                //+ " " + txtnombresegundo.Text + " " + txtapellido.Text;
                 string coordenadas = txtcoordenadas.Text.Trim();
                 string[] valores = coordenadas.Split(delimitador);
                 if (!Double.TryParse(valores[0], out double lat))

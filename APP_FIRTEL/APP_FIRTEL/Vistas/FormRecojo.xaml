@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.FormRecojo"
+             xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+             Title="Editar Recojo" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelfont" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <Grid>
+        <StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout Margin="10,4">
+
+                    <Label  Text="Cliente" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel  x:Name="txtnombre" Style="{StaticResource labelfont}"
+                                            CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} {1}">
+                                <Binding Path="objrecojocls.codigocliente"/>
+                                <Binding Path="objrecojocls.nombrecliente"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </custom:CustomLabel>
+                    <Label  Text="Tipo Recojo" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel  Text="{Binding  objrecojocls.idtiporecojo}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}"/>
+
+
+                    <Label  Text="Plan" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel  Text="{Binding  objrecojocls.plancliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}"/>
+
+                    <Label  Text="Telefono" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel Text="{Binding  objrecojocls.telefono}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"/>
+
+
+                    <Label Text="Direccion" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel   Text="{Binding  objrecojocls.direccion}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+
+                    <Label Text="Zona" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomLabel Text="{Binding  objrecojocls.zona}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
+
+                    <Label  Text="Detalle de Recojo" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
+                    <custom:BorderedEditor Keyboard="Text"  MaxLength="800" x:Name="txtdescripcion" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                                           Text="{Binding  objrecojocls.obsrecojo}" IsReadOnly="True"/>
+
+                    <Label  Text="Fecha Registro" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objrecojocls.fecha_registro,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
+
+                    <Label Text="Fecha Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objrecojocls.fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
+
+                    <Label Text="Hora Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objrecojocls.horaprogramada}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
+
+
+                    <StackLayout Orientation="Horizontal" Spacing="35">
+                        <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="Googlemaps.png" x:Name="imgmaps" Clicked="imgmaps_Clicked_1"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+
+                    </StackLayout>
+                    <custom:CustomLabel  Text="{Binding objrecojocls.coordenadas}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" x:Name="txtcoordenadas" Style="{StaticResource labelfont}"/>
+
+
+                    <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="800" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
+                                           Text="{Binding  objrecojocls.obsalta}"/>
+
+                    <Label  Text="Estado" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomPicker  Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                                  ItemsSource="{Binding Listaestado}"   SelectedItem="{Binding objrecojocls.nombreEstado}"
+                                  FontSize="16"   ItemColor="" x:Name="combolista">
+                    </custom:CustomPicker>
+
+                    <Label  Text="Por Cobrar" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomEntry Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objrecojocls.cobro}" Style="{StaticResource labelfont}"  />
+
+
+
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" Spacing="15" Margin="10,30,10,10">
+                <Button Text="Volver" BackgroundColor="Red"
+                            x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
+                    Command="{Binding VolverRecojocommand}"/>
+                <Button Text="Grabar" Background="Green" TextColor="White" 
+                            x:Name="btnRegistrarUsuario"
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarRecojoComand}" />
+
+
+            </StackLayout>
+        </StackLayout>
+        <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="{Binding flgindicador}">
+            <ActivityIndicator
+               HorizontalOptions="Center"
+                IsRunning="{Binding flgindicador}"
+                Color="#DF013A"
+                />
+        </Grid>
+    </Grid>
+
+
+</ContentPage>

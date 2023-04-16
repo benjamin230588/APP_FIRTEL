@@ -31,7 +31,9 @@
                             </Label.Text>
                         </custom:CustomLabel>
 
-                 
+                    <Label  Text="Tipo de Averia" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel  Text="{Binding  objaveriacls.idtipoaveria}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}"/>
+
                     <Label  Text="Plan" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
                     <custom:CustomLabel  Text="{Binding  objaveriacls.plancliente}" VerticalOptions="Center" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" Style="{StaticResource labelfont}"/>
 
@@ -45,7 +47,7 @@
                       <Label Text="Zona" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:CustomLabel Text="{Binding  objaveriacls.zona}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" Style="{StaticResource labelfont}"  />
 
-                        <Label  Text="Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
+                        <Label  Text="Detalle de Averia" VerticalOptions="Center" FontAttributes="Bold" FontSize="15"/>
                     <custom:BorderedEditor Keyboard="Text"  MaxLength="800" x:Name="txtdescripcion" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsaveria}" IsReadOnly="True"/>
@@ -56,7 +58,37 @@
                      <Label Text="Fecha Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
                     <custom:CustomLabel  Text="{Binding objaveriacls.fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
 
-                     <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
+                    <Label Text="Hora Programada" VerticalOptions="Start" FontAttributes="Bold" FontSize="15" />
+                    <custom:CustomLabel  Text="{Binding objaveriacls.horaprogramada}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
+
+                   
+                    <StackLayout Orientation="Horizontal" Spacing="35">
+                        <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="Googlemaps.png" x:Name="imgmaps" Clicked="imgmaps_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+                       
+                    </StackLayout>
+                    <custom:CustomLabel  Text="{Binding objaveriacls.coordenadas}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" x:Name="txtcoordenadas" Style="{StaticResource labelfont}"/>
+
+
+                    <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
                     <custom:BorderedEditor Keyboard="Text" MaxLength="800" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="130"  BorderColor="Black" Placeholder="Ingrese Observacion" FontSize="15"
                                            Text="{Binding  objaveriacls.obsalta}"/>

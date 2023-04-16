@@ -34,10 +34,16 @@
                    
                     <Label Text="Documento de Identidad" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
                     <custom:CustomEntry Text="{Binding objInstalacioncls.dni}"  HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}" />
+                    <Label  Text="Fecha Registro" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:DatePickerCtrl  x:Name="datePickerreg" Date="{Binding objInstalacioncls.fecha_registro}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950" IsEnabled="False"/>
 
-                    <Label  Text="Fecha Alta" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_registro}"  
-                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+                    <Label  Text="Fecha Programada" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:DatePickerCtrl  x:Name="datePicker" Date="{Binding objInstalacioncls.fecha_programada}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950" IsEnabled="False" />
+                    <Label  Text="Hora Programada" VerticalOptions="Center"  FontAttributes="Bold" FontSize="17"/>
+                    <custom:CustomEntry   Text="{Binding objInstalacioncls.horaprogramada}" x:Name="txthoraprog" HeightRequest="35" BorderColor="#000000"   Style="{StaticResource labelfont}" VerticalOptions="Center" IsReadOnly="True"   />
+
                     <StackLayout HeightRequest="5"></StackLayout>
                     <StackLayout Orientation="Horizontal" Spacing="35">
                         <Label  Text="Coordenadas"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
@@ -82,14 +88,16 @@
                     </StackLayout>
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.coordenadas}" x:Name="txtcoordenadas" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
-                   
-                    <Label  Text="Direccion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomEntry  Text="{Binding objInstalacioncls.direccion}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"  Style="{StaticResource labelfont}"/>
 
+                    <Label  Text="Direccion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                    <custom:BorderedEditor Keyboard="Text" MaxLength="900" CornerRadius="10"
+                                IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black" Placeholder="Ingrese Direccion" FontSize="15"
+                                           Text="{Binding  objInstalacioncls.direccion}"/>
+                    
                     <Label  Text="Zona" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.zona}" HeightRequest="35" VerticalOptions="Center" BorderColor="#000000"   Style="{StaticResource labelfont}" />
 
-                    <Label Text="Observacion" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
+                    <Label Text="Observacion Preventa" VerticalOptions="Center" FontAttributes="Bold" FontSize="17"/>
                     <custom:BorderedEditor Keyboard="Text" MaxLength="75" CornerRadius="10"
                                 IsCurvedCornersEnabled="true" HeightRequest="100"  BorderColor="Black"  FontSize="15"
                                            Text="{Binding  objInstalacioncls.observacion}" IsReadOnly="True"/>
@@ -99,7 +107,7 @@
                     <custom:CustomEntry  Text="{Binding objInstalacioncls.celular}" HeightRequest="35" VerticalOptions="Center"  BorderColor="#000000"   Style="{StaticResource labelfont}"/>
 
                     <Label  Text="Plan Internet Tv" VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
-                    <custom:CustomPicker  Title="Seleccione Estado"  TitleColor="Black"                                                                         
+                    <custom:CustomPicker  Title="Seleccione Plan"  TitleColor="Black"                                                                         
                                   ItemsSource="{Binding Listaplanes}"   SelectedItem="{Binding objInstalacioncls.plancliente}"
                                   FontSize="16"   ItemColor="" x:Name="comboplanes">
                     </custom:CustomPicker>

@@ -12,15 +12,15 @@ using Xamarin.Forms.Xaml;
 
 namespace APP_FIRTEL.Vistas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FiltroInstalacion : ContentPage
-	{
-		public List<ListaEstado> oEntityCLS { get; set; }
-		public DateTime Fdesde { get; set; }
-		public DateTime Fhasta { get; set; }
-		public FiltroInstalacion ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FiltroRecojo : ContentPage
+    {
+        public List<ListaEstado> oEntityCLS { get; set; }
+        public DateTime Fdesde { get; set; }
+        public DateTime Fhasta { get; set; }
+        public FiltroRecojo()
+        {
+            InitializeComponent();
             int idtipousuario = Setings.IdTipoUsuario;
             if (idtipousuario == 1)
             {
@@ -42,7 +42,7 @@ namespace APP_FIRTEL.Vistas
 
             }
 
-            Instalacion obj = Instalacion.GetInstance();
+            Recojos obj = Recojos.GetInstance();
             foreach (ListaEstado objCat in oEntityCLS)
             {
                 foreach (ListaEstado obj2 in obj.listaestado)
@@ -69,18 +69,19 @@ namespace APP_FIRTEL.Vistas
             Fdesde = Fdesde1;
             Fhasta = Fhasta1;
             BindingContext = this;
+
         }
 
-        private async void btnvolverinstalacion_Clicked(object sender, EventArgs e)
+
+
+        private async void btnvolverrecojo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
 
-        private async void btnfiltrarinstalacion_Clicked(object sender, EventArgs e)
+        private async void btnfiltrarrecojo_Clicked(object sender, EventArgs e)
         {
             List<ListaEstado> paginasMarcadas = oEntityCLS.Where(pag => pag.bseleccionado == true).ToList();
-           
-
             if (paginasMarcadas.Count > 0)
             {
                 var difere = Fhasta - Fdesde;
@@ -89,11 +90,16 @@ namespace APP_FIRTEL.Vistas
                 if (diferedias >= 0)
                 {
                     //Averias obj = Averias.GetInstance();
-                    Instalacion obj = Instalacion.GetInstance();
+                    Recojos obj = Recojos.GetInstance();
                     obj.fechadesde = Fdesde.ToString("dd/MM/yyyy");
                     obj.fechahasta = Fhasta.ToString("dd/MM/yyyy");
 
-                    obj.listaestado = paginasMarcadas;             
+                    //List<PaginaCLS> p = oEntityCLS.listaPagina;
+                    obj.listaestado = paginasMarcadas;
+                    //string cadenaestado = "";
+                    //foreach (ListaEstado objCat in paginasMarcadas) cadenaestado = cadenaestado + "," + objCat.idestado;
+                    //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
+
                     await Navigation.PopAsync();
                     obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado);
 

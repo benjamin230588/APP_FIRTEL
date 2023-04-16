@@ -14,7 +14,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -35,23 +35,34 @@ namespace APP_FIRTEL.Vistas
             InitializeComponent();       
             objcliente = obj;       
             titulo = nombretitulo;
-			oCategoriaModel.Imagen = obj.nombrearchivo == null ? null : obj.rutaarchivo;
-			if(obj.nombrearchivo == null)
+            try
             {
-				objcliente.alto = 50;
-				objcliente.ancho = 100;
+                oCategoriaModel.Imagen = obj.nombrearchivo == null ? null : obj.rutaarchivo;
 
-			}
-			else
+                if (obj.nombrearchivo == null)
+                {
+                    objcliente.alto = 50;
+                    objcliente.ancho = 100;
+
+                }
+                else
+                {
+
+                    objcliente.alto = 300;
+                    objcliente.ancho = 330;
+
+                }
+
+                BindingContext = this;
+                //dtfecha.NullableDate = null;
+
+            }
+            catch (Exception ex)
             {
-				
-				objcliente.alto = 300;
-				objcliente.ancho = 330;
-
-			}
-			
-			BindingContext = this;
-            //dtfecha.NullableDate = null;
+                 DisplayAlert("Error", "Error de Conexion", "Cancelar");
+            }
+            
+            
 
 
         }

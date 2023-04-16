@@ -13,7 +13,7 @@ using System.Collections.ObjectModel;
 using Plugin.Media.Abstractions;
 using Utilitarios_App;
 using System.Net.Http.Headers;
-using ImageMagick;
+
 
 namespace APP_FIRTEL.Generic
 {
@@ -89,35 +89,35 @@ namespace APP_FIRTEL.Generic
 
 
 		}
-		public static async Task<Reply> Postfile<T>(byte[] oMediaFile, string nombrefile,string url, T obj)
+		public static async Task<Reply> Postfile<T>(MediaFile oMediaFile, string nombrefile,string url, T obj)
 		{
-			string url23 =url;
-			
-			
+			string url23 = url;
+
+
 			HttpClient cliente = new HttpClient();
 			using (var multipartFormContent = new MultipartFormDataContent())
 			{
-                //Load the file and set the file's Content-Type header
-                if (oMediaFile.Length != 0 )
-                {
+				//Load the file and set the file's Content-Type header
+				if (oMediaFile != null)
+				{
 					Stream datos2;
 
-					//byte[] buffer;
-					//	Stream s = oMediaFile.GetStream();
-					//	using (MemoryStream ms = new MemoryStream())
-					//	{
-					//		s.CopyTo(ms);
-					//		buffer = ms.ToArray();
+					byte[] buffer;
+					Stream s = oMediaFile.GetStream();
+					using (MemoryStream ms = new MemoryStream())
+					{
+						s.CopyTo(ms);
+						buffer = ms.ToArray();
 
-					//	}
-					
+					}
 
-						datos2 = new MemoryStream(oMediaFile);
-						var fileStreamContent = new StreamContent(datos2);
-						fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
 
-						//Add the file
-						multipartFormContent.Add(fileStreamContent, name: "file", fileName: nombrefile);				
+					datos2 = new MemoryStream(buffer);
+					var fileStreamContent = new StreamContent(datos2);
+					fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpg");
+
+					//Add the file
+					multipartFormContent.Add(fileStreamContent, name: "file", fileName: nombrefile);
 				}
 
 				//Send it

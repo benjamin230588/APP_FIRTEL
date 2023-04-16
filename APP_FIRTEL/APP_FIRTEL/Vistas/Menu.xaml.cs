@@ -31,8 +31,9 @@ namespace APP_FIRTEL.Vistas
             int idtipousuario = Setings.IdTipoUsuario;
             if( idtipousuario==1)
             {
-                listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Clientes" });
-                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_cliente", nombreitem = "Clientes" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_averia", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_recojo", nombreitem = "Recojos" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
 
@@ -41,6 +42,7 @@ namespace APP_FIRTEL.Vistas
             {
               
                 listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Recojos" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
             }
@@ -54,6 +56,8 @@ namespace APP_FIRTEL.Vistas
             {
                 case "Averias":
                     App.Navigate.PushAsync(new Averias()); break;
+                case "Recojos":
+                    App.Navigate.PushAsync(new Recojos()); break;
                 case "Instalaciones":
                     App.Navigate.PushAsync(new Instalacion()); break;
                 case "Clientes":

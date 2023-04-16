@@ -17,7 +17,7 @@ namespace APP_FIRTEL.Convertidores
             switch (colorvalor)
             {
                 case 1:
-                    colorDevolver = Color.Green;
+                    colorDevolver = Color.Red;
                     break;
                 case 2:
                     colorDevolver = Color.Orange;
@@ -26,7 +26,7 @@ namespace APP_FIRTEL.Convertidores
                     colorDevolver = Color.Blue;
                     break;
                 case 4:
-                    colorDevolver = Color.Red;
+                    colorDevolver = Color.Green;
                     break;
 
             }

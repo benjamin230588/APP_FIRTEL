@@ -4,7 +4,6 @@ using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -13,17 +12,17 @@ using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
 {
-    public class FormAveriaModel : BaseViewModel
+    class FormRecojoModel : BaseViewModel
     {
         #region VARIABLES
         string _Texto;
         List<string> _listaestado = new List<string>();
         string selectturno;
         DateTime txtfecha;
-        AveriaCLS _objaveriacls;
+        RecojoCLS _objrecojocls;
         //List<AveriaCLS> _ListaAveria;
         private bool _flgindicador;
-       
+
         public bool flgindicador
         {
             get { return _flgindicador; }
@@ -31,18 +30,18 @@ namespace APP_FIRTEL.ViewModels
         }
         #endregion
         #region CONSTRUCTOR
-        public FormAveriaModel(INavigation navigation, AveriaCLS objeto)
+        public FormRecojoModel(INavigation navigation, RecojoCLS objeto)
         {
             Navigation = navigation;
-           // parametrosRecibe = objeto;
+            // parametrosRecibe = objeto;
             Listaestado = cargaestado();
             //Txtfecha = DateTime.Now;
-            objaveriacls = new AveriaCLS();
+            objrecojocls = new RecojoCLS();
             //myClass b = (AveriaCLS)objeto.Clone();
-            objaveriacls = (AveriaCLS)objeto.Clone();
+            objrecojocls = (RecojoCLS)objeto.Clone();
             flgindicador = false;
-           // objaveriacls.nombreEstado = 
-             //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
+            // objaveriacls.nombreEstado = 
+            //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
         }
         #endregion
@@ -59,52 +58,52 @@ namespace APP_FIRTEL.ViewModels
 
         }
 
-        public AveriaCLS objaveriacls
+        public RecojoCLS objrecojocls
         {
-            get { return _objaveriacls; }
-            set { SetValue(ref _objaveriacls, value); }
+            get { return _objrecojocls; }
+            set { SetValue(ref _objrecojocls, value); }
 
         }
 
-        
+
 
         #region PROCESOS
         public List<string> cargaestado()
         {
             int idtipousuario = Setings.IdTipoUsuario;
-            if(idtipousuario==1)
-                return new List<string>() { "Pendiente", "Proceso", "Realizado","Cerrado" };
+            if (idtipousuario == 1)
+                return new List<string>() { "Pendiente", "Proceso", "Realizado", "Cerrado" };
             else
                 return new List<string>() { "Pendiente", "Proceso", "Realizado" };
 
 
 
         }
-        public async Task GrabarAveria()
+        public async Task GrabarRecojo()
         {
 
-           
+
             flgindicador = true;
-            var nombreestado = objaveriacls.nombreEstado;
+            var nombreestado = objrecojocls.nombreEstado;
             try
             {
                 var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
                 //AveriaCLS objeto = new AveriaCLS();
 
-                objaveriacls.usu_modificacion = 1;
-                objaveriacls.fec_modificacion = DateTime.Now;
-                objaveriacls.flg_anulado = true;
+                objrecojocls.usu_modificacion = 1;
+                objrecojocls.fec_modificacion = DateTime.Now;
+                objrecojocls.flg_anulado = true;
                 //objeto.fecha_registro = objaveriacls.fecha_registro;
-                objaveriacls.Estado = idestado;
+                objrecojocls.Estado = idestado;
 
 
 
                 //crear el objeto averia que debo enviar
                 Reply res;
-                res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
+                res = await GenericLH.Post<RecojoCLS>(Constantes.url + Constantes.api_grabarrecojo, objrecojocls);
                 if (res.result == 1)
                 {
-                    Averias.actualiza = true;
+                    Recojos.actualiza = true;
                     //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
                     await Volver();
                     flgindicador = false;
@@ -134,9 +133,10 @@ namespace APP_FIRTEL.ViewModels
             await Navigation.PopAsync();
         }
 
-        public ICommand GrabarAveriaComand => new Command(async () => await GrabarAveria());
+        public ICommand GrabarRecojoComand => new Command(async () => await GrabarRecojo());
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
-        public ICommand VolverAveriacommand => new Command(async () => await Volver());
+        public ICommand VolverRecojocommand => new Command(async () => await Volver());
+
 
 
     }

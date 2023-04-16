@@ -85,7 +85,7 @@ namespace APP_FIRTEL.Vistas
             catch (Exception ex)
             {
                 oEntityLogin.flgindicador = false;
-                await DisplayAlert("Error", ex.Message , "Cancelar");
+                await DisplayAlert("Error", "Error de Conexion" , "Cancelar");
             }
               
         }

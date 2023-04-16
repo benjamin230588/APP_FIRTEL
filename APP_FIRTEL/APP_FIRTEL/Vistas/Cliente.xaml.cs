@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 using Utilitarios_App;
 using Utilitarios_App.viewmodel;
@@ -55,18 +56,36 @@ namespace APP_FIRTEL.Vistas
 			Reply res;
 			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
 			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
-			
-			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
-			if (res.result == 1)
-			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
+            try
+            {
+				if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+				{
+					await DisplayAlert("Error", "No Hay Internet", "Cancelar");
+					return;
+
+				}
+
+				res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
+				if (res.result == 1)
+				{
+					objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
+
+				}
+
+				lista.AddRange(objres.lista);
+				cantidad = objres.cantidadregistro;
+				lstCategoria12.ItemsSource = null;
+				lstCategoria12.ItemsSource = lista;
+			}
+            catch (Exception ex)
+            {
+				await DisplayAlert("Error", "Error de Conexion", "Cancelar");
+				
 
 			}
+			//validar internet
+			
 		
-			lista.AddRange(objres.lista);
-			cantidad = objres.cantidadregistro;
-			lstCategoria12.ItemsSource = null;
-			lstCategoria12.ItemsSource = lista;
 			
 
 
@@ -78,21 +97,39 @@ namespace APP_FIRTEL.Vistas
 			
 			skipcantidad = 0;
 			Reply res;
-			Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
-			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
+            try
+            {
+				Paginacion objeto = new Paginacion() { pagine = 30, skip = skipcantidad * 30 };
+				ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
 
-			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
-			if (res.result == 1)
-			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
 
+				if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+				{
+					await DisplayAlert("Error", "No Hay Internet", "Cancelar");
+					gridcontenido.IsVisible = false;
+					return;
+
+				}
+				
+				res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
+				if (res.result == 1)
+				{
+					objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
+
+				}
+
+				lista = objres.lista;
+				cantidad = objres.cantidadregistro;
+				lstCategoria12.ItemsSource = null;
+				lstCategoria12.ItemsSource = lista;
+				gridcontenido.IsVisible = false;
 			}
-
-			lista=objres.lista;
-			cantidad = objres.cantidadregistro;
-			lstCategoria12.ItemsSource = null;
-			lstCategoria12.ItemsSource = lista;
-			gridcontenido.IsVisible = false;
+            catch (Exception ex)
+            {
+				await DisplayAlert("Error", "Error de Conexion", "Cancelar");
+				gridcontenido.IsVisible = false;
+			}
+			
 
 
 
@@ -106,21 +143,29 @@ namespace APP_FIRTEL.Vistas
 			string texto = obj.Text;
 			Reply res;
 			skipcantidad = 0;
-			
-			Paginacion objeto = new Paginacion() { pagine = 30, skip = 0, nombre = texto };
-			ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
-			res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
-			if (res.result == 1)
-			{
-				objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
+            try
+            {
+				Paginacion objeto = new Paginacion() { pagine = 30, skip = 0, nombre = texto };
+				ResultadoPaginacion<ClienteCLS> objres = new ResultadoPaginacion<ClienteCLS>();
+				res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getcliente, objeto);
+				if (res.result == 1)
+				{
+					objres = JsonConvert.DeserializeObject<ResultadoPaginacion<ClienteCLS>>(JsonConvert.SerializeObject(res.data));
+
+				}
+
+
+				lista = objres.lista;
+				cantidad = objres.cantidadregistro;
+				lstCategoria12.ItemsSource = null;
+				lstCategoria12.ItemsSource = lista;
 
 			}
+			catch (Exception ex)
+            {
+				await DisplayAlert("Error", "Error de Conexion", "Cancelar");
+			}
 
-
-			lista = objres.lista;
-			cantidad = objres.cantidadregistro;
-			lstCategoria12.ItemsSource = null;
-			lstCategoria12.ItemsSource = lista;
 			
 		}
 

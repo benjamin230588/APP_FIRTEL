@@ -28,7 +28,7 @@ namespace APP_FIRTEL.Vistas
                 new ListaEstado () { idestado=1 , nombre="Pendiente" ,bseleccionado=false},
                 new ListaEstado () { idestado=2 , nombre="Proceso" , bseleccionado=false},
                 new ListaEstado () { idestado=3 , nombre="Realizado"  ,bseleccionado=false},
-                new ListaEstado () { idestado=4 , nombre="Terminado" , bseleccionado=false},
+                new ListaEstado () { idestado=4 , nombre="Cerrado" , bseleccionado=false},
             };
             }
             else

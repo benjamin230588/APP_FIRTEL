@@ -58,8 +58,8 @@
                                     <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
                                                  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
-                                    <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
-                                    <Label Text="{Binding telefono}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                     <Label Text="{Binding fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                    <Label Text="{Binding horaprogramada}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
                                         <Frame Grid.Column="2" Grid.Row="3"  Padding="0" CornerRadius="10">
                                             <Label Text="{Binding nombreEstado}"  TextColor="White"  BackgroundColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
                                         </Frame>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.FiltroRecojo"
+             xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+             Title="Filtro Recojos">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout  Margin="10,15">
+                <Grid  RowSpacing="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Text="Desde" FontAttributes="Bold" FontSize="17" HorizontalOptions="Start"/>
+                    <Label  Grid.Column="1"  Grid.Row="0" Text="Hasta"   HorizontalOptions="Start" FontAttributes="Bold" FontSize="17"  />
+                    <custom:DatePickerCtrl  Grid.Column="0"  Grid.Row="1" x:Name="datePicker" Date="{Binding Fdesde}"  
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"   MinimumDate="01/01/1950"/>
+
+                    <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55" Date="{Binding Fhasta}" 
+                                             Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"  MinimumDate="01/01/1950"/>
+
+
+                    <StackLayout Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label Text="Estados" FontAttributes="Bold" FontSize="17"/>
+                        <ListView ItemsSource="{Binding oEntityCLS}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                        <Grid RowSpacing="5" Margin="1,1,1,1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="4*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+
+                                            </Grid.RowDefinitions>
+                                            <custom:CustomCheckbox  Grid.Column="0"  IsChecked="{Binding bseleccionado}" CheckColor="#1C1C1C" SizeRequest="38" HorizontalOptions="CenterAndExpand"/>
+                                            <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" FontSize="17" />
+                                        </Grid>
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
+
+
+                </Grid>
+
+
+
+            </StackLayout>
+        </ScrollView>
+        <StackLayout HeightRequest="10"></StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="7,2">
+            <Button x:Name="btnvolverrecojo" Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White" Clicked="btnvolverrecojo_Clicked" />
+            <Button x:Name="btnfiltrarrecojo" Text="Aplicar Filtros"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltrarrecojo_Clicked"/>
+        </StackLayout>
+
+        <StackLayout HeightRequest="10"></StackLayout>
+
+    </StackLayout>
+</ContentPage>

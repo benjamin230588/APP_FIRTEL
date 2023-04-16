@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FIRTEL.Vistas.Recojos"
+               xmlns:custom="clr-namespace:APP_FIRTEL.Convertidores"
+             Title="Recojos" 
+              x:Name="thispage" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:Convertcolores x:Key="StringToColorConverter"/>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <Grid Padding="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RefreshView  x:Name="lstrefrescador" RefreshColor="Red">
+            <ScrollView Grid.Row="0" Orientation="Vertical"  VerticalOptions="FillAndExpand">
+                <CollectionView Margin="5"  x:Name="listarecojofirtel"  SelectionMode="Single" 
+                    RemainingItemsThreshold="3"  RemainingItemsThresholdReached="listarecojofirtel_RemainingItemsThresholdReached">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="7"  >
+
+                        </GridItemsLayout>
+
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Frame BackgroundColor="#FAFAFA"  HasShadow="True" CornerRadius="10" Margin="5,0,5,10" Padding="10,10,13,10" BorderColor="#848484" IsClippedToBounds="True" >
+                                <StackLayout Orientation="Vertical"  >
+
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding idtiporecojo}" Grid.Column="0" Grid.Row="0"  TextColor="#2E64FE"   Grid.ColumnSpan="3" Style="{StaticResource titulocolectionview}"/>
+                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                                                FontAttributes="Bold" Style="{StaticResource subtitulocolectionview}" />
+                                        <Label Text="{Binding codigocliente,StringFormat='N°{0}'}" Grid.Column="2" Grid.Row="1"
+                                                 FontAttributes="Bold" HorizontalTextAlignment="End" Style="{StaticResource labelcolection}" />
+
+                                        <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
+                                                 FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+
+                                        <Label Text="{Binding fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                        <Label Text="{Binding horaprogramada}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                        <Frame Grid.Column="2" Grid.Row="3"  Padding="0" CornerRadius="10">
+                                            <Label Text="{Binding nombreEstado}"  TextColor="White"  BackgroundColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
+                                        </Frame>
+                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+
+                                        <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
+
+                                    </Grid>
+
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.IrFormRecojocommand,Source={x:Reference thispage}}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </RefreshView>
+
+        <Button Grid.Row="0" Text="Filtrar" BorderColor="#2b3c3c" BorderWidth="0" FontAttributes="Bold" 
+                    BackgroundColor="#FFC733" BorderRadius="70"
+                    TextColor="Black" HorizontalOptions="End" WidthRequest="90" 
+                    HeightRequest="50" Margin="0,0,10,10" VerticalOptions="End" x:Name="btnfiltro"  Command="{Binding IrFiltroRecojocommand}"/>
+
+        <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="{Binding flgindicador}">
+            <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsRunning="{Binding flgindicador}"
+                    Color="#DF013A"
+                    />
+        </Grid>
+
+    </Grid>
+</ContentPage>

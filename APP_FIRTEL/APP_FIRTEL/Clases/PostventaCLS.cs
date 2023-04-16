@@ -11,6 +11,9 @@ namespace APP_FIRTEL.Clases
 
         public Nullable<int> idcorrelativo { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }
+        public Nullable<System.DateTime> fecha_programada { get; set; }
+        public string horaprogramada { get; set; }
+        public string ordenprioridad { get; set; }
         public string nombre { get; set; }
         public string nombresegundo { get; set; }
         public string apellido { get; set; }

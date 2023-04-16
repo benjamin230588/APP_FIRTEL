@@ -49,20 +49,30 @@
                                             <RowDefinition Height="Auto"/>
                                            
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                        <Label Text="{Binding nombrecliente}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" 
                                                 FontAttributes="Bold" Style="{StaticResource titulocolectionview}" TextColor="Blue" />
+
                                        
-                                        
+
                                         <Label Text="{Binding direccion}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
                                                  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
-                                        
-                                        <Label Text="{Binding fecha_registro,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="2"  FontAttributes="Bold" HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
-                                        <Label Text="{Binding celular}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
+
+                                        <Label Text="{Binding fecha_programada,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="2"  FontAttributes="Bold" HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
+                                        <Label Text="{Binding horaprogramada}"  Grid.Column="1" Grid.Row="2" FontAttributes="Bold" HorizontalTextAlignment="Start" Style="{StaticResource labelcolection}"/>
 
                                         <Frame Grid.Column="2" Grid.Row="2" Padding="0" CornerRadius="10">
                                             <Label Text="{Binding nombreEstado}"   TextColor="White" BackgroundColor="{Binding flg_estado,Converter={StaticResource StringToColorConverterinst}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
                                         </Frame>
-                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                      
+                                        <Label  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} {1}">
+                                                    <Binding Path="plancliente"/>
+                                                    <Binding Path="cantidadtv"/>
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
                                         <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="3" TextColor="Blue"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
 
                                        

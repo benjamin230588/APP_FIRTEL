@@ -6,7 +6,6 @@ using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -95,15 +94,15 @@ namespace APP_FIRTEL.Vistas
         private async void imgcargaimagen_Clicked(object sender, EventArgs e)
         {
 			await CrossMedia.Current.Initialize();
-			oMediaFile = await CrossMedia.Current.PickPhotoAsync();
-            string ruta = oMediaFile.Path;
-            FileInfo fileinfo = new FileInfo(oMediaFile.Path);
-            var tamano = fileinfo.Length;
-            byte[] objetoarray= new byte[0]; 
-            if(tamano > 150000)
-            {
-                objetoarray = Resizeimg(ruta);
-            }
+			//oMediaFile = await CrossMedia.Current.PickPhotoAsync();
+            oMediaFile = await CrossMedia.Current.PickPhotoAsync(
+            new PickMediaOptions() { PhotoSize = PhotoSize.Custom, CustomPhotoSize = 20 });
+
+            //string ruta = oMediaFile.Path;
+            //FileInfo fileinfo = new FileInfo(oMediaFile.Path);
+            //var tamano = fileinfo.Length;
+            //byte[] objetoarray= new byte[0]; 
+
             //CrossMedia.Current.PickPhotoAsync(oMediaFile.Path);
             //oMediaFile.a
             //byte[] resizedImage = await Plugin.Media.CrossMedia.Current. .Current.re(originalImageBytes, 500, 1000);
@@ -141,7 +140,7 @@ namespace APP_FIRTEL.Vistas
 				string nombrefile = vm.objInstalacioncls.idpostventa + "_post."+ nombrefile2[1];
 				vm.Imagenpost = GenericLH.convertirMediaFileAImageSource(oMediaFile);
 				//pasar al btes de frente
-				vm.Imgmedia = objetoarray;
+				vm.Imgmedia = oMediaFile;
 				vm.nombrefile = nombrefile;
 				vm.objInstalacioncls.nombrearchivo = nombrefile;
 			
@@ -184,37 +183,8 @@ namespace APP_FIRTEL.Vistas
 			}
 
 		}
-		 private byte[] Resizeimg(string Img)
-		{
+		 
 
-			Bitmap image = (Bitmap)Bitmap.FromFile(Img);
-
-			//float nPercent = ((float)porCiento / 100);
-			int destinoWidth = 400;
-			int destinoHeight = 400;
-
-			//Bitmap image2 = ResizeBitmap(image, destinoWidth, destinoHeight);
-			Bitmap Imagen2 = new Bitmap(destinoWidth, destinoHeight);
-			using (Graphics g = Graphics.FromImage((System.Drawing.Image)Imagen2))
-			{
-				g.DrawImage(image, 0, 0, destinoWidth, destinoHeight);
-			}
-
-			image.Dispose();
-
-			var objetoaarray=ConvertImageToByteArray(Imagen2);
-			return objetoaarray;
-		
-
-		}
-
-		 private byte[] ConvertImageToByteArray(System.Drawing.Image imageIn)
-		{
-			using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
-			{
-				imageIn.Save(ms, ImageFormat.Jpeg);
-				return ms.ToArray();
-			}
-		}
+		 
 	}
 }

@@ -62,8 +62,8 @@ namespace APP_FIRTEL.ViewModels
             get { return _Imagenpost; }
             set { SetValue(ref _Imagenpost, value); }
         }
-        private byte[] _Imgmedia;
-        public byte[] Imgmedia
+        private MediaFile _Imgmedia;
+        public MediaFile Imgmedia
         {
             get { return _Imgmedia; }
             set { SetValue(ref _Imgmedia, value); }
@@ -135,9 +135,9 @@ namespace APP_FIRTEL.ViewModels
         {
             int idtipousuario = Setings.IdTipoUsuario;
             if (idtipousuario == 1)
-                return new List<string>() { "Abierto", "Proceso", "Terminado"};
+                return new List<string>() { "Pendiente", "Proceso", "Realizado"};
             else
-                return new List<string>() { "Abierto", "Proceso", "Terminado" };
+                return new List<string>() { "Pendiente", "Proceso", "Realizado" };
 
 
 
@@ -180,69 +180,80 @@ namespace APP_FIRTEL.ViewModels
 
 
             flgindicador = true;
-            var nombreestado = objInstalacioncls.nombreEstado;
-            var nombreplan = objInstalacioncls.plancliente;
-            var idestado = nombreestado == "Abierto" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Terminado" ? 3 : 4;
-            //AveriaCLS objeto = new AveriaCLS();
-            int idplan = 0;
-            switch (nombreplan)
+            try
             {
-                case "Plan_30Mbps":
-                    idplan = 7;
-                    break;
-                case "Plan_50Mbps":
-                    idplan = 15;
-                    break;
-                case "Plan_60Mbps":
-                    idplan = 20;
-                    break;
-                case "Plan_100Mbps":
-                    idplan = 19;
-                    break;
-                case "Plan_200Mbps":
-                    idplan = 9;
-                    break;
-                case "Plan_30Mbps+TV":
-                    idplan = 14;
-                    break;
-                case "Plan_50Mbps+TV":
-                    idplan = 4;
-                    break;
-                case "Plan_60Mbps+TV":
-                    idplan = 11;
-                    break;
-                case "Plan_100Mbps+TV":
-                    idplan = 17;
-                    break;
-                case "TV":
-                    idplan = 12;
-                    break;
+                var nombreestado = objInstalacioncls.nombreEstado;
+                var nombreplan = objInstalacioncls.plancliente;
+                var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
+                //AveriaCLS objeto = new AveriaCLS();
+                int idplan = 0;
+                switch (nombreplan)
+                {
+                    case "Plan_30Mbps":
+                        idplan = 7;
+                        break;
+                    case "Plan_50Mbps":
+                        idplan = 15;
+                        break;
+                    case "Plan_60Mbps":
+                        idplan = 20;
+                        break;
+                    case "Plan_100Mbps":
+                        idplan = 19;
+                        break;
+                    case "Plan_200Mbps":
+                        idplan = 9;
+                        break;
+                    case "Plan_30Mbps+TV":
+                        idplan = 14;
+                        break;
+                    case "Plan_50Mbps+TV":
+                        idplan = 4;
+                        break;
+                    case "Plan_60Mbps+TV":
+                        idplan = 11;
+                        break;
+                    case "Plan_100Mbps+TV":
+                        idplan = 17;
+                        break;
+                    case "TV":
+                        idplan = 12;
+                        break;
+                }
+
+                objInstalacioncls.usu_modificacion = 1;
+                objInstalacioncls.fec_modificacion = DateTime.Now;
+                objInstalacioncls.flg_anulado = true;
+                //objeto.fecha_registro = objaveriacls.fecha_registro;
+                objInstalacioncls.flg_estado = idestado;
+                objInstalacioncls.idplan = idplan;
+
+
+
+                //crear el objeto averia que debo enviar
+                Reply res;
+                res = await GenericLH.Postfile<PostventaCLS>(Imgmedia, nombrefile, Constantes.url + Constantes.api_grabarpostventa, objInstalacioncls);
+                if (res.result == 1)
+                {
+                    Instalacion.actualiza = true;
+                    //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
+                    await Volver();
+                    flgindicador = false;
+
+                }
+                else
+                {
+                    flgindicador = false;
+                    await Application.Current.MainPage.DisplayAlert("Error", "Error al Grabar", "Cancelar");
+                }
+
+
             }
-
-            objInstalacioncls.usu_modificacion = 1;
-            objInstalacioncls.fec_modificacion = DateTime.Now;
-            objInstalacioncls.flg_anulado = true;
-            //objeto.fecha_registro = objaveriacls.fecha_registro;
-            objInstalacioncls.flg_estado = idestado;
-            objInstalacioncls.idplan = idplan;
-
-
-
-            //crear el objeto averia que debo enviar
-            Reply res;
-            res = await GenericLH.Postfile<PostventaCLS>(Imgmedia,nombrefile, Constantes.url + Constantes.api_grabarpostventa, objInstalacioncls);
-            if (res.result == 1)
-            {
-                Instalacion.actualiza = true;
-                //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
-                await Volver();
-                flgindicador = false;
-
-            }
-            else
+            catch (Exception ex )
             {
                 flgindicador = false;
-                await Application.Current.MainPage.DisplayAlert("Error", "Sucedio un error", "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", "Error de Conexion", "Cancelar");
+
             }
 
 

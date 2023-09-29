@@ -17,6 +17,8 @@ namespace APP_FIRTEL.Clases
         public string nombre { get; set; }
         public string nombresegundo { get; set; }
         public string apellido { get; set; }
+        public Nullable<int> nacionalidad { get; set; }
+        public Nullable<decimal> importeplan { get; set; }
 
         public string dni { get; set; }
         public string direccion { get; set; }

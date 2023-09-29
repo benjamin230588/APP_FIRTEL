@@ -15,7 +15,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
 
                     </Grid.RowDefinitions>
 
@@ -27,8 +28,13 @@
                     <custom:DatePickerCtrl  Grid.Column="1"  Grid.Row="1" x:Name="datePicker55" Date="{Binding Fhasta}" 
                                              Format="dd/MM/yyyy"   HorizontalOptions="FillAndExpand" HeightRequest="35"  MinimumDate="01/01/1950"/>
 
-
                     <StackLayout Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label Text="Zonas" FontAttributes="Bold" FontSize="17"/>
+                        <custom:CustomEntry   Text="{Binding namezona}"  HeightRequest="35" BorderColor="#000000"    VerticalOptions="Center"    />
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="2">
                         <Label Text="Estados" FontAttributes="Bold" FontSize="17"/>
                         <ListView ItemsSource="{Binding oEntityCLS}">
                             <ListView.ItemTemplate>
@@ -54,6 +60,7 @@
                         </ListView>
 
                     </StackLayout>
+                 
 
 
                 </Grid>
@@ -66,7 +73,7 @@
 
         <StackLayout Orientation="Horizontal" Margin="7,2">
             <Button x:Name="btnvolverrecojo" Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White" Clicked="btnvolverrecojo_Clicked" />
-            <Button x:Name="btnfiltrarrecojo" Text="Aplicar Filtros"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltrarrecojo_Clicked"/>
+            <Button x:Name="btnfiltrarrecojo" Text="Aplica55r Filtros"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltrarrecojo_Clicked"/>
         </StackLayout>
 
         <StackLayout HeightRequest="10"></StackLayout>

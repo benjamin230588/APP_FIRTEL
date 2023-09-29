@@ -43,6 +43,12 @@ namespace APP_FIRTEL.Clases
         public string plancliente { get; set; }
         public string nombreEstado { get; set; }
         //public string plancliente { get; set; }
+        public int alto { get; set; }
+        public int ancho { get; set; }
+        public string rutaarchivo { get; set; }
+        public string nombrearchivo { get; set; }
+        public string nombrearchivoupdate { get; set; }
+
 
         public object Clone()
         {

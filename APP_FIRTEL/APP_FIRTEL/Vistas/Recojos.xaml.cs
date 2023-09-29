@@ -22,6 +22,8 @@ namespace APP_FIRTEL.Vistas
         private int cantidad;
         public List<ListaEstado> listaestado { get; set; }
         public string fechadesde { get; set; }
+        public string namezona { get; set; }
+
         public static bool actualiza = false;
         public string fechahasta { get; set; }
         //public  List<AveriaCLS> listatu = new List<AveriaCLS>();
@@ -70,7 +72,7 @@ namespace APP_FIRTEL.Vistas
             //Y de la siguiente forma obtenemos el ultimo dia del mes
             //agregamos 1 mes al objeto anterior y restamos 1 día.
             // DateTime oUltimoDiaDelMes = oPrimerDiaDelMes.AddMonths(1).AddDays(-1);
-
+            namezona = "";
             fechadesde = "01/01/2023";
             fechahasta = oUltimoDiaDelMes.ToString("dd/MM/yyyy");
             skipcantidad = 0;
@@ -79,17 +81,17 @@ namespace APP_FIRTEL.Vistas
             {
 
                 //listarDatos();
-                actualizarlista(fechadesde, fechahasta, listaestado);
+                actualizarlista(fechadesde, fechahasta, listaestado,namezona);
                 lstrefrescador.IsRefreshing = false;
             });
             //consultaAverias();
-            actualizarlista(fechadesde, fechahasta, listaestado);
+            actualizarlista(fechadesde, fechahasta, listaestado,namezona);
 
 
         }
 
 
-        public async void actualizarlista(string desde1, string hasta1, List<ListaEstado> listaestadoave)
+        public async void actualizarlista(string desde1, string hasta1, List<ListaEstado> listaestadoave,string Zonaname)
         {
             Reply res;
             string cadenaestado = "";
@@ -98,7 +100,7 @@ namespace APP_FIRTEL.Vistas
             {
                 foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
                 cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado };
+                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado ,Zona= Zonaname };
 
                 ResultadoPaginacion<RecojoCLS> objres = new ResultadoPaginacion<RecojoCLS>();
 
@@ -135,7 +137,7 @@ namespace APP_FIRTEL.Vistas
             {
                 foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
                 cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
-                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado };
+                var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado, Zona = namezona };
 
                 ResultadoPaginacion<RecojoCLS> objres = new ResultadoPaginacion<RecojoCLS>();
 
@@ -174,7 +176,7 @@ namespace APP_FIRTEL.Vistas
         {
             if (actualiza == true)
             {
-                actualizarlista(fechadesde, fechahasta, listaestado);
+                actualizarlista(fechadesde, fechahasta, listaestado, namezona);
                 actualiza = false;
             }
 

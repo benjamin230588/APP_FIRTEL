@@ -41,8 +41,8 @@ namespace APP_FIRTEL.Vistas
             else
             {
               
-                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Averias" });
-                listamenu.Add(new MenuCLS { nombreicono = "ic_categoria", nombreitem = "Recojos" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_averia", nombreitem = "Averias" });
+                listamenu.Add(new MenuCLS { nombreicono = "ic_recojo", nombreitem = "Recojos" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_producto", nombreitem = "Instalaciones" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_cerrar", nombreitem = "Salir" });
             }

@@ -134,7 +134,7 @@
             <StackLayout HeightRequest="20"></StackLayout>
 
 
-            <Button HeightRequest="55" Text="INGRESAR AL SISTEMA" Style="{StaticResource btnloginicio1}"   x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" />
+            <Button HeightRequest="55" Text="INGRESAR AL SISTEMA2" Style="{StaticResource btnloginicio1}"   x:Name="btnIngresar" Clicked="btnIngresar_Clicked" CornerRadius="15" />
             <StackLayout HeightRequest="20"></StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
                 <Label Text="Desea recordar contraseña?" TextColor="White" VerticalOptions="Start" FontSize="16" />

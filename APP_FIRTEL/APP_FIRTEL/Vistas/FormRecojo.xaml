@@ -101,6 +101,45 @@
                     <Label  Text="Por Cobrar" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
                     <custom:CustomEntry Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objrecojocls.cobro}" Style="{StaticResource labelfont}"  />
 
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label  Text="Cargar Imagen"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="subiring.png" x:Name="imgcargaimagen" Clicked="imgcargaimagen_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+                    </StackLayout>
+
+
+                    <Frame Padding="0"
+                    HeightRequest="{Binding alto}" WidthRequest="{Binding ancho}"
+                   BackgroundColor="White"
+                   CornerRadius="30"                
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"                                   >
+                        <Frame.Content>
+                            <Image  Aspect="Fill"
+                                  Source="{Binding Imagenpost}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="tabPreviewImage" Tapped="tabPreviewImage_Tapped"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame.Content>
+                    </Frame>
 
 
                 </StackLayout>

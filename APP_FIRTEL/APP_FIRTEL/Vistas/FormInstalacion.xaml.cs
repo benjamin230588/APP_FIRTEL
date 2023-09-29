@@ -96,7 +96,7 @@ namespace APP_FIRTEL.Vistas
 			await CrossMedia.Current.Initialize();
 			//oMediaFile = await CrossMedia.Current.PickPhotoAsync();
             oMediaFile = await CrossMedia.Current.PickPhotoAsync(
-            new PickMediaOptions() { PhotoSize = PhotoSize.Custom, CustomPhotoSize = 20 });
+            new PickMediaOptions() { PhotoSize = PhotoSize.Custom, CustomPhotoSize = 50 });
 
             //string ruta = oMediaFile.Path;
             //FileInfo fileinfo = new FileInfo(oMediaFile.Path);

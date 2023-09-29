@@ -21,8 +21,9 @@ namespace APP_FIRTEL.ViewModels
         string _Texto;
         List<string> _listaestado = new List<string>();
         List<string> _listaplanes = new List<string>();
-        public int _alto;
         public string nombrefile { get; set; }
+        public int _alto;
+       
         public int alto
         {
             get { return _alto; }
@@ -135,7 +136,7 @@ namespace APP_FIRTEL.ViewModels
         {
             int idtipousuario = Setings.IdTipoUsuario;
             if (idtipousuario == 1)
-                return new List<string>() { "Pendiente", "Proceso", "Realizado"};
+                return new List<string>() { "Pendiente", "Proceso", "Realizado","Cerrado"};
             else
                 return new List<string>() { "Pendiente", "Proceso", "Realizado" };
 
@@ -146,8 +147,8 @@ namespace APP_FIRTEL.ViewModels
         {
             //int idtipousuario = Setings.IdTipoUsuario;
             //if (idtipousuario == 1)
-                return new List<string>() { "Plan_30Mbps", "Plan_50Mbps", "Plan_60Mbps", 
-                    "Plan_100Mbps" , "Plan_200Mbps","Plan_30Mbps+TV","Plan_50Mbps+TV","Plan_60Mbps+TV","Plan_100Mbps+TV","TV" };
+                return new List<string>() { "Plan_50Mbps", "Plan_70Mbps", "Plan_100Mbps", 
+                    "Plan_150Mbps" , "Plan_200Mbps","Plan_50Mbps+TV","Plan_70Mbps+TV","Plan_100Mbps+TV","Plan_150Mbps+TV","Plan_200Mbps+TV","TV" };
             //else
             //    return new List<string>() { "Abierto", "En Proceso", "Terminado" };
 
@@ -189,39 +190,42 @@ namespace APP_FIRTEL.ViewModels
                 int idplan = 0;
                 switch (nombreplan)
                 {
-                    case "Plan_30Mbps":
+                    case "Plan_50Mbps":
                         idplan = 7;
                         break;
-                    case "Plan_50Mbps":
+                    case "Plan_70Mbps":
                         idplan = 15;
                         break;
-                    case "Plan_60Mbps":
+                    case "Plan_100Mbps":
                         idplan = 20;
                         break;
-                    case "Plan_100Mbps":
+                    case "Plan_150Mbps":
                         idplan = 19;
                         break;
                     case "Plan_200Mbps":
                         idplan = 9;
                         break;
-                    case "Plan_30Mbps+TV":
+                    case "Plan_50Mbps+TV":
                         idplan = 14;
                         break;
-                    case "Plan_50Mbps+TV":
+                    case "Plan_70Mbps+TV":
                         idplan = 4;
                         break;
-                    case "Plan_60Mbps+TV":
+                    case "Plan_100Mbps+TV":
                         idplan = 11;
                         break;
-                    case "Plan_100Mbps+TV":
+                    case "Plan_150Mbps+TV":
                         idplan = 17;
+                        break;
+                    case "Plan_200Mbps+TV":
+                        idplan = 21;
                         break;
                     case "TV":
                         idplan = 12;
                         break;
                 }
 
-                objInstalacioncls.usu_modificacion = 1;
+                objInstalacioncls.usu_modificacion = Setings.IdUsuario;
                 objInstalacioncls.fec_modificacion = DateTime.Now;
                 objInstalacioncls.flg_anulado = true;
                 //objeto.fecha_registro = objaveriacls.fecha_registro;

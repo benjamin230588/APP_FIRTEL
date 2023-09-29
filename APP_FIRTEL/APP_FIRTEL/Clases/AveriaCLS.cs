@@ -10,7 +10,8 @@ namespace APP_FIRTEL.Clases
         public Nullable<int> idcorrelativo { get; set; }
         public Nullable<int> idcliente { get; set; }
 
-
+        public Nullable<int> Tiposolucion { get; set; }
+        public Nullable<int> tipoprobabilidad { get; set; }
         public string obsaveria { get; set; }
 
         public Nullable<int> idgrado { get; set; }
@@ -24,7 +25,7 @@ namespace APP_FIRTEL.Clases
        
         public Nullable<System.DateTime> fechaprogramada { get; set; }
         public string horaprogramada { get; set; }
-        public string ordenprioridad { get; set; }
+        public Nullable<int> ordenprioridad { get; set; }
         public string coordenadas { get; set; }
 
         public string obsalta { get; set; }
@@ -61,6 +62,12 @@ namespace APP_FIRTEL.Clases
         public Nullable<decimal> importeplan { get; set; }
         public Nullable<int> idtecnologia { get; set; }
         public string cantidadtv { get; set; }
+
+        public int alto { get; set; }
+        public int ancho { get; set; }
+        public string rutaarchivo { get; set; }
+        public string nombrearchivo { get; set; }
+        public string nombrearchivoupdate { get; set; }
 
         public object Clone()
         {

@@ -17,6 +17,7 @@ namespace APP_FIRTEL.Vistas
     {
         public List<ListaEstado> oEntityCLS { get; set; }
         public DateTime Fdesde { get; set; }
+        public string namezona { get; set; }
         public DateTime Fhasta { get; set; }
         public FiltroRecojo()
         {
@@ -68,6 +69,7 @@ namespace APP_FIRTEL.Vistas
 
             Fdesde = Fdesde1;
             Fhasta = Fhasta1;
+            namezona = obj.namezona;
             BindingContext = this;
 
         }
@@ -93,6 +95,7 @@ namespace APP_FIRTEL.Vistas
                     Recojos obj = Recojos.GetInstance();
                     obj.fechadesde = Fdesde.ToString("dd/MM/yyyy");
                     obj.fechahasta = Fhasta.ToString("dd/MM/yyyy");
+                    obj.namezona = namezona;
 
                     //List<PaginaCLS> p = oEntityCLS.listaPagina;
                     obj.listaestado = paginasMarcadas;
@@ -101,7 +104,7 @@ namespace APP_FIRTEL.Vistas
                     //cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
 
                     await Navigation.PopAsync();
-                    obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado);
+                    obj.actualizarlista(obj.fechadesde, obj.fechahasta, obj.listaestado,obj.namezona);
 
                 }
                 else

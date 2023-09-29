@@ -2,9 +2,12 @@
 using APP_FIRTEL.Generic;
 using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -18,6 +21,7 @@ namespace APP_FIRTEL.ViewModels
         #region VARIABLES
         string _Texto;
         List<string> _listaestado = new List<string>();
+        public string nombrefile { get; set; }
         string selectturno;
         DateTime txtfecha;
         AveriaCLS _objaveriacls;
@@ -28,6 +32,31 @@ namespace APP_FIRTEL.ViewModels
         {
             get { return _flgindicador; }
             set { SetValue(ref _flgindicador, value); }
+        }
+        public int _alto;
+
+        public int alto
+        {
+            get { return _alto; }
+            set { SetValue(ref _alto, value); }
+        }
+        private int _ancho;
+        public int ancho
+        {
+            get { return _ancho; }
+            set { SetValue(ref _ancho, value); }
+        }
+        private ImageSource _Imagenpost;
+        public ImageSource Imagenpost
+        {
+            get { return _Imagenpost; }
+            set { SetValue(ref _Imagenpost, value); }
+        }
+        private MediaFile _Imgmedia;
+        public MediaFile Imgmedia
+        {
+            get { return _Imgmedia; }
+            set { SetValue(ref _Imgmedia, value); }
         }
         #endregion
         #region CONSTRUCTOR
@@ -40,9 +69,22 @@ namespace APP_FIRTEL.ViewModels
             objaveriacls = new AveriaCLS();
             //myClass b = (AveriaCLS)objeto.Clone();
             objaveriacls = (AveriaCLS)objeto.Clone();
+            if (objeto.nombrearchivo == null)
+            {
+                alto = 150;
+                ancho = 330;
+
+            }
+            else
+            {
+                alto = 300;
+                ancho = 330;
+                traebytes(objeto.rutaarchivo);
+            }
             flgindicador = false;
-           // objaveriacls.nombreEstado = 
-             //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
+           
+            // objaveriacls.nombreEstado = 
+            //objaveriacls.Estado == 1 ? "Pendiente" : objaveriacls.Estado == 2 ? "Proceso" : "Realizado";
             //Selectturno = "Pendiente";
         }
         #endregion
@@ -91,7 +133,7 @@ namespace APP_FIRTEL.ViewModels
                 var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
                 //AveriaCLS objeto = new AveriaCLS();
 
-                objaveriacls.usu_modificacion = 1;
+                objaveriacls.usu_modificacion = Setings.IdUsuario;
                 objaveriacls.fec_modificacion = DateTime.Now;
                 objaveriacls.flg_anulado = true;
                 //objeto.fecha_registro = objaveriacls.fecha_registro;
@@ -101,7 +143,9 @@ namespace APP_FIRTEL.ViewModels
 
                 //crear el objeto averia que debo enviar
                 Reply res;
-                res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
+                //res = await GenericLH.Post<AveriaCLS>(Constantes.url + Constantes.api_grabaraveria, objaveriacls);
+                res = await GenericLH.Postfile<AveriaCLS>(Imgmedia, nombrefile, Constantes.url + Constantes.api_grabaraveria, objaveriacls);
+
                 if (res.result == 1)
                 {
                     Averias.actualiza = true;
@@ -138,6 +182,17 @@ namespace APP_FIRTEL.ViewModels
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
         public ICommand VolverAveriacommand => new Command(async () => await Volver());
 
+        public async void traebytes(string url)
+        {
+            byte[] bytes;
 
+            using (HttpClient client = new HttpClient())
+            {
+                byte[] fileArray = await client.GetByteArrayAsync(url);
+                bytes = fileArray;
+            }
+            Imagenpost = ImageSource.FromStream(() => new MemoryStream(bytes));
+
+        }
     }
 }

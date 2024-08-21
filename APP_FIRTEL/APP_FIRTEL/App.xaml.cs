@@ -21,7 +21,7 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
             LoadStyles();
-            //Application.Current.MainPage = new Paginainicio();
+           //Application.Current.MainPage = new Pruebasxaml();
             if (Setings.RecordarContra == true)
             {
                 Application.Current.MainPage = new Pagainaprincipal();
@@ -30,6 +30,7 @@ namespace APP_FIRTEL
             {
                 MainPage = new NavigationPage(new Login());
             }
+         
 
         }
         void LoadStyles()

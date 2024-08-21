@@ -162,6 +162,44 @@ namespace APP_FIRTEL.Vistas
             }
         }
 
+        private async void imgmapsnueva_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                char delimitador = ',';
+                string nombrecliente = txtnombre.Text;
+                //+ " " + txtnombresegundo.Text + " " + txtapellido.Text;
+                string coordenadas = txtcoordenadasnueva.Text.Trim();
+                string[] valores = coordenadas.Split(delimitador);
+                if (!Double.TryParse(valores[0], out double lat))
+                {
+                    await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
+                    return;
+                }
+                if (!Double.TryParse(valores[1], out double longi))
+                {
+                    await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
+                    return;
+                }
+
+
+                var location = new Xamarin.Essentials.Location(lat, longi);
+                var options = new MapLaunchOptions
+                {
+                    Name = nombrecliente,
+                    NavigationMode = NavigationMode.None
+
+                };
+                //Launching Maps
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
+
+            }
+        }
+
 
         //private void btnRegistrarUsuario_Clicked(object sender, EventArgs e)
         //{

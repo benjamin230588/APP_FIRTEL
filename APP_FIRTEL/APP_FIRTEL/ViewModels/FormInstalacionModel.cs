@@ -148,7 +148,7 @@ namespace APP_FIRTEL.ViewModels
             //int idtipousuario = Setings.IdTipoUsuario;
             //if (idtipousuario == 1)
                 return new List<string>() { "Plan_50Mbps", "Plan_70Mbps", "Plan_100Mbps", 
-                    "Plan_150Mbps" , "Plan_200Mbps","Plan_50Mbps+TV","Plan_70Mbps+TV","Plan_100Mbps+TV","Plan_150Mbps+TV","Plan_200Mbps+TV","TV" };
+                    "Plan_150Mbps" , "Plan_200Mbps","Plan_300Mbps","Plan_400Mbps","Plan_50Mbps+TV","Plan_70Mbps+TV","Plan_100Mbps+TV","Plan_150Mbps+TV","Plan_200Mbps+TV","Plan_300Mbps+TV","Plan_400Mbps+TV","TV" };
             //else
             //    return new List<string>() { "Abierto", "En Proceso", "Terminado" };
 
@@ -219,6 +219,18 @@ namespace APP_FIRTEL.ViewModels
                         break;
                     case "Plan_200Mbps+TV":
                         idplan = 21;
+                        break;
+                    case "Plan_300Mbps+TV":
+                        idplan = 24;
+                        break;
+                    case "Plan_400Mbps+TV":
+                        idplan = 23;
+                        break;
+                    case "Plan_300Mbps":
+                        idplan = 25;
+                        break;
+                    case "Plan_400Mbps":
+                        idplan = 22;
                         break;
                     case "TV":
                         idplan = 12;

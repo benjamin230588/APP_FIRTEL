@@ -87,6 +87,30 @@
                     </StackLayout>
                     <custom:CustomLabel  Text="{Binding objaveriacls.coordenadas}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" x:Name="txtcoordenadas" Style="{StaticResource labelfont}"/>
 
+                    <StackLayout Orientation="Horizontal" Spacing="35">
+                        <Label  Text="Coordenada Nueva Por Traslado"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
+                        <ImageButton Source="Googlemaps.png" x:Name="imgmapsnueva" Clicked="imgmapsnueva_Clicked"                                                                       
+                                     >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.8"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ImageButton>
+
+                    </StackLayout>
+                    <custom:CustomLabel  Text="{Binding objaveriacls.coordenadanueva}" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center" x:Name="txtcoordenadasnueva" Style="{StaticResource labelfont}"/>
 
                     <Label Text="Observacion Tecnico" VerticalOptions="Center" FontAttributes="Bold" FontSize="14"/>
                     <custom:BorderedEditor Keyboard="Text" MaxLength="800" CornerRadius="10"

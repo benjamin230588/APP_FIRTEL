@@ -86,7 +86,7 @@
             </StackLayout>
     </ScrollView>
         
-        <StackLayout>
+    <StackLayout>
         <Button Text="Volver" x:Name="btnvolvercliente" Margin="5,5" BackgroundColor="Red" TextColor="White" CornerRadius="15" Clicked="btnvolvercliente_Clicked"/>
     </StackLayout>
     </StackLayout>

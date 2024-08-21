@@ -14,9 +14,10 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="250"/>
+                       
 
                     </Grid.RowDefinitions>
 
@@ -34,7 +35,7 @@
 
                     </StackLayout>
 
-                    <StackLayout Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="2">
+                    <StackLayout Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="2" >
                         <Label Text="Estados" FontAttributes="Bold" FontSize="17"/>
                         <ListView ItemsSource="{Binding oEntityCLS}">
                             <ListView.ItemTemplate>
@@ -50,7 +51,7 @@
                                                 <RowDefinition Height="auto"/>
 
                                             </Grid.RowDefinitions>
-                                            <custom:CustomCheckbox  Grid.Column="0"  IsChecked="{Binding bseleccionado}" CheckColor="#1C1C1C" SizeRequest="38" HorizontalOptions="CenterAndExpand"/>
+                                            <custom:CustomCheckbox  Grid.Column="0"  IsChecked="{Binding bseleccionado}" CheckColor="#1C1C1C" SizeRequest="38" HorizontalOptions="Center"/>
                                             <Label Text="{Binding nombre}" Grid.Column="1" VerticalOptions="Center" FontSize="17" />
                                         </Grid>
 
@@ -60,7 +61,6 @@
                         </ListView>
 
                     </StackLayout>
-                 
 
 
                 </Grid>
@@ -73,7 +73,7 @@
 
         <StackLayout Orientation="Horizontal" Margin="7,2">
             <Button x:Name="btnvolverrecojo" Text="Volver" HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="#DF0101" TextColor="White" Clicked="btnvolverrecojo_Clicked" />
-            <Button x:Name="btnfiltrarrecojo" Text="Aplica55r Filtros"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltrarrecojo_Clicked"/>
+            <Button x:Name="btnfiltrarrecojo" Text="Aplicar Filtros"  HorizontalOptions="FillAndExpand"  CornerRadius="15" Background="green" TextColor="White" Clicked="btnfiltrarrecojo_Clicked"/>
         </StackLayout>
 
         <StackLayout HeightRequest="10"></StackLayout>

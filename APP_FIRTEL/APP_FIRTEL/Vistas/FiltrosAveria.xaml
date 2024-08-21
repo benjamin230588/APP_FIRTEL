@@ -6,7 +6,7 @@
             
              Title="Filtro Averia">
       <StackLayout>
-        <ScrollView VerticalOptions="FillAndExpand">
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout  Margin="10,15">
                 <Grid  RowSpacing="5">
                     <Grid.ColumnDefinitions>

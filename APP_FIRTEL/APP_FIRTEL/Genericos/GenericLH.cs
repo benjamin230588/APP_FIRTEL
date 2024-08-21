@@ -14,7 +14,6 @@ using Plugin.Media.Abstractions;
 using Utilitarios_App;
 using System.Net.Http.Headers;
 
-
 namespace APP_FIRTEL.Generic
 {
 	public class GenericLH
@@ -24,6 +23,7 @@ namespace APP_FIRTEL.Generic
 		public static async Task<int> Delete(string url)
 		{
 			HttpClient cliente = new HttpClient();
+			
 			var rpta = await cliente.DeleteAsync(url);
 			if (!rpta.IsSuccessStatusCode) return 0;
 			else

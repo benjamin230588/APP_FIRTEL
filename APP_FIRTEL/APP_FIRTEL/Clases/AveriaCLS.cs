@@ -27,6 +27,7 @@ namespace APP_FIRTEL.Clases
         public string horaprogramada { get; set; }
         public Nullable<int> ordenprioridad { get; set; }
         public string coordenadas { get; set; }
+        public string coordenadanueva { get; set; }
 
         public string obsalta { get; set; }
         public string comentario { get; set; }

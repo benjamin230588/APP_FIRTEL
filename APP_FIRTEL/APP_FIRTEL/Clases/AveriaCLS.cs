@@ -70,6 +70,8 @@ namespace APP_FIRTEL.Clases
         public string nombrearchivo { get; set; }
         public string nombrearchivoupdate { get; set; }
 
+        public string CDF_FIBRA { get; set; }
+
         public object Clone()
         {
             return this.MemberwiseClone();

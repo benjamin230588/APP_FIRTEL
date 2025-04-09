@@ -7,6 +7,8 @@ namespace APP_FIRTEL.Clases
     public class RecojoCLS
     {
         public int idrecojo { get; set; }
+
+        public string CDF_FIBRA { get; set; }
         public Nullable<int> idcorrelativo { get; set; }
         public Nullable<int> idcliente { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }

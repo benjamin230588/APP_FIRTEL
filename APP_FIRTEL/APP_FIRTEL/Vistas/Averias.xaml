@@ -60,10 +60,14 @@
 
                                      <Label Text="{Binding fechaprogramada,StringFormat='{00:dd/MM/yyyy}'}"  Grid.Column="0" Grid.Row="3"  FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
                                     <Label Text="{Binding horaprogramada}"  Grid.Column="1" Grid.Row="3" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
-                                        <Frame Grid.Column="2" Grid.Row="3"  Padding="0" CornerRadius="10">
-                                            <Label Text="{Binding nombreEstado}"  TextColor="White"  BackgroundColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
-                                        </Frame>
-                                        <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+                                    <Frame Grid.Column="2" Grid.Row="3"  Padding="0" CornerRadius="10">
+                                        <Label Text="{Binding nombreEstado}"  TextColor="White"  BackgroundColor="{Binding Estado,Converter={StaticResource StringToColorConverter}}"  HorizontalTextAlignment="Center" Style="{StaticResource labelcolection}"/>
+                                    </Frame>
+                                    <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
+
+
+                                    <Label Text="{Binding CDF_FIBRA}"  Grid.Column="2" Grid.Row="4"  FontAttributes="Bold" HorizontalTextAlignment="Start" FontSize="16" />
+
 
                                     <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 

@@ -126,6 +126,10 @@
                     <Label  Text="Por Cobrar" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
                      <custom:CustomEntry Keyboard="Numeric"   HeightRequest="35" VerticalOptions="Center" Text="{Binding  objaveriacls.cobro}" Style="{StaticResource labelfont}"  />
 
+                    <Label  Text="Codigo de Fibra" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16"/>
+                    <custom:CustomLabel  Text="{Binding objaveriacls.CDF_FIBRA }" CurvedCornerRadius="30" BorderColor="#000000" Padding="15,5" VerticalOptions="Center"  Style="{StaticResource labelfont}"/>
+
+
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Label  Text="Cargar Imagen"  VerticalOptions="Center" FontAttributes="Bold" FontSize="17" />
                         <ImageButton Source="subiring.png" x:Name="imgcargaimagen" Clicked="imgcargaimagen_Clicked"                                                                       

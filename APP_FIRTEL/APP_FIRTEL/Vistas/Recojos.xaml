@@ -64,6 +64,8 @@
                                         </Frame>
                                         <Label Text="{Binding plancliente}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontAttributes="Bold" Style="{StaticResource labelcolection}"/>
 
+                                        <Label Text="{Binding CDF_FIBRA}"  Grid.Column="2" Grid.Row="4"  FontAttributes="Bold" HorizontalTextAlignment="Start" FontSize="16"/>
+
                                         <Label Text="{Binding idcorrelativo,StringFormat='#{0}'}"  Grid.Column="2" Grid.Row="4" TextColor="Blue"  HorizontalTextAlignment="End" Style="{StaticResource labelcolection}"/>
 
                                     </Grid>

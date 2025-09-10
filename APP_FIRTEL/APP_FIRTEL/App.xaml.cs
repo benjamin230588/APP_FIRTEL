@@ -24,6 +24,7 @@ namespace APP_FIRTEL
            //Application.Current.MainPage = new Pruebasxaml();
            //fffff
            //delissss   ssss
+           //change
             if (Setings.RecordarContra == true)
             {
                 Application.Current.MainPage = new Pagainaprincipal();

@@ -22,6 +22,7 @@ namespace APP_FIRTEL
             InitializeComponent();
             LoadStyles();
            //Application.Current.MainPage = new Pruebasxaml();
+           //fffff
             if (Setings.RecordarContra == true)
             {
                 Application.Current.MainPage = new Pagainaprincipal();

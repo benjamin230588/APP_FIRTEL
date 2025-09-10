@@ -138,7 +138,9 @@
             <StackLayout HeightRequest="20"></StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
                 <Label Text="Desea recordar contraseña?" TextColor="White" VerticalOptions="Start" FontSize="16" />
-                <Switch  IsToggled="True" ScaleX="1.2" ScaleY="1.2" x:Name="validacontra" ThumbColor="Red" Toggled="validacontra_Toggled" />
+                <Switch  IsToggled="True" ScaleX="1.2" ScaleY="1.2" x:Name="validacontra" ThumbColor="Red" Toggled="validacontra_Toggled" >
+                    
+                </Switch>
                  
             </StackLayout>
             

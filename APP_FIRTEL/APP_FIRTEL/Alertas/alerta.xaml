@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" xmlns:alertas="clr-namespace:APP_FIRTEL.Alertas" x:DataType="alertas:alerta"
+           x:Class="APP_FIRTEL.Alertas.alerta"
+           Size="300,400"
+           Color="White"
+           IsLightDismissEnabled="False"
+           >
+    <Frame BackgroundColor="White"
+           CornerRadius="15"
+           Padding="20"
+           WidthRequest="300"
+           HeightRequest="350"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           HasShadow="True">
+        <StackLayout 
+                
+                 Padding="20">
+            <!-- Animación Lottie -->
+            <lottie:AnimationView x:Name="animacion"
+                              Animation="exito23.json"
+                              AutoPlay="True"
+                              RepeatMode="Infinite"
+                              WidthRequest="150"
+                              HeightRequest="150"/>
+
+            <Label Text="Registro Modificado con Exito"
+               FontSize="18"
+               HorizontalTextAlignment="Center"/>
+
+            <Button Text="Cerrar"
+                Clicked="Cerrar_Clicked"
+                TextColor="White"
+                HorizontalOptions="Center"
+                CornerRadius="15"
+                BackgroundColor="Green"/>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

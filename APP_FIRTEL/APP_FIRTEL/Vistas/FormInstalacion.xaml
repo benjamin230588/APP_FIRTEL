@@ -4,6 +4,7 @@
              x:Class="APP_FIRTEL.Vistas.FormInstalacion"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
                xmlns:local="clr-namespace:APP_FIRTEL.Convertidores"
+              x:Name="thispage"
               Title="Editar Instalacion">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -184,7 +185,8 @@
                     Command="{Binding VolverInstalacioncommand}"/>
                 <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
-                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarInstalacionComand}" />
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarInstalacionComand}"
+                         CommandParameter="{x:Reference Name=thispage}"/>
 
 
             </StackLayout>

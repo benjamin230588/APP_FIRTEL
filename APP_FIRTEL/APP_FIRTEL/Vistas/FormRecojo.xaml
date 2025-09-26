@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP_FIRTEL.Vistas.FormRecojo"
              xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
+              x:Name="thispage"
              Title="Editar Recojo" >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -151,7 +152,8 @@
                     Command="{Binding VolverRecojocommand}"/>
                 <Button Text="Grabar" Background="Green" TextColor="White" 
                             x:Name="btnRegistrarUsuario"
-                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarRecojoComand}" />
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarRecojoComand}" 
+                         CommandParameter="{x:Reference Name=thispage}"/>
 
 
             </StackLayout>

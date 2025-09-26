@@ -51,7 +51,7 @@
 
         </ListView>
             
-            <Label Text="Version 1.1.26" HorizontalTextAlignment="Center" />
+            <Label Text="Version 1.1.27" HorizontalTextAlignment="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

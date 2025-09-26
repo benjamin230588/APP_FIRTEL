@@ -173,7 +173,6 @@ namespace APP_FIRTEL.Vistas
         }
 
         private void listaaveriafirtel_RemainingItemsThresholdReached(object sender, EventArgs e)
-        
         {
             if (cantidad > ListaAveria.Count)
             {

@@ -4,6 +4,7 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
               xmlns:custom="clr-namespace:APP_FIRTEL.Clases"
               x:Class="APP_FIRTEL.Vistas.FormAveria"
+              x:Name="thispage"
              Title="Editar Averia" >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -180,8 +181,10 @@
                             x:Name="btnVolverLogin"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15"
                     Command="{Binding VolverAveriacommand}"/>
             <Button Text="Grabar" Background="Green" TextColor="White" 
-                            x:Name="btnRegistrarUsuario"
-                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarAveriaComand}" />
+                            x:Name="btnRegistrarUsuario" 
+                            CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarAveriaComand}" 
+                            CommandParameter="{x:Reference Name=thispage}"
+                    />
            
 
         </StackLayout>

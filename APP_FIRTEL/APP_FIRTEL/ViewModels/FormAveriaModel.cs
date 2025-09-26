@@ -1,4 +1,5 @@
-﻿using APP_FIRTEL.Clases;
+﻿using APP_FIRTEL.Alertas;
+using APP_FIRTEL.Clases;
 using APP_FIRTEL.Generic;
 using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Utilitarios_App;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
@@ -122,7 +124,7 @@ namespace APP_FIRTEL.ViewModels
 
 
         }
-        public async Task GrabarAveria()
+        public async Task GrabarAveria(Page page)
         {
 
            
@@ -148,6 +150,11 @@ namespace APP_FIRTEL.ViewModels
 
                 if (res.result == 1)
                 {
+
+                    var resultado = await page.ShowPopupAsync(new alerta());
+
+                   
+
                     Averias.actualiza = true;
                     //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
                     await Volver();
@@ -178,7 +185,7 @@ namespace APP_FIRTEL.ViewModels
             await Navigation.PopAsync();
         }
 
-        public ICommand GrabarAveriaComand => new Command(async () => await GrabarAveria());
+        public ICommand GrabarAveriaComand => new Command<Page> (async (p) => await GrabarAveria(p));
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
         public ICommand VolverAveriacommand => new Command(async () => await Volver());
 

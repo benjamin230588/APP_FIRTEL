@@ -1,4 +1,5 @@
-﻿using APP_FIRTEL.Clases;
+﻿using APP_FIRTEL.Alertas;
+using APP_FIRTEL.Clases;
 using APP_FIRTEL.Generic;
 using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Vistas;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Utilitarios_App;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
@@ -121,7 +123,7 @@ namespace APP_FIRTEL.ViewModels
 
 
         }
-        public async Task GrabarRecojo()
+        public async Task GrabarRecojo(Page page)
         {
 
 
@@ -147,6 +149,8 @@ namespace APP_FIRTEL.ViewModels
 
                 if (res.result == 1)
                 {
+                    var resultado = await page.ShowPopupAsync(new alerta());
+
                     Recojos.actualiza = true;
                     //await Application.Current.MainPage.DisplayAlert("Datos incompletos", "Seleccine una fecha", "OK");
                     await Volver();
@@ -177,7 +181,7 @@ namespace APP_FIRTEL.ViewModels
             await Navigation.PopAsync();
         }
 
-        public ICommand GrabarRecojoComand => new Command(async () => await GrabarRecojo());
+        public ICommand GrabarRecojoComand => new Command<Page>(async (p) => await GrabarRecojo(p));
         //public ICommand Iradetallecommand => new Command<AveriaCLS>(async (p) => await Iradetalle(p));
         public ICommand VolverRecojocommand => new Command(async () => await Volver());
 

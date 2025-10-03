@@ -36,8 +36,8 @@ namespace APP_FIRTEL.Droid
 
             // 🔔 Manejar notificación al tocarla
              NotificationCenter.NotifyNotificationTapped(Intent);
-            //var intent = new Intent(this, typeof(SignalRForegroundService));
-            //StartForegroundService(intent);
+            var intent = new Intent(this, typeof(SignalRForegroundService));
+            StartForegroundService(intent);
             //NotificationCenter.Current.CreateNotificationChannel();
 
 

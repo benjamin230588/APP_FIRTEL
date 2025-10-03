@@ -52,10 +52,10 @@ namespace APP_FIRTEL
             //{
             //    HandleNotification(lastRequest);
             //}
-            Task.Run(async () =>
-            {
-                await SignalRService.Instance.StartConnectionAsync();
-            });
+            //Task.Run(async () =>
+            //{
+            //    await SignalRService.Instance.StartConnectionAsync();
+            //});
 
         }
         private async  void OnLocalNotificationTapped(NotificationEventArgs e)

@@ -37,6 +37,7 @@ namespace APP_FIRTEL.Conexion
             _hub.On<string>("message", (message) =>
             {
                 // Solo disparamos el evento
+                // System.Diagnostics.Debug.WriteLine($"Mensaje recibido: {message}");
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     await Application.Current.MainPage.DisplayAlert("Notificación",
@@ -44,7 +45,7 @@ namespace APP_FIRTEL.Conexion
                 });
 
 
-                
+
             });
 
             // Manejo de reconexión

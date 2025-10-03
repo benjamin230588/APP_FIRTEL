@@ -1,7 +1,10 @@
-﻿using APP_FIRTEL.Genericos;
+﻿using APP_FIRTEL.Conexion;
+using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Recursos;
 using APP_FIRTEL.Vistas;
+using Plugin.LocalNotification;
 using System;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -25,18 +28,47 @@ namespace APP_FIRTEL
             //fffff
             //delissss   ssss
             //change
-            if (Setings.RecordarContra == true)
-            {
-                Application.Current.MainPage = new Pagainaprincipal();
-            }
-            else
-            {
-                MainPage = new NavigationPage(new Login());
-            }
-            //MainPage = new Animacion();
+            //if (Setings.RecordarContra == true)
+            //{
+            //    Application.Current.MainPage = new Pagainaprincipal();
+            //}
+            //else
+            //{
+            //    MainPage = new NavigationPage(new Login());
+            //}
+            MainPage = new NavigationPage(new Animacion());
+            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
+            //Plugin.LocalNotification.NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
+            //LocalNotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
+            // Suscribirse al evento de toque en la notificación
+            //LocalNotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
 
+            //NotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
+            // NotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
+
+            // Revisar si la app fue abierta desde una notificación
+            //var lastRequest = NotificationCenter.Current.GetLastNotificationResponse();
+            //if (lastRequest != null)
+            //{
+            //    HandleNotification(lastRequest);
+            //}
+            Task.Run(async () =>
+            {
+                await SignalRService.Instance.StartConnectionAsync();
+            });
 
         }
+        private async  void OnLocalNotificationTapped(NotificationEventArgs e)
+        {
+            // Aquí obtienes los datos que enviaste
+            //string data = e.Request.ReturningData;
+
+            // Mostrar alerta o navegar a otra página
+            //MainPage = new Paginaopciones();
+            await MainPage.Navigation.PushAsync(new Paginaopciones());
+          //  await MainPage.DisplayAlert("Notificación", $"Tocaste la notificación: ", "OK");
+        }
+     
         void LoadStyles()
         {
             if (IsASmallDevice())

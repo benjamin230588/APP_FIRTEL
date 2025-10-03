@@ -138,7 +138,7 @@ namespace APP_FIRTEL.Vistas
 
                 ResultadoPaginacion<PostventaCLS> objres = new ResultadoPaginacion<PostventaCLS>();
 
-                res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getaveria, objeto);
+                res = await GenericLH.GetAll<Paginacion>(Constantes.url + Constantes.api_getpostventa, objeto);
                 if (res.result == 1)
                 {
                     objres = JsonConvert.DeserializeObject<ResultadoPaginacion<PostventaCLS>>(JsonConvert.SerializeObject(res.data));

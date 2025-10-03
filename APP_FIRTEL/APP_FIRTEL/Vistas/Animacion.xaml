@@ -6,6 +6,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Button Text="DALE" Clicked="Button_Clicked" ></Button>
+            <Button Text="envio" Clicked="Button_Clicked_1" ></Button>
+            <Button Text="Mostra" Clicked="Button_Clicked_2" ></Button>
             <lottie:AnimationView
                 Animation="bici.json"
                 AutoPlay="True"

@@ -185,9 +185,10 @@
                             CornerRadius="15"  HorizontalOptions="FillAndExpand" Command="{Binding GrabarAveriaComand}" 
                             CommandParameter="{x:Reference Name=thispage}"
                     />
-           
+                <Button Text="NOTIFICACION" BackgroundColor="Red" Clicked="btnVolverLn_Clicked"
+                            x:Name="btnVolverLn"  TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="15" />
 
-        </StackLayout>
+            </StackLayout>
         </StackLayout>
         <Grid  x:Name="gridcontenido"  BackgroundColor="#FAFAFA" Opacity=".8" IsVisible="{Binding flgindicador}">
             <ActivityIndicator

@@ -1,6 +1,7 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Generic;
 using APP_FIRTEL.ViewModels;
+using Plugin.LocalNotification;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
@@ -198,6 +199,32 @@ namespace APP_FIRTEL.Vistas
                 await DisplayAlert("Error", "Coordenadas Incorrectas", "Cancelar");
 
             }
+        }
+
+        private void btnVolverLn_Clicked(object sender, EventArgs e)
+        {
+            var notification = new NotificationRequest
+            {
+                NotificationId = 100,
+                Title = "Hola!",
+                Description = "Esta es una notificación local usando NuGet",
+                ReturningData = "Opcional: datos que regresan al tocar la notificación",
+
+                Android = new Plugin.LocalNotification.AndroidOption.AndroidOptions
+                {
+                    ChannelId = "default",
+
+                    AutoCancel = true,
+
+                }
+                //NotifyTime = DateTime.Now.AddSeconds(1) // Se dispara en 1 segundo
+            };
+            //Device.BeginInvokeOnMainThread(async () =>
+            //{
+            //    await Application.Current.MainPage.DisplayAlert("Notificación",
+            //        "Se mostró mientras la app está abierta", "OK");
+            //});
+            NotificationCenter.Current.Show(notification);
         }
 
 

@@ -9,6 +9,7 @@ using Plugin.Permissions;
 using Plugin.LocalNotification.Platform.Droid;
 using Plugin.LocalNotification;
 using Android.Content;
+using Firebase.Messaging;
 
 namespace APP_FIRTEL.Droid
 {
@@ -18,7 +19,7 @@ namespace APP_FIRTEL.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            //string cadena = "deee";
 
             NotificationCenter.CreateNotificationChannel(new NotificationChannelRequest
             {
@@ -36,8 +37,8 @@ namespace APP_FIRTEL.Droid
 
             // 🔔 Manejar notificación al tocarla
              NotificationCenter.NotifyNotificationTapped(Intent);
-            var intent = new Intent(this, typeof(SignalRForegroundService));
-            StartForegroundService(intent);
+            //var intent = new Intent(this, typeof(SignalRForegroundService));
+            //StartForegroundService(intent);
             //NotificationCenter.Current.CreateNotificationChannel();
 
 
@@ -45,7 +46,7 @@ namespace APP_FIRTEL.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
 
-
+         //   string token23=FirebaseMessaging.Instance.GetToken()
 
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             LoadApplication(new App());

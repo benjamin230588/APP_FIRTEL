@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using Plugin.LocalNotification;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,13 +37,41 @@ namespace APP_FIRTEL.Conexion
             // Escucha de mensajes
             _hub.On<string>("message", (message) =>
             {
-                // Solo disparamos el evento
-                // System.Diagnostics.Debug.WriteLine($"Mensaje recibido: {message}");
-                Device.BeginInvokeOnMainThread(async () =>
+                var notification = new NotificationRequest
                 {
-                    await Application.Current.MainPage.DisplayAlert("Notificación",
-                        message, "OK");
-                });
+                    NotificationId = DateTime.Now.Minute,
+                    Title = "Nuevo Pedido Atender",
+                    Description = "Esta es una notificación local usando NuGet",
+                    ReturningData = "Opcional: datos que regresan al tocar la notificación",
+                    Schedule =
+                {
+                    NotifyTime = DateTime.Now.AddSeconds(2)
+                },
+
+                    Android = new Plugin.LocalNotification.AndroidOption.AndroidOptions
+                    {
+                        ChannelId = "default",
+                        IconSmallName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("icnoti"),
+                        Color = new Plugin.LocalNotification.AndroidOption.AndroidColor(unchecked((int)0xFF0000FF)),
+
+                        // 🔹 El grande (a color, aparece al desplegar la notificación)
+                        //   IconLargeName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("icnotifondo"),
+
+
+                        AutoCancel = false,
+                        Priority = NotificationPriority.High,
+
+                        Ongoing = true,
+
+                    }
+                    //NotifyTime = DateTime.Now.AddSeconds(1) // Se dispara en 1 segundo
+                };
+                //Device.BeginInvokeOnMainThread(async () =>
+                //{
+                //    await Application.Current.MainPage.DisplayAlert("Notificación",
+                //        "Se mostró mientras la app está abierta", "OK");
+                //});
+                NotificationCenter.Current.Show(notification);
 
 
 
@@ -71,7 +100,7 @@ namespace APP_FIRTEL.Conexion
 
         private async Task Reconnect()
         {
-            while (_connection.State != ConnectionState.Connected)
+            while (_connection.State != ConnectionState.Disconnected)
             {
                 try
                 {
@@ -95,7 +124,7 @@ namespace APP_FIRTEL.Conexion
                 {
                     await Application.Current.MainPage.DisplayAlert("Éxito", "Conectado", "Ok");
                 });
-               // await Application.Current.MainPage.DisplayAlert("ss", "conectado", "ssss");
+                // await Application.Current.MainPage.DisplayAlert("ss", "conectado", "ssss");
                 // Console.WriteLine("⚠️ No conectado al servidor.");
             }
             else
@@ -104,7 +133,18 @@ namespace APP_FIRTEL.Conexion
                 {
                     await Application.Current.MainPage.DisplayAlert("ss", "errror", "ssss");
                 });
-               
+
+            }
+        }
+        public  int validarconexion()
+        {
+            if (_connection.State == ConnectionState.Disconnected)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
             }
         }
     }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870710679747",
+    "project_id": "benajmin-e3eb7",
+    "storage_bucket": "benajmin-e3eb7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870710679747:android:b988e3f71bd50ac930aa76",
+        "android_client_info": {
+          "package_name": "com.companyname.app_firtel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgk-Z8Z_dUEDmBQAMWKo4Lq8crZDg7c14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -27,16 +27,16 @@ namespace APP_FIRTEL
             //Application.Current.MainPage = new Pruebasxaml();
             //fffff
             //delissss   ssss
-            //change
-            //if (Setings.RecordarContra == true)
-            //{
-            //    Application.Current.MainPage = new Pagainaprincipal();
-            //}
-            //else
-            //{
-            //    MainPage = new NavigationPage(new Login());
-            //}
-            MainPage = new NavigationPage(new Animacion());
+         //   change
+            if (Setings.RecordarContra == true)
+            {
+                Application.Current.MainPage = new Pagainaprincipal();
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Login());
+            }
+            //MainPage = new NavigationPage(new Animacion());
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             //Plugin.LocalNotification.NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             //LocalNotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
@@ -123,8 +123,15 @@ namespace APP_FIRTEL
         {
         }
 
+        
         protected override void OnResume()
         {
+            //base.OnResume();
+
+            //if (SignalRService.Instance.validarconexion()==1)
+            //{
+            //    string cadena = "si";
+            //}
         }
     }
 }

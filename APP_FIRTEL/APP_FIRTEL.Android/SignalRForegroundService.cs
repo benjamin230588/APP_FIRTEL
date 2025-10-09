@@ -19,6 +19,28 @@ namespace APP_FIRTEL.Droid
     [Service]
     public class SignalRForegroundService : Service
     {
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+
+            // Crear el canal del servicio en Android >= Oreo
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            {
+                var channel = new NotificationChannel(
+                    "foreground_service_channel",  // ID del canal
+                    "Foreground Service",          // Nombre visible
+                    NotificationImportance.Min     // Mínima importancia
+                )
+                {
+                    Description = "Canal para mantener el servicio activo"
+                };
+
+                var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+                notificationManager.CreateNotificationChannel(channel);
+            }
+        }
+
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
             Task.Run(() => SignalRService.Instance.StartConnectionAsync());
@@ -37,12 +59,12 @@ namespace APP_FIRTEL.Droid
             //}
             //};
 
-            var notification = new NotificationCompat.Builder(this, "default")
-           .SetContentTitle("App conectada")
-           .SetContentText("Escuchando mensajes en tiempo real")
+            var notification = new NotificationCompat.Builder(this, "foreground_service_channel")
+           .SetContentTitle("")
+           .SetContentText("")
            .SetSmallIcon(Resource.Drawable.ic_notification) // Tu ícono
-           .SetOngoing(true)
-           .SetPriority((int)NotificationPriority.High)
+           
+           .SetPriority((int)NotificationPriority.Min)
            .Build();
 
 

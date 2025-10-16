@@ -17,6 +17,8 @@ using System.Globalization;
 using APP_FIRTEL.Genericos;
 using Utilitarios_App.viewmodel;
 using Utilitarios_App;
+using APP_FIRTEL.Firebase;
+using Xamarin.Essentials;
 
 namespace APP_FIRTEL.Vistas
 {
@@ -64,18 +66,28 @@ namespace APP_FIRTEL.Vistas
                 {
                     objeto = JsonConvert.DeserializeObject<Eusuario>(JsonConvert.SerializeObject(res.data));
 
-                    Setings.IdUsuario = objeto.idusuario;
-                    Setings.nomusuario = objeto.Usuario;
+                    //Setings.IdUsuario = objeto.idusuario;
+                    //Setings.nomusuario = objeto.Usuario;
+                    //Setings.IdTipoUsuario = objeto.idperfilcab ?? 0;
+                    //Setings.RecordarContra = validacontra.IsToggled;
 
-                    Setings.IdTipoUsuario = objeto.idperfilcab ?? 0;
-                    Setings.RecordarContra = validacontra.IsToggled;
+                    Preferences.Set(Preferencias.IdUsuario, objeto.idusuario);
+                    Preferences.Set(Preferencias.nomusuario, objeto.Usuario);
+                    Preferences.Set(Preferencias.IdTipoUsuario, objeto.idperfilcab ?? 0);
+                    Preferences.Set(Preferencias.RecordarContra, validacontra.IsToggled);
+
+
+                    ServiceFireToken objfirebase = new ServiceFireToken();
+                    string token = Preferences.Get(Preferencias.idNewToken, null);
+
+                    Task.Run(async () => await objfirebase.SendTokenToServerAsync(token));
 
                     Application.Current.MainPage = new Pagainaprincipal();
                 }
                 else
                 {
-                    Setings.IdUsuario = 0;
-                    Setings.IdTipoUsuario = 0;
+                    //Setings.IdUsuario = 0;
+                    //Setings.IdTipoUsuario = 0;
                     await DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
 
                 }

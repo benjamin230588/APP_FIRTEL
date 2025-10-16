@@ -1,4 +1,5 @@
-﻿using APP_FIRTEL.Conexion;
+﻿using APP_FIRTEL.Clases;
+using APP_FIRTEL.Conexion;
 using APP_FIRTEL.Genericos;
 using APP_FIRTEL.Recursos;
 using APP_FIRTEL.Vistas;
@@ -24,11 +25,12 @@ namespace APP_FIRTEL
         {
             InitializeComponent();
             LoadStyles();
+            VerificarVersionYLimpiarPreferencias();
             //Application.Current.MainPage = new Pruebasxaml();
             //fffff
             //delissss   ssss
-         //   change
-            if (Setings.RecordarContra == true)
+            //   change
+            if (Preferences.Get(Preferencias.RecordarContra, false) == true)
             {
                 Application.Current.MainPage = new Pagainaprincipal();
             }
@@ -36,7 +38,7 @@ namespace APP_FIRTEL
             {
                 MainPage = new NavigationPage(new Login());
             }
-            //MainPage = new NavigationPage(new Animacion());
+           // MainPage = new NavigationPage(new Animacion());
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             //Plugin.LocalNotification.NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             //LocalNotificationCenter.Current.NotificationTapped += OnLocalNotificationTapped;
@@ -57,6 +59,30 @@ namespace APP_FIRTEL
             //    await SignalRService.Instance.StartConnectionAsync();
             //});
 
+        }
+
+        private void VerificarVersionYLimpiarPreferencias()
+        {
+            
+            string versionGuardada =  Preferences.Get(Preferencias.idversion, "");
+
+            string versionActual = VersionTracking.CurrentVersion; // Versión actual de la app
+
+            if (versionGuardada != versionActual)
+            {
+                
+                //Preferences.Clear(); // ← Borra TODO
+                //Setings.RecordarContra = false;
+                Preferences.Set(Preferencias.RecordarContra, false);
+                Preferences.Set(Preferencias.IdUsuario, 0);
+                Preferences.Set(Preferencias.nomusuario, "");
+                Preferences.Set(Preferencias.IdTipoUsuario, 0);
+                
+
+
+                // Guardamos la nueva versión para futuras comparaciones
+                Preferences.Set(Preferencias.idversion, versionActual);
+            }
         }
         private async  void OnLocalNotificationTapped(NotificationEventArgs e)
         {

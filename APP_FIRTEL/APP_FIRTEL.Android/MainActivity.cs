@@ -20,23 +20,52 @@ namespace APP_FIRTEL.Droid
         {
             base.OnCreate(savedInstanceState);
             //string cadena = "deee";
+            //NotificationManager manager;
 
-            NotificationCenter.CreateNotificationChannel(new NotificationChannelRequest
+            //manager = (NotificationManager)AndroidApp.Context.GetSystemService(AndroidApp.NotificationService);
+
+            //if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            //{
+            //    var channelNameJava = new Java.Lang.String(channelName);
+            //    var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.High)
+            //    {
+            //        Description = channelDescription
+            //    };
+            //    manager.CreateNotificationChannel(channel);
+            //}
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
-                Id = "default",
-                Name = "General",
-                Description = "Canal de notificaciones",
-                Importance = NotificationImportance.High
-                
-            });
+                var channel = new NotificationChannel(
+                    "default",           // ID del canal (debe coincidir con el usado en AndroidNotificationManager)
+                    "General",           // Nombre visible del canal
+                    NotificationImportance.High
+                )
+                {
+                    Description = "Canal general de notificaciones"
+                };
+
+                var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+                notificationManager.CreateNotificationChannel(channel);
+            }
+
+
+            //NotificationCenter.CreateNotificationChannel(new NotificationChannelRequest
+            //{
+            //    Id = "default",
+            //    Name = "General",
+            //    Description = "Canal de notificaciones",
+            //    Importance = NotificationImportance.High
+
+            //});
             //if (Intent != null && Intent.Extras != null)
             //{
             //    Plugin.LocalNotification.NotificationCenter.Current.OnNotificationTapped(Intent);
             //}
 
 
-            // 🔔 Manejar notificación al tocarla
-             NotificationCenter.NotifyNotificationTapped(Intent);
+            // Manejar notificación al tocarla
+            //NotificationCenter.NotifyNotificationTapped(Intent);
             //var intent = new Intent(this, typeof(SignalRForegroundService));
             //StartForegroundService(intent);
             //NotificationCenter.Current.CreateNotificationChannel();

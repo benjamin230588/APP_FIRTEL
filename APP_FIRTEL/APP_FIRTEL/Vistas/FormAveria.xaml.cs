@@ -201,31 +201,31 @@ namespace APP_FIRTEL.Vistas
             }
         }
 
-        private void btnVolverLn_Clicked(object sender, EventArgs e)
-        {
-            var notification = new NotificationRequest
-            {
-                NotificationId = 100,
-                Title = "Hola!",
-                Description = "Esta es una notificación local usando NuGet",
-                ReturningData = "Opcional: datos que regresan al tocar la notificación",
+        //private void btnVolverLn_Clicked(object sender, EventArgs e)
+        //{
+        //    var notification = new NotificationRequest
+        //    {
+        //        NotificationId = 100,
+        //        Title = "Hola!",
+        //        Description = "Esta es una notificación local usando NuGet",
+        //        ReturningData = "Opcional: datos que regresan al tocar la notificación",
 
-                Android = new Plugin.LocalNotification.AndroidOption.AndroidOptions
-                {
-                    ChannelId = "default",
+        //        Android = new Plugin.LocalNotification.AndroidOption.AndroidOptions
+        //        {
+        //            ChannelId = "default",
 
-                    AutoCancel = true,
+        //            AutoCancel = true,
 
-                }
-                //NotifyTime = DateTime.Now.AddSeconds(1) // Se dispara en 1 segundo
-            };
-            //Device.BeginInvokeOnMainThread(async () =>
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Notificación",
-            //        "Se mostró mientras la app está abierta", "OK");
-            //});
-            NotificationCenter.Current.Show(notification);
-        }
+        //        }
+        //        //NotifyTime = DateTime.Now.AddSeconds(1) // Se dispara en 1 segundo
+        //    };
+        //    //Device.BeginInvokeOnMainThread(async () =>
+        //    //{
+        //    //    await Application.Current.MainPage.DisplayAlert("Notificación",
+        //    //        "Se mostró mientras la app está abierta", "OK");
+        //    //});
+        //    NotificationCenter.Current.Show(notification);
+        //}
 
 
         //private void btnRegistrarUsuario_Clicked(object sender, EventArgs e)

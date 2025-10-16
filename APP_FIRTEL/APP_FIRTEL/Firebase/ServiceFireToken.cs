@@ -1,50 +1,17 @@
-﻿
-
-using Android.App;
-using APP_FIRTEL.Clases;
+﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Genericos;
-using Firebase.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
-namespace APP_FIRTEL.Droid
+namespace APP_FIRTEL.Firebase
 {
-    [Service]
-    [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
-    public class MyFirebaseMessagingService : FirebaseMessagingService
+    public class ServiceFireToken
     {
-        const string TAG = "MyFirebaseMsgService";
-        AndroidNotificationManager androidNotification = new AndroidNotificationManager();
-        public override void OnMessageReceived(RemoteMessage message)
-        {
-            IDictionary<string, string> MensajeData = message.Data;
-
-            string Titulo = MensajeData["title"];
-            string SubTitulo = MensajeData["body"];
-            // Log.Debug(TAG, "From: " + message.From);
-            // Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
-            //androidNotification.CrearNotificacionLocal(message.GetNotification().Title, message.GetNotification().Body);
-            androidNotification.CrearNotificacionLocal(Titulo, SubTitulo);
-
-        }
-        public override async void OnNewToken(string token)
-        {
-            base.OnNewToken(token);
-
-           // Setings.idNewToken = token;
-           Preferences.Set(Preferencias.idNewToken, token);
-            // sedRegisterToken(token);
-            // await SendTokenToServerAsync(token);
-        }
-
-        public void sedRegisterToken(string token)
-        {
-            //Tu código para registrar el token a tu servidor y base de datos
-        }
-        private async Task SendTokenToServerAsync(string token)
+        public async Task SendTokenToServerAsync(string token)
         {
             try
             {
@@ -52,7 +19,8 @@ namespace APP_FIRTEL.Droid
                 {
                     // 🔹 URL de tu API donde guardarás el token
                     string url = Constantes.url + "/Usuarios/UpdateToken";
-                    int idusuario = Setings.IdUsuario;
+                    int idusuario = Preferences.Get(Preferencias.IdUsuario, 0);
+
                     // 🔹 Objeto que enviarás al servidor
                     var data = new
                     {

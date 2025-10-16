@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Utilitarios_App;
 using Utilitarios_App.viewmodel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -97,7 +98,7 @@ namespace APP_FIRTEL.Vistas
             skipcantidad = 0;
             try
             {
-                string idtipousuario = Setings.IdTipoUsuario.ToString();
+                string idtipousuario = Preferences.Get(Preferencias.IdTipoUsuario, 0).ToString();
                 foreach (ListaEstado objCat in listaestadoave) cadenaestado = cadenaestado + "," + objCat.idestado;
                 cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
                 var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = desde1, hasta = hasta1, idcliente = "", idestado = cadenaestado, idsolucion=idtipousuario,plataforma=2 };
@@ -135,7 +136,7 @@ namespace APP_FIRTEL.Vistas
             string cadenaestado = "";
             try
             {
-                string idtipousuario = Setings.IdTipoUsuario.ToString();
+                string idtipousuario = Preferences.Get(Preferencias.IdTipoUsuario, 0).ToString();
                 foreach (ListaEstado objCat in listaestado) cadenaestado = cadenaestado + "," + objCat.idestado;
                 cadenaestado = cadenaestado.Substring(1, cadenaestado.Length - 1);
                 var objeto = new Paginacion { pagine = 10, skip = skipcantidad * 10, desde = fechadesde, hasta = fechahasta, idcliente = "", idestado = cadenaestado ,idsolucion=idtipousuario,plataforma=2 };

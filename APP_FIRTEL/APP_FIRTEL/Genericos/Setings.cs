@@ -30,7 +30,10 @@ namespace APP_FIRTEL.Genericos
         //recordar
         private const string SettingsKeyRecordarContra = "recordarcontra";
         private static readonly bool SettingsDefaultRecordarContra = false;
-        
+
+        private const string SettingsKeyToken = "idNewToken";
+        private static readonly string SettingsDefaultToken = "";
+
         #endregion
 
         //idusuario
@@ -55,6 +58,18 @@ namespace APP_FIRTEL.Genericos
             set
             {
                 AppSettings.AddOrUpdateValue(SettingsKeynomusuario, value);
+            }
+        }
+
+        public static string idNewToken
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(SettingsKeyToken, SettingsDefaultToken);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(SettingsKeyToken, value);
             }
         }
         //idtipousuario

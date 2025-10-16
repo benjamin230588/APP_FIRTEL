@@ -26,7 +26,7 @@ namespace APP_FIRTEL.Droid
 
         bool channelInitialized = false;
         int messageId = -1;
-        NotificationManager manager;
+       NotificationManager manager;
 
 
         void CreateNotificationChannel()
@@ -36,7 +36,7 @@ namespace APP_FIRTEL.Droid
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
                 var channelNameJava = new Java.Lang.String(channelName);
-                var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.Default)
+                var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.High)
                 {
                     Description = channelDescription
                 };
@@ -49,10 +49,12 @@ namespace APP_FIRTEL.Droid
         public int CrearNotificacionLocal(string pTitle, string pBody)
         {
 
-            if (!channelInitialized)
-            {
-                CreateNotificationChannel();
-            }
+            //if (!channelInitialized)
+            //{
+            //    CreateNotificationChannel();
+            //}
+            manager = (NotificationManager)AndroidApp.Context.GetSystemService(AndroidApp.NotificationService);
+
 
             messageId++;
 
@@ -73,6 +75,8 @@ namespace APP_FIRTEL.Droid
                 .SetSmallIcon(Resource.Drawable.icnoti)
                 .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
 
+
+            messageId = (int)DateTime.Now.Ticks;
             var notification = builder.Build();
             manager.Notify(messageId, notification);
 

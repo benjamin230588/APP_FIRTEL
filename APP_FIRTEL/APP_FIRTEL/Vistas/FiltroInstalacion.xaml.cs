@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +21,7 @@ namespace APP_FIRTEL.Vistas
 		public FiltroInstalacion ()
 		{
 			InitializeComponent ();
-            int idtipousuario = Setings.IdTipoUsuario;
+            int idtipousuario = Preferences.Get(Preferencias.IdTipoUsuario, 0);
             if (idtipousuario == 1)
             {
                 oEntityCLS = new List<ListaEstado>(){

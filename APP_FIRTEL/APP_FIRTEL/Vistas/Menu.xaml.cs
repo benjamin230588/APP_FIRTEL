@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,7 +19,7 @@ namespace APP_FIRTEL.Vistas
         public Menu()
         {
             InitializeComponent();
-            string nomusuario = Setings.nomusuario;
+            string nomusuario = Preferences.Get(Preferencias.nomusuario, ""); ;
             listamenu = new List<MenuCLS>();
             mensajeusuario = nomusuario;
             BindingContext = this;
@@ -28,8 +28,8 @@ namespace APP_FIRTEL.Vistas
 
         private void listarMenu()
         {
-            int idtipousuario = Setings.IdTipoUsuario;
-            if( idtipousuario==1)
+            int idtipousuario = Preferences.Get(Preferencias.IdTipoUsuario, 0);
+            if ( idtipousuario==1)
             {
                 listamenu.Add(new MenuCLS { nombreicono = "ic_cliente", nombreitem = "Clientes" });
                 listamenu.Add(new MenuCLS { nombreicono = "ic_averia", nombreitem = "Averias" });
@@ -63,8 +63,10 @@ namespace APP_FIRTEL.Vistas
                 case "Clientes":
                     App.Navigate.PushAsync(new Cliente()); break;
                 case "Salir":
-                    App.Current.MainPage = new NavigationPage(new Login()); 
-                    Setings.RecordarContra = false;
+                    App.Current.MainPage = new NavigationPage(new Login());
+                    //Setings.RecordarContra = false;
+                    Preferences.Set(Preferencias.RecordarContra, false);
+
                     break;
             }
             App.MenuApp.IsPresented = false;

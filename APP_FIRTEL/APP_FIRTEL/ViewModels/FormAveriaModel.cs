@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Utilitarios_App;
 using Xamarin.CommunityToolkit.Extensions;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace APP_FIRTEL.ViewModels
@@ -115,8 +116,8 @@ namespace APP_FIRTEL.ViewModels
         #region PROCESOS
         public List<string> cargaestado()
         {
-            int idtipousuario = Setings.IdTipoUsuario;
-            if(idtipousuario==1)
+            int idtipousuario = Preferences.Get(Preferencias.IdTipoUsuario, 0);
+            if (idtipousuario==1)
                 return new List<string>() { "Pendiente", "Proceso", "Realizado","Cerrado" };
             else
                 return new List<string>() { "Pendiente", "Proceso", "Realizado" };
@@ -135,7 +136,7 @@ namespace APP_FIRTEL.ViewModels
                 var idestado = nombreestado == "Pendiente" ? 1 : nombreestado == "Proceso" ? 2 : nombreestado == "Realizado" ? 3 : 4;
                 //AveriaCLS objeto = new AveriaCLS();
 
-                objaveriacls.usu_modificacion = Setings.IdUsuario;
+                objaveriacls.usu_modificacion = Preferences.Get(Preferencias.IdUsuario, 0);
                 objaveriacls.fec_modificacion = DateTime.Now;
                 objaveriacls.flg_anulado = true;
                 //objeto.fecha_registro = objaveriacls.fecha_registro;

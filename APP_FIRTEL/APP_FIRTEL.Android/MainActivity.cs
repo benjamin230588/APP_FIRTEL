@@ -10,13 +10,16 @@ using Plugin.LocalNotification.Platform.Droid;
 using Plugin.LocalNotification;
 using Android.Content;
 using Firebase.Messaging;
+using Xamarin.Forms;
+using Android.Media;
+using Xamarin.Essentials;
 
 namespace APP_FIRTEL.Droid
 {
     [Activity(Label = "FIbraSur", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = false, ScreenOrientation =ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async  void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             //string cadena = "deee";
@@ -33,7 +36,7 @@ namespace APP_FIRTEL.Droid
             //    };
             //    manager.CreateNotificationChannel(channel);
             //}
-
+            var soundUri = RingtoneManager.GetDefaultUri(RingtoneType.Ringtone);
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
                 var channel = new NotificationChannel(
@@ -44,6 +47,13 @@ namespace APP_FIRTEL.Droid
                 {
                     Description = "Canal general de notificaciones"
                 };
+
+                var audioAttributes = new AudioAttributes.Builder()
+                .SetUsage(AudioUsageKind.Notification)
+                .SetContentType(AudioContentType.Sonification)
+                .Build();
+                channel.SetSound(soundUri, audioAttributes);
+
 
                 var notificationManager = (NotificationManager)GetSystemService(NotificationService);
                 notificationManager.CreateNotificationChannel(channel);
@@ -66,8 +76,17 @@ namespace APP_FIRTEL.Droid
 
             // Manejar notificación al tocarla
             //NotificationCenter.NotifyNotificationTapped(Intent);
-            //var intent = new Intent(this, typeof(SignalRForegroundService));
-            //StartForegroundService(intent);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
+            var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
+
+            if (status == PermissionStatus.Granted)
+            {
+                var intent = new Intent(this, typeof(LocalizacionForegroundService));
+                StartForegroundService(intent);
+            }
+
+           
             //NotificationCenter.Current.CreateNotificationChannel();
 
 
@@ -79,6 +98,13 @@ namespace APP_FIRTEL.Droid
 
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+
+            if (Intent?.HasExtra("Payload") == true)
+            {
+                string data = Intent.GetStringExtra("Payload");
+                MessagingCenter.Send<object, string>(this, "NotificationTapped", data);
+            }
         }
         //protected override void OnNewIntent(Intent intent)
         //{
@@ -98,6 +124,19 @@ namespace APP_FIRTEL.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+            DetectarNotificacionYRedirigir(intent);
+        }
+        private void DetectarNotificacionYRedirigir(Intent intent)
+        {
+            if (intent?.Extras != null && intent.Extras.ContainsKey("Payload"))
+            {
+                string payload = intent.GetStringExtra("Payload");
+                Xamarin.Forms.MessagingCenter.Send<object, string>(this, "NotificationTapped", payload);
+            }
         }
     }
 }

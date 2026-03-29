@@ -11,6 +11,7 @@ namespace Utilitarios_App
         public string usuario { get; set; }
         public string pasword { get; set; }
         public int plataforma { get; set; }
+        public string identificadordispositivo { get; set; }
 
     }
     

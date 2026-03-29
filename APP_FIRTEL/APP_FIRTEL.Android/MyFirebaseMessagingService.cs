@@ -24,10 +24,11 @@ namespace APP_FIRTEL.Droid
 
             string Titulo = MensajeData["title"];
             string SubTitulo = MensajeData["body"];
+            string clave = MensajeData["payload"];
             // Log.Debug(TAG, "From: " + message.From);
             // Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
             //androidNotification.CrearNotificacionLocal(message.GetNotification().Title, message.GetNotification().Body);
-            androidNotification.CrearNotificacionLocal(Titulo, SubTitulo);
+            androidNotification.CrearNotificacionLocal(Titulo, SubTitulo,clave);
 
         }
         public override async void OnNewToken(string token)

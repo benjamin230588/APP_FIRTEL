@@ -46,7 +46,7 @@ namespace APP_FIRTEL.Droid
             channelInitialized = true;
         }
 
-        public int CrearNotificacionLocal(string pTitle, string pBody)
+        public int CrearNotificacionLocal(string pTitle, string pBody, string clave)
         {
 
             //if (!channelInitialized)
@@ -59,9 +59,11 @@ namespace APP_FIRTEL.Droid
             messageId++;
 
             Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
-            intent.PutExtra(TitleKey, pTitle);
-            intent.PutExtra(MessageKey, pBody);
-            intent.AddFlags(ActivityFlags.ClearTop);
+            //intent.PutExtra(TitleKey, pTitle);
+            //intent.PutExtra(MessageKey, pBody);
+            intent.PutExtra("Payload", clave); // 👈 Aquí mandas datos a Forms
+            //intent.AddFlags(ActivityFlags.ClearTop);
+            intent.AddFlags(ActivityFlags.ClearTop | ActivityFlags.SingleTop);
 
             PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.UpdateCurrent);
 

@@ -114,6 +114,8 @@
     <Compile Include="CustomPickerRenderer.cs" />
     <Compile Include="CustomSwitchRenderer.cs" />
     <Compile Include="DatePickerCtrlRenderer.cs" />
+    <Compile Include="DeviceService.cs" />
+    <Compile Include="LocalizacionForegroundService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="renderprueba.cs" />
@@ -246,4 +248,9 @@
     <AndroidResource Include="Resources\drawable\icnotifondo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionAPP_FIRTELAndroidHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

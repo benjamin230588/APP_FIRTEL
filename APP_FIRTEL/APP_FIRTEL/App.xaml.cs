@@ -1,6 +1,7 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Conexion;
 using APP_FIRTEL.Genericos;
+using APP_FIRTEL.Interfaces;
 using APP_FIRTEL.Recursos;
 using APP_FIRTEL.Vistas;
 using Plugin.LocalNotification;
@@ -24,7 +25,12 @@ namespace APP_FIRTEL
         public App()
         {
             InitializeComponent();
+            MessagingCenter.Subscribe<object, string>(this, "NotificationTapped", async (sender, payload) =>
+            {
+                await OnLocalNotificationTapped(payload);
+            });
             LoadStyles();
+            var deviceId = DependencyService.Get<IDeviceService>().GetDeviceId();
             VerificarVersionYLimpiarPreferencias();
             //Application.Current.MainPage = new Pruebasxaml();
             //fffff
@@ -84,16 +90,16 @@ namespace APP_FIRTEL
                 Preferences.Set(Preferencias.idversion, versionActual);
             }
         }
-        private async  void OnLocalNotificationTapped(NotificationEventArgs e)
-        {
-            // Aquí obtienes los datos que enviaste
-            //string data = e.Request.ReturningData;
+        //private async  void OnLocalNotificationTapped(NotificationEventArgs e)
+        //{
+        //    // Aquí obtienes los datos que enviaste
+        //    //string data = e.Request.ReturningData;
 
-            // Mostrar alerta o navegar a otra página
-            //MainPage = new Paginaopciones();
-            await MainPage.Navigation.PushAsync(new Paginaopciones());
-          //  await MainPage.DisplayAlert("Notificación", $"Tocaste la notificación: ", "OK");
-        }
+        //    // Mostrar alerta o navegar a otra página
+        //    //MainPage = new Paginaopciones();
+        //    await MainPage.Navigation.PushAsync(new Paginaopciones());
+        //  //  await MainPage.DisplayAlert("Notificación", $"Tocaste la notificación: ", "OK");
+        //}
      
         void LoadStyles()
         {
@@ -143,8 +149,36 @@ namespace APP_FIRTEL
         }
         protected override void OnStart()
         {
+            
         }
+        private async Task OnLocalNotificationTapped(string payload)
+        {
 
+            bool estaLogueado = Preferences.Get(Preferencias.RecordarContra, false);
+
+            if (!estaLogueado)
+            {
+                // Redirigir al Login
+                 App.Current.MainPage = new NavigationPage(new Login());
+                return;
+            }
+            // Ejemplo: payload = "PaginaOpciones"
+            if (payload == "AVERIAS")
+            {
+                await App.Navigate.PushAsync(new Averias());
+              //  await MainPage.Navigation.PushAsync(new Paginaopciones());
+            }
+            else if (payload=="RECOJOS")
+            {
+                await App.Navigate.PushAsync(new Recojos());
+            }
+            else if (payload == "POSTVENTA")
+            {
+                await App.Navigate.PushAsync(new Instalacion());
+            }
+
+            
+        }
         protected override void OnSleep()
         {
         }

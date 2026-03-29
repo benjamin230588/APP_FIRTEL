@@ -58,6 +58,7 @@ namespace APP_FIRTEL.Vistas
                 //model.pasword = txtpasword.Text;
                 model.usuario = oEntityLogin.usuario;
                 model.pasword = oEntityLogin.pasword;
+               // model.identificadordispositivo=
                 model.plataforma = 2;
                 Eusuario objeto = new Eusuario();
                 oEntityLogin.flgindicador = true;

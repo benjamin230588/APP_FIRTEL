@@ -19,7 +19,7 @@ namespace APP_FIRTEL.Droid
     [Activity(Label = "FIbraSur", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = false, ScreenOrientation =ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override async  void OnCreate(Bundle savedInstanceState)
+        protected override   void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             //string cadena = "deee";
@@ -76,17 +76,16 @@ namespace APP_FIRTEL.Droid
 
             // Manejar notificación al tocarla
             //NotificationCenter.NotifyNotificationTapped(Intent);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            //Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
-            var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
+            //var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
 
-            if (status == PermissionStatus.Granted)
-            {
-                var intent = new Intent(this, typeof(LocalizacionForegroundService));
-                StartForegroundService(intent);
-            }
+            ////if (status == PermissionStatus.Granted)
+            ////{
 
-           
+            ////}
+            PedirPermisos();
+
             //NotificationCenter.Current.CreateNotificationChannel();
 
 
@@ -136,6 +135,16 @@ namespace APP_FIRTEL.Droid
             {
                 string payload = intent.GetStringExtra("Payload");
                 Xamarin.Forms.MessagingCenter.Send<object, string>(this, "NotificationTapped", payload);
+            }
+        }
+        async void PedirPermisos()
+        {
+            var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
+
+            if (status == PermissionStatus.Granted)
+            {
+                var intent = new Intent(this, typeof(LocalizacionForegroundService));
+                StartForegroundService(intent);
             }
         }
     }

@@ -80,8 +80,20 @@ namespace APP_FIRTEL.Droid
         {
             // 🔥 TU LÓGICA AQUÍ
             // Debug.w ("SERVICE", "Ejecutando cada minuto: " + DateTime.Now);
-            System.Diagnostics.Debug.WriteLine("Debug VS");
-            //var result = await GpsUsuario.Ubicacionusurio();
+            //System.Diagnostics.Debug.WriteLine("Debug VS");
+            try
+            {
+               // var result = await GpsUsuario.Ubicacionusurio();
+
+                System.Diagnostics.Debug.WriteLine("Debug VS" );
+            }
+            catch (Exception ex)
+            {
+                //var result = await GpsUsuario.Ubicacionusurio();
+
+                System.Diagnostics.Debug.WriteLine("Debug VS error" );
+            }
+           
             //  Android.Util.Log.Debug("SERVICE", "Ejecutando cada minuto: " + result.latitud + "--" + result.longitud);
             // Ejemplo:
             // llamar API

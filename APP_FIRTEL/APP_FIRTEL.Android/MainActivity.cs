@@ -13,13 +13,14 @@ using Firebase.Messaging;
 using Xamarin.Forms;
 using Android.Media;
 using Xamarin.Essentials;
+using System.Threading.Tasks;
 
 namespace APP_FIRTEL.Droid
 {
     [Activity(Label = "FIbraSur", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = false, ScreenOrientation =ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override   void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             //string cadena = "deee";
@@ -76,7 +77,7 @@ namespace APP_FIRTEL.Droid
 
             // Manejar notificación al tocarla
             //NotificationCenter.NotifyNotificationTapped(Intent);
-            //Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             //var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
 
@@ -84,13 +85,15 @@ namespace APP_FIRTEL.Droid
             ////{
 
             ////}
-            PedirPermisos();
+           await  PedirPermisos();
 
             //NotificationCenter.Current.CreateNotificationChannel();
-
+            var intent = new Intent(this, typeof(LocalizacionForegroundService));
+            StartForegroundService(intent);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
 
 
          //   string token23=FirebaseMessaging.Instance.GetToken()
@@ -137,14 +140,16 @@ namespace APP_FIRTEL.Droid
                 Xamarin.Forms.MessagingCenter.Send<object, string>(this, "NotificationTapped", payload);
             }
         }
-        async void PedirPermisos()
+        async Task PedirPermisos()
         {
-            var status = await Permissions.RequestAsync<Permissions.LocationAlways>();
 
-            if (status == PermissionStatus.Granted)
+           // Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
+            var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+
+            if (status != PermissionStatus.Granted)
             {
-                var intent = new Intent(this, typeof(LocalizacionForegroundService));
-                StartForegroundService(intent);
+                status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
             }
         }
     }

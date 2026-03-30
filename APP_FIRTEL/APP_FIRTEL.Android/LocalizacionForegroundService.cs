@@ -64,14 +64,14 @@ namespace APP_FIRTEL.Droid
            .SetContentText("")
            .SetSmallIcon(Resource.Drawable.ic_notification) // Tu ícono
 
-           .SetPriority((int)NotificationPriority.Min)
+           .SetPriority((int)NotificationPriority.Low)
            .Build();
 
 
 
             StartForeground(1, notification);
 
-            _timer = new Timer(EjecutarTarea, null, TimeSpan.Zero, TimeSpan.FromMinutes(1));
+            _timer = new Timer(EjecutarTarea, null, TimeSpan.Zero, TimeSpan.FromSeconds(20));
 
 
             return StartCommandResult.Sticky;
@@ -83,9 +83,9 @@ namespace APP_FIRTEL.Droid
             //System.Diagnostics.Debug.WriteLine("Debug VS");
             try
             {
-               // var result = await GpsUsuario.Ubicacionusurio();
+               var result = await GpsUsuario.Ubicacionusurio();
 
-                System.Diagnostics.Debug.WriteLine("Debug VS" );
+                System.Diagnostics.Debug.WriteLine("Debug VS" + result.latitud );
             }
             catch (Exception ex)
             {

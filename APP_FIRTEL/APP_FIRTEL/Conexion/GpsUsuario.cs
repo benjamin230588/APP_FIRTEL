@@ -1,5 +1,6 @@
 ﻿using APP_FIRTEL.Clases;
 using APP_FIRTEL.Genericos;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -34,21 +35,28 @@ namespace APP_FIRTEL.Conexion
                 int idusuario = Preferences.Get(Preferencias.IdUsuario, 0);
 
                 // 🔹 Objeto que enviarás al servidor
+                var horaLocal = DateTime.UtcNow.AddHours(-5);
+                //var fecha = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Unspecified);
+                //var horaLocal = DateTime.Now;
                 var data = new
                 {
                     idlocalizacion=0,
                     idusuario = idusuario, // o el ID del usuario logueado
                     latitud = obj.latitud,
                     longitud= obj.longitud,
-                    Fecha = DateTime.UtcNow
+                    Fecha = horaLocal
                 };
 
                 // 🔹 Serializar a JSON
                 string json = System.Text.Json.JsonSerializer.Serialize(data);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                //var content = new StringContent(json, Encoding.UTF8, "application/json");
+                //objmodel = JsonConvert.DeserializeObject<Categoria>(objetojson);
+
+                var cadena = JsonConvert.SerializeObject(data);
+                var body = new StringContent(cadena, Encoding.UTF8, "application/json");
 
                 // 🔹 Enviar POST a tu servidor
-                var response = await client.PostAsync(url, content);
+                var response = await client.PostAsync(url, body);
 
                 if (response.IsSuccessStatusCode)
                 {

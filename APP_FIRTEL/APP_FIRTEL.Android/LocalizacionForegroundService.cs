@@ -19,7 +19,7 @@ namespace APP_FIRTEL.Droid
     public class LocalizacionForegroundService :Service
     {
         private Timer _timer;
-
+        private bool isRunning = false;
         public override void OnCreate()
         {
             base.OnCreate();
@@ -60,32 +60,52 @@ namespace APP_FIRTEL.Droid
             //};
 
             var notification = new NotificationCompat.Builder(this, "foreground_service_channel")
-           .SetContentTitle("")
-           .SetContentText("")
+           .SetContentTitle("PRUEBA")
+           .SetContentText("PRUEBA TIEMPO")
            .SetSmallIcon(Resource.Drawable.ic_notification) // Tu ícono
 
-           .SetPriority((int)NotificationPriority.Low)
+           .SetPriority((int)NotificationPriority.High)
            .Build();
 
 
 
             StartForeground(1, notification);
+            if (!isRunning)
+            {
+                isRunning = true;
 
-            _timer = new Timer(EjecutarTarea, null, TimeSpan.Zero, TimeSpan.FromSeconds(20));
+                Task.Run(async () =>
+                {
+                    while (isRunning)
+                    {
+                        try
+                        {
+                            await GpsUsuario.Ubicacionusurio();
+                            System.Diagnostics.Debug.WriteLine("Debug VS EXITO");
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine("Debug VS error");
+                        }
+
+                        await Task.Delay(TimeSpan.FromMinutes(1));
+                    }
+                });
+            }
 
 
             return StartCommandResult.Sticky;
         }
-        private async void EjecutarTarea(object state)
+        private async void EjecutarTarea()
         {
             // 🔥 TU LÓGICA AQUÍ
             // Debug.w ("SERVICE", "Ejecutando cada minuto: " + DateTime.Now);
             //System.Diagnostics.Debug.WriteLine("Debug VS");
             try
             {
-               var result = await GpsUsuario.Ubicacionusurio();
+               await GpsUsuario.Ubicacionusurio();
 
-                System.Diagnostics.Debug.WriteLine("Debug VS" + result.latitud );
+                System.Diagnostics.Debug.WriteLine("Debug VS EXITO" );
             }
             catch (Exception ex)
             {
@@ -100,7 +120,11 @@ namespace APP_FIRTEL.Droid
             // guardar datos
             // obtener ubicación
         }
-
+        public override void OnDestroy()
+        {
+            isRunning = false;
+            base.OnDestroy();
+        }
         public override IBinder OnBind(Intent intent) => null;
     }
 }

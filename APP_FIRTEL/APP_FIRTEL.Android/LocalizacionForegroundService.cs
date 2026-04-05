@@ -20,6 +20,9 @@ namespace APP_FIRTEL.Droid
     {
         private Timer _timer;
         private bool isRunning = false;
+        private CancellationTokenSource _cts;
+        private DateTime _ultimaEjecucion = DateTime.MinValue;
+
         public override void OnCreate()
         {
             base.OnCreate();
@@ -30,7 +33,7 @@ namespace APP_FIRTEL.Droid
                 var channel = new NotificationChannel(
                     "foreground_service_channel",  // ID del canal
                     "Foreground Service",          // Nombre visible
-                    NotificationImportance.Min     // Mínima importancia
+                    NotificationImportance.High     // Mínima importancia
                 )
                 {
                     Description = "Canal para mantener el servicio activo"
@@ -60,8 +63,8 @@ namespace APP_FIRTEL.Droid
             //};
 
             var notification = new NotificationCompat.Builder(this, "foreground_service_channel")
-           .SetContentTitle("PRUEBA")
-           .SetContentText("PRUEBA TIEMPO")
+           .SetContentTitle("Firtel")
+           .SetContentText("Mensaje Firtel")
            .SetSmallIcon(Resource.Drawable.ic_notification) // Tu ícono
 
            .SetPriority((int)NotificationPriority.High)
@@ -70,30 +73,12 @@ namespace APP_FIRTEL.Droid
 
 
             StartForeground(1, notification);
-            if (!isRunning)
+            if (_cts == null)
             {
-                isRunning = true;
-
-                Task.Run(async () =>
-                {
-                    while (isRunning)
-                    {
-                        try
-                        {
-                            await GpsUsuario.Ubicacionusurio();
-                            System.Diagnostics.Debug.WriteLine("Debug VS EXITO");
-                        }
-                        catch (Exception ex)
-                        {
-                            System.Diagnostics.Debug.WriteLine("Debug VS error");
-                        }
-
-                        await Task.Delay(TimeSpan.FromMinutes(1));
-                    }
-                });
+                _cts = new CancellationTokenSource();
+                EjecutarLoop(_cts.Token);
             }
-
-
+          
             return StartCommandResult.Sticky;
         }
         private async void EjecutarTarea()
@@ -124,6 +109,34 @@ namespace APP_FIRTEL.Droid
         {
             isRunning = false;
             base.OnDestroy();
+        }
+        private async Task EjecutarLoop(CancellationToken token)
+        {
+            while (!token.IsCancellationRequested)
+            {
+                try
+                {
+                    var ahora = DateTime.UtcNow;
+
+                    // 🔥 Control de tiempo (cada 10 minutos)
+                    if ((ahora - _ultimaEjecucion).TotalMinutes >= 1)
+                    {
+                        _ultimaEjecucion = ahora;
+
+                        // 👉 TU LÓGICA
+                        await GpsUsuario.Ubicacionusurio();
+
+                        System.Diagnostics.Debug.WriteLine("✔ Ubicación enviada: " + ahora);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("❌ Error: " + ex.Message);
+                }
+
+                // 🔥 Delay corto (IMPORTANTE)
+                await Task.Delay(5000, token);
+            }
         }
         public override IBinder OnBind(Intent intent) => null;
     }
